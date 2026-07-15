@@ -1,0 +1,422 @@
+[
+  {
+    "lead_hours": 24,
+    "stream": "CMC",
+    "record_count": 163,
+    "storm_count": 17,
+    "kish_effective_storm_count": 14.200427578834848,
+    "mean_error_km": 88.66225189399587,
+    "mean_error_ci95_km": [
+      80.04216714122853,
+      97.35308994691013
+    ],
+    "median_error_km": 78.01635999999158,
+    "median_error_ci95_km": [
+      66.39583698859504,
+      91.05905654706848
+    ],
+    "p80_error_km": 125.13738212997023
+  },
+  {
+    "lead_hours": 24,
+    "stream": "NGX",
+    "record_count": 163,
+    "storm_count": 17,
+    "kish_effective_storm_count": 14.200427578834848,
+    "mean_error_km": 95.78733950881005,
+    "mean_error_ci95_km": [
+      81.92333496788203,
+      108.3024730683834
+    ],
+    "median_error_km": 82.83942853746628,
+    "median_error_ci95_km": [
+      68.93019870786398,
+      91.15960317689732
+    ],
+    "p80_error_km": 150.2746944914438
+  },
+  {
+    "lead_hours": 24,
+    "stream": "UKM",
+    "record_count": 163,
+    "storm_count": 17,
+    "kish_effective_storm_count": 14.200427578834848,
+    "mean_error_km": 67.21919936545801,
+    "mean_error_ci95_km": [
+      57.97571386210927,
+      76.83198152900911
+    ],
+    "median_error_km": 53.04965612176471,
+    "median_error_ci95_km": [
+      46.18172412453041,
+      57.80015165242453
+    ],
+    "p80_error_km": 95.27259426103093
+  },
+  {
+    "lead_hours": 24,
+    "stream": "LOCAL_EQ2_CMC_NGX",
+    "record_count": 163,
+    "storm_count": 17,
+    "kish_effective_storm_count": 14.200427578834848,
+    "mean_error_km": 78.31957701762224,
+    "mean_error_ci95_km": [
+      68.96085705895017,
+      88.70176888357577
+    ],
+    "median_error_km": 66.5432788681024,
+    "median_error_ci95_km": [
+      52.09527973628472,
+      80.39077327364038
+    ],
+    "p80_error_km": 116.76290618786899
+  },
+  {
+    "lead_hours": 24,
+    "stream": "LOCAL_EQ2_MINUS_UKM",
+    "record_count": 163,
+    "storm_count": 17,
+    "kish_effective_storm_count": 14.200427578834848,
+    "mean_error_difference_km": 11.10037765216422,
+    "mean_error_difference_ci95_km": [
+      2.6580772072562078,
+      19.381287025024267
+    ]
+  },
+  {
+    "lead_hours": 48,
+    "stream": "CMC",
+    "record_count": 137,
+    "storm_count": 17,
+    "kish_effective_storm_count": 13.770359501100513,
+    "mean_error_km": 162.17361065762913,
+    "mean_error_ci95_km": [
+      141.3421678129429,
+      181.97741749213793
+    ],
+    "median_error_km": 145.41577760009986,
+    "median_error_ci95_km": [
+      128.56099470205123,
+      181.1418578978633
+    ],
+    "p80_error_km": 231.39676820723327
+  },
+  {
+    "lead_hours": 48,
+    "stream": "NGX",
+    "record_count": 137,
+    "storm_count": 17,
+    "kish_effective_storm_count": 13.770359501100513,
+    "mean_error_km": 165.19623355432338,
+    "mean_error_ci95_km": [
+      138.8091269117915,
+      188.2850973254509
+    ],
+    "median_error_km": 126.42545395507226,
+    "median_error_ci95_km": [
+      103.27233282351311,
+      146.06557134797706
+    ],
+    "p80_error_km": 252.9286483852194
+  },
+  {
+    "lead_hours": 48,
+    "stream": "UKM",
+    "record_count": 137,
+    "storm_count": 17,
+    "kish_effective_storm_count": 13.770359501100513,
+    "mean_error_km": 118.38741782741258,
+    "mean_error_ci95_km": [
+      99.61017009038544,
+      135.66012282806838
+    ],
+    "median_error_km": 97.25356525734098,
+    "median_error_ci95_km": [
+      80.26267050946684,
+      115.1253531592431
+    ],
+    "p80_error_km": 183.45928032879993
+  },
+  {
+    "lead_hours": 48,
+    "stream": "LOCAL_EQ2_CMC_NGX",
+    "record_count": 137,
+    "storm_count": 17,
+    "kish_effective_storm_count": 13.770359501100513,
+    "mean_error_km": 135.75571916470227,
+    "mean_error_ci95_km": [
+      110.13344631075502,
+      158.9298778746781
+    ],
+    "median_error_km": 105.49218248795539,
+    "median_error_ci95_km": [
+      83.76957646522402,
+      143.82825942878293
+    ],
+    "p80_error_km": 203.57905131988673
+  },
+  {
+    "lead_hours": 48,
+    "stream": "LOCAL_EQ2_MINUS_UKM",
+    "record_count": 137,
+    "storm_count": 17,
+    "kish_effective_storm_count": 13.770359501100513,
+    "mean_error_difference_km": 17.36830133728968,
+    "mean_error_difference_ci95_km": [
+      -0.9487208016036348,
+      35.19609613284502
+    ]
+  },
+  {
+    "lead_hours": 72,
+    "stream": "CMC",
+    "record_count": 111,
+    "storm_count": 17,
+    "kish_effective_storm_count": 13.038095238095238,
+    "mean_error_km": 254.72377865828742,
+    "mean_error_ci95_km": [
+      204.82248290269163,
+      307.87364971081416
+    ],
+    "median_error_km": 243.1785861393936,
+    "median_error_ci95_km": [
+      170.59419195632478,
+      268.1411638206921
+    ],
+    "p80_error_km": 375.6609068829414
+  },
+  {
+    "lead_hours": 72,
+    "stream": "NGX",
+    "record_count": 111,
+    "storm_count": 17,
+    "kish_effective_storm_count": 13.038095238095238,
+    "mean_error_km": 273.68572975245274,
+    "mean_error_ci95_km": [
+      225.89656103126725,
+      313.27488660249054
+    ],
+    "median_error_km": 217.83065847616774,
+    "median_error_ci95_km": [
+      165.99316850563872,
+      262.38079878625695
+    ],
+    "p80_error_km": 394.6029576155883
+  },
+  {
+    "lead_hours": 72,
+    "stream": "UKM",
+    "record_count": 111,
+    "storm_count": 17,
+    "kish_effective_storm_count": 13.038095238095238,
+    "mean_error_km": 181.80414259384733,
+    "mean_error_ci95_km": [
+      154.6585069950805,
+      207.3488837555317
+    ],
+    "median_error_km": 133.41444692087768,
+    "median_error_ci95_km": [
+      108.20486543557689,
+      176.77699270043067
+    ],
+    "p80_error_km": 261.6252487716136
+  },
+  {
+    "lead_hours": 72,
+    "stream": "LOCAL_EQ2_CMC_NGX",
+    "record_count": 111,
+    "storm_count": 17,
+    "kish_effective_storm_count": 13.038095238095238,
+    "mean_error_km": 220.5349505017574,
+    "mean_error_ci95_km": [
+      172.6566745721027,
+      263.0421989959521
+    ],
+    "median_error_km": 154.05103232902655,
+    "median_error_ci95_km": [
+      139.46470008458425,
+      221.25433681519536
+    ],
+    "p80_error_km": 323.7569578224638
+  },
+  {
+    "lead_hours": 72,
+    "stream": "LOCAL_EQ2_MINUS_UKM",
+    "record_count": 111,
+    "storm_count": 17,
+    "kish_effective_storm_count": 13.038095238095238,
+    "mean_error_difference_km": 38.73080790791008,
+    "mean_error_difference_ci95_km": [
+      -5.070104588186978,
+      78.02056364716911
+    ]
+  },
+  {
+    "lead_hours": 96,
+    "stream": "CMC",
+    "record_count": 82,
+    "storm_count": 15,
+    "kish_effective_storm_count": 11.879858657243815,
+    "mean_error_km": 362.7566883857909,
+    "mean_error_ci95_km": [
+      267.67715354515514,
+      475.3314027286962
+    ],
+    "median_error_km": 326.58213814424715,
+    "median_error_ci95_km": [
+      223.64033645051484,
+      475.8641728714715
+    ],
+    "p80_error_km": 528.3240265757432
+  },
+  {
+    "lead_hours": 96,
+    "stream": "NGX",
+    "record_count": 82,
+    "storm_count": 15,
+    "kish_effective_storm_count": 11.879858657243815,
+    "mean_error_km": 340.6710370699226,
+    "mean_error_ci95_km": [
+      276.6790025583126,
+      408.48184274155443
+    ],
+    "median_error_km": 268.8682641079836,
+    "median_error_ci95_km": [
+      192.20857661639909,
+      348.80072382460594
+    ],
+    "p80_error_km": 465.55477817087353
+  },
+  {
+    "lead_hours": 96,
+    "stream": "UKM",
+    "record_count": 82,
+    "storm_count": 15,
+    "kish_effective_storm_count": 11.879858657243815,
+    "mean_error_km": 223.98246439339187,
+    "mean_error_ci95_km": [
+      190.127292356607,
+      258.35931785011314
+    ],
+    "median_error_km": 197.92637902775317,
+    "median_error_ci95_km": [
+      154.98908025278206,
+      255.8649714319232
+    ],
+    "p80_error_km": 304.4323084998904
+  },
+  {
+    "lead_hours": 96,
+    "stream": "LOCAL_EQ2_CMC_NGX",
+    "record_count": 82,
+    "storm_count": 15,
+    "kish_effective_storm_count": 11.879858657243815,
+    "mean_error_km": 300.09789826084113,
+    "mean_error_ci95_km": [
+      226.41193301729518,
+      379.1573263350643
+    ],
+    "median_error_km": 222.230140440914,
+    "median_error_ci95_km": [
+      166.42373960945315,
+      338.25861085916
+    ],
+    "p80_error_km": 465.35669125331975
+  },
+  {
+    "lead_hours": 96,
+    "stream": "LOCAL_EQ2_MINUS_UKM",
+    "record_count": 82,
+    "storm_count": 15,
+    "kish_effective_storm_count": 11.879858657243815,
+    "mean_error_difference_km": 76.11543386744931,
+    "mean_error_difference_ci95_km": [
+      -3.3530598218685648,
+      158.04329107025566
+    ]
+  },
+  {
+    "lead_hours": 120,
+    "stream": "CMC",
+    "record_count": 59,
+    "storm_count": 14,
+    "kish_effective_storm_count": 10.71076923076923,
+    "mean_error_km": 531.7512841995675,
+    "mean_error_ci95_km": [
+      382.51394031644054,
+      667.7415211800984
+    ],
+    "median_error_km": 457.4325975607283,
+    "median_error_ci95_km": [
+      292.61568333358235,
+      619.188709089082
+    ],
+    "p80_error_km": 755.0487495408518
+  },
+  {
+    "lead_hours": 120,
+    "stream": "NGX",
+    "record_count": 59,
+    "storm_count": 14,
+    "kish_effective_storm_count": 10.71076923076923,
+    "mean_error_km": 509.8311296998573,
+    "mean_error_ci95_km": [
+      378.2816776719381,
+      615.6428806860253
+    ],
+    "median_error_km": 455.81811491292353,
+    "median_error_ci95_km": [
+      242.35949505562502,
+      518.3515588192088
+    ],
+    "p80_error_km": 709.9101398492794
+  },
+  {
+    "lead_hours": 120,
+    "stream": "UKM",
+    "record_count": 59,
+    "storm_count": 14,
+    "kish_effective_storm_count": 10.71076923076923,
+    "mean_error_km": 351.512316772851,
+    "mean_error_ci95_km": [
+      284.5742031714979,
+      433.0568948317944
+    ],
+    "median_error_km": 327.83336203419185,
+    "median_error_ci95_km": [
+      275.1593378642732,
+      380.43939667312486
+    ],
+    "p80_error_km": 540.568576384501
+  },
+  {
+    "lead_hours": 120,
+    "stream": "LOCAL_EQ2_CMC_NGX",
+    "record_count": 59,
+    "storm_count": 14,
+    "kish_effective_storm_count": 10.71076923076923,
+    "mean_error_km": 454.2704066001722,
+    "mean_error_ci95_km": [
+      342.0940240689652,
+      557.5023549787757
+    ],
+    "median_error_km": 347.31869638242745,
+    "median_error_ci95_km": [
+      245.62094033767914,
+      513.2253943223272
+    ],
+    "p80_error_km": 691.3095864772099
+  },
+  {
+    "lead_hours": 120,
+    "stream": "LOCAL_EQ2_MINUS_UKM",
+    "record_count": 59,
+    "storm_count": 14,
+    "kish_effective_storm_count": 10.71076923076923,
+    "mean_error_difference_km": 102.75808982732111,
+    "mean_error_difference_ci95_km": [
+      -30.624409604515076,
+      219.12605079054833
+    ]
+  }
+]

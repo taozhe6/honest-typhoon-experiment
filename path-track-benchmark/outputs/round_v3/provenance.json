@@ -1,0 +1,136 @@
+{
+  "generated_at_utc": "2026-07-15T13:09:33.779677+00:00",
+  "analysis_code_git_commit": "4a4cc9fd6d191aef3337f482a44010a664d8abbc",
+  "config": {
+    "path": "config/round_v3.json",
+    "sha256": "dbfd90470d14dc30c2336f140ad210276bc86aef4901777ce6ca0ba056e48a80"
+  },
+  "preregistration": {
+    "path": "preregistration_round_v3.md",
+    "sha256": "9985c63dbe7b12ce475869238554d26239e5faa4956a8bce1a20ffc1c5031659"
+  },
+  "eligibility_manifest": {
+    "path": "config/round_v2_eligibility_manifest.json",
+    "sha256": "ab759ff0d43a59543701c009537f51b9fa4a3f4aff80f1d3ac4caca720598534"
+  },
+  "ibtracs": {
+    "path": "data/raw/ibtracs.WP.list.v04r01.csv",
+    "sha256": "f6dd323ad940774b98c747a639a5a1c66d94a342db50423db47f6b3e8456b687"
+  },
+  "adecks": {
+    "WP012024": {
+      "path": "data/raw/awp012024.dat",
+      "sha256": "0dfd6a5c7cb1f850dda9c88c07abffbf11a26228a4a4599d0727d65c63081c19"
+    },
+    "WP022022": {
+      "path": "data/raw/awp022022.dat",
+      "sha256": "ee11a82b5220f7b5b75dfebd3d558fe465c44abc74f6382fc08115ceac35e581"
+    },
+    "WP022023": {
+      "path": "data/raw/awp022023.dat",
+      "sha256": "34b9795178bf8702348fb6ac958ed6a21c308b6d5aee3d74fbfe7ce9a0efdab5"
+    },
+    "WP032023": {
+      "path": "data/raw/awp032023.dat",
+      "sha256": "461810d80cb4aff9b70504ec63758f71bd96f97f5c9152dca02b3dcc3813757c"
+    },
+    "WP052023": {
+      "path": "data/raw/awp052023.dat",
+      "sha256": "40ea457944234606ee6eb84148b23c6c39fcf9dfe2fc6dbbe2620b0439686dad"
+    },
+    "WP052024": {
+      "path": "data/raw/awp052024.dat",
+      "sha256": "a111440f783f18648dcb34b5bb702856f0283a1d58fe375086fea33e9a438827"
+    },
+    "WP062023": {
+      "path": "data/raw/awp062023.dat",
+      "sha256": "458258ba19c42cbbf3deebd2016f6c41c42e96a86c0464d6c2f0690239599eeb"
+    },
+    "WP072023": {
+      "path": "data/raw/awp072023.dat",
+      "sha256": "9aa79103be2f63c6ea2eaab7e0d475b1c7d802e04f29c3f15f09dc6c8e0780a6"
+    },
+    "WP082024": {
+      "path": "data/raw/awp082024.dat",
+      "sha256": "043c3d737131b2d841bdf89efbb19a02dcb7e5d947dc17d1348843560557edaa"
+    },
+    "WP092023": {
+      "path": "data/raw/awp092023.dat",
+      "sha256": "e1b19d951d362125329532f927a73b5771250d00e1cb3c04891c1c1b7b9fa049"
+    },
+    "WP102023": {
+      "path": "data/raw/awp102023.dat",
+      "sha256": "ca6dfde7106d71a9d3002794ce67e7ba5406efcff8e6e3719c438a9e1d79f864"
+    },
+    "WP112022": {
+      "path": "data/raw/awp112022.dat",
+      "sha256": "9df4065b2c3909e340fe86e15db738312eb5d8eb6e175f2b1e3402c1498d812a"
+    },
+    "WP112024": {
+      "path": "data/raw/awp112024.dat",
+      "sha256": "0ceb8010dc801087ec74de181aefadd45f85b0b6aa8532946d17e9aa25128bbd"
+    },
+    "WP122022": {
+      "path": "data/raw/awp122022.dat",
+      "sha256": "07e66dd2d6fab26a831d12893b155b5e563b634285e4cee2d8b26e1c88d369dc"
+    },
+    "WP122024": {
+      "path": "data/raw/awp122024.dat",
+      "sha256": "e563199fe70768fe143bb88db29e07611f4a8f9de986824e275c24ec9ba95ecb"
+    },
+    "WP142022": {
+      "path": "data/raw/awp142022.dat",
+      "sha256": "dc2af32890333299b081655a187e77f54a60f5e5e387870958a693bcb4d30336"
+    },
+    "WP142023": {
+      "path": "data/raw/awp142023.dat",
+      "sha256": "a042dea8ea6beb8731e40b5fd13ba0094fbbae50cc09b0b61b5d3f76541e017a"
+    },
+    "WP142024": {
+      "path": "data/raw/awp142024.dat",
+      "sha256": "41eb096bcaa28ee4a5c68358e971c8f182a396438bfe561871bc68e2a8f34c0b"
+    },
+    "WP152023": {
+      "path": "data/raw/awp152023.dat",
+      "sha256": "9847404d04342208fa2e301c99b0ceaf94e8788eb0f68377a242d599815b4ff1"
+    },
+    "WP162022": {
+      "path": "data/raw/awp162022.dat",
+      "sha256": "5c565b71c88fd6e8b22dc32c52a945dbf70c91436d3b01243f7a9558d10c44e6"
+    },
+    "WP182022": {
+      "path": "data/raw/awp182022.dat",
+      "sha256": "60dbff956a039c67579513aaee499d32713a6fbf249fecb7d3ff1c771bb08ec8"
+    },
+    "WP232022": {
+      "path": "data/raw/awp232022.dat",
+      "sha256": "6d6036f8472be3613aea60d9dc367fa7309662b0ff3cc5a0c9cc9cd33bfd6a1c"
+    },
+    "WP232024": {
+      "path": "data/raw/awp232024.dat",
+      "sha256": "1a5a49bb18d9b406e9e0c71c9d3b6cc3787220b9bac86563312d947e7acc42bf"
+    },
+    "WP242024": {
+      "path": "data/raw/awp242024.dat",
+      "sha256": "7ced9f96fbd56e3f53d816a3f9c719fa17671389c4c286e72560bbea62656f0c"
+    },
+    "WP252024": {
+      "path": "data/raw/awp252024.dat",
+      "sha256": "dc346053869036e3f6b2628373d4e625d043913dce4af7e93243997aa4d932ec"
+    },
+    "WP272024": {
+      "path": "data/raw/awp272024.dat",
+      "sha256": "c8a45ea1bd38ce32ecab4e292680cbaa0182b15c5728527424f18227194cb056"
+    }
+  },
+  "source_audit": {
+    "files_scanned": 27,
+    "tech_counts": {
+      "CMC": 15956,
+      "NGX": 12949,
+      "UKM": 7132,
+      "DYC2": 0
+    },
+    "verdict": "DYC2 is a local alias for LOCAL_EQ2_CMC_NGX and is not read from an a-deck TECH."
+  }
+}

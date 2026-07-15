@@ -1,0 +1,84 @@
+{
+  "assumption": "exchangeable two-stream errors; n_eff=2/(1+rho)",
+  "scope_disclaimer": "n_eff measures agreement of two radial track-error streams; it does not measure accuracy or prove complete dynamical independence.",
+  "bootstrap_cluster": "atcf_id",
+  "bootstrap_replicates": 2000,
+  "primary": {
+    "method": "pearson",
+    "lead_centered": true,
+    "record_count": 552,
+    "storm_count": 17,
+    "rho_cmc_ngx": 0.4171757049798514,
+    "rho_cmc_ngx_ci95": [
+      0.2631711046531784,
+      0.5848652093637969
+    ],
+    "rho_local_eq2_ukm": 0.34577604957481467,
+    "rho_local_eq2_ukm_ci95": [
+      0.13013415316112434,
+      0.5311083740141247
+    ],
+    "neff_cmc_ngx": 1.4112576111572805,
+    "neff_cmc_ngx_ci95": [
+      1.261936970462984,
+      1.58331677536634
+    ],
+    "neff_local_eq2_ukm": 1.4861313668287388,
+    "neff_local_eq2_ukm_ci95": [
+      1.3062432655695444,
+      1.769701433706947
+    ],
+    "delta_neff": 0.07487375567145826,
+    "delta_neff_ci95": [
+      -0.20296866100734362,
+      0.39709829265982943
+    ]
+  },
+  "raw_pearson_sensitivity": {
+    "method": "pearson",
+    "lead_centered": false,
+    "record_count": 552,
+    "storm_count": 17,
+    "rho_cmc_ngx": 0.6024608943497728,
+    "rho_cmc_ngx_ci95": [
+      0.47288894352528177,
+      0.7365141104299171
+    ],
+    "rho_local_eq2_ukm": 0.5496553453126005,
+    "rho_local_eq2_ukm_ci95": [
+      0.40376360010849593,
+      0.6948464906264914
+    ],
+    "neff_cmc_ngx": 1.248080378779874,
+    "neff_cmc_ngx_ci95": [
+      1.1517326517891258,
+      1.357875628689959
+    ],
+    "neff_local_eq2_ukm": 1.2906095578281986,
+    "neff_local_eq2_ukm_ci95": [
+      1.1800478789593674,
+      1.4247414437397434
+    ],
+    "delta_neff": 0.04252917904832465,
+    "delta_neff_ci95": [
+      -0.10890608676503111,
+      0.2082132724755435
+    ]
+  },
+  "lead_centered_spearman_sensitivity": {
+    "method": "spearman",
+    "lead_centered": true,
+    "record_count": 552,
+    "storm_count": 17,
+    "rho_cmc_ngx": 0.42218057281046906,
+    "rho_cmc_ngx_ci95": [
+      0.23516941648997763,
+      0.5419356622332329
+    ],
+    "rho_local_eq2_ukm": 0.32063415282344643,
+    "rho_local_eq2_ukm_ci95": [
+      0.16063669003876888,
+      0.4427891161220653
+    ]
+  }
+}

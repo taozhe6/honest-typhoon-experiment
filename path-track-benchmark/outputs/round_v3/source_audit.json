@@ -1,0 +1,10 @@
+{
+  "files_scanned": 27,
+  "tech_counts": {
+    "CMC": 15956,
+    "NGX": 12949,
+    "UKM": 7132,
+    "DYC2": 0
+  },
+  "verdict": "DYC2 is a local alias for LOCAL_EQ2_CMC_NGX and is not read from an a-deck TECH."
+}
