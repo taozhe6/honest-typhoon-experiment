@@ -33,3 +33,13 @@
 - 三条支线【并行】,不强制先后。业余项目,允许哪条有兴致就推哪条。
 - 每条支线都要能【独立出一个小成果】,不必等其他支线。
 - 缺口要标注,但每次交付必须同时列出"已经能用的东西",不许只报问题。 写入对应项目的文档
+
+## 2026-07-15 执行索引
+
+上方 `/goal` 保持原文。当前完整进展、数值、资格判决、三把刀审计和复现命令见 [阶段总报告](PROJECT_REPORT_2026-07-15.md)。
+
+- [A 路径发布报告](path-track-benchmark/report_round_v2.md)
+- [B 登陆强度与风压报告](ibtracs-agency-disagreement/report_b_branch.md)
+- [C 零人工标签与 ERC 资源报告](markov/report_c_branch.md)
+- [FAST 固定常量敏感性报告](markov/report_global_sensitivity.md)
+- [统一验证脚本](scripts/verify_all.sh)
