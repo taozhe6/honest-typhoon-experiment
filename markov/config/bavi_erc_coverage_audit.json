@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0",
+  "status": "coverage-correction",
+  "storm": {
+    "name": "BAVI",
+    "sid": "wp092026",
+    "season": 2026,
+    "basin": "WP",
+    "annual_number": "09"
+  },
+  "public_event_source": {
+    "name": "NASA Scientific Visualization Studio",
+    "url": "https://svs.gsfc.nasa.gov/5662",
+    "claim_scope": "Narrative identifies eyewall replacement cycles on July 4, July 7, and July 9, 2026, plus a GPM-observed double eyewall at 12:27 UTC July 10."
+  },
+  "secondary_sources": [
+    {
+      "name": "Wikipedia Typhoon Bavi (2026)",
+      "url": "https://en.wikipedia.org/wiki/Typhoon_Bavi_(2026)",
+      "role": "secondary_cross_check"
+    },
+    {
+      "name": "CIMSS Satellite Blog",
+      "url": "https://cimss.ssec.wisc.edu/satellite-blog/archives/71044",
+      "role": "imagery_and_environment_context_without_independent_erc_count"
+    }
+  ],
+  "event_windows": [
+    {
+      "id": "public_erc_1",
+      "start_utc": "2026-07-04T00:00:00Z",
+      "end_utc": "2026-07-05T00:00:00Z",
+      "narrative": "First peak on July 4 followed by slight weakening attributed to an ERC."
+    },
+    {
+      "id": "public_erc_2",
+      "start_utc": "2026-07-05T22:00:00Z",
+      "end_utc": "2026-07-08T12:00:00Z",
+      "narrative": "Post-Marianas ERC, weakening by July 7 00 UTC and re-intensification by July 8 00 UTC."
+    },
+    {
+      "id": "public_erc_3",
+      "start_utc": "2026-07-09T00:00:00Z",
+      "end_utc": "2026-07-10T12:28:00Z",
+      "narrative": "Third ERC on July 9 and GPM double-eyewall observation at July 10 12:27 UTC."
+    }
+  ],
+  "cyclobs": {
+    "input_path": "outputs/bavi_2026_cyclobs_structure_audit.json",
+    "eye_required": true,
+    "maximum_center_quality_exclusive": 2.0,
+    "maximum_sufficient_sampling_gap_hours": 6.0
+  },
+  "tc_primed": {
+    "bucket_url": "https://noaa-nesdis-tcprimed-pds.s3.amazonaws.com",
+    "version": "v01r01",
+    "version_type": "preliminary",
+    "storm_prefix": "v01r01/preliminary/2026/WP/09/",
+    "publication_latency_source": "https://rammb-data.cira.colostate.edu/tcprimed/TCPRIMED_v01r01_documentation.pdf"
+  }
+}
