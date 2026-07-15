@@ -1,0 +1,41 @@
+{
+  "generated_at_utc": "2026-07-15T12:13:10.960507+00:00",
+  "outputs": {
+    "bavi_cyclobs_vr_series.csv": {
+      "bytes": 2442,
+      "sha256": "a7f8248deeba04257d782fcf31fc1276b81dddeae96d068912598129575bdc47"
+    },
+    "bavi_cyclobs_vr_summary.json": {
+      "bytes": 1141,
+      "sha256": "c7d90b2884170e22613f7da787b589a62671a707816a0168ab4b2c999c708113"
+    },
+    "bavi_cyclobs_vr_timeline.png": {
+      "bytes": 206236,
+      "sha256": "c4ddcac504010d60b191d80d0e20077a2b47615c14e1aba12d66f1c75687a3a2"
+    },
+    "event_reliability_primary.csv": {
+      "bytes": 733,
+      "sha256": "a9f1a39f4d5b60ad4ee4919651e36d888a33e25fbf592584d3ff738867433308"
+    },
+    "event_reliability_primary.png": {
+      "bytes": 107829,
+      "sha256": "5129c52745c424fcd501448f7f3a504591132ae8849da5465dda91c989931c0d"
+    },
+    "event_rows_primary.csv": {
+      "bytes": 2899487,
+      "sha256": "5d436de69d5cb456b3d943139d174583fabb08c05df2787ee3484601f8814914"
+    },
+    "intensity_event_benchmark.json": {
+      "bytes": 47994,
+      "sha256": "15b86d86b11594adc30b95095a64e0f4c974d1f78cd2a98c8bbd850aa14a96a1"
+    },
+    "kuo_2009_wpac_ce_cases.csv": {
+      "bytes": 11354,
+      "sha256": "e0836ac06e10e9406cebb35059f8237596a1ccf3dbb5eb84b07e25a562e570e6"
+    },
+    "published_erc_resource_audit.json": {
+      "bytes": 11538,
+      "sha256": "e102f8afb95d20df43b8cd261b1f1d68a14a37ace190edb40f394189798e5b5c"
+    }
+  }
+}

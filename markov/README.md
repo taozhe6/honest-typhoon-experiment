@@ -4,6 +4,15 @@
 
 项目目标与永久规则以[项目原文](../README.md)为准。
 
+## 支线 C 零标签基线
+
+[支线 C 发布报告](report_c_branch.md)已完成：IBTrACS 自动波形事件、风暴分组折外 Brier、公开 CE/ERC 资源审计、Kuo et al. 62 行 CE formation 表，以及巴威 CyclObs `V·R` 时序。主结果证伪了持续性概率增益；巴威 SAR 支持一个观测双环时段。
+
+```bash
+cd "/Users/taozhe/Documents/New project/typhoon"
+markov/.venv/bin/python markov/scripts/run_c_branch.py
+```
+
 ## 巴威证伪结果
 
 - NMC 2 分钟通道：`40 -> 42 m/s`，12 小时预报命中后续分析。

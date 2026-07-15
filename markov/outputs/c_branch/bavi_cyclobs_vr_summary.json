@@ -1,0 +1,27 @@
+{
+  "authoritative_forecast": false,
+  "dual_peak_overpasses": 4,
+  "interpretation": "The audited SAR sequence supports the reported number of observed dual-ring intervals; it does not fill temporal sampling gaps or label completed ERCs.",
+  "observed_dual_ring_interval_count": 1,
+  "observed_dual_ring_intervals": [
+    {
+      "dual_peak_overpass_count": 4,
+      "end_utc": "2026-07-09T21:27:40+00:00",
+      "interpretation": "observed dual-ring interval; gaps remain unobserved",
+      "observed_times_utc": [
+        "2026-07-08T09:19:41+00:00",
+        "2026-07-08T21:14:23+00:00",
+        "2026-07-09T09:26:47+00:00",
+        "2026-07-09T21:27:40+00:00"
+      ],
+      "start_utc": "2026-07-08T09:19:41+00:00"
+    }
+  ],
+  "overpasses": 16,
+  "quality_eligible_overpasses": 12,
+  "report_id": "bavi-cyclobs-vr-retrospective-v1",
+  "source_path": "/Users/taozhe/Documents/New project/typhoon/markov/outputs/bavi_2026_cyclobs_structure_audit.json",
+  "source_sha256": "a15a45ce0d906e58755e97ed48d14d2244fd0371b2242508a37920300df6f6e6",
+  "status": "retrospective-structure-observation",
+  "subthreshold_two_shoulder_overpasses": 2
+}

@@ -1,0 +1,1594 @@
+{
+  "authoritative_forecast": false,
+  "five_point_windows": {
+    "rows": 12190,
+    "storms": 631
+  },
+  "generated_at_utc": "2026-07-15T12:13:10.667603+00:00",
+  "interpretation_limits": [
+    "The label measures a best-track intensity waveform and leaves physical causation unassigned.",
+    "USA_WIND is a post-season best-track estimate with a 1-minute averaging window.",
+    "Storm-block intervals address serial dependence within storms; best-track analysis uncertainty remains unobserved."
+  ],
+  "label_semantics": "automatic future-12-hour intensity drop-then-rise waveform; no causal ERC label",
+  "preregistration": {
+    "path": "/Users/taozhe/Documents/New project/typhoon/markov/docs/c-branch-preregistration.md",
+    "sha256": "a937de7a9987fcd3f24701cf7aa5fe551b8e12970970279efc155253da4b56c5"
+  },
+  "report_id": "c-branch-zero-label-intensity-event-benchmark-v1",
+  "scenarios": [
+    {
+      "bootstrap": {
+        "cluster_unit": "storm SID",
+        "replicates": 2000,
+        "seed": 20260715
+      },
+      "effective_independent_units": {
+        "count": 631,
+        "unit": "storm SID"
+      },
+      "event_storms": 127,
+      "events": 169,
+      "folds": [
+        {
+          "climatology_probability": 0.014618707927258114,
+          "fold": 0,
+          "persistence_strata": {
+            "0": {
+              "events": 140,
+              "jeffreys_probability": 0.014308992769121091,
+              "raw_rate": 0.014259523324506009,
+              "rows": 9818
+            },
+            "1": {
+              "events": 5,
+              "jeffreys_probability": 0.040740740740740744,
+              "raw_rate": 0.03731343283582089,
+              "rows": 134
+            }
+          },
+          "test_rows": 2238,
+          "test_storms": 118,
+          "training_events": 145,
+          "training_raw_rate": 0.014569935691318328,
+          "training_rows": 9952,
+          "training_storms": 513
+        },
+        {
+          "climatology_probability": 0.014071106659989984,
+          "fold": 1,
+          "persistence_strata": {
+            "0": {
+              "events": 135,
+              "jeffreys_probability": 0.013754948736168917,
+              "raw_rate": 0.013705583756345178,
+              "rows": 9850
+            },
+            "1": {
+              "events": 5,
+              "jeffreys_probability": 0.040740740740740744,
+              "raw_rate": 0.03731343283582089,
+              "rows": 134
+            }
+          },
+          "test_rows": 2206,
+          "test_storms": 110,
+          "training_events": 140,
+          "training_raw_rate": 0.014022435897435898,
+          "training_rows": 9984,
+          "training_storms": 521
+        },
+        {
+          "climatology_probability": 0.013719363343423495,
+          "fold": 2,
+          "persistence_strata": {
+            "0": {
+              "events": 136,
+              "jeffreys_probability": 0.013502819269957464,
+              "raw_rate": 0.013454689354966362,
+              "rows": 10108
+            },
+            "1": {
+              "events": 4,
+              "jeffreys_probability": 0.03383458646616541,
+              "raw_rate": 0.030303030303030304,
+              "rows": 132
+            }
+          },
+          "test_rows": 1950,
+          "test_storms": 113,
+          "training_events": 140,
+          "training_raw_rate": 0.013671875,
+          "training_rows": 10240,
+          "training_storms": 518
+        },
+        {
+          "climatology_probability": 0.014387343385007433,
+          "fold": 3,
+          "persistence_strata": {
+            "0": {
+              "events": 129,
+              "jeffreys_probability": 0.013938219782585297,
+              "raw_rate": 0.013885898815931108,
+              "rows": 9290
+            },
+            "1": {
+              "events": 6,
+              "jeffreys_probability": 0.05078125,
+              "raw_rate": 0.047244094488188976,
+              "rows": 127
+            }
+          },
+          "test_rows": 2773,
+          "test_storms": 140,
+          "training_events": 135,
+          "training_raw_rate": 0.014335775724753107,
+          "training_rows": 9417,
+          "training_storms": 491
+        },
+        {
+          "climatology_probability": 0.012707242582897033,
+          "fold": 4,
+          "persistence_strata": {
+            "0": {
+              "events": 112,
+              "jeffreys_probability": 0.012424075096631695,
+              "raw_rate": 0.012370223105809586,
+              "rows": 9054
+            },
+            "1": {
+              "events": 4,
+              "jeffreys_probability": 0.039473684210526314,
+              "raw_rate": 0.035398230088495575,
+              "rows": 113
+            }
+          },
+          "test_rows": 3023,
+          "test_storms": 150,
+          "training_events": 116,
+          "training_raw_rate": 0.012654085305988874,
+          "training_rows": 9167,
+          "training_storms": 481
+        }
+      ],
+      "metrics": {
+        "climatology_brier": {
+          "ci95_high": 0.01611455313126202,
+          "ci95_low": 0.011502364806735475,
+          "value": 0.013675583927797275
+        },
+        "event_row_rate": {
+          "ci95_high": 0.0163732794237531,
+          "ci95_low": 0.011626855236531404,
+          "value": 0.013863822805578343
+        },
+        "event_storm_rate": {
+          "ci95_high": 0.23454833597464342,
+          "ci95_low": 0.16957210776545167,
+          "value": 0.20126782884310618
+        },
+        "persistence_brier": {
+          "ci95_high": 0.01610931723613356,
+          "ci95_low": 0.011502621559694223,
+          "value": 0.013671473853515493
+        },
+        "persistence_brier_skill": {
+          "ci95_high": 0.0016971282735520142,
+          "ci95_low": -0.000977658231210088,
+          "value": 0.0003005410447906032
+        },
+        "persistence_minus_climatology_brier": {
+          "ci95_high": 1.3339831276967631e-05,
+          "ci95_low": -2.3373832769419844e-05,
+          "value": -4.110074281781992e-06
+        }
+      },
+      "past_pattern_rows": 160,
+      "rows": 12190,
+      "storms": 631,
+      "subset": "all_tropical",
+      "threshold_ms": 2.5
+    },
+    {
+      "bootstrap": {
+        "cluster_unit": "storm SID",
+        "replicates": 2000,
+        "seed": 20260715
+      },
+      "effective_independent_units": {
+        "count": 350,
+        "unit": "storm SID"
+      },
+      "event_storms": 68,
+      "events": 86,
+      "folds": [
+        {
+          "climatology_probability": 0.018008474576271187,
+          "fold": 0,
+          "persistence_strata": {
+            "0": {
+              "events": 74,
+              "jeffreys_probability": 0.017835767297103185,
+              "raw_rate": 0.017720306513409962,
+              "rows": 4176
+            },
+            "1": {
+              "events": 2,
+              "jeffreys_probability": 0.034722222222222224,
+              "raw_rate": 0.028169014084507043,
+              "rows": 71
+            }
+          },
+          "test_rows": 990,
+          "test_storms": 65,
+          "training_events": 76,
+          "training_raw_rate": 0.01789498469507888,
+          "training_rows": 4247,
+          "training_storms": 285
+        },
+        {
+          "climatology_probability": 0.01647581210563216,
+          "fold": 1,
+          "persistence_strata": {
+            "0": {
+              "events": 69,
+              "jeffreys_probability": 0.016500474833808166,
+              "raw_rate": 0.016385656613630967,
+              "rows": 4211
+            },
+            "1": {
+              "events": 1,
+              "jeffreys_probability": 0.022058823529411766,
+              "raw_rate": 0.014925373134328358,
+              "rows": 67
+            }
+          },
+          "test_rows": 959,
+          "test_storms": 62,
+          "training_events": 70,
+          "training_raw_rate": 0.016362786348761104,
+          "training_rows": 4278,
+          "training_storms": 288
+        },
+        {
+          "climatology_probability": 0.015694568121104185,
+          "fold": 2,
+          "persistence_strata": {
+            "0": {
+              "events": 68,
+              "jeffreys_probability": 0.015480225988700564,
+              "raw_rate": 0.015370705244122965,
+              "rows": 4424
+            },
+            "1": {
+              "events": 2,
+              "jeffreys_probability": 0.03676470588235294,
+              "raw_rate": 0.029850746268656716,
+              "rows": 67
+            }
+          },
+          "test_rows": 746,
+          "test_storms": 57,
+          "training_events": 70,
+          "training_raw_rate": 0.01558672901358272,
+          "training_rows": 4491,
+          "training_storms": 293
+        },
+        {
+          "climatology_probability": 0.016918208373904578,
+          "fold": 3,
+          "persistence_strata": {
+            "0": {
+              "events": 67,
+              "jeffreys_probability": 0.016695523126391294,
+              "raw_rate": 0.016575952498762987,
+              "rows": 4042
+            },
+            "1": {
+              "events": 2,
+              "jeffreys_probability": 0.03787878787878788,
+              "raw_rate": 0.03076923076923077,
+              "rows": 65
+            }
+          },
+          "test_rows": 1130,
+          "test_storms": 81,
+          "training_events": 69,
+          "training_raw_rate": 0.016800584368151936,
+          "training_rows": 4107,
+          "training_storms": 269
+        },
+        {
+          "climatology_probability": 0.015551489806586513,
+          "fold": 4,
+          "persistence_strata": {
+            "0": {
+              "events": 58,
+              "jeffreys_probability": 0.015509013785790032,
+              "raw_rate": 0.015380535666931849,
+              "rows": 3771
+            },
+            "1": {
+              "events": 1,
+              "jeffreys_probability": 0.02727272727272727,
+              "raw_rate": 0.018518518518518517,
+              "rows": 54
+            }
+          },
+          "test_rows": 1412,
+          "test_storms": 85,
+          "training_events": 59,
+          "training_raw_rate": 0.015424836601307189,
+          "training_rows": 3825,
+          "training_storms": 265
+        }
+      ],
+      "metrics": {
+        "climatology_brier": {
+          "ci95_high": 0.01982695544692928,
+          "ci95_low": 0.012428674022559184,
+          "value": 0.01615914526500234
+        },
+        "event_row_rate": {
+          "ci95_high": 0.020208542570528863,
+          "ci95_low": 0.012567893550601533,
+          "value": 0.016421615428680543
+        },
+        "event_storm_rate": {
+          "ci95_high": 0.2342857142857143,
+          "ci95_low": 0.15428571428571428,
+          "value": 0.19428571428571428
+        },
+        "persistence_brier": {
+          "ci95_high": 0.019823792762107714,
+          "ci95_low": 0.012436123297241794,
+          "value": 0.016163655316622186
+        },
+        "persistence_brier_skill": {
+          "ci95_high": 0.0003550897809043375,
+          "ci95_low": -0.0007796415842200366,
+          "value": -0.00027910211498705095
+        },
+        "persistence_minus_climatology_brier": {
+          "ci95_high": 1.2369244631984816e-05,
+          "ci95_low": -6.2862933064522685e-06,
+          "value": 4.510051619846522e-06
+        }
+      },
+      "past_pattern_rows": 81,
+      "rows": 5237,
+      "storms": 350,
+      "subset": "intense",
+      "threshold_ms": 2.5
+    },
+    {
+      "bootstrap": {
+        "cluster_unit": "storm SID",
+        "replicates": 2000,
+        "seed": 20260715
+      },
+      "effective_independent_units": {
+        "count": 349,
+        "unit": "storm SID"
+      },
+      "event_storms": 65,
+      "events": 82,
+      "folds": [
+        {
+          "climatology_probability": 0.017865824015556635,
+          "fold": 0,
+          "persistence_strata": {
+            "0": {
+              "events": 71,
+              "jeffreys_probability": 0.01768051434223541,
+              "raw_rate": 0.0175612169181301,
+              "rows": 4043
+            },
+            "1": {
+              "events": 2,
+              "jeffreys_probability": 0.035211267605633804,
+              "raw_rate": 0.02857142857142857,
+              "rows": 70
+            }
+          },
+          "test_rows": 967,
+          "test_storms": 65,
+          "training_events": 73,
+          "training_raw_rate": 0.01774860199367858,
+          "training_rows": 4113,
+          "training_storms": 284
+        },
+        {
+          "climatology_probability": 0.016035688449481552,
+          "fold": 1,
+          "persistence_strata": {
+            "0": {
+              "events": 65,
+              "jeffreys_probability": 0.016049987748100954,
+              "raw_rate": 0.015931372549019607,
+              "rows": 4080
+            },
+            "1": {
+              "events": 1,
+              "jeffreys_probability": 0.022388059701492536,
+              "raw_rate": 0.015151515151515152,
+              "rows": 66
+            }
+          },
+          "test_rows": 934,
+          "test_storms": 62,
+          "training_events": 66,
+          "training_raw_rate": 0.015918958031837915,
+          "training_rows": 4146,
+          "training_storms": 287
+        },
+        {
+          "climatology_probability": 0.015227845202656286,
+          "fold": 2,
+          "persistence_strata": {
+            "0": {
+              "events": 64,
+              "jeffreys_probability": 0.014996512438967682,
+              "raw_rate": 0.014883720930232559,
+              "rows": 4300
+            },
+            "1": {
+              "events": 2,
+              "jeffreys_probability": 0.03731343283582089,
+              "raw_rate": 0.030303030303030304,
+              "rows": 66
+            }
+          },
+          "test_rows": 714,
+          "test_storms": 57,
+          "training_events": 66,
+          "training_raw_rate": 0.015116811726981219,
+          "training_rows": 4366,
+          "training_storms": 292
+        },
+        {
+          "climatology_probability": 0.01690881763527054,
+          "fold": 3,
+          "persistence_strata": {
+            "0": {
+              "events": 65,
+              "jeffreys_probability": 0.016675152749490836,
+              "raw_rate": 0.016552075375604786,
+              "rows": 3927
+            },
+            "1": {
+              "events": 2,
+              "jeffreys_probability": 0.038461538461538464,
+              "raw_rate": 0.03125,
+              "rows": 64
+            }
+          },
+          "test_rows": 1089,
+          "test_storms": 81,
+          "training_events": 67,
+          "training_raw_rate": 0.01678777248809822,
+          "training_rows": 3991,
+          "training_storms": 268
+        },
+        {
+          "climatology_probability": 0.01524966261808367,
+          "fold": 4,
+          "persistence_strata": {
+            "0": {
+              "events": 55,
+              "jeffreys_probability": 0.015201314708299097,
+              "raw_rate": 0.015068493150684932,
+              "rows": 3650
+            },
+            "1": {
+              "events": 1,
+              "jeffreys_probability": 0.02727272727272727,
+              "raw_rate": 0.018518518518518517,
+              "rows": 54
+            }
+          },
+          "test_rows": 1376,
+          "test_storms": 84,
+          "training_events": 56,
+          "training_raw_rate": 0.01511879049676026,
+          "training_rows": 3704,
+          "training_storms": 265
+        }
+      ],
+      "metrics": {
+        "climatology_brier": {
+          "ci95_high": 0.019707923464431183,
+          "ci95_low": 0.012170363592299059,
+          "value": 0.015890447778278256
+        },
+        "event_row_rate": {
+          "ci95_high": 0.020080360435698733,
+          "ci95_low": 0.012306266608064826,
+          "value": 0.016141732283464567
+        },
+        "event_storm_rate": {
+          "ci95_high": 0.22636103151862463,
+          "ci95_low": 0.14613180515759314,
+          "value": 0.18624641833810887
+        },
+        "persistence_brier": {
+          "ci95_high": 0.01970522908187112,
+          "ci95_low": 0.012176651197725425,
+          "value": 0.01589498670467631
+        },
+        "persistence_brier_skill": {
+          "ci95_high": 0.00039238835173047414,
+          "ci95_low": -0.0008406676381530088,
+          "value": -0.00028563867182263003
+        },
+        "persistence_minus_climatology_brier": {
+          "ci95_high": 1.2945529136382073e-05,
+          "ci95_low": -6.882583246382076e-06,
+          "value": 4.538926398053866e-06
+        }
+      },
+      "past_pattern_rows": 80,
+      "rows": 5080,
+      "storms": 349,
+      "subset": "intense_over_ocean",
+      "threshold_ms": 2.5
+    },
+    {
+      "bootstrap": {
+        "cluster_unit": "storm SID",
+        "replicates": 2000,
+        "seed": 20260715
+      },
+      "effective_independent_units": {
+        "count": 631,
+        "unit": "storm SID"
+      },
+      "event_storms": 16,
+      "events": 16,
+      "folds": [
+        {
+          "climatology_probability": 0.001456847181754245,
+          "fold": 0,
+          "persistence_strata": {
+            "0": {
+              "events": 14,
+              "jeffreys_probability": 0.0014587525150905434,
+              "raw_rate": 0.0014085924137237148,
+              "rows": 9939
+            },
+            "1": {
+              "events": 0,
+              "jeffreys_probability": 0.03571428571428571,
+              "raw_rate": 0.0,
+              "rows": 13
+            }
+          },
+          "test_rows": 2238,
+          "test_storms": 118,
+          "training_events": 14,
+          "training_raw_rate": 0.0014067524115755627,
+          "training_rows": 9952,
+          "training_storms": 513
+        },
+        {
+          "climatology_probability": 0.0013520280420630947,
+          "fold": 1,
+          "persistence_strata": {
+            "0": {
+              "events": 13,
+              "jeffreys_probability": 0.0013537906137184115,
+              "raw_rate": 0.001303780964797914,
+              "rows": 9971
+            },
+            "1": {
+              "events": 0,
+              "jeffreys_probability": 0.03571428571428571,
+              "raw_rate": 0.0,
+              "rows": 13
+            }
+          },
+          "test_rows": 2206,
+          "test_storms": 110,
+          "training_events": 13,
+          "training_raw_rate": 0.0013020833333333333,
+          "training_rows": 9984,
+          "training_storms": 521
+        },
+        {
+          "climatology_probability": 0.0014158773557269798,
+          "fold": 2,
+          "persistence_strata": {
+            "0": {
+              "events": 14,
+              "jeffreys_probability": 0.0014176769651935862,
+              "raw_rate": 0.0013689253935660506,
+              "rows": 10227
+            },
+            "1": {
+              "events": 0,
+              "jeffreys_probability": 0.03571428571428571,
+              "raw_rate": 0.0,
+              "rows": 13
+            }
+          },
+          "test_rows": 1950,
+          "test_storms": 113,
+          "training_events": 14,
+          "training_raw_rate": 0.0013671875,
+          "training_rows": 10240,
+          "training_storms": 518
+        },
+        {
+          "climatology_probability": 0.001327245699723933,
+          "fold": 3,
+          "persistence_strata": {
+            "0": {
+              "events": 12,
+              "jeffreys_probability": 0.0013287977038375677,
+              "raw_rate": 0.0012757814161173718,
+              "rows": 9406
+            },
+            "1": {
+              "events": 0,
+              "jeffreys_probability": 0.041666666666666664,
+              "raw_rate": 0.0,
+              "rows": 11
+            }
+          },
+          "test_rows": 2773,
+          "test_storms": 140,
+          "training_events": 12,
+          "training_raw_rate": 0.0012742911755336094,
+          "training_rows": 9417,
+          "training_storms": 491
+        },
+        {
+          "climatology_probability": 0.0012543630017452006,
+          "fold": 4,
+          "persistence_strata": {
+            "0": {
+              "events": 11,
+              "jeffreys_probability": 0.0012557326927276698,
+              "raw_rate": 0.0012012667904335481,
+              "rows": 9157
+            },
+            "1": {
+              "events": 0,
+              "jeffreys_probability": 0.045454545454545456,
+              "raw_rate": 0.0,
+              "rows": 10
+            }
+          },
+          "test_rows": 3023,
+          "test_storms": 150,
+          "training_events": 11,
+          "training_raw_rate": 0.0011999563652230827,
+          "training_rows": 9167,
+          "training_storms": 481
+        }
+      ],
+      "metrics": {
+        "climatology_brier": {
+          "ci95_high": 0.0019571612168887854,
+          "ci95_low": 0.0007365630133678961,
+          "value": 0.0013108751694730315
+        },
+        "event_row_rate": {
+          "ci95_high": 0.001960568290618563,
+          "ci95_low": 0.0007366648415631283,
+          "value": 0.0013125512715340443
+        },
+        "event_storm_rate": {
+          "ci95_high": 0.03803486529318542,
+          "ci95_low": 0.014263074484944533,
+          "value": 0.025356576862123614
+        },
+        "persistence_brier": {
+          "ci95_high": 0.0019602597360152156,
+          "ci95_low": 0.0007378827527494325,
+          "value": 0.0013129181890734918
+        },
+        "persistence_brier_skill": {
+          "ci95_high": -0.0012713394402964373,
+          "ci95_low": -0.0017996055725852055,
+          "value": -0.0015585157519473203
+        },
+        "persistence_minus_climatology_brier": {
+          "ci95_high": 3.0943513435430508e-06,
+          "ci95_low": 1.1133072458751404e-06,
+          "value": 2.0430196004603274e-06
+        }
+      },
+      "past_pattern_rows": 15,
+      "rows": 12190,
+      "storms": 631,
+      "subset": "all_tropical",
+      "threshold_ms": 5.0
+    },
+    {
+      "bootstrap": {
+        "cluster_unit": "storm SID",
+        "replicates": 2000,
+        "seed": 20260715
+      },
+      "effective_independent_units": {
+        "count": 350,
+        "unit": "storm SID"
+      },
+      "event_storms": 11,
+      "events": 11,
+      "folds": [
+        {
+          "climatology_probability": 0.0024717514124293787,
+          "fold": 0,
+          "persistence_strata": {
+            "0": {
+              "events": 10,
+              "jeffreys_probability": 0.0024775837659273244,
+              "raw_rate": 0.002360160490913382,
+              "rows": 4237
+            },
+            "1": {
+              "events": 0,
+              "jeffreys_probability": 0.045454545454545456,
+              "raw_rate": 0.0,
+              "rows": 10
+            }
+          },
+          "test_rows": 990,
+          "test_storms": 65,
+          "training_events": 10,
+          "training_raw_rate": 0.0023546032493524842,
+          "training_rows": 4247,
+          "training_storms": 285
+        },
+        {
+          "climatology_probability": 0.0022201448936667446,
+          "fold": 1,
+          "persistence_strata": {
+            "0": {
+              "events": 9,
+              "jeffreys_probability": 0.002224824355971897,
+              "raw_rate": 0.0021082220660576245,
+              "rows": 4269
+            },
+            "1": {
+              "events": 0,
+              "jeffreys_probability": 0.05,
+              "raw_rate": 0.0,
+              "rows": 9
+            }
+          },
+          "test_rows": 959,
+          "test_storms": 62,
+          "training_events": 9,
+          "training_raw_rate": 0.0021037868162692847,
+          "training_rows": 4278,
+          "training_storms": 288
+        },
+        {
+          "climatology_probability": 0.002560106856634016,
+          "fold": 2,
+          "persistence_strata": {
+            "0": {
+              "events": 11,
+              "jeffreys_probability": 0.002566391430484267,
+              "raw_rate": 0.002455357142857143,
+              "rows": 4480
+            },
+            "1": {
+              "events": 0,
+              "jeffreys_probability": 0.041666666666666664,
+              "raw_rate": 0.0,
+              "rows": 11
+            }
+          },
+          "test_rows": 746,
+          "test_storms": 57,
+          "training_events": 11,
+          "training_raw_rate": 0.002449343130705856,
+          "training_rows": 4491,
+          "training_storms": 293
+        },
+        {
+          "climatology_probability": 0.0018257059396299903,
+          "fold": 3,
+          "persistence_strata": {
+            "0": {
+              "events": 7,
+              "jeffreys_probability": 0.0018288222384784199,
+              "raw_rate": 0.0017073170731707317,
+              "rows": 4100
+            },
+            "1": {
+              "events": 0,
+              "jeffreys_probability": 0.0625,
+              "raw_rate": 0.0,
+              "rows": 7
+            }
+          },
+          "test_rows": 1130,
+          "test_storms": 81,
+          "training_events": 7,
+          "training_raw_rate": 0.0017044071098125152,
+          "training_rows": 4107,
+          "training_storms": 269
+        },
+        {
+          "climatology_probability": 0.0019602718243596443,
+          "fold": 4,
+          "persistence_strata": {
+            "0": {
+              "events": 7,
+              "jeffreys_probability": 0.0019638648860958365,
+              "raw_rate": 0.0018334206390780514,
+              "rows": 3818
+            },
+            "1": {
+              "events": 0,
+              "jeffreys_probability": 0.0625,
+              "raw_rate": 0.0,
+              "rows": 7
+            }
+          },
+          "test_rows": 1412,
+          "test_storms": 85,
+          "training_events": 7,
+          "training_raw_rate": 0.0018300653594771241,
+          "training_rows": 3825,
+          "training_storms": 265
+        }
+      ],
+      "metrics": {
+        "climatology_brier": {
+          "ci95_high": 0.0034835239453282394,
+          "ci95_low": 0.0009856786683334383,
+          "value": 0.002096762509762893
+        },
+        "event_row_rate": {
+          "ci95_high": 0.003493178649804617,
+          "ci95_low": 0.0009847996634674168,
+          "value": 0.002100439182738209
+        },
+        "event_storm_rate": {
+          "ci95_high": 0.05142857142857143,
+          "ci95_low": 0.014285714285714285,
+          "value": 0.03142857142857143
+        },
+        "persistence_brier": {
+          "ci95_high": 0.0034953580496607985,
+          "ci95_low": 0.000989518675134911,
+          "value": 0.0021040744349054047
+        },
+        "persistence_brier_skill": {
+          "ci95_high": -0.0030320319132884355,
+          "ci95_low": -0.003911631805911753,
+          "value": -0.0034872452690593025
+        },
+        "persistence_minus_climatology_brier": {
+          "ci95_high": 1.2117393997655964e-05,
+          "ci95_low": 3.4227100436015416e-06,
+          "value": 7.3119251425115064e-06
+        }
+      },
+      "past_pattern_rows": 11,
+      "rows": 5237,
+      "storms": 350,
+      "subset": "intense",
+      "threshold_ms": 5.0
+    },
+    {
+      "bootstrap": {
+        "cluster_unit": "storm SID",
+        "replicates": 2000,
+        "seed": 20260715
+      },
+      "effective_independent_units": {
+        "count": 349,
+        "unit": "storm SID"
+      },
+      "event_storms": 10,
+      "events": 10,
+      "folds": [
+        {
+          "climatology_probability": 0.0023091881380651433,
+          "fold": 0,
+          "persistence_strata": {
+            "0": {
+              "events": 9,
+              "jeffreys_probability": 0.0023148148148148147,
+              "raw_rate": 0.0021935169388252497,
+              "rows": 4103
+            },
+            "1": {
+              "events": 0,
+              "jeffreys_probability": 0.045454545454545456,
+              "raw_rate": 0.0,
+              "rows": 10
+            }
+          },
+          "test_rows": 967,
+          "test_storms": 65,
+          "training_events": 9,
+          "training_raw_rate": 0.002188183807439825,
+          "training_rows": 4113,
+          "training_storms": 284
+        },
+        {
+          "climatology_probability": 0.002049674463467567,
+          "fold": 1,
+          "persistence_strata": {
+            "0": {
+              "events": 8,
+              "jeffreys_probability": 0.002054132431126148,
+              "raw_rate": 0.0019337684312303602,
+              "rows": 4137
+            },
+            "1": {
+              "events": 0,
+              "jeffreys_probability": 0.05,
+              "raw_rate": 0.0,
+              "rows": 9
+            }
+          },
+          "test_rows": 934,
+          "test_storms": 62,
+          "training_events": 8,
+          "training_raw_rate": 0.001929570670525808,
+          "training_rows": 4146,
+          "training_storms": 287
+        },
+        {
+          "climatology_probability": 0.0024043966109457294,
+          "fold": 2,
+          "persistence_strata": {
+            "0": {
+              "events": 10,
+              "jeffreys_probability": 0.0024104683195592287,
+              "raw_rate": 0.002296211251435132,
+              "rows": 4355
+            },
+            "1": {
+              "events": 0,
+              "jeffreys_probability": 0.041666666666666664,
+              "raw_rate": 0.0,
+              "rows": 11
+            }
+          },
+          "test_rows": 714,
+          "test_storms": 57,
+          "training_events": 10,
+          "training_raw_rate": 0.0022904260192395786,
+          "training_rows": 4366,
+          "training_storms": 292
+        },
+        {
+          "climatology_probability": 0.00187875751503006,
+          "fold": 3,
+          "persistence_strata": {
+            "0": {
+              "events": 7,
+              "jeffreys_probability": 0.0018820577164366374,
+              "raw_rate": 0.0017570281124497991,
+              "rows": 3984
+            },
+            "1": {
+              "events": 0,
+              "jeffreys_probability": 0.0625,
+              "raw_rate": 0.0,
+              "rows": 7
+            }
+          },
+          "test_rows": 1089,
+          "test_storms": 81,
+          "training_events": 7,
+          "training_raw_rate": 0.0017539463793535455,
+          "training_rows": 3991,
+          "training_storms": 268
+        },
+        {
+          "climatology_probability": 0.0017543859649122807,
+          "fold": 4,
+          "persistence_strata": {
+            "0": {
+              "events": 6,
+              "jeffreys_probability": 0.0017577068685776095,
+              "raw_rate": 0.0016229375169055991,
+              "rows": 3697
+            },
+            "1": {
+              "events": 0,
+              "jeffreys_probability": 0.0625,
+              "raw_rate": 0.0,
+              "rows": 7
+            }
+          },
+          "test_rows": 1376,
+          "test_storms": 84,
+          "training_events": 6,
+          "training_raw_rate": 0.0016198704103671706,
+          "training_rows": 3704,
+          "training_storms": 265
+        }
+      ],
+      "metrics": {
+        "climatology_brier": {
+          "ci95_high": 0.003263183140979118,
+          "ci95_low": 0.0008283000270669521,
+          "value": 0.0019651894312514954
+        },
+        "event_row_rate": {
+          "ci95_high": 0.0032720171096362193,
+          "ci95_low": 0.0008271903062319663,
+          "value": 0.001968503937007874
+        },
+        "event_storm_rate": {
+          "ci95_high": 0.04871060171919771,
+          "ci95_low": 0.011461318051575931,
+          "value": 0.02865329512893983
+        },
+        "persistence_brier": {
+          "ci95_high": 0.0032757133379494184,
+          "ci95_low": 0.0008323310885381648,
+          "value": 0.0019727274278321452
+        },
+        "persistence_brier_skill": {
+          "ci95_high": -0.0031192977010554347,
+          "ci95_low": -0.005183021868587501,
+          "value": -0.0038357607978023456
+        },
+        "persistence_minus_climatology_brier": {
+          "ci95_high": 1.2394265553712592e-05,
+          "ci95_low": 3.6346642004006604e-06,
+          "value": 7.5379965806497695e-06
+        }
+      },
+      "past_pattern_rows": 11,
+      "rows": 5080,
+      "storms": 349,
+      "subset": "intense_over_ocean",
+      "threshold_ms": 5.0
+    },
+    {
+      "bootstrap": {
+        "cluster_unit": "storm SID",
+        "replicates": 2000,
+        "seed": 20260715
+      },
+      "effective_independent_units": {
+        "count": 631,
+        "unit": "storm SID"
+      },
+      "event_storms": 1,
+      "events": 1,
+      "folds": [
+        {
+          "climatology_probability": 0.00015070832914699085,
+          "fold": 0,
+          "persistence_strata": {
+            "0": {
+              "events": 1,
+              "jeffreys_probability": 0.0001507234726688103,
+              "raw_rate": 0.00010049241282283188,
+              "rows": 9951
+            },
+            "1": {
+              "events": 0,
+              "jeffreys_probability": 0.25,
+              "raw_rate": 0.0,
+              "rows": 1
+            }
+          },
+          "test_rows": 2238,
+          "test_storms": 118,
+          "training_events": 1,
+          "training_raw_rate": 0.00010048231511254019,
+          "training_rows": 9952,
+          "training_storms": 513
+        },
+        {
+          "climatology_probability": 0.00015022533800701052,
+          "fold": 1,
+          "persistence_strata": {
+            "0": {
+              "events": 1,
+              "jeffreys_probability": 0.00015024038461538462,
+              "raw_rate": 0.00010017028949213663,
+              "rows": 9983
+            },
+            "1": {
+              "events": 0,
+              "jeffreys_probability": 0.25,
+              "raw_rate": 0.0,
+              "rows": 1
+            }
+          },
+          "test_rows": 2206,
+          "test_storms": 110,
+          "training_events": 1,
+          "training_raw_rate": 0.00010016025641025641,
+          "training_rows": 9984,
+          "training_storms": 521
+        },
+        {
+          "climatology_probability": 0.00014647007128210137,
+          "fold": 2,
+          "persistence_strata": {
+            "0": {
+              "events": 1,
+              "jeffreys_probability": 0.000146484375,
+              "raw_rate": 9.76657876745776e-05,
+              "rows": 10239
+            },
+            "1": {
+              "events": 0,
+              "jeffreys_probability": 0.25,
+              "raw_rate": 0.0,
+              "rows": 1
+            }
+          },
+          "test_rows": 1950,
+          "test_storms": 113,
+          "training_events": 1,
+          "training_raw_rate": 9.765625e-05,
+          "training_rows": 10240,
+          "training_storms": 518
+        },
+        {
+          "climatology_probability": 0.00015926948396687195,
+          "fold": 3,
+          "persistence_strata": {
+            "0": {
+              "events": 1,
+              "jeffreys_probability": 0.00015928639694170118,
+              "raw_rate": 0.00010620220900594733,
+              "rows": 9416
+            },
+            "1": {
+              "events": 0,
+              "jeffreys_probability": 0.25,
+              "raw_rate": 0.0,
+              "rows": 1
+            }
+          },
+          "test_rows": 2773,
+          "test_storms": 140,
+          "training_events": 1,
+          "training_raw_rate": 0.00010619093129446746,
+          "training_rows": 9417,
+          "training_storms": 491
+        },
+        {
+          "climatology_probability": 5.453752181500873e-05,
+          "fold": 4,
+          "persistence_strata": {
+            "0": {
+              "events": 0,
+              "jeffreys_probability": 5.453752181500873e-05,
+              "raw_rate": 0.0,
+              "rows": 9167
+            },
+            "1": {
+              "events": 0,
+              "jeffreys_probability": 0.5,
+              "raw_rate": null,
+              "rows": 0
+            }
+          },
+          "test_rows": 3023,
+          "test_storms": 150,
+          "training_events": 0,
+          "training_raw_rate": 0.0,
+          "training_rows": 9167,
+          "training_storms": 481
+        }
+      ],
+      "metrics": {
+        "climatology_brier": {
+          "ci95_high": 0.0002549805681158583,
+          "ci95_low": 1.755678828161176e-08,
+          "value": 8.204370046467875e-05
+        },
+        "event_row_rate": {
+          "ci95_high": 0.00025498988130993644,
+          "ci95_low": 0.0,
+          "value": 8.203445447087777e-05
+        },
+        "event_storm_rate": {
+          "ci95_high": 0.004754358161648178,
+          "ci95_low": 0.0,
+          "value": 0.001584786053882726
+        },
+        "persistence_brier": {
+          "ci95_high": 0.0003187280413049323,
+          "ci95_low": 1.7560187995758403e-08,
+          "value": 0.00010255231739053404
+        },
+        "persistence_brier_skill": {
+          "ci95_high": -0.00019373877353732195,
+          "ci95_low": -0.25000964906084105,
+          "value": -0.2499718663309758
+        },
+        "persistence_minus_climatology_brier": {
+          "ci95_high": 6.374747318907404e-05,
+          "ci95_low": 3.4031804731813787e-12,
+          "value": 2.050861692585529e-05
+        }
+      },
+      "past_pattern_rows": 1,
+      "rows": 12190,
+      "storms": 631,
+      "subset": "all_tropical",
+      "threshold_ms": 7.5
+    },
+    {
+      "bootstrap": {
+        "cluster_unit": "storm SID",
+        "replicates": 2000,
+        "seed": 20260715
+      },
+      "effective_independent_units": {
+        "count": 350,
+        "unit": "storm SID"
+      },
+      "event_storms": 1,
+      "events": 1,
+      "folds": [
+        {
+          "climatology_probability": 0.00035310734463276836,
+          "fold": 0,
+          "persistence_strata": {
+            "0": {
+              "events": 1,
+              "jeffreys_probability": 0.0003531904874028726,
+              "raw_rate": 0.00023551577955723034,
+              "rows": 4246
+            },
+            "1": {
+              "events": 0,
+              "jeffreys_probability": 0.25,
+              "raw_rate": 0.0,
+              "rows": 1
+            }
+          },
+          "test_rows": 990,
+          "test_storms": 65,
+          "training_events": 1,
+          "training_raw_rate": 0.0002354603249352484,
+          "training_rows": 4247,
+          "training_storms": 285
+        },
+        {
+          "climatology_probability": 0.0003505491937368544,
+          "fold": 1,
+          "persistence_strata": {
+            "0": {
+              "events": 1,
+              "jeffreys_probability": 0.0003506311360448808,
+              "raw_rate": 0.00023380874444704232,
+              "rows": 4277
+            },
+            "1": {
+              "events": 0,
+              "jeffreys_probability": 0.25,
+              "raw_rate": 0.0,
+              "rows": 1
+            }
+          },
+          "test_rows": 959,
+          "test_storms": 62,
+          "training_events": 1,
+          "training_raw_rate": 0.0002337540906965872,
+          "training_rows": 4278,
+          "training_storms": 288
+        },
+        {
+          "climatology_probability": 0.00033392698130008905,
+          "fold": 2,
+          "persistence_strata": {
+            "0": {
+              "events": 1,
+              "jeffreys_probability": 0.00033400133600534405,
+              "raw_rate": 0.00022271714922048998,
+              "rows": 4490
+            },
+            "1": {
+              "events": 0,
+              "jeffreys_probability": 0.25,
+              "raw_rate": 0.0,
+              "rows": 1
+            }
+          },
+          "test_rows": 746,
+          "test_storms": 57,
+          "training_events": 1,
+          "training_raw_rate": 0.00022266755733689602,
+          "training_rows": 4491,
+          "training_storms": 293
+        },
+        {
+          "climatology_probability": 0.00036514118792599804,
+          "fold": 3,
+          "persistence_strata": {
+            "0": {
+              "events": 1,
+              "jeffreys_probability": 0.0003652300949598247,
+              "raw_rate": 0.00024354603019970775,
+              "rows": 4106
+            },
+            "1": {
+              "events": 0,
+              "jeffreys_probability": 0.25,
+              "raw_rate": 0.0,
+              "rows": 1
+            }
+          },
+          "test_rows": 1130,
+          "test_storms": 81,
+          "training_events": 1,
+          "training_raw_rate": 0.00024348672997321646,
+          "training_rows": 4107,
+          "training_storms": 269
+        },
+        {
+          "climatology_probability": 0.00013068478829064296,
+          "fold": 4,
+          "persistence_strata": {
+            "0": {
+              "events": 0,
+              "jeffreys_probability": 0.00013068478829064296,
+              "raw_rate": 0.0,
+              "rows": 3825
+            },
+            "1": {
+              "events": 0,
+              "jeffreys_probability": 0.5,
+              "raw_rate": null,
+              "rows": 0
+            }
+          },
+          "test_rows": 1412,
+          "test_storms": 85,
+          "training_events": 0,
+          "training_raw_rate": 0.0,
+          "training_rows": 3825,
+          "training_storms": 265
+        }
+      ],
+      "metrics": {
+        "climatology_brier": {
+          "ci95_high": 0.0007185873882119222,
+          "ci95_low": 9.052285233013003e-08,
+          "value": 0.0001909944385770596
+        },
+        "event_row_rate": {
+          "ci95_high": 0.0007186812766081838,
+          "ci95_low": 0.0,
+          "value": 0.00019094901661256445
+        },
+        "event_storm_rate": {
+          "ci95_high": 0.011428571428571429,
+          "ci95_low": 0.0,
+          "value": 0.002857142857142857
+        },
+        "persistence_brier": {
+          "ci95_high": 0.0008982577371025569,
+          "ci95_low": 9.056290852708657e-08,
+          "value": 0.000238731732177251
+        },
+        "persistence_brier_skill": {
+          "ci95_high": -0.000442685214268318,
+          "ci95_low": -0.2500300031689323,
+          "value": -0.2499407519708019
+        },
+        "persistence_minus_climatology_brier": {
+          "ci95_high": 0.00017967034889063472,
+          "ci95_low": 4.0055897175601376e-11,
+          "value": 4.773729360019142e-05
+        }
+      },
+      "past_pattern_rows": 1,
+      "rows": 5237,
+      "storms": 350,
+      "subset": "intense",
+      "threshold_ms": 7.5
+    },
+    {
+      "bootstrap": {
+        "cluster_unit": "storm SID",
+        "replicates": 2000,
+        "seed": 20260715
+      },
+      "effective_independent_units": {
+        "count": 349,
+        "unit": "storm SID"
+      },
+      "event_storms": 1,
+      "events": 1,
+      "folds": [
+        {
+          "climatology_probability": 0.00036460865337870687,
+          "fold": 0,
+          "persistence_strata": {
+            "0": {
+              "events": 1,
+              "jeffreys_probability": 0.00036469730123997083,
+              "raw_rate": 0.00024319066147859923,
+              "rows": 4112
+            },
+            "1": {
+              "events": 0,
+              "jeffreys_probability": 0.25,
+              "raw_rate": 0.0,
+              "rows": 1
+            }
+          },
+          "test_rows": 967,
+          "test_storms": 65,
+          "training_events": 1,
+          "training_raw_rate": 0.00024313153415998054,
+          "training_rows": 4113,
+          "training_storms": 284
+        },
+        {
+          "climatology_probability": 0.0003617072582589824,
+          "fold": 1,
+          "persistence_strata": {
+            "0": {
+              "events": 1,
+              "jeffreys_probability": 0.000361794500723589,
+              "raw_rate": 0.00024125452352231604,
+              "rows": 4145
+            },
+            "1": {
+              "events": 0,
+              "jeffreys_probability": 0.25,
+              "raw_rate": 0.0,
+              "rows": 1
+            }
+          },
+          "test_rows": 934,
+          "test_storms": 62,
+          "training_events": 1,
+          "training_raw_rate": 0.000241196333815726,
+          "training_rows": 4146,
+          "training_storms": 287
+        },
+        {
+          "climatology_probability": 0.0003434852301351042,
+          "fold": 2,
+          "persistence_strata": {
+            "0": {
+              "events": 1,
+              "jeffreys_probability": 0.00034356390288593677,
+              "raw_rate": 0.0002290950744558992,
+              "rows": 4365
+            },
+            "1": {
+              "events": 0,
+              "jeffreys_probability": 0.25,
+              "raw_rate": 0.0,
+              "rows": 1
+            }
+          },
+          "test_rows": 714,
+          "test_storms": 57,
+          "training_events": 1,
+          "training_raw_rate": 0.00022904260192395785,
+          "training_rows": 4366,
+          "training_storms": 292
+        },
+        {
+          "climatology_probability": 0.000375751503006012,
+          "fold": 3,
+          "persistence_strata": {
+            "0": {
+              "events": 1,
+              "jeffreys_probability": 0.00037584565271861687,
+              "raw_rate": 0.0002506265664160401,
+              "rows": 3990
+            },
+            "1": {
+              "events": 0,
+              "jeffreys_probability": 0.25,
+              "raw_rate": 0.0,
+              "rows": 1
+            }
+          },
+          "test_rows": 1089,
+          "test_storms": 81,
+          "training_events": 1,
+          "training_raw_rate": 0.00025056376847907793,
+          "training_rows": 3991,
+          "training_storms": 268
+        },
+        {
+          "climatology_probability": 0.0001349527665317139,
+          "fold": 4,
+          "persistence_strata": {
+            "0": {
+              "events": 0,
+              "jeffreys_probability": 0.0001349527665317139,
+              "raw_rate": 0.0,
+              "rows": 3704
+            },
+            "1": {
+              "events": 0,
+              "jeffreys_probability": 0.5,
+              "raw_rate": null,
+              "rows": 0
+            }
+          },
+          "test_rows": 1376,
+          "test_storms": 84,
+          "training_events": 0,
+          "training_raw_rate": 0.0,
+          "training_rows": 3704,
+          "training_storms": 265
+        }
+      ],
+      "metrics": {
+        "climatology_brier": {
+          "ci95_high": 0.0006301950852074039,
+          "ci95_low": 9.631356855132062e-08,
+          "value": 0.00019689840520879857
+        },
+        "event_row_rate": {
+          "ci95_high": 0.0006302666660788925,
+          "ci95_low": 0.0,
+          "value": 0.0001968503937007874
+        },
+        "event_storm_rate": {
+          "ci95_high": 0.008595988538681949,
+          "ci95_low": 0.0,
+          "value": 0.0028653295128939827
+        },
+        "persistence_brier": {
+          "ci95_high": 0.0007877617854550405,
+          "ci95_low": 9.635753401523493e-08,
+          "value": 0.00024611104672720644
+        },
+        "persistence_brier_skill": {
+          "ci95_high": -0.0004562352728258279,
+          "ci95_low": -0.2500286819553063,
+          "value": -0.24993925911294657
+        },
+        "persistence_minus_climatology_brier": {
+          "ci95_high": 0.0001575667002476366,
+          "ci95_low": 4.38962386160252e-11,
+          "value": 4.921264151840787e-05
+        }
+      },
+      "past_pattern_rows": 1,
+      "rows": 5080,
+      "storms": 349,
+      "subset": "intense_over_ocean",
+      "threshold_ms": 7.5
+    }
+  ],
+  "source_audit": {
+    "bytes": 113976897,
+    "duplicate_rows_before_resolution": 0,
+    "end_year": 2024,
+    "kt_to_ms": 0.514444,
+    "native_unit": "kt",
+    "path": "/Users/taozhe/Documents/New project/typhoon/ibtracs-agency-disagreement/data/raw/ibtracs.WP.list.v04r01.csv",
+    "selected_rows": 15036,
+    "selected_storms": 669,
+    "selection_counts": {
+      "jtwc_wp": 18788,
+      "main_track": 47699,
+      "original_or_verified": 18783,
+      "positive_wind": 18788,
+      "raw_rows": 247706,
+      "synoptic_6h": 24073,
+      "tropical_nature": 15036,
+      "year_2001_2024": 47729
+    },
+    "sha256": "f6dd323ad940774b98c747a639a5a1c66d94a342db50423db47f6b3e8456b687",
+    "start_year": 2001,
+    "wind_average_window_minutes": 1,
+    "wind_column": "USA_WIND"
+  },
+  "status": "research-baseline"
+}

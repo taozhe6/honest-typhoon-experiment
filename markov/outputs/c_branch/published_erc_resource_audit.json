@@ -1,0 +1,265 @@
+{
+  "kuo_table_parse": {
+    "csv_path": "/Users/taozhe/Documents/New project/typhoon/markov/outputs/c_branch/kuo_2009_wpac_ce_cases.csv",
+    "parsed_rows": 62,
+    "pdf_path": "/Users/taozhe/Documents/New project/typhoon/markov/data/published/CEdataWPAC9706.pdf",
+    "pdf_sha256": "87931b32243fd9e3d5bbe7493f344e29a64d21bc3245641d7ca24bd2cb909a43",
+    "semantic_class": "concentric-eyewall formation cases; not ERC onset labels",
+    "unique_tropical_cyclones": 55
+  },
+  "registry_path": "/Users/taozhe/Documents/New project/typhoon/markov/config/published_erc_resources.json",
+  "registry_sha256": "7968fd3ed26f619676b7df7f5ab37fd4055ad325f473bda468086dcecad9af89",
+  "resources": [
+    {
+      "access": {
+        "all_expected_phrases_found": true,
+        "bytes": 52065,
+        "content_type": "text/html",
+        "expected_phrase_checks": {
+          "TC PRIMED": true,
+          "passive microwave": true
+        },
+        "final_url": "https://rammb-data.cira.colostate.edu/tcprimed/products.html",
+        "sha256": "5c6fa44d31ba07a8ff385db4a47dc736e543dc62b9c472e13f7ec7fe4b140408",
+        "status": 200
+      },
+      "assessment": "Provides storm-centered observations and metadata; the documented product variables contain no published ERC event-label column.",
+      "citation": "DeMuth et al., TC PRIMED v01r01 products and documentation",
+      "direct_reuse_for_ce_formation": false,
+      "direct_reuse_for_erc_onset": false,
+      "expected_phrases": [
+        "TC PRIMED",
+        "passive microwave"
+      ],
+      "id": "tcprimed_products",
+      "label_unit": "satellite overpass with calibrated observations and metadata",
+      "media_type": "text/html",
+      "region": "global tropical cyclones",
+      "row_level_wnp_erc_labels": false,
+      "url": "https://rammb-data.cira.colostate.edu/tcprimed/products.html",
+      "years": "1998 onward, product-dependent"
+    },
+    {
+      "access": {
+        "all_expected_phrases_found": true,
+        "bytes": 5817637,
+        "content_type": "application/pdf",
+        "expected_phrase_checks": {
+          "TC PRIMED": true,
+          "brightness temperature": true
+        },
+        "final_url": "https://rammb-data.cira.colostate.edu/tcprimed/TCPRIMED_v01r01_documentation.pdf",
+        "sha256": "297e30689a27b6eca8c456a564d38b5f083092f7c0a90894cf357f770ab155a0",
+        "status": 200
+      },
+      "assessment": "The variable inventory documents calibrated observations, storm metadata, and ancillary fields without an ERC truth-label variable.",
+      "citation": "DeMuth et al., TC PRIMED v01r01 data documentation",
+      "direct_reuse_for_ce_formation": false,
+      "direct_reuse_for_erc_onset": false,
+      "expected_phrases": [
+        "TC PRIMED",
+        "brightness temperature"
+      ],
+      "id": "tcprimed_documentation",
+      "label_unit": "documented satellite and storm metadata variables",
+      "media_type": "application/pdf",
+      "region": "global tropical cyclones",
+      "row_level_wnp_erc_labels": false,
+      "url": "https://rammb-data.cira.colostate.edu/tcprimed/TCPRIMED_v01r01_documentation.pdf",
+      "years": "1998 onward, product-dependent"
+    },
+    {
+      "access": {
+        "all_expected_phrases_found": true,
+        "bytes": 80447,
+        "content_type": "text/html; charset=UTF-8",
+        "expected_phrase_checks": {
+          "CyclObs": true
+        },
+        "final_url": "https://www.esa-cyms.org/data-access/",
+        "sha256": "15f986dd2883f79ce701d01cbdfeae1afc0abab5a1a40cfba911c6ab0db26adf",
+        "status": 200
+      },
+      "assessment": "Provides observed wind fields and structure variables; ERC sequence labels remain an analysis product.",
+      "citation": "ESA CYMS CyclObs data access",
+      "direct_reuse_for_ce_formation": false,
+      "direct_reuse_for_erc_onset": false,
+      "expected_phrases": [
+        "CyclObs"
+      ],
+      "id": "cyclobs_data_access",
+      "label_unit": "SAR surface-wind overpass",
+      "media_type": "text/html",
+      "region": "global tropical cyclones",
+      "row_level_wnp_erc_labels": false,
+      "url": "https://www.esa-cyms.org/data-access/",
+      "years": "mission-dependent"
+    },
+    {
+      "access": {
+        "all_expected_phrases_found": true,
+        "bytes": 49032,
+        "cache_path": "/Users/taozhe/Documents/New project/typhoon/markov/data/published/CEdataWPAC9706.pdf",
+        "content_type": "application/pdf",
+        "expected_phrase_checks": {
+          "Inner eyewall": true,
+          "Moat": true,
+          "TC number": true
+        },
+        "final_url": "https://web.archive.org/web/20200508075248id_/http://faculty.nps.edu/cpchang/papers/CEdataWPAC9706.pdf",
+        "sha256": "87931b32243fd9e3d5bbe7493f344e29a64d21bc3245641d7ca24bd2cb909a43",
+        "status": "cached"
+      },
+      "assessment": "A deterministic 62-row published CE-formation table with storm identifier, image time, inner-eyewall radius, and moat width. CE formation and completed ERC remain separate event semantics.",
+      "cache_filename": "CEdataWPAC9706.pdf",
+      "citation": "Kuo et al. 2009, Monthly Weather Review, DOI 10.1175/2009MWR2850.1",
+      "direct_reuse_for_ce_formation": true,
+      "direct_reuse_for_erc_onset": false,
+      "expected_phrases": [
+        "TC number",
+        "Inner eyewall",
+        "Moat"
+      ],
+      "id": "kuo2009_wpac_ce_table",
+      "label_unit": "concentric-eyewall formation case",
+      "media_type": "application/pdf",
+      "region": "western North Pacific",
+      "row_level_wnp_erc_labels": false,
+      "url": "https://web.archive.org/web/20200508075248id_/http://faculty.nps.edu/cpchang/papers/CEdataWPAC9706.pdf",
+      "years": "1997-2006"
+    },
+    {
+      "access": {
+        "error_type": "HTTPError",
+        "message": "HTTP Error 403: Forbidden",
+        "status": "error"
+      },
+      "assessment": "Publishes the algorithm, event definition, sample sizes, and verification; a downloadable row-level western North Pacific label table is absent from the paper package.",
+      "citation": "Kossin et al. 2023, Weather and Forecasting, DOI 10.1175/WAF-D-22-0178.1",
+      "direct_reuse_for_ce_formation": false,
+      "direct_reuse_for_erc_onset": false,
+      "expected_phrases": [
+        "M-PERC",
+        "Brier"
+      ],
+      "id": "mperc_paper",
+      "label_unit": "ERC onset and radial-profile probability",
+      "media_type": "application/pdf",
+      "region": "Atlantic development; global operational demonstration",
+      "row_level_wnp_erc_labels": false,
+      "url": "https://repository.library.noaa.gov/view/noaa/53696/noaa_53696_DS1.pdf",
+      "years": "training and independent periods defined in paper"
+    },
+    {
+      "access": {
+        "all_expected_phrases_found": true,
+        "bytes": 36103,
+        "content_type": "text/html; charset=utf-8",
+        "expected_phrase_checks": {
+          "Cindy": true,
+          "ERC": true
+        },
+        "final_url": "https://tropic.ssec.wisc.edu/real-time/archerOnline/web/ERC_archive_page.html",
+        "sha256": "937eb09820ed25f79c948bb25d3668c7d3fae5e3b0bf77df20a3b601afa7235a",
+        "status": 200
+      },
+      "assessment": "The public development archive is Atlantic-focused and does not supply a western North Pacific row-level ERC truth table.",
+      "citation": "CIMSS ARCHER M-PERC development archive",
+      "direct_reuse_for_ce_formation": false,
+      "direct_reuse_for_erc_onset": false,
+      "expected_phrases": [
+        "ERC",
+        "Cindy"
+      ],
+      "id": "mperc_archive",
+      "label_unit": "storm page and algorithm output",
+      "media_type": "text/html",
+      "region": "Atlantic archive page",
+      "row_level_wnp_erc_labels": false,
+      "url": "https://tropic.ssec.wisc.edu/real-time/archerOnline/web/ERC_archive_page.html",
+      "years": "1999-2011 development archive with later entries"
+    },
+    {
+      "access": {
+        "all_expected_phrases_found": true,
+        "bytes": 19832,
+        "content_type": "text/html; charset=utf-8",
+        "expected_phrase_checks": {
+          "M-PERC 2017": true,
+          "West Pacific": true
+        },
+        "final_url": "https://tropic.ssec.wisc.edu/real-time/archerOnline/cyclones/mperc_archive_2017.html",
+        "sha256": "7b917f03430bfe80023ada8b84c4824cc78502723a54e056cf74d86d1725f707",
+        "status": 200
+      },
+      "assessment": "Contains western North Pacific model-output pages; those probabilities are predictions and do not constitute independent event truth labels.",
+      "citation": "CIMSS ARCHER M-PERC 2017 all-basin product archive",
+      "direct_reuse_for_ce_formation": false,
+      "direct_reuse_for_erc_onset": false,
+      "expected_phrases": [
+        "M-PERC 2017",
+        "West Pacific"
+      ],
+      "id": "mperc_2017_all_basin_output_archive",
+      "label_unit": "storm-level operational probability output page",
+      "media_type": "text/html",
+      "region": "multiple basins, including western North Pacific product pages",
+      "row_level_wnp_erc_labels": false,
+      "url": "https://tropic.ssec.wisc.edu/real-time/archerOnline/cyclones/mperc_archive_2017.html",
+      "years": "2017 example archive"
+    },
+    {
+      "access": {
+        "all_expected_phrases_found": true,
+        "bytes": 11448538,
+        "content_type": "application/pdf;charset=UTF-8",
+        "expected_phrase_checks": {
+          "N-ERC": true,
+          "T-ERC": true
+        },
+        "final_url": "https://www.jstage.jst.go.jp/article/jmsj/97/1/97_2019-008/_pdf/-char/en",
+        "sha256": "069fdc8860458c20569490493df710273c0b19fd2bea339c945878632b7d1fde",
+        "status": 200
+      },
+      "assessment": "Reports aggregate manually classified T-ERC and N-ERC samples; the article package contains no complete machine-readable row table.",
+      "citation": "Zhu and Yu 2019, Journal of the Meteorological Society of Japan, DOI 10.2151/jmsj.2019-008",
+      "direct_reuse_for_ce_formation": false,
+      "direct_reuse_for_erc_onset": false,
+      "expected_phrases": [
+        "T-ERC",
+        "N-ERC"
+      ],
+      "id": "zhu_yu_2019_main",
+      "label_unit": "manually classified T-ERC and N-ERC cases",
+      "media_type": "application/pdf",
+      "region": "western North Pacific",
+      "row_level_wnp_erc_labels": false,
+      "url": "https://www.jstage.jst.go.jp/article/jmsj/97/1/97_2019-008/_pdf/-char/en",
+      "years": "1997-2011"
+    },
+    {
+      "access": {
+        "all_expected_phrases_found": true,
+        "bytes": 130559,
+        "content_type": "application/pdf;charset=UTF-8",
+        "expected_phrase_checks": {},
+        "final_url": "https://www.jstage.jst.go.jp/article/jmsj/97/1/97_2019-008/_supplement/_download/97_2019-008_1.pdf",
+        "sha256": "c76b742a598b738139f8823e76e70ca79a27fc7d2635494fb2339bff443e6176",
+        "status": 200
+      },
+      "assessment": "The downloadable supplement is an abstract file and carries no row-level case table.",
+      "citation": "Zhu and Yu 2019 supplementary file",
+      "direct_reuse_for_ce_formation": false,
+      "direct_reuse_for_erc_onset": false,
+      "expected_phrases": [],
+      "id": "zhu_yu_2019_supplement",
+      "label_unit": "Japanese abstract supplement",
+      "media_type": "application/pdf",
+      "region": "western North Pacific",
+      "row_level_wnp_erc_labels": false,
+      "url": "https://www.jstage.jst.go.jp/article/jmsj/97/1/97_2019-008/_supplement/_download/97_2019-008_1.pdf",
+      "years": "1997-2011"
+    }
+  ],
+  "schema_version": "1.0"
+}
