@@ -1,0 +1,30 @@
+{
+  "analysis_code_git_commit": "fb4e5e6dfd6eac9a14e72c0e397a326da6c66028",
+  "generated_at_utc": "2026-07-15T13:22:40.332266+00:00",
+  "outputs": {
+    "benchmark.json": {
+      "bytes": 7911,
+      "sha256": "ac7a791512957aa64cd51ab3c62736a837499f98bc7d454ca25c237d4592210d"
+    },
+    "candidate_development_rates.png": {
+      "bytes": 81082,
+      "sha256": "70f5f68124139ff02ae82f17d238fe0374b69066ae6c513c78bdb0ac220cf4e8"
+    },
+    "candidate_rates.csv": {
+      "bytes": 3103,
+      "sha256": "97d1d81c38457940e8c6094cd23b4379b155622bd4cbb1e2781b13720357daaa"
+    },
+    "validation_reliability.csv": {
+      "bytes": 231,
+      "sha256": "cef5629951628516f9b292a52837d08dbd47f19d662614a461822f0c8d45cfd5"
+    },
+    "validation_reliability.png": {
+      "bytes": 77267,
+      "sha256": "eca6b32475f6b9774955241ed48674736241c0f11084817f059dc29b1bdcac18"
+    },
+    "validation_rows.csv": {
+      "bytes": 413481,
+      "sha256": "971a8f7d45cf323c8c053dd0c0e64b3da89b095597d09bfd51dac05847c5c881"
+    }
+  }
+}

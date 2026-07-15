@@ -1,0 +1,249 @@
+{
+  "authoritative_forecast": false,
+  "benchmark": {
+    "metrics": {
+      "brier": {
+        "climatology_brier": {
+          "ci95_high": 0.17421295810716458,
+          "ci95_low": 0.09115809185755772,
+          "value": 0.13060318146868377
+        },
+        "event_row_rate": {
+          "ci95_high": 0.19359686936514808,
+          "ci95_low": 0.09941410129096326,
+          "value": 0.14414414414414414
+        },
+        "event_storm_rate": {
+          "ci95_high": 0.5428571428571428,
+          "ci95_low": 0.3142857142857143,
+          "value": 0.42857142857142855
+        },
+        "persistence_brier": {
+          "ci95_high": 0.1751099170185266,
+          "ci95_low": 0.09129329260996326,
+          "value": 0.13109183355974413
+        },
+        "persistence_brier_skill": {
+          "ci95_high": -1.4103484605516894e-05,
+          "ci95_low": -0.006862895976070249,
+          "value": -0.003741502202054159
+        },
+        "persistence_minus_climatology_brier": {
+          "ci95_high": 0.0011249434718563483,
+          "ci95_low": 1.0745828625431674e-06,
+          "value": 0.0004886520910603598
+        }
+      },
+      "development_rates": {
+        "event_row_rate": {
+          "ci95_high": 0.07176487203675137,
+          "ci95_low": 0.047030990345216725,
+          "value": 0.05894549763033175
+        },
+        "event_storm_rate": {
+          "ci95_high": 0.35684647302904565,
+          "ci95_low": 0.24066390041493776,
+          "value": 0.2987551867219917
+        }
+      },
+      "nondegenerate_validation_classes": true,
+      "validation_classes": [
+        0,
+        1
+      ],
+      "validation_event_storms": 30,
+      "validation_events": 112,
+      "validation_rates": {
+        "event_row_rate": {
+          "ci95_high": 0.19359686936514808,
+          "ci95_low": 0.09941410129096326,
+          "value": 0.14414414414414414
+        },
+        "event_storm_rate": {
+          "ci95_high": 0.5428571428571428,
+          "ci95_low": 0.3142857142857143,
+          "value": 0.42857142857142855
+        }
+      },
+      "validation_rows": 777,
+      "validation_storms": 70
+    },
+    "training_audit": {
+      "climatology_probability": 0.05907610305004442,
+      "development_events": 199,
+      "development_rows": 3376,
+      "development_storms": 241,
+      "persistence_degenerate_to_six_decimals": false,
+      "persistence_probability_absolute_difference": 0.01265895351261205,
+      "persistence_strata": {
+        "0": {
+          "events": 191,
+          "jeffreys_probability": 0.05988117573483427,
+          "raw_rate": 0.05974350954019393,
+          "rows": 3197,
+          "storms": 241
+        },
+        "1": {
+          "events": 8,
+          "jeffreys_probability": 0.04722222222222222,
+          "raw_rate": 0.0446927374301676,
+          "rows": 179,
+          "storms": 69
+        }
+      }
+    },
+    "validation_row_sha256": "97107b47faa290b9fd5ab992566e9550c503c9352aaeb3579379c8a36a4ef1d2"
+  },
+  "generated_at_utc": "2026-07-15T13:22:40.332266+00:00",
+  "label_semantics": "future weakening-then-reintensification best-track waveform; physical ERC causation remains unassigned",
+  "nine_point_windows": {
+    "rows": 9706,
+    "storms": 562,
+    "wind_average_window_minutes": 1
+  },
+  "provenance": {
+    "analysis_code_git_commit": "fb4e5e6dfd6eac9a14e72c0e397a326da6c66028",
+    "config_path": "/Users/taozhe/Documents/New project/typhoon/markov/config/c_event_label_v2.json",
+    "config_sha256": "1e93e0eb4a85ea600bd0bdeebafc0479a9dd28d6b80e5ff5144292cf1fd0828f",
+    "preregistration_path": "/Users/taozhe/Documents/New project/typhoon/markov/docs/c-event-label-v2-preregistration.md",
+    "preregistration_sha256": "a5aad8f1da1723a3b35504c1b2c9d7cb65ef4d939a2fdf5e701ffe1299a56d94",
+    "source_path": "/Users/taozhe/Documents/New project/typhoon/ibtracs-agency-disagreement/data/raw/ibtracs.WP.list.v04r01.csv",
+    "source_sha256": "f6dd323ad940774b98c747a639a5a1c66d94a342db50423db47f6b3e8456b687"
+  },
+  "qualification": "unvalidated",
+  "quantization_audit": {
+    "minimum_positive_native_increment_ms": 2.57222,
+    "multiple_of_5kt_fraction": 1.0,
+    "multiple_of_5kt_rows": 15036,
+    "native_unit": "kt",
+    "rows": 15036,
+    "wind_average_window_minutes": 1
+  },
+  "report_id": "c-event-label-v2-sealed-temporal-benchmark",
+  "selection": {
+    "quantization_equivalence_groups": [
+      {
+        "event_vector_sha256": "568d7713a466545d7362f5d64c8e5b76d9273d9fe64fb9c2685195c0f0f3e40c",
+        "labels": [
+          {
+            "horizon_hours": 18,
+            "threshold_ms": 2.5
+          }
+        ]
+      },
+      {
+        "event_vector_sha256": "5fb9495ebc04610c46c283fd45a9c8d4ee3ba1280895b7c4148b492d20909bc0",
+        "labels": [
+          {
+            "horizon_hours": 18,
+            "threshold_ms": 3.0
+          },
+          {
+            "horizon_hours": 18,
+            "threshold_ms": 4.0
+          },
+          {
+            "horizon_hours": 18,
+            "threshold_ms": 5.0
+          }
+        ]
+      },
+      {
+        "event_vector_sha256": "7f1f9bf3cf5a169cb420f17ce0e99da409f92d1c9b5fddb23f3aea251cb04ef3",
+        "labels": [
+          {
+            "horizon_hours": 24,
+            "threshold_ms": 3.0
+          },
+          {
+            "horizon_hours": 24,
+            "threshold_ms": 4.0
+          },
+          {
+            "horizon_hours": 24,
+            "threshold_ms": 5.0
+          }
+        ]
+      },
+      {
+        "event_vector_sha256": "93aff61cc9b76e809ce3cba460659d7d317b8611edffd73c11a223dde6946e57",
+        "labels": [
+          {
+            "horizon_hours": 24,
+            "threshold_ms": 2.5
+          }
+        ]
+      },
+      {
+        "event_vector_sha256": "98db6e24671b99b1e8f1b48186f811bd7494b296cb1df2945c2f63b4afec97ee",
+        "labels": [
+          {
+            "horizon_hours": 12,
+            "threshold_ms": 3.0
+          },
+          {
+            "horizon_hours": 12,
+            "threshold_ms": 4.0
+          },
+          {
+            "horizon_hours": 12,
+            "threshold_ms": 5.0
+          }
+        ]
+      },
+      {
+        "event_vector_sha256": "ea7672b04508e46350a6da6af67431845bcd97659487fa39382631996d26c2a1",
+        "labels": [
+          {
+            "horizon_hours": 12,
+            "threshold_ms": 2.5
+          }
+        ]
+      }
+    ],
+    "selected": {
+      "distance_from_target_midpoint": 0.041054502369668254,
+      "event_row_rate": 0.05894549763033175,
+      "event_row_rate_ci95_high": 0.07176487203675137,
+      "event_row_rate_ci95_low": 0.047030990345216725,
+      "event_storm_rate": 0.2987551867219917,
+      "event_storm_rate_ci95_high": 0.35684647302904565,
+      "event_storm_rate_ci95_low": 0.24066390041493776,
+      "event_storms": 72,
+      "event_vector_sha256": "93aff61cc9b76e809ce3cba460659d7d317b8611edffd73c11a223dde6946e57",
+      "events": 199,
+      "horizon_hours": 24,
+      "in_target_interval": true,
+      "rows": 3376,
+      "selection_qualification": "target-achieved",
+      "storms": 241,
+      "threshold_ms": 2.5
+    },
+    "target_achieved": true
+  },
+  "source_audit": {
+    "bytes": 113976897,
+    "duplicate_rows_before_resolution": 0,
+    "end_year": 2024,
+    "kt_to_ms": 0.514444,
+    "native_unit": "kt",
+    "path": "/Users/taozhe/Documents/New project/typhoon/ibtracs-agency-disagreement/data/raw/ibtracs.WP.list.v04r01.csv",
+    "selected_rows": 15036,
+    "selected_storms": 669,
+    "selection_counts": {
+      "jtwc_wp": 18788,
+      "main_track": 47699,
+      "original_or_verified": 18783,
+      "positive_wind": 18788,
+      "raw_rows": 247706,
+      "synoptic_6h": 24073,
+      "tropical_nature": 15036,
+      "year_2001_2024": 47729
+    },
+    "sha256": "f6dd323ad940774b98c747a639a5a1c66d94a342db50423db47f6b3e8456b687",
+    "start_year": 2001,
+    "wind_average_window_minutes": 1,
+    "wind_column": "USA_WIND"
+  },
+  "status": "sealed-temporal-research-baseline"
+}
