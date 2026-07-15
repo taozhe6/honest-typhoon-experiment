@@ -91,5 +91,5 @@
 - [ATCF System Administrator Guide](https://science.nrlmry.navy.mil/atcf/docs/html/ATCF_SAG_Sec3.html)
 - [Met Office Unified Model](https://www.metoffice.gov.uk/research/approach/modelling-systems/unified-model)
 - [NOAA/NCEI IBTrACS](https://www.ncei.noaa.gov/products/international-best-track-archive)
-- [MEASURED] 分析代码 Git `4a4cc9fd6d191aef3337f482a44010a664d8abbc`；生成时刻 `2026-07-15T13:09:33.779677+00:00`。
+- [MEASURED] 分析代码 Git `08e6f7ddb9a70db038a27fcdfa9c2f93705bd127`；生成时刻 `2026-07-15T13:09:33.779677+00:00`。
 - 机器可读结果：`outputs/round_v3/summary.json`、`outputs/round_v3/correlation_neff.json`、`outputs/round_v3/coverage_audit.csv`、`outputs/round_v3/paired_track_rows.csv`、`outputs/round_v3/provenance.json`。

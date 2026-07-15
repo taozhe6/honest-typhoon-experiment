@@ -1,5 +1,5 @@
 {
-  "analysis_code_git_commit": "ae0c7947c1bf35eccbf7ef8ba0c7408b1e0d1451",
+  "analysis_code_git_commit": "2349b0f9532a238debc23f93a053c53fd6797c4d",
   "ceiling_semantics": "evidence bottlenecks, not theorem-level upper bounds on atmospheric predictability",
   "evidence": {
     "redundancy_ceiling": {
@@ -191,7 +191,7 @@
     "theta_propagation": {
       "bytes": 129708,
       "path": "markov/outputs/theta_propagation/theta_propagation.json",
-      "sha256": "0d86d04b7f8356cc872c9a03382de3ed98d4956f24d3d60c88e803e471abcc63"
+      "sha256": "986f8422c490d4d0ce682b2476c53eb22c70676addcdfda695268b305ff7aaf5"
     }
   }
 }

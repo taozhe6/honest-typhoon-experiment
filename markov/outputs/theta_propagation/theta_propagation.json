@@ -16,7 +16,7 @@
   },
   "generated_at_utc": "2026-07-15T14:04:38.185236+00:00",
   "provenance": {
-    "analysis_code_git_commit": "77d3b775ff7098bf3674d8cb99d394cede9dc737",
+    "analysis_code_git_commit": "0f343298449b7095403c937cb60d31fbca46990f",
     "config_path": "/Users/taozhe/Documents/New project/typhoon/markov/config/theta_propagation.json",
     "config_sha256": "f67e1983c19328d4ee844719d26941a08c5da80e26f400d0309caebf60c8e9be",
     "protocol_path": "/Users/taozhe/Documents/New project/typhoon/markov/docs/theta-propagation-protocol.md",

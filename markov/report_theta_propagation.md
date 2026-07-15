@@ -48,5 +48,5 @@
 ## 来源与复现
 
 - [Lin et al. (2023), JAMES](https://doi.org/10.1029/2023MS003686)
-- [MEASURED] 分析代码 Git `77d3b775ff7098bf3674d8cb99d394cede9dc737`；生成时刻 `2026-07-15T14:04:38.185236+00:00`。
+- [MEASURED] 分析代码 Git `0f343298449b7095403c937cb60d31fbca46990f`；生成时刻 `2026-07-15T14:04:38.185236+00:00`。
 - 机器可读结果：`outputs/theta_propagation/theta_propagation.json`、`theta_grid.csv`、`manifest.json`。

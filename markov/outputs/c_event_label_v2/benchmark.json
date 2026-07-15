@@ -102,7 +102,7 @@
     "wind_average_window_minutes": 1
   },
   "provenance": {
-    "analysis_code_git_commit": "fb4e5e6dfd6eac9a14e72c0e397a326da6c66028",
+    "analysis_code_git_commit": "19788c829bf68d79c97623f8a2db21de62039fba",
     "config_path": "/Users/taozhe/Documents/New project/typhoon/markov/config/c_event_label_v2.json",
     "config_sha256": "1e93e0eb4a85ea600bd0bdeebafc0479a9dd28d6b80e5ff5144292cf1fd0828f",
     "preregistration_path": "/Users/taozhe/Documents/New project/typhoon/markov/docs/c-event-label-v2-preregistration.md",

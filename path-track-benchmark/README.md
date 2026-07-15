@@ -22,6 +22,6 @@ The source audit is in [`dyc2_source_audit.md`](dyc2_source_audit.md); the froze
 results, and machine-readable artifacts are in [`preregistration_round_v3.md`](preregistration_round_v3.md),
 [`report_round_v3.md`](report_round_v3.md), and [`outputs/round_v3/`](outputs/round_v3/).
 
-The selection rule was frozen in commit `8528a77`, and the resulting eligibility manifest
-was frozen in commit `52199e3` before expanded-sample errors were read. This learning
+The selection rule was frozen in commit `054f225`, and the resulting eligibility manifest
+was frozen in commit `d30ff7e` before expanded-sample errors were read. This learning
 exercise fits zero path-prediction parameters and claims no operational forecast advantage.

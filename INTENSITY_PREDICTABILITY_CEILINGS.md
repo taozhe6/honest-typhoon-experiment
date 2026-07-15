@@ -167,7 +167,7 @@ regime 日程固定。
 - [CITED] [NOAA/NCEI IBTrACS](https://www.ncei.noaa.gov/products/international-best-track-archive)
 - [CITED] [Lin et al. (2023), JAMES](https://doi.org/10.1029/2023MS003686)
 
-[MEASURED] 证据构建代码 Git `ae0c7947c1bf35eccbf7ef8ba0c7408b1e0d1451`。
+[MEASURED] 证据构建代码 Git `2349b0f9532a238debc23f93a053c53fd6797c4d`。
 机器可读产物位于 `outputs/intensity_predictability_ceilings/synthesis.json`；
 `manifest.json` 保存输入与输出哈希。
 

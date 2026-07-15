@@ -94,7 +94,7 @@
 - [MEASURED] 覆盖排除：WP202024；排除原因是没有 CMC/NGX 同循环 72 h 路径，资格生成器未读取误差。
 - [CITED] `CMC/NGX` 均为原始 late-cycle TECH；本轮读取原生 6 h 倍数点。UCAR 约定末尾 `I` 才表示提前对齐版本，本轮没有读取该版本。
 - [MEASURED] 所有 a-deck、IBTrACS 与资格 manifest 的 SHA-256 在 provenance 中逐项核对；哈希漂移会中止运行。
-- [MEASURED] 运行时刻 `2026-07-15T11:13:02.343877+00:00`；Git `52199e35b9afcecce7cc2afc5b5539800277f6f4`。
+- [MEASURED] 运行时刻 `2026-07-15T11:13:02.343877+00:00`；Git `d30ff7e60b8acede2cf214944448b896c37d9f40`。
 
 ## 三把刀自检
 

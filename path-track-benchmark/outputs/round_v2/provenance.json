@@ -2,7 +2,7 @@
   "generated_at_utc": "2026-07-15T11:13:02.343877+00:00",
   "status": "prospective-expanded-sample-learning-reproduction",
   "qualification": "unvalidated",
-  "git_commit": "52199e35b9afcecce7cc2afc5b5539800277f6f4",
+  "git_commit": "d30ff7e60b8acede2cf214944448b896c37d9f40",
   "config_sha256": "90369275a600446eb5588dd4e4cfd3bb9ebd06b779249b4d2bdcef07a1afe97f",
   "eligibility_manifest_sha256": "ab759ff0d43a59543701c009537f51b9fa4a3f4aff80f1d3ac4caca720598534",
   "parsed_forecast_point_count": 3523,

@@ -48,6 +48,7 @@
 - [FAST 固定常量敏感性报告](markov/report_global_sensitivity.md)
 - [`theta=Ck/h` 终值传播报告](markov/report_theta_propagation.md)
 - [西北太平洋强度可预报性的三重天花板](INTENSITY_PREDICTABILITY_CEILINGS.md)
+- [公开发布与敏感信息审计](PUBLICATION_AUDIT.md)
 - [统一验证脚本](scripts/verify_all.sh)
 
 ## 证据宪法

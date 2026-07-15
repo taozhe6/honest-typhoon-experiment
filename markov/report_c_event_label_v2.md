@@ -75,5 +75,5 @@
 ## 来源与复现
 
 - [NOAA/NCEI IBTrACS](https://www.ncei.noaa.gov/products/international-best-track-archive)
-- [MEASURED] 分析代码 Git `fb4e5e6dfd6eac9a14e72c0e397a326da6c66028`；生成时刻 `2026-07-15T13:22:40.332266+00:00`。
+- [MEASURED] 分析代码 Git `19788c829bf68d79c97623f8a2db21de62039fba`；生成时刻 `2026-07-15T13:22:40.332266+00:00`。
 - 机器可读结果：`outputs/c_event_label_v2/benchmark.json`、`candidate_rates.csv`、`validation_rows.csv`、`validation_reliability.csv`、`manifest.json`。
