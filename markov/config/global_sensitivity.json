@@ -1,0 +1,169 @@
+{
+  "schema_version": "1.0",
+  "status": "preregistered-synthetic-sensitivity",
+  "upstream_fast_source": {
+    "repository": "https://github.com/linjonathan/tropical_cyclone_risk",
+    "commit": "a540a1ed86b121f7244557edb691b40561b81939",
+    "evidence": {
+      "Ck": "namelist.py:60",
+      "western_north_pacific_boundary_layer_depth_m": "namelist.py:88",
+      "epsilon_kappa_beta": "intensity/coupled_fast.py:25-27"
+    }
+  },
+  "markov_parameters": {
+    "persistence_logit": 1.2,
+    "regime_width": 0.6,
+    "calibration_id": "synthetic-sensitivity-unfitted",
+    "calibrated": false
+  },
+  "perturbations": [
+    {
+      "id": "Ck_minus_30pct",
+      "multipliers": {"exchange_coefficient": 0.7},
+      "type": "one_at_a_time"
+    },
+    {
+      "id": "Ck_plus_30pct",
+      "multipliers": {"exchange_coefficient": 1.3},
+      "type": "one_at_a_time"
+    },
+    {
+      "id": "boundary_layer_depth_minus_30pct",
+      "multipliers": {"boundary_layer_depth_m": 0.7},
+      "type": "one_at_a_time"
+    },
+    {
+      "id": "boundary_layer_depth_plus_30pct",
+      "multipliers": {"boundary_layer_depth_m": 1.3},
+      "type": "one_at_a_time"
+    },
+    {
+      "id": "fast_kappa_minus_30pct",
+      "multipliers": {"kappa": 0.7},
+      "type": "one_at_a_time"
+    },
+    {
+      "id": "fast_kappa_plus_30pct",
+      "multipliers": {"kappa": 1.3},
+      "type": "one_at_a_time"
+    },
+    {
+      "id": "Ck_and_depth_minus_30pct",
+      "multipliers": {
+        "exchange_coefficient": 0.7,
+        "boundary_layer_depth_m": 0.7
+      },
+      "type": "ratio_preserving_structural_control"
+    },
+    {
+      "id": "Ck_and_depth_plus_30pct",
+      "multipliers": {
+        "exchange_coefficient": 1.3,
+        "boundary_layer_depth_m": 1.3
+      },
+      "type": "ratio_preserving_structural_control"
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "open_ocean_intensifying",
+      "seed": 20260715,
+      "initial_regime": "quasi_steady",
+      "forced_regime_schedule": [
+        "intensifying",
+        "intensifying",
+        "intensifying",
+        "intensifying",
+        "quasi_steady",
+        "quasi_steady",
+        "quasi_steady",
+        "quasi_steady"
+      ],
+      "initial_state": {
+        "wind_ms": 35.0,
+        "core_moisture": 0.78,
+        "central_pressure_pa": 97000.0,
+        "rmw_m": 40000.0
+      },
+      "forcings": [
+        {"potential_intensity_ms": 72.0, "shear_ms": 7.0, "entropy_deficit": 0.45, "mixed_layer_depth_m": 55.0, "submixed_stratification_k_per_100m": 1.0, "translation_speed_ms": 5.5, "surface_exchange_multiplier": 1.0, "land_fraction": 0.0, "latitude_deg": 20.0},
+        {"potential_intensity_ms": 71.2, "shear_ms": 8.8, "entropy_deficit": 0.45, "mixed_layer_depth_m": 55.0, "submixed_stratification_k_per_100m": 1.0, "translation_speed_ms": 5.5, "surface_exchange_multiplier": 1.0, "land_fraction": 0.0, "latitude_deg": 20.4},
+        {"potential_intensity_ms": 70.4, "shear_ms": 10.6, "entropy_deficit": 0.45, "mixed_layer_depth_m": 55.0, "submixed_stratification_k_per_100m": 1.0, "translation_speed_ms": 5.5, "surface_exchange_multiplier": 1.0, "land_fraction": 0.0, "latitude_deg": 20.8},
+        {"potential_intensity_ms": 69.6, "shear_ms": 12.4, "entropy_deficit": 0.45, "mixed_layer_depth_m": 55.0, "submixed_stratification_k_per_100m": 1.0, "translation_speed_ms": 5.5, "surface_exchange_multiplier": 1.0, "land_fraction": 0.0, "latitude_deg": 21.2},
+        {"potential_intensity_ms": 68.8, "shear_ms": 14.2, "entropy_deficit": 0.45, "mixed_layer_depth_m": 55.0, "submixed_stratification_k_per_100m": 1.0, "translation_speed_ms": 5.5, "surface_exchange_multiplier": 1.0, "land_fraction": 0.0, "latitude_deg": 21.6},
+        {"potential_intensity_ms": 68.0, "shear_ms": 16.0, "entropy_deficit": 0.45, "mixed_layer_depth_m": 55.0, "submixed_stratification_k_per_100m": 1.0, "translation_speed_ms": 5.5, "surface_exchange_multiplier": 1.0, "land_fraction": 0.0, "latitude_deg": 22.0},
+        {"potential_intensity_ms": 67.2, "shear_ms": 17.8, "entropy_deficit": 0.45, "mixed_layer_depth_m": 55.0, "submixed_stratification_k_per_100m": 1.0, "translation_speed_ms": 5.5, "surface_exchange_multiplier": 1.0, "land_fraction": 0.0, "latitude_deg": 22.4},
+        {"potential_intensity_ms": 66.4, "shear_ms": 19.6, "entropy_deficit": 0.45, "mixed_layer_depth_m": 55.0, "submixed_stratification_k_per_100m": 1.0, "translation_speed_ms": 5.5, "surface_exchange_multiplier": 1.0, "land_fraction": 0.0, "latitude_deg": 22.8}
+      ]
+    },
+    {
+      "id": "hostile_open_ocean",
+      "seed": 20260716,
+      "initial_regime": "weakening",
+      "forced_regime_schedule": [
+        "weakening",
+        "weakening",
+        "weakening",
+        "weakening",
+        "weakening",
+        "weakening",
+        "weakening",
+        "weakening"
+      ],
+      "initial_state": {
+        "wind_ms": 45.0,
+        "core_moisture": 0.72,
+        "central_pressure_pa": 95000.0,
+        "rmw_m": 35000.0
+      },
+      "forcings": [
+        {"potential_intensity_ms": 58.0, "shear_ms": 18.0, "entropy_deficit": 1.1, "mixed_layer_depth_m": 30.0, "submixed_stratification_k_per_100m": 1.5, "translation_speed_ms": 3.0, "surface_exchange_multiplier": 1.0, "land_fraction": 0.0, "latitude_deg": 22.0},
+        {"potential_intensity_ms": 57.0, "shear_ms": 19.5, "entropy_deficit": 1.1, "mixed_layer_depth_m": 30.0, "submixed_stratification_k_per_100m": 1.5, "translation_speed_ms": 3.0, "surface_exchange_multiplier": 1.0, "land_fraction": 0.0, "latitude_deg": 22.4},
+        {"potential_intensity_ms": 56.0, "shear_ms": 21.0, "entropy_deficit": 1.1, "mixed_layer_depth_m": 30.0, "submixed_stratification_k_per_100m": 1.5, "translation_speed_ms": 3.0, "surface_exchange_multiplier": 1.0, "land_fraction": 0.0, "latitude_deg": 22.8},
+        {"potential_intensity_ms": 55.0, "shear_ms": 22.5, "entropy_deficit": 1.1, "mixed_layer_depth_m": 30.0, "submixed_stratification_k_per_100m": 1.5, "translation_speed_ms": 3.0, "surface_exchange_multiplier": 1.0, "land_fraction": 0.0, "latitude_deg": 23.2},
+        {"potential_intensity_ms": 54.0, "shear_ms": 24.0, "entropy_deficit": 1.1, "mixed_layer_depth_m": 30.0, "submixed_stratification_k_per_100m": 1.5, "translation_speed_ms": 3.0, "surface_exchange_multiplier": 1.0, "land_fraction": 0.0, "latitude_deg": 23.6},
+        {"potential_intensity_ms": 53.0, "shear_ms": 25.5, "entropy_deficit": 1.1, "mixed_layer_depth_m": 30.0, "submixed_stratification_k_per_100m": 1.5, "translation_speed_ms": 3.0, "surface_exchange_multiplier": 1.0, "land_fraction": 0.0, "latitude_deg": 24.0},
+        {"potential_intensity_ms": 52.0, "shear_ms": 27.0, "entropy_deficit": 1.1, "mixed_layer_depth_m": 30.0, "submixed_stratification_k_per_100m": 1.5, "translation_speed_ms": 3.0, "surface_exchange_multiplier": 1.0, "land_fraction": 0.0, "latitude_deg": 24.4},
+        {"potential_intensity_ms": 51.0, "shear_ms": 28.5, "entropy_deficit": 1.1, "mixed_layer_depth_m": 30.0, "submixed_stratification_k_per_100m": 1.5, "translation_speed_ms": 3.0, "surface_exchange_multiplier": 1.0, "land_fraction": 0.0, "latitude_deg": 24.8}
+      ]
+    },
+    {
+      "id": "landfall_transition",
+      "seed": 20260717,
+      "initial_regime": "intensifying",
+      "forced_regime_schedule": [
+        "intensifying",
+        "intensifying",
+        "quasi_steady",
+        "quasi_steady",
+        "weakening",
+        "weakening",
+        "weakening",
+        "weakening"
+      ],
+      "initial_state": {
+        "wind_ms": 42.0,
+        "core_moisture": 0.8,
+        "central_pressure_pa": 96000.0,
+        "rmw_m": 45000.0
+      },
+      "forcings": [
+        {"potential_intensity_ms": 68.0, "shear_ms": 10.0, "entropy_deficit": 0.65, "mixed_layer_depth_m": 50.0, "submixed_stratification_k_per_100m": 1.1, "translation_speed_ms": 6.0, "surface_exchange_multiplier": 1.0, "land_fraction": 0.0, "latitude_deg": 22.0},
+        {"potential_intensity_ms": 68.0, "shear_ms": 10.0, "entropy_deficit": 0.65, "mixed_layer_depth_m": 50.0, "submixed_stratification_k_per_100m": 1.1, "translation_speed_ms": 6.0, "surface_exchange_multiplier": 1.0, "land_fraction": 0.0, "latitude_deg": 22.4},
+        {"potential_intensity_ms": 68.0, "shear_ms": 10.0, "entropy_deficit": 0.65, "mixed_layer_depth_m": 50.0, "submixed_stratification_k_per_100m": 1.1, "translation_speed_ms": 6.0, "surface_exchange_multiplier": 1.2, "land_fraction": 0.1, "latitude_deg": 22.8},
+        {"potential_intensity_ms": 68.0, "shear_ms": 10.0, "entropy_deficit": 0.65, "mixed_layer_depth_m": 50.0, "submixed_stratification_k_per_100m": 1.1, "translation_speed_ms": 6.0, "surface_exchange_multiplier": 1.5, "land_fraction": 0.25, "latitude_deg": 23.2},
+        {"potential_intensity_ms": 68.0, "shear_ms": 10.0, "entropy_deficit": 0.65, "mixed_layer_depth_m": 50.0, "submixed_stratification_k_per_100m": 1.1, "translation_speed_ms": 6.0, "surface_exchange_multiplier": 2.0, "land_fraction": 0.5, "latitude_deg": 23.6},
+        {"potential_intensity_ms": 68.0, "shear_ms": 10.0, "entropy_deficit": 0.65, "mixed_layer_depth_m": 50.0, "submixed_stratification_k_per_100m": 1.1, "translation_speed_ms": 6.0, "surface_exchange_multiplier": 2.5, "land_fraction": 0.75, "latitude_deg": 24.0},
+        {"potential_intensity_ms": 68.0, "shear_ms": 10.0, "entropy_deficit": 0.65, "mixed_layer_depth_m": 50.0, "submixed_stratification_k_per_100m": 1.1, "translation_speed_ms": 6.0, "surface_exchange_multiplier": 3.0, "land_fraction": 0.95, "latitude_deg": 24.4},
+        {"potential_intensity_ms": 68.0, "shear_ms": 10.0, "entropy_deficit": 0.65, "mixed_layer_depth_m": 50.0, "submixed_stratification_k_per_100m": 1.1, "translation_speed_ms": 6.0, "surface_exchange_multiplier": 3.0, "land_fraction": 1.0, "latitude_deg": 24.8}
+      ]
+    }
+  ],
+  "integration": {
+    "duration_hours_per_step": 6.0,
+    "steps": 8,
+    "comparison_hour": 48,
+    "common_random_numbers": true
+  },
+  "ratio_invariance_absolute_tolerance": 1e-8
+}
