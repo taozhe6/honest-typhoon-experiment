@@ -1,0 +1,197 @@
+{
+  "analysis_code_git_commit": "ae0c7947c1bf35eccbf7ef8ba0c7408b1e0d1451",
+  "ceiling_semantics": "evidence bottlenecks, not theorem-level upper bounds on atmospheric predictability",
+  "evidence": {
+    "redundancy_ceiling": {
+      "agency_pairwise_disagreement": {
+        "JTWC_1min_to_10min_0.88": {
+          "maximum_raw_ms": 4.929310409189192,
+          "maximum_reported_integer_ms": 5,
+          "minimum_raw_ms": 2.4897580877210306,
+          "minimum_reported_integer_ms": 2,
+          "pair_count": 10
+        },
+        "JTWC_1min_to_10min_0.93": {
+          "maximum_raw_ms": 5.541493728045622,
+          "maximum_reported_integer_ms": 6,
+          "minimum_raw_ms": 2.4897580877210306,
+          "minimum_reported_integer_ms": 2,
+          "pair_count": 10
+        },
+        "evidence_label": "ASSUMED_TO_MEASURED",
+        "wind_average_window_minutes": 10
+      },
+      "correction": {
+        "claim_status": "retracted",
+        "reason": "the two 1.46 references are the same observation audit, while 1.47 is a path-error construct; round-v2 and round-v3 path samples also overlap",
+        "retracted_claim": "1.46, 1.47, and 1.46 are three independent replications"
+      },
+      "five_agency_intensity_neff": {
+        "algebraic_point_range": [
+          49.088000314650586,
+          145.50784998217074
+        ],
+        "evidence_label": "ASSUMED_TO_MEASURED",
+        "number_of_agencies": 5,
+        "reason": "For five agencies, sum_i d_i = 0 at every time.",
+        "status": "unidentifiable"
+      },
+      "separate_redundancy_diagnostics": {
+        "JTWC_V_Pc_RMW_participation_ratio": {
+          "ci95": null,
+          "construct": "cross-channel effective dimension of USA_WIND, USA_PRES, USA_RMW",
+          "evidence_label": "MEASURED",
+          "record_count": 16225,
+          "storm_count": 660,
+          "value": 1.464133937313892
+        },
+        "path_CMC_NGX_round_v2_neff": {
+          "ci95": [
+            1.3408139606075953,
+            1.6221610866002878
+          ],
+          "construct": "exchangeable two-stream lead-centered radial track-error n_eff",
+          "evidence_label": "ASSUMED_TO_MEASURED",
+          "record_count": 1203,
+          "storm_count": 26,
+          "value": 1.4670755349841267
+        },
+        "path_LOCAL_EQ2_UKM_round_v3_neff": {
+          "ci95": [
+            1.3062432655695444,
+            1.769701433706947
+          ],
+          "construct": "exchangeable two-stream lead-centered radial track-error n_eff",
+          "evidence_label": "ASSUMED_TO_MEASURED",
+          "record_count": 552,
+          "storm_count": 17,
+          "value": 1.4861313668287388
+        },
+        "path_round_v3_increment": {
+          "ci95": [
+            -0.20296866100734362,
+            0.39709829265982943
+          ],
+          "construct": "same-bootstrap difference between LOCAL_EQ2-UKM and CMC-NGX path n_eff",
+          "evidence_label": "MEASURED",
+          "value": 0.07487375567145826
+        }
+      }
+    },
+    "structural_ceiling": {
+      "comparison_scope": "numerical scale comparison only; agency disagreement and synthetic parameter response have different statistical semantics",
+      "individual_constant_sensitivity": {
+        "absolute_final_wind_delta_ms": {
+          "Ck +30%": 2.525007780863639,
+          "Ck -30%": 3.5432238790581287,
+          "h +30%": 2.5996857878977337,
+          "h -30%": 3.4060731181646364,
+          "kappa +30%": 0.8316757409968218,
+          "kappa -30%": 0.7743397438212511
+        },
+        "family_maximum_ms": {
+          "Ck": 3.5432238790581287,
+          "h": 3.4060731181646364,
+          "kappa": 0.8316757409968218
+        },
+        "ratio_invariance": {
+          "absolute_tolerance": 1e-08,
+          "maximum_native_state_delta": 2.546585164964199e-11,
+          "maximum_transition_probability_l1_delta": 8.656270145124267e-16,
+          "passed": true
+        }
+      },
+      "theta_final_state_propagation": {
+        "comparison_hour": 48.0,
+        "equivalent_parameterizations_passed": true,
+        "evidence_label": "ASSUMED_TO_MEASURED",
+        "grid_points": 61,
+        "maximum_baseline_centered_absolute_delta_ms": 3.5432238790581287,
+        "maximum_endpoint_to_endpoint_width_ms": 6.068231659921768,
+        "theta_definition": "exchange_coefficient / boundary_layer_depth_m",
+        "theta_multiplier_range": [
+          0.7,
+          1.3
+        ],
+        "uncertainty_semantics": "assumed bounded scenario envelope; no probability distribution"
+      }
+    },
+    "truth_ceiling": {
+      "agencies": [
+        "JTWC",
+        "JMA",
+        "CMA",
+        "HKO",
+        "KMA"
+      ],
+      "agency_count": 5,
+      "evidence_label": "MEASURED",
+      "identifiable_outputs": [],
+      "landfall_events": 108,
+      "matched_independent_truth_events": 0,
+      "status_by_agency": {
+        "CMA": "unidentifiable_zero_independent_truth_coverage",
+        "HKO": "unidentifiable_zero_independent_truth_coverage",
+        "JMA": "unidentifiable_zero_independent_truth_coverage",
+        "JTWC": "unidentifiable_zero_independent_truth_coverage",
+        "KMA": "unidentifiable_zero_independent_truth_coverage"
+      },
+      "unidentifiable_outputs": [
+        "agency landfall bias against independent truth",
+        "agency landfall MAE against independent truth",
+        "agency landfall RMSE against independent truth",
+        "correlation of agency errors against independent truth"
+      ]
+    }
+  },
+  "generated_at_utc": "2026-07-15T14:11:07.034067+00:00",
+  "qualification": "cross-project-evidence-synthesis; unvalidated for forecasting",
+  "report_id": "western-north-pacific-intensity-predictability-ceilings-v1",
+  "sources": {
+    "five_agency_neff": {
+      "bytes": 64846,
+      "path": "ibtracs-agency-disagreement/outputs/neff_sensitivity.json",
+      "sha256": "bf5744f8cd273d963b928b00498506c7a67cb4db366367eeebe51370f67e8e3c"
+    },
+    "global_sensitivity": {
+      "bytes": 617996,
+      "path": "markov/outputs/global_sensitivity/global_sensitivity.json",
+      "sha256": "e63555f08d0d01d755a5d394eaf1ae15d566f76a500d44502b31cf14ca1a9308"
+    },
+    "independent_truth": {
+      "bytes": 496,
+      "path": "ibtracs-agency-disagreement/outputs/b_branch/independent_truth_error_table.csv",
+      "sha256": "f3ca7c774c7b223bbadee26e3a30434d9b91853388c1fe10fdbbb03357016094"
+    },
+    "observation_dimension": {
+      "bytes": 8627,
+      "path": "markov/outputs/ibtracs_observation_audit_2001_2024.json",
+      "sha256": "2bb5e8f3dfb646faab1d18a54a0a8539ce84f88d7c5adb1ceae37c975354d102"
+    },
+    "pairwise_s088": {
+      "bytes": 431,
+      "path": "ibtracs-agency-disagreement/outputs/pairwise_disagreement_S088.csv",
+      "sha256": "9a73e084b9b258b6af99cb003dbf16bbf1515aabc923a73e575db7fd2cf0c159"
+    },
+    "pairwise_s093": {
+      "bytes": 429,
+      "path": "ibtracs-agency-disagreement/outputs/pairwise_disagreement_S093.csv",
+      "sha256": "de7569d7f5627833721d6446f9f0177636db2855768bbca472b963a9ec54dba2"
+    },
+    "path_round_v2": {
+      "bytes": 3007,
+      "path": "path-track-benchmark/outputs/round_v2/correlation_neff.json",
+      "sha256": "334e1f6c5a86d99ff23abaeafa150f1373358f979a46db6bbefca6ce58d617eb"
+    },
+    "path_round_v3": {
+      "bytes": 2243,
+      "path": "path-track-benchmark/outputs/round_v3/correlation_neff.json",
+      "sha256": "1c1c914dc589082b963a747362bb160e0eae0481554828f694c66facfe076c06"
+    },
+    "theta_propagation": {
+      "bytes": 129708,
+      "path": "markov/outputs/theta_propagation/theta_propagation.json",
+      "sha256": "0d86d04b7f8356cc872c9a03382de3ed98d4956f24d3d60c88e803e471abcc63"
+    }
+  }
+}

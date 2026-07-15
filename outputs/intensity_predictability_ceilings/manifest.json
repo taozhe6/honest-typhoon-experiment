@@ -1,0 +1,14 @@
+{
+  "analysis_code_git_commit": "ae0c7947c1bf35eccbf7ef8ba0c7408b1e0d1451",
+  "generated_at_utc": "2026-07-15T14:11:07.034067+00:00",
+  "outputs": {
+    "synthesis.json": {
+      "bytes": 7682,
+      "sha256": "c7cd370c18819de3e4adecc6555e6563b6d9e4092162e0a3fe9dba104abae545"
+    },
+    "three_ceilings.png": {
+      "bytes": 145700,
+      "sha256": "ed3d8a06a76ca78c8c53edf31e68bd335f2aab9f995f8aa463b85d35674b83fc"
+    }
+  }
+}
