@@ -195,6 +195,15 @@ def build_report(result: dict[str, Any], candidates: pd.DataFrame) -> str:
     )
     equivalence_groups = result["selection"]["quantization_equivalence_groups"]
     repeated_groups = [group for group in equivalence_groups if len(group["labels"]) > 1]
+    development_rate = metrics["development_rates"]["event_row_rate"]
+    validation_rate = metrics["validation_rates"]["event_row_rate"]
+    rate_shift_points = 100.0 * (
+        validation_rate["value"] - development_rate["value"]
+    )
+    rate_intervals_overlap = not (
+        development_rate["ci95_high"] < validation_rate["ci95_low"]
+        or validation_rate["ci95_high"] < development_rate["ci95_low"]
+    )
 
     lines = [
         "# C 支线：非退化减弱—再增强波形标签 v2",
@@ -206,9 +215,13 @@ def build_report(result: dict[str, Any], candidates: pd.DataFrame) -> str:
         f"- [MEASURED] 确定性开发集选择得到 `H={selected['horizon_hours']} h`、"
         f"`q={selected['threshold_ms']:g} m/s`；{target_statement}",
         f"- [MEASURED] 开发集逐时次事件率 "
-        f"{_percent_metric(metrics['development_rates']['event_row_rate'])}；"
+        f"{_percent_metric(development_rate)}；"
         f"2019--2024 密封时间段事件率 "
-        f"{_percent_metric(metrics['validation_rates']['event_row_rate'])}。",
+        f"{_percent_metric(validation_rate)}。",
+        f"- [MEASURED] 密封时间段点估计比开发集高 {rate_shift_points:.1f} 个百分点；"
+        f"两个台风聚类 95% CI"
+        f"{'重叠' if rate_intervals_overlap else '不重叠'}。开发集点估计通过 5% 门槛，"
+        f"其区间下界为 {100 * development_rate['ci95_low']:.1f}%。",
         f"- [MEASURED] 密封时间段包含 {metrics['validation_events']} 个事件、"
         f"{metrics['validation_rows']} 行、{metrics['validation_storms']} 场台风；"
         f"双类别评分门槛"
@@ -217,11 +230,14 @@ def build_report(result: dict[str, Any], candidates: pd.DataFrame) -> str:
         f"{_decimal_metric(brier['climatology_brier'])}；持续性 Brier="
         f"{_decimal_metric(brier['persistence_brier'])}。",
         f"- [MEASURED] `Brier_persistence-Brier_climatology`="
-        f"{_decimal_metric(difference)}；{brier_decision}",
+        f"{_decimal_metric(difference, 6)}；{brier_decision}",
         f"- [MEASURED] 1 分钟 `USA_WIND` 中，5 kt 整倍数占 "
         f"{100 * result['quantization_audit']['multiple_of_5kt_fraction']:.1f}%；"
         f"12 个数值候选折叠成 {len(equivalence_groups)} 个事件向量等价类，"
         f"其中 {len(repeated_groups)} 类包含重复标签。",
+        f"- [CITED+MEASURED] 5 kt 等于 "
+        f"{result['quantization_audit']['minimum_positive_native_increment_ms']:.3f} m/s；"
+        f"选定的 `q=2.5 m/s` 在该量化序列上对应至少一个 5 kt 强度档。",
         "- [MEASURED] 这个结果建立了一个可评分、可被后续方法击败的概率门槛。"
         "标签语义仍是强度波形代理；微波/SAR 结构承担 ERC 因果确认。",
         "",
@@ -232,7 +248,7 @@ def build_report(result: dict[str, Any], candidates: pd.DataFrame) -> str:
         "## 候选标签审计",
         "",
         "[MEASURED] 比率括号为按台风 bootstrap 2,000 次的 95% CI。选择只使用"
-        "2001--2018；表中粗体行为冻结标签。",
+        " 2001--2018；表中粗体行为冻结标签。",
         "",
         "|H|q|行/台风|事件|开发率|目标内|向量哈希|",
         "|---:|---:|---:|---:|---:|:---:|---|",
@@ -287,7 +303,7 @@ def build_report(result: dict[str, Any], candidates: pd.DataFrame) -> str:
             f"{training['persistence_strata']['1']['events']}/"
             f"{training['persistence_strata']['1']['rows']} 事件/行。",
             f"- [MEASURED] 持续性 Brier skill="
-            f"{_decimal_metric(brier['persistence_brier_skill'])}。",
+            f"{_decimal_metric(brier['persistence_brier_skill'], 6)}。",
             "- [MEASURED] 全部区间按密封时间段台风 SID 整块重采样；相邻 6 h 行"
             "不充当独立样本。",
             "",
@@ -465,4 +481,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
