@@ -1,0 +1,47 @@
+{
+  "status": "learning-reproduction",
+  "storms": [
+    {
+      "atcf_id": "WP122022",
+      "name": "HINNAMNOR",
+      "adeck_url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2022/awp122022.dat"
+    },
+    {
+      "atcf_id": "WP052023",
+      "name": "DOKSURI",
+      "adeck_url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2023/awp052023.dat"
+    },
+    {
+      "atcf_id": "WP052024",
+      "name": "GAEMI",
+      "adeck_url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2024/awp052024.dat"
+    },
+    {
+      "atcf_id": "WP122024",
+      "name": "YAGI",
+      "adeck_url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2024/awp122024.dat"
+    }
+  ],
+  "aids": {
+    "CMC": {
+      "description": "Canadian model",
+      "source": "NHC ATCF TECH list"
+    },
+    "NGX": {
+      "description": "NAVGEM/NOGAPS with GFS tracker",
+      "source": "NHC ATCF TECH list"
+    }
+  },
+  "lead_hours": [24, 48, 72, 96, 120],
+  "bootstrap": {
+    "replicates": 2000,
+    "seed": 20260715,
+    "cluster": "storm"
+  },
+  "ibtracs": {
+    "url": "https://www.ncei.noaa.gov/data/international-best-track-archive-for-climate-stewardship-ibtracs/v04r01/access/csv/ibtracs.WP.list.v04r01.csv",
+    "shared_local_path": "../ibtracs-agency-disagreement/data/raw/ibtracs.WP.list.v04r01.csv",
+    "fields": ["USA_ATCF_ID", "ISO_TIME", "USA_LAT", "USA_LON"]
+  }
+}
+

@@ -1,0 +1,242 @@
+[
+  {
+    "lead_hours": 24,
+    "aid": "CMC",
+    "record_count": 46,
+    "storm_count": 4,
+    "kish_effective_storm_count": 3.6357388316151202,
+    "mean_error_km": 89.90287999629064,
+    "mean_error_ci95_km": [
+      70.44002275972215,
+      106.5754750019871
+    ],
+    "median_error_km": 84.82263886509553,
+    "median_error_ci95_km": [
+      63.120607628972415,
+      102.23032885276945
+    ],
+    "p80_error_km": 117.84279984342604
+  },
+  {
+    "lead_hours": 24,
+    "aid": "NGX",
+    "record_count": 46,
+    "storm_count": 4,
+    "kish_effective_storm_count": 3.6357388316151202,
+    "mean_error_km": 85.47828849388699,
+    "mean_error_ci95_km": [
+      71.03597852068576,
+      99.92059846708823
+    ],
+    "median_error_km": 70.94001369610649,
+    "median_error_ci95_km": [
+      64.01286291777173,
+      98.04954689337447
+    ],
+    "p80_error_km": 118.54694141988746
+  },
+  {
+    "lead_hours": 24,
+    "aid": "CMC_MINUS_NGX",
+    "record_count": 46,
+    "storm_count": 4,
+    "kish_effective_storm_count": 3.6357388316151202,
+    "mean_error_difference_km": 4.4245915024036515,
+    "mean_error_difference_ci95_km": [
+      -7.402756852049888,
+      26.600869667004037
+    ]
+  },
+  {
+    "lead_hours": 48,
+    "aid": "CMC",
+    "record_count": 40,
+    "storm_count": 4,
+    "kish_effective_storm_count": 3.6363636363636362,
+    "mean_error_km": 184.73912103077856,
+    "mean_error_ci95_km": [
+      159.3161018878632,
+      208.7706289160695
+    ],
+    "median_error_km": 200.13061720441218,
+    "median_error_ci95_km": [
+      154.058807550991,
+      219.91697007348108
+    ],
+    "p80_error_km": 251.98261051881332
+  },
+  {
+    "lead_hours": 48,
+    "aid": "NGX",
+    "record_count": 40,
+    "storm_count": 4,
+    "kish_effective_storm_count": 3.6363636363636362,
+    "mean_error_km": 153.63764238245173,
+    "mean_error_ci95_km": [
+      108.25935161968266,
+      193.39664759458577
+    ],
+    "median_error_km": 114.8964260930007,
+    "median_error_ci95_km": [
+      93.95733899197471,
+      187.8385149430381
+    ],
+    "p80_error_km": 213.38044480109392
+  },
+  {
+    "lead_hours": 48,
+    "aid": "CMC_MINUS_NGX",
+    "record_count": 40,
+    "storm_count": 4,
+    "kish_effective_storm_count": 3.6363636363636362,
+    "mean_error_difference_km": 31.10147864832684,
+    "mean_error_difference_ci95_km": [
+      5.833634699328245,
+      78.02747455360993
+    ]
+  },
+  {
+    "lead_hours": 72,
+    "aid": "CMC",
+    "record_count": 34,
+    "storm_count": 4,
+    "kish_effective_storm_count": 3.6582278481012658,
+    "mean_error_km": 264.55378905063435,
+    "mean_error_ci95_km": [
+      202.00144214212264,
+      318.60732385986375
+    ],
+    "median_error_km": 243.25316859660813,
+    "median_error_ci95_km": [
+      165.85607533025683,
+      285.10102754065116
+    ],
+    "p80_error_km": 325.4861927737237
+  },
+  {
+    "lead_hours": 72,
+    "aid": "NGX",
+    "record_count": 34,
+    "storm_count": 4,
+    "kish_effective_storm_count": 3.6582278481012658,
+    "mean_error_km": 207.6422881795326,
+    "mean_error_ci95_km": [
+      153.36028644965796,
+      281.631973302781
+    ],
+    "median_error_km": 165.53938215174352,
+    "median_error_ci95_km": [
+      96.4164667526631,
+      171.72845706345376
+    ],
+    "p80_error_km": 261.30630455907124
+  },
+  {
+    "lead_hours": 72,
+    "aid": "CMC_MINUS_NGX",
+    "record_count": 34,
+    "storm_count": 4,
+    "kish_effective_storm_count": 3.6582278481012658,
+    "mean_error_difference_km": 56.9115008711018,
+    "mean_error_difference_ci95_km": [
+      32.031956293454385,
+      94.93931694481732
+    ]
+  },
+  {
+    "lead_hours": 96,
+    "aid": "CMC",
+    "record_count": 25,
+    "storm_count": 4,
+    "kish_effective_storm_count": 3.834355828220859,
+    "mean_error_km": 335.3748172339396,
+    "mean_error_ci95_km": [
+      266.22983042762974,
+      426.0862945570688
+    ],
+    "median_error_km": 326.4649164892272,
+    "median_error_ci95_km": [
+      243.9729674274023,
+      440.42766734032614
+    ],
+    "p80_error_km": 474.29922447247816
+  },
+  {
+    "lead_hours": 96,
+    "aid": "NGX",
+    "record_count": 25,
+    "storm_count": 4,
+    "kish_effective_storm_count": 3.834355828220859,
+    "mean_error_km": 225.89895754275247,
+    "mean_error_ci95_km": [
+      180.53714262261747,
+      301.6061936860829
+    ],
+    "median_error_km": 164.29621817766187,
+    "median_error_ci95_km": [
+      149.78327583628703,
+      190.55104079584774
+    ],
+    "p80_error_km": 329.2660508733176
+  },
+  {
+    "lead_hours": 96,
+    "aid": "CMC_MINUS_NGX",
+    "record_count": 25,
+    "storm_count": 4,
+    "kish_effective_storm_count": 3.834355828220859,
+    "mean_error_difference_km": 109.47585969118718,
+    "mean_error_difference_ci95_km": [
+      78.64293885871989,
+      137.23927575095576
+    ]
+  },
+  {
+    "lead_hours": 120,
+    "aid": "CMC",
+    "record_count": 18,
+    "storm_count": 4,
+    "kish_effective_storm_count": 3.857142857142857,
+    "mean_error_km": 469.65708238325925,
+    "mean_error_ci95_km": [
+      303.0249247908707,
+      683.2187271506469
+    ],
+    "median_error_km": 440.85740105784635,
+    "median_error_ci95_km": [
+      265.844691216883,
+      590.2868010615114
+    ],
+    "p80_error_km": 630.0680869228568
+  },
+  {
+    "lead_hours": 120,
+    "aid": "NGX",
+    "record_count": 18,
+    "storm_count": 4,
+    "kish_effective_storm_count": 3.857142857142857,
+    "mean_error_km": 356.3248197220421,
+    "mean_error_ci95_km": [
+      239.61614170036756,
+      486.5823602799867
+    ],
+    "median_error_km": 282.06809025655286,
+    "median_error_ci95_km": [
+      189.40781577022065,
+      374.2855345668606
+    ],
+    "p80_error_km": 510.3182853316806
+  },
+  {
+    "lead_hours": 120,
+    "aid": "CMC_MINUS_NGX",
+    "record_count": 18,
+    "storm_count": 4,
+    "kish_effective_storm_count": 3.857142857142857,
+    "mean_error_difference_km": 113.33226266121719,
+    "mean_error_difference_ci95_km": [
+      18.288041391585494,
+      192.595405394451
+    ]
+  }
+]

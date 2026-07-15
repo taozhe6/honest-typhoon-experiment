@@ -1,0 +1,102 @@
+{
+  "generated_at_utc": "2026-07-15T10:52:47.459523+00:00",
+  "status": "learning-reproduction",
+  "config": {
+    "status": "learning-reproduction",
+    "storms": [
+      {
+        "atcf_id": "WP122022",
+        "name": "HINNAMNOR",
+        "adeck_url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2022/awp122022.dat"
+      },
+      {
+        "atcf_id": "WP052023",
+        "name": "DOKSURI",
+        "adeck_url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2023/awp052023.dat"
+      },
+      {
+        "atcf_id": "WP052024",
+        "name": "GAEMI",
+        "adeck_url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2024/awp052024.dat"
+      },
+      {
+        "atcf_id": "WP122024",
+        "name": "YAGI",
+        "adeck_url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2024/awp122024.dat"
+      }
+    ],
+    "aids": {
+      "CMC": {
+        "description": "Canadian model",
+        "source": "NHC ATCF TECH list"
+      },
+      "NGX": {
+        "description": "NAVGEM/NOGAPS with GFS tracker",
+        "source": "NHC ATCF TECH list"
+      }
+    },
+    "lead_hours": [
+      24,
+      48,
+      72,
+      96,
+      120
+    ],
+    "bootstrap": {
+      "replicates": 2000,
+      "seed": 20260715,
+      "cluster": "storm"
+    },
+    "ibtracs": {
+      "url": "https://www.ncei.noaa.gov/data/international-best-track-archive-for-climate-stewardship-ibtracs/v04r01/access/csv/ibtracs.WP.list.v04r01.csv",
+      "shared_local_path": "../ibtracs-agency-disagreement/data/raw/ibtracs.WP.list.v04r01.csv",
+      "fields": [
+        "USA_ATCF_ID",
+        "ISO_TIME",
+        "USA_LAT",
+        "USA_LON"
+      ]
+    }
+  },
+  "sources": {
+    "WP122022": {
+      "url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2022/awp122022.dat",
+      "local_path": "data/raw/awp122022.dat",
+      "source_mode": "download",
+      "bytes": 11021730,
+      "sha256": "07e66dd2d6fab26a831d12893b155b5e563b634285e4cee2d8b26e1c88d369dc"
+    },
+    "WP052023": {
+      "url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2023/awp052023.dat",
+      "local_path": "data/raw/awp052023.dat",
+      "source_mode": "download",
+      "bytes": 7501743,
+      "sha256": "40ea457944234606ee6eb84148b23c6c39fcf9dfe2fc6dbbe2620b0439686dad"
+    },
+    "WP052024": {
+      "url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2024/awp052024.dat",
+      "local_path": "data/raw/awp052024.dat",
+      "source_mode": "download",
+      "bytes": 5566413,
+      "sha256": "a111440f783f18648dcb34b5bb702856f0283a1d58fe375086fea33e9a438827"
+    },
+    "WP122024": {
+      "url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2024/awp122024.dat",
+      "local_path": "data/raw/awp122024.dat",
+      "source_mode": "download",
+      "bytes": 4642745,
+      "sha256": "e563199fe70768fe143bb88db29e07611f4a8f9de986824e275c24ec9ba95ecb"
+    },
+    "IBTrACS": {
+      "url": "https://www.ncei.noaa.gov/data/international-best-track-archive-for-climate-stewardship-ibtracs/v04r01/access/csv/ibtracs.WP.list.v04r01.csv",
+      "local_path": "data/raw/ibtracs.WP.list.v04r01.csv",
+      "source_mode": "shared-local-copy",
+      "bytes": 113976897,
+      "sha256": "f6dd323ad940774b98c747a639a5a1c66d94a342db50423db47f6b3e8456b687"
+    }
+  },
+  "parsed_forecast_point_count": 511,
+  "truth_point_count": 282,
+  "paired_row_count": 163,
+  "paired_storm_count": 4
+}
