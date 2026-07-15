@@ -18,6 +18,23 @@ SPEC.loader.exec_module(AUDIT)
 
 
 class ERCSourceAvailabilityAuditTests(unittest.TestCase):
+    def test_public_s3_evidence_hashes_and_omits_continuation_token(self):
+        evidence = AUDIT.public_s3_request_evidence(
+            "https://example-bucket.invalid",
+            {
+                "list-type": "2",
+                "prefix": "v01/final/2024/",
+                "max-keys": "1000",
+                "continuation-token": "private-page-state",
+            },
+            b"page-response",
+            page_number=2,
+        )
+        self.assertNotIn("continuation-token", evidence["url"])
+        self.assertNotIn("private-page-state", str(evidence))
+        self.assertEqual(evidence["page_number"], 2)
+        self.assertRegex(evidence["continuation_token_sha256"], r"^[0-9a-f]{64}$")
+
     def test_tcprimed_inventory_counts_storms_and_sensors(self):
         keys = [
             "v01r01/final/2024/WP/01/TCPRIMED_v01r01-final_WP012024_GMI_GPM_a.nc",

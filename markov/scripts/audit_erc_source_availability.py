@@ -36,6 +36,29 @@ def sha256_bytes(payload: bytes) -> str:
     return hashlib.sha256(payload).hexdigest()
 
 
+def public_s3_request_evidence(
+    bucket_url: str,
+    params: dict[str, str],
+    payload: bytes,
+    page_number: int,
+) -> dict[str, Any]:
+    public_params = {
+        key: value for key, value in params.items() if key != "continuation-token"
+    }
+    evidence: dict[str, Any] = {
+        "url": f"{bucket_url}/?{urllib.parse.urlencode(public_params)}",
+        "page_number": page_number,
+        "bytes": len(payload),
+        "sha256": sha256_bytes(payload),
+    }
+    continuation_token = params.get("continuation-token")
+    if continuation_token:
+        evidence["continuation_token_sha256"] = sha256_bytes(
+            continuation_token.encode("utf-8")
+        )
+    return evidence
+
+
 def list_s3_keys(
     bucket_url: str,
     prefix: str,
@@ -51,11 +74,12 @@ def list_s3_keys(
         url = f"{bucket_url}/?{urllib.parse.urlencode(params)}"
         payload = fetch_bytes(url, timeout_seconds)
         evidence.append(
-            {
-                "url": url,
-                "bytes": len(payload),
-                "sha256": sha256_bytes(payload),
-            }
+            public_s3_request_evidence(
+                bucket_url,
+                params,
+                payload,
+                page_number=len(evidence) + 1,
+            )
         )
         root = ET.fromstring(payload)
         keys.extend(
