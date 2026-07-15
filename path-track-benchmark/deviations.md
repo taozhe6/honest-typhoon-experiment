@@ -20,3 +20,18 @@ Frozen round-v1 design:
 
 The equal-weight `DYC2` consensus is not run, fitted, scored, or plotted in round v1.
 
+## D002: full publishable round and reactivation of DYC2
+
+- Date: 2026-07-15.
+- Timing: registered after viewing the four-storm round-v1 errors and before generating the
+  2022--2024 mechanical eligibility list or calculating any expanded-sample error,
+  correlation, `n_eff`, consensus score, or cross-validation coverage.
+- Trigger: the persistent user goal now requires each branch to reach an independently
+  publishable artifact and explicitly requires the equal-weight spherical consensus.
+- Effect: D001 remains the immutable description of round v1. Round v2 follows
+  [`preregistration_round_v2.md`](preregistration_round_v2.md), uses every storm selected by
+  the frozen coverage-and-intensity rule, and restores `DYC2` as a zero-fitted-parameter
+  diagnostic consensus.
+- Interpretive status: `prospective-expanded-sample` with disclosed prior exposure to four
+  overlapping storms; the result remains a learning reproduction and cannot carry a
+  `validated` label.
