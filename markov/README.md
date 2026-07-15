@@ -13,6 +13,15 @@ cd "/Users/taozhe/Documents/New project/typhoon"
 markov/.venv/bin/python markov/scripts/run_c_branch.py
 ```
 
+## FAST 固定常量敏感性
+
+[全局敏感性发布报告](report_global_sensitivity.md)已完成：`Ck`、边界层深度 `h`、FAST `kappa` 分别运行 `+/-30%`，覆盖三个冻结合成场景。结构控制确认当前连续核心只识别 `Ck/h`；三态 regime 对风速路径的作用仍为 `0.0 m/s`。
+
+```bash
+cd "/Users/taozhe/Documents/New project/typhoon"
+markov/.venv/bin/python markov/scripts/run_global_sensitivity.py
+```
+
 ## 巴威证伪结果
 
 - NMC 2 分钟通道：`40 -> 42 m/s`，12 小时预报命中后续分析。
@@ -78,10 +87,12 @@ python3 typhoon/markov/scripts/audit_cyclobs_structure.py \
 - `config/wind_observation_contract.json`：NMC/JMA/JTWC 风速定义与平均时段契约。
 - `config/erc_observation_sources.json`：微波、ARCHER 和 SAR 官方数据源注册表。
 - `config/eyewall_structure_observation_contract.json`：双风环观测语义、质量门槛和反泄漏规则。
+- `config/global_sensitivity.json`：FAST 固定常量敏感性的冻结场景、扰动和结构判据。
 - `cases/bavi_2026_reintensification_spec.json`：冻结的案例选择规则和时次。
 - `cases/bavi_2026_reintensification.json`：从归档报文生成的案例证据。
 - `src/typhoon_markov/model.py`：状态、FAST 核心、转移核、气压/RMW 方程。
 - `src/typhoon_markov/case_validation.py`：原生通道评分、跨口径闸门和结构审计。
+- `src/typhoon_markov/sensitivity.py`：固定 regime 与完整 Markov 的常量敏感性运行器。
 - `src/typhoon_markov/rk45.py`：自适应 Dormand--Prince 5(4)。
 - `src/typhoon_markov/audit.py`：识别性与回报检验闸门。
 - `scripts/audit_cyclobs_structure.py`：CyclObs 动态发现、NetCDF 径向剖面与双峰审计。
@@ -90,4 +101,5 @@ python3 typhoon/markov/scripts/audit_cyclobs_structure.py \
 - `outputs/bavi_2026_reintensification_case.json`：当前模型的巴威案例判决。
 - `outputs/bavi_2026_cyclobs_structure_audit.json`：巴威 SAR 双风峰来源与径向廓线审计。
 - `outputs/erc_source_availability_2022_2026.json`：密封期与当前风暴的数据源库存、请求 URL 和响应哈希。
+- `outputs/global_sensitivity/`：逐步轨迹、场景级汇总、图和 SHA-256 manifest。
 - `../previous/2026-07-11-scalar-lgem/`：此前模型的只读归档。
