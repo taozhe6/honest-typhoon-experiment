@@ -1,0 +1,18 @@
+{
+  "analysis_code_git_commit": "77d3b775ff7098bf3674d8cb99d394cede9dc737",
+  "generated_at_utc": "2026-07-15T14:04:38.185236+00:00",
+  "outputs": {
+    "theta_final_wind.png": {
+      "bytes": 134972,
+      "sha256": "ec782f56365fc1e60043dc556034a3e4c0fc0e62f9cc39f87f5cf1040c795965"
+    },
+    "theta_grid.csv": {
+      "bytes": 42062,
+      "sha256": "88c6903a2a2b71184423d4ca4d61bfa9cbd5f4f305ee19182902ffd57db47546"
+    },
+    "theta_propagation.json": {
+      "bytes": 129708,
+      "sha256": "0d86d04b7f8356cc872c9a03382de3ed98d4956f24d3d60c88e803e471abcc63"
+    }
+  }
+}
