@@ -1,4 +1,8 @@
-# 支线 C 预注册：24 小时内减弱—再增强物理波形标签 v2
+# C-代理预注册：24 小时内减弱—再增强强度波形标签 v2
+
+> **项目宪法术语修订（`5fdcd6c`）：** 本文件的统计规则、候选网格和时间密封保持冻结。
+> 本标签只属于 C-代理。
+> C-结构使用独立的一手微波/SAR裁决。
 
 冻结日期：2026-07-15  
 状态：`preregistered-before-v2-label-rate-read`  
@@ -19,9 +23,9 @@
 1. [ASSUMED] 物理语义为“未来 24 h 内完整出现减弱—再增强谷形”；
 2. [ASSUMED] 2001--2018 开发集的逐时次基准率位于 5%--15%。
 
-该标签是 best-track 强度波形代理事件。它不构成 ERC 结构真值；ERC 因果标签仍需要
-微波/SAR 双环结构观测。标签选择和 naive 概率基线属于统计测量，本轮不训练分类器，
-也不输出巴威预测。
+该标签是 best-track 强度波形代理事件。它不是 ERC；ERC 是可能成因之一。
+C-结构真值需要独立的微波/SAR 双环结构观测。
+标签选择和 naive 概率基线属于统计测量，本轮不训练分类器，也不输出巴威预测。
 
 ## 数据与固定样本
 
@@ -126,4 +130,3 @@ p_{pers}(Y=1\mid H=h)=\frac{N_{1,h}+0.5}{N_h+1}.
 
 - [NOAA/NCEI IBTrACS](https://www.ncei.noaa.gov/products/international-best-track-archive)
 - [Brier (1950), Verification of forecasts expressed in terms of probability](https://doi.org/10.1175/1520-0493(1950)078%3C0001:VOFEIT%3E2.0.CO;2)
-

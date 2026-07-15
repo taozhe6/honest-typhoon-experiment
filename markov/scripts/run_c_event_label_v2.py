@@ -206,7 +206,7 @@ def build_report(result: dict[str, Any], candidates: pd.DataFrame) -> str:
     )
 
     lines = [
-        "# C 支线：非退化减弱—再增强波形标签 v2",
+        "# C-代理：未来 24 h 减弱—再增强强度波形标签 v2",
         "",
         "状态：`sealed-temporal-research-baseline`；资格：`unvalidated`。",
         "",
@@ -219,7 +219,7 @@ def build_report(result: dict[str, Any], candidates: pd.DataFrame) -> str:
         f"2019--2024 密封时间段事件率 "
         f"{_percent_metric(validation_rate)}。",
         f"- [MEASURED] 密封时间段点估计比开发集高 {rate_shift_points:.1f} 个百分点；"
-        f"两个台风聚类 95% CI"
+        f"两个台风聚类 95% CI "
         f"{'重叠' if rate_intervals_overlap else '不重叠'}。开发集点估计通过 5% 门槛，"
         f"其区间下界为 {100 * development_rate['ci95_low']:.1f}%。",
         f"- [MEASURED] 密封时间段包含 {metrics['validation_events']} 个事件、"
@@ -238,8 +238,8 @@ def build_report(result: dict[str, Any], candidates: pd.DataFrame) -> str:
         f"- [CITED+MEASURED] 5 kt 等于 "
         f"{result['quantization_audit']['minimum_positive_native_increment_ms']:.3f} m/s；"
         f"选定的 `q=2.5 m/s` 在该量化序列上对应至少一个 5 kt 强度档。",
-        "- [MEASURED] 这个结果建立了一个可评分、可被后续方法击败的概率门槛。"
-        "标签语义仍是强度波形代理；微波/SAR 结构承担 ERC 因果确认。",
+        "- [MEASURED] C-代理已经建立一个可评分、可被后续方法击败的概率门槛。",
+        "- [MEASURED] 该标签是强度波形，不是 ERC。ERC 是可能成因之一，非唯一成因。",
         "",
         "![开发集候选率](outputs/c_event_label_v2/candidate_development_rates.png)",
         "",
@@ -321,9 +321,9 @@ def build_report(result: dict[str, Any], candidates: pd.DataFrame) -> str:
             "",
             "## 缺口与下一步",
             "",
-            "- 该标签测量 1 分钟 best-track 的强度谷形；ERC 结构原因仍未赋值。",
+            "- C-代理测量 1 分钟 best-track 的强度谷形；成因字段仍未赋值。",
             "- 5 kt 量化压缩了阈值自由度；更细强度观测或微波径向结构才能增加独立信息。",
-            "- 下一轮 ERC 概率实验应使用双人盲标的结构事件，沿用本报告的气候 Brier 门槛。",
+            "- C-代理后续概率模型沿用本报告的气候 Brier 门槛与可靠性评分。",
             "",
             "## 来源与复现",
             "",

@@ -33,6 +33,9 @@ printf '\n[Synthesis] cross-project evidence and artifact integrity\n'
 markov/.venv/bin/python \
   scripts/build_intensity_predictability_ceilings.py --check
 
+printf '\n[Semantics] permanent C-track boundary\n'
+markov/.venv/bin/python scripts/check_c_semantics.py
+
 markov/.venv/bin/python -m compileall -q \
   scripts \
   path-track-benchmark/src path-track-benchmark/scripts path-track-benchmark/tests \

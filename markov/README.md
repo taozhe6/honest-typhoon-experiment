@@ -4,22 +4,33 @@
 
 项目目标与永久规则以[项目原文](../README.md)为准。
 
-## 支线 C 零标签基线
+## C-代理：未来 24 h 强度波形概率
 
-[支线 C 发布报告](report_c_branch.md)已完成：IBTrACS 自动波形事件、风暴分组折外 Brier、公开 CE/ERC 资源审计、Kuo et al. 62 行 CE formation 表，以及巴威 CyclObs `V·R` 时序。主结果证伪了持续性概率增益；巴威 SAR 支持一个观测双环时段。
+[C-代理 v1 失败基线](report_c_branch.md)使用 IBTrACS 自动强度波形事件和风暴分组折外 Brier。主结果证伪了持续性概率增益。
 
-[巴威一手覆盖纠错报告](report_c_coverage_correction.md)已经撤回旧版 ERC 数量否定：CyclObs 确证 1 个连续双环风结构观测时段；7 月 4 日和 7 日两个二手待核窗口不可判定；TC PRIMED WP09 在审计时无 preliminary 文件。二手叙述与一手 tally 完全分栏。
-
-[C 事件标签 v2 报告](report_c_event_label_v2.md)把物理波形标签冻结为未来
+[C-代理标签 v2 报告](report_c_event_label_v2.md)把强度波形标签冻结为未来
 24 h 内先减弱、后恢复且两段均至少 `2.5 m/s`。开发期发生率为
 `5.9%` [4.7%, 7.2%]，密封验证期为 `14.4%` [9.9%, 19.4%]；
 验证集同时含正负类。气候 Brier 为 `0.130603`，持续性 Brier 为
-`0.131092`，持续性基线略差。该标签是强度波形代理，ERC 因果字段保持为空。
+`0.131092`，持续性基线略差。
+
+C-代理输出未来减弱-再增强强度波形概率。该标签不是 ERC；ERC 是可能成因之一。
 
 ```bash
-cd "/Users/taozhe/Documents/New project/typhoon"
-markov/.venv/bin/python markov/scripts/run_c_branch.py
+cd "/Users/taozhe/Documents/New project/typhoon/markov"
+.venv/bin/python scripts/run_c_event_label_v2.py
 ```
+
+## C-结构：一手双环结构观测
+
+[C-结构历史资源审计](report_c_branch.md)登记公开 CE/ERC 资源与 Kuo et al.
+62 行 CE formation 表。
+
+[C-结构一手覆盖纠错报告](report_c_coverage_correction.md)按可观测时段裁决：
+7 月 8--9 日为确证；7 月 4 日为存疑；7 月 7 日为存疑；TC PRIMED WP09
+preliminary 为无覆盖。二手叙述与一手裁决完全分栏。
+
+C-结构只输出“确证/存疑/无覆盖”，不换算物理 ERC 次数。
 
 ## FAST 固定常量敏感性
 

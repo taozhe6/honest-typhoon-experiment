@@ -39,20 +39,26 @@
 ## 平台原则
 - 三条支线【并行】,不强制先后。业余项目,允许哪条有兴致就推哪条。
 - 每条支线都要能【独立出一个小成果】,不必等其他支线。
-- C-代理与 C-结构使用独立目标、独立标签和独立结论句,永不合并成一句话。
+- C-代理使用独立目标、独立标签和独立结论句。
+- C-结构使用独立目标、独立标签和独立结论句。
+- 两类输出永不合并成一句话。
 - 缺口要标注,但每次交付必须同时列出"已经能用的东西",不许只报问题。 写入对应项目的文档
 
 ## 2026-07-15 执行索引
 
-上方 `/goal` 保持原文。当前完整进展、数值、资格判决、三把刀审计和复现命令见 [阶段总报告](PROJECT_REPORT_2026-07-15.md)。
+上方 `/goal` 是当前项目宪法。
+C-代理完成定义自 `5fdcd6c` 起独立生效。
+C-结构完成定义自同一提交起独立生效。
+当前完整进展、数值、资格判决、三把刀审计和复现命令见 [阶段总报告](PROJECT_REPORT_2026-07-15.md)。
 
 - [A 路径发布报告](path-track-benchmark/report_round_v2.md)
 - [A 路径 DYC2/UKMET 深化报告](path-track-benchmark/report_round_v3.md)
 - [DYC2 来源审计](path-track-benchmark/dyc2_source_audit.md)
 - [B 登陆强度与风压报告](ibtracs-agency-disagreement/report_b_branch.md)
-- [C 零人工标签与 ERC 资源报告](markov/report_c_branch.md)
-- [C 一手微波覆盖纠错报告](markov/report_c_coverage_correction.md)
-- [C 事件标签 v2 与非退化 Brier 基线](markov/report_c_event_label_v2.md)
+- [C-代理 v1 强度波形失败基线](markov/report_c_branch.md)
+- [C-结构历史 CE/ERC 资源审计](markov/report_c_branch.md)
+- [C-结构一手微波覆盖纠错报告](markov/report_c_coverage_correction.md)
+- [C-代理标签 v2 与非退化 Brier 基线](markov/report_c_event_label_v2.md)
 - [FAST 固定常量敏感性报告](markov/report_global_sensitivity.md)
 - [`theta=Ck/h` 终值传播报告](markov/report_theta_propagation.md)
 - [西北太平洋强度可预报性的三重天花板](INTENSITY_PREDICTABILITY_CEILINGS.md)

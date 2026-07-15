@@ -31,12 +31,14 @@ Status: `public-review-ready` after the checks below complete on the final commi
 
 ## Final scan evidence
 
-- [MEASURED] Main repository release candidate: 32 reachable commits, 16.66 MB scanned,
+- [MEASURED] Main repository release candidate: 34 reachable commits, 16.68 MB scanned,
   zero findings.
 - [MEASURED] Embedded pre-monorepo IBTrACS bundle: 4 commits, 8.12 MB scanned,
   zero findings.
-- [MEASURED] Current working tree directory scan: 474.10 MB including local virtual
+- [MEASURED] Current working tree directory scan: 474.12 MB including local virtual
   environments, zero findings.
+- [MEASURED] The unified verification entry point enforces the permanent C-track
+  semantic boundary before release.
 - [MEASURED] Manual tracked-text patterns for API keys, client secrets, access tokens,
   passwords, authorization headers, bearer tokens, private-key markers, GitHub tokens,
   and AWS access-key IDs returned zero matches.
@@ -64,5 +66,6 @@ running the same `gitleaks git` command there.
 - Public availability increases auditability and does not change any branch to
   `validated`.
 - Independent landfall truth coverage remains 0/108.
-- ERC structural labels remain incomplete, and the v2 intensity waveform is a proxy.
+- The C-proxy v2 intensity waveform remains a proxy.
+- C-structure labels remain incomplete outside quality-controlled observable periods.
 - `theta=Ck/h` remains a bounded synthetic sensitivity without probability semantics.
