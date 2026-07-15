@@ -1,0 +1,93 @@
+{
+  "status": "frozen-before-round-v3-error-read",
+  "qualification": [
+    "learning-reproduction",
+    "unvalidated"
+  ],
+  "historical_alias": {
+    "DYC2": "LOCAL_EQ2_CMC_NGX",
+    "source": "local 0.5/0.5 spherical consensus of CMC and NGX",
+    "official_atcf_tech": false
+  },
+  "aids": [
+    "CMC",
+    "NGX",
+    "UKM"
+  ],
+  "independent_core_aid": "UKM",
+  "lead_hours": [
+    24,
+    48,
+    72,
+    96,
+    120
+  ],
+  "strict_same_cycle_three_way_intersection": true,
+  "truth_requires_exact_valid_time": true,
+  "truth_fields": [
+    "USA_LAT",
+    "USA_LON"
+  ],
+  "eligible_atcf_ids": [
+    "WP012024",
+    "WP022022",
+    "WP052024",
+    "WP082024",
+    "WP112022",
+    "WP112024",
+    "WP122022",
+    "WP122024",
+    "WP142022",
+    "WP142024",
+    "WP162022",
+    "WP182022",
+    "WP232022",
+    "WP232024",
+    "WP242024",
+    "WP252024",
+    "WP272024"
+  ],
+  "consensus": {
+    "name": "LOCAL_EQ2_CMC_NGX",
+    "method": "normalized weighted mean of Earth-centered unit vectors",
+    "weights": {
+      "CMC": 0.5,
+      "NGX": 0.5
+    },
+    "fitted_parameter_count": 0
+  },
+  "correlation": {
+    "primary": "lead-centered Pearson correlation of radial WGS84 errors",
+    "sensitivities": [
+      "raw Pearson correlation of radial WGS84 errors",
+      "lead-centered Spearman correlation of radial WGS84 errors"
+    ],
+    "pairs": [
+      [
+        "CMC",
+        "NGX"
+      ],
+      [
+        "LOCAL_EQ2_CMC_NGX",
+        "UKM"
+      ]
+    ],
+    "neff_formula": "2/(1+rho)",
+    "close_to_two_point_interval": [
+      1.8,
+      2.2
+    ],
+    "close_to_two_minimum_ci95_lower": 1.6
+  },
+  "bootstrap": {
+    "cluster": "atcf_id",
+    "replicates": 2000,
+    "seed": 20260715,
+    "confidence": 0.95
+  },
+  "minimum_evidence_per_lead": {
+    "storms": 10,
+    "records": 50
+  }
+}
+

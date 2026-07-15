@@ -1,5 +1,10 @@
 # A 支线路径对比：可发布学习性复现
 
+> **来源审计修正（2026-07-15）：** `DYC2` 是本项目对 `CMC/NGX` 做固定 0.5/0.5
+> 球面平均得到的本地诊断量，官方 a-deck 中没有该 TECH。其正式名称现为
+> `LOCAL_EQ2_CMC_NGX`；本报告保留旧标签以维持历史输出可复现。详见
+> [DYC2 来源审计](dyc2_source_audit.md)。
+
 状态：`prospective-expanded-sample-learning-reproduction`。资格：`unvalidated`。
 
 ## 这轮做成了什么
