@@ -1,0 +1,96 @@
+{
+  "S088": [
+    {
+      "agency": "JTWC",
+      "source_column": "USA_WIND",
+      "native_window_minutes": 1,
+      "target_window_minutes": 10,
+      "multiplier": 0.88,
+      "unit_multiplier_kt_to_ms": 0.5144444444444445,
+      "source": "IBTrACS field documentation; scenario factor"
+    },
+    {
+      "agency": "JMA",
+      "source_column": "TOKYO_WIND",
+      "native_window_minutes": 10,
+      "target_window_minutes": 10,
+      "multiplier": 1.0,
+      "unit_multiplier_kt_to_ms": 0.5144444444444445,
+      "source": "IBTrACS field documentation"
+    },
+    {
+      "agency": "CMA",
+      "source_column": "CMA_WIND",
+      "native_window_minutes": 2,
+      "target_window_minutes": 10,
+      "multiplier": 0.96,
+      "unit_multiplier_kt_to_ms": 0.5144444444444445,
+      "source": "IBTrACS field documentation; WMO gust-factor ratio"
+    },
+    {
+      "agency": "HKO",
+      "source_column": "HKO_WIND",
+      "native_window_minutes": 10,
+      "target_window_minutes": 10,
+      "multiplier": 1.0,
+      "unit_multiplier_kt_to_ms": 0.5144444444444445,
+      "source": "IBTrACS field documentation"
+    },
+    {
+      "agency": "KMA",
+      "source_column": "KMA_WIND",
+      "native_window_minutes": 10,
+      "target_window_minutes": 10,
+      "multiplier": 1.0,
+      "unit_multiplier_kt_to_ms": 0.5144444444444445,
+      "source": "IBTrACS field documentation"
+    }
+  ],
+  "S093": [
+    {
+      "agency": "JTWC",
+      "source_column": "USA_WIND",
+      "native_window_minutes": 1,
+      "target_window_minutes": 10,
+      "multiplier": 0.93,
+      "unit_multiplier_kt_to_ms": 0.5144444444444445,
+      "source": "IBTrACS field documentation; scenario factor"
+    },
+    {
+      "agency": "JMA",
+      "source_column": "TOKYO_WIND",
+      "native_window_minutes": 10,
+      "target_window_minutes": 10,
+      "multiplier": 1.0,
+      "unit_multiplier_kt_to_ms": 0.5144444444444445,
+      "source": "IBTrACS field documentation"
+    },
+    {
+      "agency": "CMA",
+      "source_column": "CMA_WIND",
+      "native_window_minutes": 2,
+      "target_window_minutes": 10,
+      "multiplier": 0.96,
+      "unit_multiplier_kt_to_ms": 0.5144444444444445,
+      "source": "IBTrACS field documentation; WMO gust-factor ratio"
+    },
+    {
+      "agency": "HKO",
+      "source_column": "HKO_WIND",
+      "native_window_minutes": 10,
+      "target_window_minutes": 10,
+      "multiplier": 1.0,
+      "unit_multiplier_kt_to_ms": 0.5144444444444445,
+      "source": "IBTrACS field documentation"
+    },
+    {
+      "agency": "KMA",
+      "source_column": "KMA_WIND",
+      "native_window_minutes": 10,
+      "target_window_minutes": 10,
+      "multiplier": 1.0,
+      "unit_multiplier_kt_to_ms": 0.5144444444444445,
+      "source": "IBTrACS field documentation"
+    }
+  ]
+}

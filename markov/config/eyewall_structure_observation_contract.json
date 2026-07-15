@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0",
+  "status": "research-observation-contract",
+  "latent_structure_proposal": {
+    "state_fields": [
+      "inner_peak_wind_ms",
+      "inner_peak_radius_km",
+      "outer_peak_wind_ms",
+      "outer_peak_radius_km"
+    ],
+    "interpretation": "The two wind maxima are latent physical structure. Passive microwave and SAR enter through separate observation operators."
+  },
+  "passive_microwave": {
+    "preferred_frequency_range_ghz": [85.0, 92.0],
+    "radial_extent_km": [0.0, 200.0],
+    "ring_score_spacing_km": 6.0,
+    "secondary_ring_label_minimum_completeness_fraction": 0.75,
+    "source": "Kossin et al. 2023 M-PERC, DOI 10.1175/WAF-D-22-0178.1",
+    "observed_quantity": "ice-scattering and precipitation-convection ring geometry",
+    "forbidden_interpretation": "Treating a microwave convective-ring peak as a direct surface-wind maximum"
+  },
+  "cyclobs_sar": {
+    "minimum_wind_cell_quality_level": 3,
+    "accepted_quality_meanings": [
+      "acceptable",
+      "best"
+    ],
+    "maximum_center_quality_flag_exclusive": 2.0,
+    "minimum_azimuthal_coverage_fraction": 0.5,
+    "radial_search_bounds_km": [10.0, 250.0],
+    "smoothing_window_km": 9.0,
+    "prominence_window_km": 20.0,
+    "exploratory_peak_minimum_prominence_ms": 0.25,
+    "dual_peak_minimum_prominence_ms": 0.5,
+    "dual_peak_minimum_separation_km": 30.0,
+    "dual_peak_requires_eye_in_acquisition": true,
+    "threshold_status": "exploratory-preregistered-for-data-audit",
+    "threshold_rationale": "The quality and coverage thresholds follow product metadata. Peak prominence and separation thresholds isolate broad, persistent wind maxima for manual review and require validation on a sealed labeled sample before model use."
+  },
+  "required_provenance_fields": [
+    "source_id",
+    "source_url",
+    "source_sha256",
+    "valid_at_utc",
+    "available_at_utc",
+    "platform",
+    "instrument",
+    "native_or_effective_resolution",
+    "storm_center_source",
+    "storm_center_uncertainty",
+    "coverage",
+    "quality_flags",
+    "processing_version"
+  ],
+  "anti_leakage_rule": "Every operational hindcast input must satisfy available_at_utc <= forecast_issue_time_utc. Final best-track centers are restricted to retrospective structural analysis.",
+  "label_rule": "An ERC label requires a time sequence: secondary convective-ring formation, radial contraction, and replacement or loss of the inner wind maximum. A single image can supply a concentric-structure observation and a candidate label."
+}

@@ -1,0 +1,758 @@
+{
+  "S088": {
+    "usa_factor": 0.88,
+    "cma_primary_factor": 0.96,
+    "suite": {
+      "adjusted": {
+        "records": 3591,
+        "storms": 225,
+        "kish_effective_storm_count": 146.95309455162905,
+        "breakpoint_km": 400.0,
+        "controls": true,
+        "within_storm": false,
+        "near_slope": {
+          "estimate": -0.0016777518506949291,
+          "lower": -0.0030789997673923634,
+          "upper": -0.0002579605834379418
+        },
+        "far_slope": {
+          "estimate": -0.00031818054306982933,
+          "lower": -0.0016511165658182612,
+          "upper": 0.0010371503110113297
+        },
+        "slope_change": {
+          "estimate": 0.0013595713076250998,
+          "lower": -0.001042001902290609,
+          "upper": 0.003751959074801433
+        },
+        "piecewise_aic": -25474.95673753789,
+        "linear_aic": -25473.376974533778,
+        "delta_aic_piecewise_minus_linear": -1.5797630041124648,
+        "decision": "disagreement_increases_toward_coast"
+      },
+      "unadjusted": {
+        "records": 3591,
+        "storms": 225,
+        "kish_effective_storm_count": 146.95309455162905,
+        "breakpoint_km": 400.0,
+        "controls": false,
+        "within_storm": false,
+        "near_slope": {
+          "estimate": -0.0022071993168067245,
+          "lower": -0.003737804337693797,
+          "upper": -0.0006673531841796309
+        },
+        "far_slope": {
+          "estimate": 0.00013860877197586913,
+          "lower": -0.0012120390896915721,
+          "upper": 0.0016074892543685956
+        },
+        "slope_change": {
+          "estimate": 0.0023458080887825937,
+          "lower": -0.00027333385896993805,
+          "upper": 0.0050268501690340596
+        },
+        "piecewise_aic": -25062.999820538542,
+        "linear_aic": -25055.30975709822,
+        "delta_aic_piecewise_minus_linear": -7.690063440320955,
+        "decision": "disagreement_increases_toward_coast"
+      },
+      "within_storm": {
+        "records": 3591,
+        "storms": 225,
+        "kish_effective_storm_count": 146.95309455162905,
+        "breakpoint_km": 400.0,
+        "controls": true,
+        "within_storm": true,
+        "near_slope": {
+          "estimate": -0.0017095442671379816,
+          "lower": -0.002979027598218198,
+          "upper": -0.00037714141715467024
+        },
+        "far_slope": {
+          "estimate": -5.52347743172417e-05,
+          "lower": -0.0016035194905748595,
+          "upper": 0.0014944647245286784
+        },
+        "slope_change": {
+          "estimate": 0.0016543094928207398,
+          "lower": -0.0006909812231579095,
+          "upper": 0.003984559727156822
+        },
+        "piecewise_aic": -26360.72206409431,
+        "linear_aic": -26357.654941964203,
+        "delta_aic_piecewise_minus_linear": -3.0671221301054175,
+        "decision": "disagreement_increases_toward_coast"
+      },
+      "breakpoint_sensitivity": {
+        "300": {
+          "near_slope": -0.002216968133977147,
+          "far_slope": -0.0003844851611107792,
+          "aic": -25476.92933350069
+        },
+        "350": {
+          "near_slope": -0.0019260381736065453,
+          "far_slope": -0.0003323003667880065,
+          "aic": -25476.11283632358
+        },
+        "450": {
+          "near_slope": -0.0014720303841886414,
+          "far_slope": -0.00034108355894245845,
+          "aic": -25473.818059281566
+        },
+        "500": {
+          "near_slope": -0.0012679070840645814,
+          "far_slope": -0.0004635444469895116,
+          "aic": -25472.546601854407
+        }
+      },
+      "intensity_strata": {
+        "17.2-24.4": {
+          "records": 1130,
+          "storms": 223,
+          "kish_effective_storm_count": 142.0988203872691,
+          "breakpoint_km": 400.0,
+          "controls": true,
+          "within_storm": false,
+          "near_slope": {
+            "estimate": -0.0006811596482570542,
+            "lower": -0.0030472331341025788,
+            "upper": 0.001645110675722293
+          },
+          "far_slope": {
+            "estimate": -0.002046596556196023,
+            "lower": -0.003942073497565856,
+            "upper": -7.962863911091611e-06
+          },
+          "slope_change": {
+            "estimate": -0.001365436907938969,
+            "lower": -0.005134748046784174,
+            "upper": 0.002736124967424108
+          },
+          "piecewise_aic": -7903.421597100432,
+          "linear_aic": -7904.322084602386,
+          "delta_aic_piecewise_minus_linear": 0.9004875019536485,
+          "decision": "near_coast_effect_uncertain_or_disappears"
+        },
+        "24.5-32.6": {
+          "records": 788,
+          "storms": 159,
+          "kish_effective_storm_count": 109.74620007069636,
+          "breakpoint_km": 400.0,
+          "controls": true,
+          "within_storm": false,
+          "near_slope": {
+            "estimate": -0.0009735034427027957,
+            "lower": -0.0040985664811772436,
+            "upper": 0.002176116303424419
+          },
+          "far_slope": {
+            "estimate": -0.0014770421619758622,
+            "lower": -0.004380754035982145,
+            "upper": 0.0012515867524247664
+          },
+          "slope_change": {
+            "estimate": -0.0005035387192730666,
+            "lower": -0.005780102447713002,
+            "upper": 0.004700460666230901
+          },
+          "piecewise_aic": -5473.262768800896,
+          "linear_aic": -5475.164173522355,
+          "delta_aic_piecewise_minus_linear": 1.9014047214586753,
+          "decision": "near_coast_effect_uncertain_or_disappears"
+        },
+        "32.7-41.4": {
+          "records": 772,
+          "storms": 120,
+          "kish_effective_storm_count": 78.27475702653008,
+          "breakpoint_km": 400.0,
+          "controls": true,
+          "within_storm": false,
+          "near_slope": {
+            "estimate": -0.004041024618018789,
+            "lower": -0.007201269476479068,
+            "upper": -0.00035072891498644286
+          },
+          "far_slope": {
+            "estimate": 0.0007241914540773242,
+            "lower": -0.001730426120471626,
+            "upper": 0.003467044037851513
+          },
+          "slope_change": {
+            "estimate": 0.004765216072096113,
+            "lower": -0.0008510340406350381,
+            "upper": 0.009640185533807874
+          },
+          "piecewise_aic": -5473.623304050357,
+          "linear_aic": -5467.100424584816,
+          "delta_aic_piecewise_minus_linear": -6.522879465540427,
+          "decision": "disagreement_increases_toward_coast"
+        },
+        "41.5-50.8": {
+          "records": 547,
+          "storms": 83,
+          "kish_effective_storm_count": 56.210595528837125,
+          "breakpoint_km": 400.0,
+          "controls": true,
+          "within_storm": false,
+          "near_slope": {
+            "estimate": -0.0008801986597892252,
+            "lower": -0.0033420921971117267,
+            "upper": 0.0014485598914631213
+          },
+          "far_slope": {
+            "estimate": 0.0029783390016597192,
+            "lower": -0.00046327533984215135,
+            "upper": 0.007185449574857803
+          },
+          "slope_change": {
+            "estimate": 0.0038585376614489447,
+            "lower": -0.0011937732619075935,
+            "upper": 0.009869013342649419
+          },
+          "piecewise_aic": -4149.1208747492365,
+          "linear_aic": -4144.905276280249,
+          "delta_aic_piecewise_minus_linear": -4.215598468987082,
+          "decision": "near_coast_effect_uncertain_or_disappears"
+        },
+        ">=50.9": {
+          "records": 354,
+          "storms": 54,
+          "kish_effective_storm_count": 40.13965406790519,
+          "breakpoint_km": 400.0,
+          "controls": true,
+          "within_storm": false,
+          "near_slope": {
+            "estimate": -0.0003589740272894266,
+            "lower": -0.0026833316187596075,
+            "upper": 0.0019465918818636148
+          },
+          "far_slope": {
+            "estimate": 0.003229721433245084,
+            "lower": 0.001449577765822751,
+            "upper": 0.005454728659719332
+          },
+          "slope_change": {
+            "estimate": 0.0035886954605345105,
+            "lower": 0.00017651194691933146,
+            "upper": 0.007390719731570475
+          },
+          "piecewise_aic": -2748.1220490415103,
+          "linear_aic": -2745.96510727565,
+          "delta_aic_piecewise_minus_linear": -2.1569417658602106,
+          "decision": "near_coast_effect_uncertain_or_disappears"
+        }
+      }
+    },
+    "cma_factor_point_sensitivity": {
+      "0.90": {
+        "records": 3591,
+        "storms": 225,
+        "near_slope": -0.00105616345588223,
+        "far_slope": -0.0005455387924376324,
+        "slope_change": 0.0005106246634445975,
+        "piecewise_aic": -25696.192623232062
+      },
+      "0.91": {
+        "records": 3591,
+        "storms": 225,
+        "near_slope": -0.0011787373622461359,
+        "far_slope": -0.0005339075307905298,
+        "slope_change": 0.0006448298314556061,
+        "piecewise_aic": -25634.870611972485
+      },
+      "0.92": {
+        "records": 3591,
+        "storms": 225,
+        "near_slope": -0.0012929878869989175,
+        "far_slope": -0.0004969758322441052,
+        "slope_change": 0.0007960120547548123,
+        "piecewise_aic": -25583.181828388675
+      },
+      "0.93": {
+        "records": 3591,
+        "storms": 225,
+        "near_slope": -0.0014132090019075797,
+        "far_slope": -0.0004556406166750663,
+        "slope_change": 0.0009575683852325134,
+        "piecewise_aic": -25549.403078372306
+      },
+      "0.94": {
+        "records": 3591,
+        "storms": 225,
+        "near_slope": -0.0014786580138550975,
+        "far_slope": -0.0004097875229421995,
+        "slope_change": 0.001068870490912898,
+        "piecewise_aic": -25520.400918218515
+      },
+      "0.95": {
+        "records": 3591,
+        "storms": 225,
+        "near_slope": -0.0015660248728542627,
+        "far_slope": -0.0003809349331956367,
+        "slope_change": 0.001185089939658626,
+        "piecewise_aic": -25497.39535488489
+      },
+      "0.96": {
+        "records": 3591,
+        "storms": 225,
+        "near_slope": -0.0016777518506949291,
+        "far_slope": -0.00031818054306982933,
+        "slope_change": 0.0013595713076250998,
+        "piecewise_aic": -25474.95673753789
+      },
+      "0.97": {
+        "records": 3591,
+        "storms": 225,
+        "near_slope": -0.001793651203704798,
+        "far_slope": -0.00026557430935570986,
+        "slope_change": 0.0015280768943490882,
+        "piecewise_aic": -25454.02603510367
+      },
+      "0.98": {
+        "records": 3591,
+        "storms": 225,
+        "near_slope": -0.001832429176030548,
+        "far_slope": -0.0002748058851875509,
+        "slope_change": 0.001557623290842997,
+        "piecewise_aic": -25434.465477723672
+      },
+      "0.99": {
+        "records": 3734,
+        "storms": 234,
+        "near_slope": -0.0016818939991687975,
+        "far_slope": -0.00034356688131999556,
+        "slope_change": 0.001338327117848802,
+        "piecewise_aic": -26317.88557136948
+      },
+      "1.00": {
+        "records": 3734,
+        "storms": 234,
+        "near_slope": -0.0017684986293272768,
+        "far_slope": -0.00032201002560011856,
+        "slope_change": 0.0014464886037271582,
+        "piecewise_aic": -26308.361612132634
+      }
+    },
+    "methodological_point_sensitivity": {
+      "primary_original_TS_2001_2024": {
+        "records": 3591,
+        "storms": 225,
+        "near_slope": -0.0016777518506949291,
+        "far_slope": -0.00031818054306982933,
+        "slope_change": 0.0013595713076250998,
+        "piecewise_aic": -25474.95673753789
+      },
+      "including_interpolated_flags": {
+        "records": 3591,
+        "storms": 225,
+        "near_slope": -0.0016777518506949291,
+        "far_slope": -0.00031818054306982933,
+        "slope_change": 0.0013595713076250998,
+        "piecewise_aic": -25474.95673753789
+      },
+      "all_nature_codes": {
+        "records": 3688,
+        "storms": 229,
+        "near_slope": -0.0016980674436175849,
+        "far_slope": -0.0004168719766593535,
+        "slope_change": 0.0012811954669582314,
+        "piecewise_aic": -26142.290898080533
+      },
+      "extended_1987_2024": {
+        "records": 3591,
+        "storms": 225,
+        "near_slope": -0.0016777518506949291,
+        "far_slope": -0.00031818054306982933,
+        "slope_change": 0.0013595713076250998,
+        "piecewise_aic": -25474.95673753789
+      },
+      "at_least_three_agencies": {
+        "records": 9341,
+        "storms": 546,
+        "near_slope": -0.0021620442051591793,
+        "far_slope": 0.0006487748279110184,
+        "slope_change": 0.0028108190330701976,
+        "piecewise_aic": -63404.94912294917
+      }
+    }
+  },
+  "S093": {
+    "usa_factor": 0.93,
+    "cma_primary_factor": 0.96,
+    "suite": {
+      "adjusted": {
+        "records": 3591,
+        "storms": 225,
+        "kish_effective_storm_count": 146.95309455162905,
+        "breakpoint_km": 400.0,
+        "controls": true,
+        "within_storm": false,
+        "near_slope": {
+          "estimate": -0.001722181649953736,
+          "lower": -0.0031609732422614688,
+          "upper": -0.0002837160994062258
+        },
+        "far_slope": {
+          "estimate": 0.00020089614361286663,
+          "lower": -0.0011571586894189366,
+          "upper": 0.0016544641836694963
+        },
+        "slope_change": {
+          "estimate": 0.0019230777935666027,
+          "lower": -0.0006078550744103759,
+          "upper": 0.004440669886464399
+        },
+        "piecewise_aic": -25374.508003331775,
+        "linear_aic": -25369.552514950625,
+        "delta_aic_piecewise_minus_linear": -4.955488381150644,
+        "decision": "disagreement_increases_toward_coast"
+      },
+      "unadjusted": {
+        "records": 3591,
+        "storms": 225,
+        "kish_effective_storm_count": 146.95309455162905,
+        "breakpoint_km": 400.0,
+        "controls": false,
+        "within_storm": false,
+        "near_slope": {
+          "estimate": -0.0014913485304966325,
+          "lower": -0.0030751859749146015,
+          "upper": 2.067542518313064e-05
+        },
+        "far_slope": {
+          "estimate": 0.0003990990502816444,
+          "lower": -0.0010432444397252797,
+          "upper": 0.001988591509491265
+        },
+        "slope_change": {
+          "estimate": 0.001890447580778277,
+          "lower": -0.0007236453225183629,
+          "upper": 0.004619135752955704
+        },
+        "piecewise_aic": -25157.906306229725,
+        "linear_aic": -25153.44167111052,
+        "delta_aic_piecewise_minus_linear": -4.464635119205923,
+        "decision": "near_coast_effect_uncertain_or_disappears"
+      },
+      "within_storm": {
+        "records": 3591,
+        "storms": 225,
+        "kish_effective_storm_count": 146.95309455162905,
+        "breakpoint_km": 400.0,
+        "controls": true,
+        "within_storm": true,
+        "near_slope": {
+          "estimate": -0.0016575977517038784,
+          "lower": -0.0030155528817893125,
+          "upper": -0.00034748343081372036
+        },
+        "far_slope": {
+          "estimate": 0.0003018779012466943,
+          "lower": -0.0014354064215352249,
+          "upper": 0.001954409120163302
+        },
+        "slope_change": {
+          "estimate": 0.0019594756529505725,
+          "lower": -0.0006209391670070783,
+          "upper": 0.004465519124068096
+        },
+        "piecewise_aic": -26338.159337530866,
+        "linear_aic": -26333.100502647172,
+        "delta_aic_piecewise_minus_linear": -5.058834883693635,
+        "decision": "disagreement_increases_toward_coast"
+      },
+      "breakpoint_sensitivity": {
+        "300": {
+          "near_slope": -0.002231791567227163,
+          "far_slope": -1.054181724742675e-05,
+          "aic": -25375.468713437494
+        },
+        "350": {
+          "near_slope": -0.001958193810549464,
+          "far_slope": 0.00010496279702536364,
+          "aic": -25375.257864919426
+        },
+        "450": {
+          "near_slope": -0.0015345222995505595,
+          "far_slope": 0.0002958855421318359,
+          "aic": -25373.763533997346
+        },
+        "500": {
+          "near_slope": -0.0013637680105478105,
+          "far_slope": 0.0003628585819980237,
+          "aic": -25372.790042681427
+        }
+      },
+      "intensity_strata": {
+        "17.2-24.4": {
+          "records": 1130,
+          "storms": 223,
+          "kish_effective_storm_count": 142.0988203872691,
+          "breakpoint_km": 400.0,
+          "controls": true,
+          "within_storm": false,
+          "near_slope": {
+            "estimate": -0.0005065302311459384,
+            "lower": -0.0028165498924014477,
+            "upper": 0.0019365921836631726
+          },
+          "far_slope": {
+            "estimate": -0.001346591204151017,
+            "lower": -0.003154295080093522,
+            "upper": 0.0004413366943194138
+          },
+          "slope_change": {
+            "estimate": -0.0008400609730050785,
+            "lower": -0.004640502018968329,
+            "upper": 0.002650254513001915
+          },
+          "piecewise_aic": -7886.874516488852,
+          "linear_aic": -7888.466552785164,
+          "delta_aic_piecewise_minus_linear": 1.5920362963115622,
+          "decision": "near_coast_effect_uncertain_or_disappears"
+        },
+        "24.5-32.6": {
+          "records": 758,
+          "storms": 159,
+          "kish_effective_storm_count": 107.87908374014269,
+          "breakpoint_km": 400.0,
+          "controls": true,
+          "within_storm": false,
+          "near_slope": {
+            "estimate": -0.0015968835202077635,
+            "lower": -0.004622586088469106,
+            "upper": 0.001735875087990635
+          },
+          "far_slope": {
+            "estimate": -0.0006476738980654453,
+            "lower": -0.0034567959257600874,
+            "upper": 0.0018565576401969465
+          },
+          "slope_change": {
+            "estimate": 0.0009492096221423181,
+            "lower": -0.004618654305682681,
+            "upper": 0.005857597048015736
+          },
+          "piecewise_aic": -5290.364200107855,
+          "linear_aic": -5292.014828330343,
+          "delta_aic_piecewise_minus_linear": 1.6506282224881943,
+          "decision": "near_coast_effect_uncertain_or_disappears"
+        },
+        "32.7-41.4": {
+          "records": 784,
+          "storms": 121,
+          "kish_effective_storm_count": 78.5402504472272,
+          "breakpoint_km": 400.0,
+          "controls": true,
+          "within_storm": false,
+          "near_slope": {
+            "estimate": -0.003637448985621462,
+            "lower": -0.0068963606857521745,
+            "upper": -0.00036598818593324095
+          },
+          "far_slope": {
+            "estimate": 0.0005877452204389863,
+            "lower": -0.0016348023991435922,
+            "upper": 0.0034607792110928353
+          },
+          "slope_change": {
+            "estimate": 0.004225194206060448,
+            "lower": -0.0007357329923673082,
+            "upper": 0.009605602963643753
+          },
+          "piecewise_aic": -5574.512108300383,
+          "linear_aic": -5569.507818684227,
+          "delta_aic_piecewise_minus_linear": -5.004289616156711,
+          "decision": "disagreement_increases_toward_coast"
+        },
+        "41.5-50.8": {
+          "records": 554,
+          "storms": 84,
+          "kish_effective_storm_count": 56.294203961848865,
+          "breakpoint_km": 400.0,
+          "controls": true,
+          "within_storm": false,
+          "near_slope": {
+            "estimate": -0.0011357780791104804,
+            "lower": -0.004294547241871985,
+            "upper": 0.0019452626232398546
+          },
+          "far_slope": {
+            "estimate": 0.0034753871876034097,
+            "lower": -0.00022426414049944775,
+            "upper": 0.007824424857997156
+          },
+          "slope_change": {
+            "estimate": 0.00461116526671389,
+            "lower": -0.001481829626565361,
+            "upper": 0.011413773426975376
+          },
+          "piecewise_aic": -4031.555498177085,
+          "linear_aic": -4026.904702255232,
+          "delta_aic_piecewise_minus_linear": -4.650795921852932,
+          "decision": "near_coast_effect_uncertain_or_disappears"
+        },
+        ">=50.9": {
+          "records": 365,
+          "storms": 54,
+          "kish_effective_storm_count": 40.140102440494125,
+          "breakpoint_km": 400.0,
+          "controls": true,
+          "within_storm": false,
+          "near_slope": {
+            "estimate": 0.00041707344352205373,
+            "lower": -0.0018776604178897978,
+            "upper": 0.0027986720752346517
+          },
+          "far_slope": {
+            "estimate": 0.002780795560193193,
+            "lower": 0.0009257666631111028,
+            "upper": 0.004984248785133513
+          },
+          "slope_change": {
+            "estimate": 0.0023637221166711393,
+            "lower": -0.0009031272539589677,
+            "upper": 0.006002546014851888
+          },
+          "piecewise_aic": -2791.916168095387,
+          "linear_aic": -2792.2655674165476,
+          "delta_aic_piecewise_minus_linear": 0.3493993211604902,
+          "decision": "near_coast_effect_uncertain_or_disappears"
+        }
+      }
+    },
+    "cma_factor_point_sensitivity": {
+      "0.90": {
+        "records": 3591,
+        "storms": 225,
+        "near_slope": -0.0011210733072969492,
+        "far_slope": -5.763806968035352e-06,
+        "slope_change": 0.0011153095003289138,
+        "piecewise_aic": -25623.54570789378
+      },
+      "0.91": {
+        "records": 3591,
+        "storms": 225,
+        "near_slope": -0.001206635638891744,
+        "far_slope": 4.276617732920362e-06,
+        "slope_change": 0.0012109122566246642,
+        "piecewise_aic": -25568.17793984619
+      },
+      "0.92": {
+        "records": 3591,
+        "storms": 225,
+        "near_slope": -0.0013047853362287757,
+        "far_slope": 3.701806535514045e-05,
+        "slope_change": 0.0013418034015839162,
+        "piecewise_aic": -25513.9206581313
+      },
+      "0.93": {
+        "records": 3591,
+        "storms": 225,
+        "near_slope": -0.0014145072174775353,
+        "far_slope": 7.992929208432027e-05,
+        "slope_change": 0.0014944365095618556,
+        "piecewise_aic": -25469.9745793381
+      },
+      "0.94": {
+        "records": 3591,
+        "storms": 225,
+        "near_slope": -0.001464096142020536,
+        "far_slope": 0.0001240368677240173,
+        "slope_change": 0.0015881330097445533,
+        "piecewise_aic": -25435.221586300217
+      },
+      "0.95": {
+        "records": 3591,
+        "storms": 225,
+        "near_slope": -0.0015855588593444224,
+        "far_slope": 0.00014951160019806766,
+        "slope_change": 0.00173507045954249,
+        "piecewise_aic": -25401.10105298912
+      },
+      "0.96": {
+        "records": 3591,
+        "storms": 225,
+        "near_slope": -0.001722181649953736,
+        "far_slope": 0.00020089614361286663,
+        "slope_change": 0.0019230777935666027,
+        "piecewise_aic": -25374.508003331775
+      },
+      "0.97": {
+        "records": 3591,
+        "storms": 225,
+        "near_slope": -0.001836787082806997,
+        "far_slope": 0.00024996194386532334,
+        "slope_change": 0.0020867490266723203,
+        "piecewise_aic": -25350.583446240304
+      },
+      "0.98": {
+        "records": 3591,
+        "storms": 225,
+        "near_slope": -0.0018994505211932385,
+        "far_slope": 0.0002460358896721613,
+        "slope_change": 0.0021454864108653997,
+        "piecewise_aic": -25331.6815492207
+      },
+      "0.99": {
+        "records": 3734,
+        "storms": 234,
+        "near_slope": -0.0018091467388691312,
+        "far_slope": 0.0002348093555821758,
+        "slope_change": 0.002043956094451307,
+        "piecewise_aic": -26240.43991949576
+      },
+      "1.00": {
+        "records": 3734,
+        "storms": 234,
+        "near_slope": -0.001876968899954722,
+        "far_slope": 0.00026369775552549337,
+        "slope_change": 0.0021406666554802155,
+        "piecewise_aic": -26222.449808754693
+      }
+    },
+    "methodological_point_sensitivity": {
+      "primary_original_TS_2001_2024": {
+        "records": 3591,
+        "storms": 225,
+        "near_slope": -0.001722181649953736,
+        "far_slope": 0.00020089614361286663,
+        "slope_change": 0.0019230777935666027,
+        "piecewise_aic": -25374.508003331775
+      },
+      "including_interpolated_flags": {
+        "records": 3591,
+        "storms": 225,
+        "near_slope": -0.001722181649953736,
+        "far_slope": 0.00020089614361286663,
+        "slope_change": 0.0019230777935666027,
+        "piecewise_aic": -25374.508003331775
+      },
+      "all_nature_codes": {
+        "records": 3688,
+        "storms": 229,
+        "near_slope": -0.0017588305877183014,
+        "far_slope": 0.00016820595610950637,
+        "slope_change": 0.0019270365438278077,
+        "piecewise_aic": -26050.340097551223
+      },
+      "extended_1987_2024": {
+        "records": 3591,
+        "storms": 225,
+        "near_slope": -0.001722181649953736,
+        "far_slope": 0.00020089614361286663,
+        "slope_change": 0.0019230777935666027,
+        "piecewise_aic": -25374.508003331775
+      },
+      "at_least_three_agencies": {
+        "records": 9347,
+        "storms": 546,
+        "near_slope": -0.0017717399115648347,
+        "far_slope": 0.0009148407166608948,
+        "slope_change": 0.0026865806282257293,
+        "piecewise_aic": -62519.32034259201
+      }
+    }
+  }
+}

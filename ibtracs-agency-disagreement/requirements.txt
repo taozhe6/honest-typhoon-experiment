@@ -1,0 +1,7 @@
+matplotlib>=3.9,<4
+numpy>=2,<3
+pandas>=2.2,<3
+pyproj>=3.6,<4
+pyshp>=2.3,<3
+scipy>=1.14,<2
+shapely>=2.0,<3

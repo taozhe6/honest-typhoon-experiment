@@ -1,0 +1,239 @@
+{
+  "generated_at_utc": "2026-07-12T12:38:56.157088+00:00",
+  "model_id": "tc-msrom-v0.1",
+  "model_status": "research-rejected",
+  "scenario": "synthetic-smoke-test",
+  "authoritative_forecast": false,
+  "global_free_parameter_count": 2,
+  "scored_observation_field_count": 3,
+  "parameters": {
+    "persistence_logit": 1.2,
+    "regime_width": 0.6,
+    "calibration_id": "synthetic-demo-from-model-v0-config",
+    "calibrated": false
+  },
+  "initial_state": {
+    "wind_ms": 35.0,
+    "core_moisture": 0.78,
+    "central_pressure_pa": 97000.0,
+    "rmw_m": 40000.0
+  },
+  "steps": [
+    {
+      "valid_hour": 6,
+      "regime": "intensifying",
+      "transition_probabilities": {
+        "weakening": 0.004925465883646236,
+        "quasi_steady": 0.5927346843263698,
+        "intensifying": 0.40233984978998394
+      },
+      "state": {
+        "wind_ms": 38.25312180635789,
+        "core_moisture": 0.8150680041253386,
+        "central_pressure_pa": 96633.85746314398,
+        "rmw_m": 36760.449173550274
+      },
+      "diagnostics_at_step_start": {
+        "wind_tendency_ms2": 0.00014156476637750893,
+        "moisture_tendency_s": 1.7476666666666664e-06,
+        "ocean_feedback_alpha": 0.998274294299106,
+        "standardized_24h_tendency": 0.7925180873660975
+      },
+      "solver": {
+        "accepted_steps": 25,
+        "rejected_steps": 0,
+        "derivative_evaluations": 175,
+        "final_time_s": 21600.0
+      }
+    },
+    {
+      "valid_hour": 12,
+      "regime": "intensifying",
+      "transition_probabilities": {
+        "weakening": 0.002877812136997523,
+        "quasi_steady": 0.11113600609756452,
+        "intensifying": 0.885986181765438
+      },
+      "state": {
+        "wind_ms": 41.395225265550245,
+        "core_moisture": 0.8406658027815522,
+        "central_pressure_pa": 96238.53044529549,
+        "rmw_m": 34086.473599788515
+      },
+      "diagnostics_at_step_start": {
+        "wind_tendency_ms2": 0.00014564150582460758,
+        "moisture_tendency_s": 1.282185622583318e-06,
+        "ocean_feedback_alpha": 0.9968791572811762,
+        "standardized_24h_tendency": 0.8153407842276088
+      },
+      "solver": {
+        "accepted_steps": 25,
+        "rejected_steps": 0,
+        "derivative_evaluations": 175,
+        "final_time_s": 21600.0
+      }
+    },
+    {
+      "valid_hour": 18,
+      "regime": "intensifying",
+      "transition_probabilities": {
+        "weakening": 0.004381990593215905,
+        "quasi_steady": 0.13514917077093963,
+        "intensifying": 0.8604688386358444
+      },
+      "state": {
+        "wind_ms": 44.08771268523255,
+        "core_moisture": 0.8578092179490563,
+        "central_pressure_pa": 95817.06164655388,
+        "rmw_m": 32082.650507605325
+      },
+      "diagnostics_at_step_start": {
+        "wind_tendency_ms2": 0.00013118250724558387,
+        "moisture_tendency_s": 8.618997023650835e-07,
+        "ocean_feedback_alpha": 0.9949269686999372,
+        "standardized_24h_tendency": 0.7343953753359684
+      },
+      "solver": {
+        "accepted_steps": 25,
+        "rejected_steps": 0,
+        "derivative_evaluations": 175,
+        "final_time_s": 21600.0
+      }
+    },
+    {
+      "valid_hour": 24,
+      "regime": "intensifying",
+      "transition_probabilities": {
+        "weakening": 0.009387078747326898,
+        "quasi_steady": 0.19071804227638453,
+        "intensifying": 0.7998948789762886
+      },
+      "state": {
+        "wind_ms": 46.12867970190712,
+        "core_moisture": 0.8676954531653659,
+        "central_pressure_pa": 95375.05060207633,
+        "rmw_m": 30712.34194016364
+      },
+      "diagnostics_at_step_start": {
+        "wind_tendency_ms2": 0.00010434046383589808,
+        "moisture_tendency_s": 4.940969697982646e-07,
+        "ocean_feedback_alpha": 0.992662391377618,
+        "standardized_24h_tendency": 0.5841263115823927
+      },
+      "solver": {
+        "accepted_steps": 25,
+        "rejected_steps": 0,
+        "derivative_evaluations": 175,
+        "final_time_s": 21600.0
+      }
+    },
+    {
+      "valid_hour": 30,
+      "regime": "quasi_steady",
+      "transition_probabilities": {
+        "weakening": 0.02282691505085572,
+        "quasi_steady": 0.27804339110024057,
+        "intensifying": 0.6991296938489037
+      },
+      "state": {
+        "wind_ms": 47.44500518206757,
+        "core_moisture": 0.871614329136102,
+        "central_pressure_pa": 95375.05060207633,
+        "rmw_m": 29888.498997868955
+      },
+      "diagnostics_at_step_start": {
+        "wind_tendency_ms2": 7.14401264873505e-05,
+        "moisture_tendency_s": 1.861533727713726e-07,
+        "ocean_feedback_alpha": 0.9904478484566598,
+        "standardized_24h_tendency": 0.39994126966568566
+      },
+      "solver": {
+        "accepted_steps": 25,
+        "rejected_steps": 0,
+        "derivative_evaluations": 175,
+        "final_time_s": 21600.0
+      }
+    },
+    {
+      "valid_hour": 36,
+      "regime": "quasi_steady",
+      "transition_probabilities": {
+        "weakening": 0.03540730279680695,
+        "quasi_steady": 0.8496030038043301,
+        "intensifying": 0.11498969339886295
+      },
+      "state": {
+        "wind_ms": 48.06308820084851,
+        "core_moisture": 0.8707925889354978,
+        "central_pressure_pa": 95375.05060207633,
+        "rmw_m": 29516.691418098457
+      },
+      "diagnostics_at_step_start": {
+        "wind_tendency_ms2": 3.787354176703418e-05,
+        "moisture_tendency_s": -6.14547834463582e-08,
+        "ocean_feedback_alpha": 0.9886075909247813,
+        "standardized_24h_tendency": 0.21202639365043757
+      },
+      "solver": {
+        "accepted_steps": 25,
+        "rejected_steps": 0,
+        "derivative_evaluations": 175,
+        "final_time_s": 21600.0
+      }
+    },
+    {
+      "valid_hour": 42,
+      "regime": "quasi_steady",
+      "transition_probabilities": {
+        "weakening": 0.05820362924025891,
+        "quasi_steady": 0.8686692443536917,
+        "intensifying": 0.07312712640604935
+      },
+      "state": {
+        "wind_ms": 48.069963182428936,
+        "core_moisture": 0.8662807683588905,
+        "central_pressure_pa": 95375.05060207633,
+        "rmw_m": 29512.609229653743
+      },
+      "diagnostics_at_step_start": {
+        "wind_tendency_ms2": 7.338925329440749e-06,
+        "moisture_tendency_s": -2.549804810589598e-07,
+        "ocean_feedback_alpha": 0.9873323420811467,
+        "standardized_24h_tendency": 0.0410853011963508
+      },
+      "solver": {
+        "accepted_steps": 25,
+        "rejected_steps": 0,
+        "derivative_evaluations": 175,
+        "final_time_s": 21600.0
+      }
+    },
+    {
+      "valid_hour": 48,
+      "regime": "quasi_steady",
+      "transition_probabilities": {
+        "weakening": 0.08629100737620307,
+        "quasi_steady": 0.8648205558153378,
+        "intensifying": 0.04888843680845917
+      },
+      "state": {
+        "wind_ms": 47.57785307562731,
+        "core_moisture": 0.8589108777389535,
+        "central_pressure_pa": 95375.05060207633,
+        "rmw_m": 29807.476984064506
+      },
+      "diagnostics_at_step_start": {
+        "wind_tendency_ms2": -1.8268709590002115e-05,
+        "moisture_tendency_s": -4.042392783848637e-07,
+        "ocean_feedback_alpha": 0.9866702242811318,
+        "standardized_24h_tendency": -0.10227320789910471
+      },
+      "solver": {
+        "accepted_steps": 25,
+        "rejected_steps": 0,
+        "derivative_evaluations": 175,
+        "final_time_s": 21600.0
+      }
+    }
+  ]
+}

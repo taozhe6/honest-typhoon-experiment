@@ -1,0 +1,269 @@
+{
+  "schema_version": 1,
+  "case_id": "bavi-2026-prelandfall-reintensification-v1",
+  "storm": {
+    "name": "BAVI",
+    "international_number": "2609",
+    "jtwc_id": "09W",
+    "basin": "western_north_pacific"
+  },
+  "purpose": "Frozen post-event falsification case for a 12-hour pre-landfall intensity reversal.",
+  "selection_rule": "Use each agency's forecast and later analysis in its native sustained-wind averaging period. Keep agency channels separate.",
+  "generated_at_utc": "2026-07-11T22:59:26.342186Z",
+  "observation_contract_path": "config/wind_observation_contract.json",
+  "channels": {
+    "NMC": {
+      "agency": "NMC",
+      "initial_analysis": {
+        "agency": "NMC",
+        "stage": "ingest_initial_analysis",
+        "issued_at_utc": "2026-07-10T09:00:00Z",
+        "valid_at_utc": "2026-07-10T09:00:00Z",
+        "wind_value_native": 40.0,
+        "wind_unit_native": "m/s",
+        "wind_value_ms": 40.0,
+        "wind_averaging_period_seconds": 120,
+        "wind_height_m": 10,
+        "wind_definition": "maximum sustained wind near the tropical-cyclone center",
+        "latitude_deg": 22.2,
+        "longitude_deg": 126.6,
+        "central_pressure_hpa": 960,
+        "source_id": "nmc_detail"
+      },
+      "forecast": {
+        "agency": "NMC",
+        "stage": "forecast_output",
+        "issued_at_utc": "2026-07-10T09:00:00Z",
+        "valid_at_utc": "2026-07-10T21:00:00Z",
+        "wind_value_native": 42.0,
+        "wind_unit_native": "m/s",
+        "wind_value_ms": 42.0,
+        "wind_averaging_period_seconds": 120,
+        "wind_height_m": 10,
+        "wind_definition": "maximum sustained wind near the tropical-cyclone center",
+        "latitude_deg": 24.3,
+        "longitude_deg": 124.7,
+        "central_pressure_hpa": 955,
+        "source_id": "nmc_detail"
+      },
+      "truth": {
+        "agency": "NMC",
+        "stage": "verification_truth",
+        "issued_at_utc": "2026-07-10T21:00:00Z",
+        "valid_at_utc": "2026-07-10T21:00:00Z",
+        "wind_value_native": 42.0,
+        "wind_unit_native": "m/s",
+        "wind_value_ms": 42.0,
+        "wind_averaging_period_seconds": 120,
+        "wind_height_m": 10,
+        "wind_definition": "maximum sustained wind near the tropical-cyclone center",
+        "latitude_deg": 24.2,
+        "longitude_deg": 125.0,
+        "central_pressure_hpa": 955,
+        "source_id": "nmc_detail"
+      }
+    },
+    "JMA": {
+      "agency": "JMA",
+      "initial_analysis": {
+        "agency": "JMA",
+        "stage": "ingest_initial_analysis",
+        "issued_at_utc": "2026-07-10T09:00:00Z",
+        "valid_at_utc": "2026-07-10T09:00:00Z",
+        "wind_value_native": 85,
+        "wind_unit_native": "kt",
+        "wind_value_ms": 43.72777777777778,
+        "wind_averaging_period_seconds": 600,
+        "wind_height_m": 10,
+        "wind_definition": "maximum sustained wind near the tropical-cyclone center",
+        "latitude_deg": 22.3,
+        "longitude_deg": 126.5,
+        "central_pressure_hpa": 935,
+        "source_id": "gdacs_gts"
+      },
+      "forecast": {
+        "agency": "JMA",
+        "stage": "forecast_output",
+        "issued_at_utc": "2026-07-10T09:00:00Z",
+        "valid_at_utc": "2026-07-10T21:00:00Z",
+        "wind_value_native": 85,
+        "wind_unit_native": "kt",
+        "wind_value_ms": 43.72777777777778,
+        "wind_averaging_period_seconds": 600,
+        "wind_height_m": 10,
+        "wind_definition": "maximum sustained wind near the tropical-cyclone center",
+        "latitude_deg": 24.5,
+        "longitude_deg": 124.8,
+        "central_pressure_hpa": 935,
+        "source_id": "gdacs_gts"
+      },
+      "truth": {
+        "agency": "JMA",
+        "stage": "verification_truth",
+        "issued_at_utc": "2026-07-10T21:00:00Z",
+        "valid_at_utc": "2026-07-10T21:00:00Z",
+        "wind_value_native": 80,
+        "wind_unit_native": "kt",
+        "wind_value_ms": 41.15555555555556,
+        "wind_averaging_period_seconds": 600,
+        "wind_height_m": 10,
+        "wind_definition": "maximum sustained wind near the tropical-cyclone center",
+        "latitude_deg": 24.2,
+        "longitude_deg": 125.0,
+        "central_pressure_hpa": 940,
+        "source_id": "gdacs_gts"
+      }
+    },
+    "JTWC": {
+      "agency": "JTWC",
+      "initial_analysis": {
+        "agency": "JTWC",
+        "stage": "ingest_initial_analysis",
+        "issued_at_utc": "2026-07-10T09:00:00Z",
+        "valid_at_utc": "2026-07-10T06:00:00Z",
+        "wind_value_native": 75,
+        "wind_unit_native": "kt",
+        "wind_value_ms": 38.583333333333336,
+        "wind_averaging_period_seconds": 60,
+        "wind_height_m": 10,
+        "wind_definition": "maximum sustained wind",
+        "latitude_deg": 21.9,
+        "longitude_deg": 126.9,
+        "central_pressure_hpa": 962,
+        "source_id": "ucar_adeck"
+      },
+      "forecast": {
+        "agency": "JTWC",
+        "stage": "forecast_output",
+        "issued_at_utc": "2026-07-10T09:00:00Z",
+        "valid_at_utc": "2026-07-10T18:00:00Z",
+        "wind_value_native": 75,
+        "wind_unit_native": "kt",
+        "wind_value_ms": 38.583333333333336,
+        "wind_averaging_period_seconds": 60,
+        "wind_height_m": 10,
+        "wind_definition": "maximum sustained wind",
+        "latitude_deg": 24.0,
+        "longitude_deg": 125.2,
+        "central_pressure_hpa": 962,
+        "source_id": "gdacs_gts"
+      },
+      "truth": {
+        "agency": "JTWC",
+        "stage": "verification_truth",
+        "issued_at_utc": "2026-07-10T18:00:00Z",
+        "valid_at_utc": "2026-07-10T18:00:00Z",
+        "wind_value_native": 85,
+        "wind_unit_native": "kt",
+        "wind_value_ms": 43.72777777777778,
+        "wind_averaging_period_seconds": 60,
+        "wind_height_m": 10,
+        "wind_definition": "maximum sustained wind",
+        "latitude_deg": 23.8,
+        "longitude_deg": 125.2,
+        "central_pressure_hpa": 951,
+        "source_id": "ucar_adeck"
+      }
+    }
+  },
+  "model_evaluation": {
+    "primary_native_channel": "JTWC",
+    "required_artifacts": [
+      {
+        "id": "accepted_calibration",
+        "path": "calibration/accepted.json"
+      },
+      {
+        "id": "forecast_time_initial_state",
+        "path": "cases/bavi_2026/operational_initial_state.json"
+      },
+      {
+        "id": "forecast_time_environmental_forcing",
+        "path": "cases/bavi_2026/forecast_time_forcing.json"
+      },
+      {
+        "id": "agency_observation_operators",
+        "path": "config/observation_operators.json"
+      }
+    ],
+    "event_diagnostics": [
+      "median_12h_wind_change",
+      "probability_positive_12h_wind_change",
+      "probability_at_least_10kt_12h_wind_change",
+      "probability_any_intensifying_regime",
+      "central_80_interval_for_12h_wind_change"
+    ],
+    "case_reproduction_rule": "Observed 12-hour change lies inside the forecast central 80% interval and the forecast median change is positive.",
+    "scope": "One diagnostic case. It cannot replace the storm-disjoint sealed hindcast."
+  },
+  "provenance": {
+    "sources": {
+      "nmc_detail": {
+        "url": "https://typhoon.nmc.cn/weatherservice/typhoon/jsons/view_3257931?callback=typhoon_jsons_view_3257931",
+        "authority": "NMC",
+        "archive_role": "official historical storm detail",
+        "retrieved_at_utc": "2026-07-11T22:59:26.342186Z",
+        "response_bytes_utf8": 70051,
+        "response_sha256": "c00d61b14d110e2f64e8d6205ff19795e756b263055cc7c4639c335456608173",
+        "selected_evidence_bytes_utf8": 506,
+        "selected_evidence_sha256": "7c890ac90e889cf0f2e1def0a876e2cf52b25a11c4ed2c152efca7b570bf56db"
+      },
+      "gdacs_gts": {
+        "url": "https://www.gdacs.org/gts.aspx?eventid=1001279&eventtype=TC",
+        "authority": "GDACS archive relaying original WMO/JMA/JTWC bulletins",
+        "archive_role": "historical bulletin archive",
+        "retrieved_at_utc": "2026-07-11T22:59:26.342186Z",
+        "response_bytes_utf8": 725154,
+        "response_sha256": "3bd3f2cefb4fa55e404bc4d87875b039ef1bf77741b51bb538da5ade2903293d",
+        "selected_evidence_bytes_utf8": 10682,
+        "selected_evidence_sha256": "6398d47b9dd052bc9f240a389f1ba5e9cb12fa3757d5be623ae1a62d6959ddc4"
+      },
+      "ucar_adeck": {
+        "url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/awp092026.dat",
+        "authority": "NCAR Research Applications Laboratory archive of ATCF data",
+        "archive_role": "historical operational CARQ analyses",
+        "retrieved_at_utc": "2026-07-11T22:59:26.342186Z",
+        "response_bytes_utf8": 15256546,
+        "response_sha256": "319ccf52d8a02feed57759ac0d1eaab33fe19ec6ed7b202332b52bb8eb24f8c0",
+        "selected_evidence_bytes_utf8": 193,
+        "selected_evidence_sha256": "437ee11de60811b6a23bf8834a821f1cc61344e8617cae3ab0a0580ba2a3fc7d"
+      }
+    },
+    "message_excerpts": {
+      "WTPQ51RJTD100900": "WTPQ51 RJTD 100900\r\nRSMC TROPICAL CYCLONE ADVISORY\r\nNAME  TY 2609 BAVI (2609)\r\nANALYSIS\r\nPSTN  100900UTC 22.3N 126.5E GOOD\r\nMOVE  NNW 10KT\r\nPRES  935HPA\r\nMXWD  085KT\r\nGUST  120KT\r\n50KT  180NM\r\n30KT  400NM\r\nFORECAST\r\n12HF  102100UTC 24.5N 124.8E 25NM 70%\r\nMOVE  NW 13KT\r\nPRES  935HPA\r\nMXWD  085KT\r\nGUST  120KT\r\n24HF  110900UTC 26.5N 122.3E 35NM 70%\r\nMOVE  NW 15KT\r\nPRES  950HPA\r\nMXWD  075KT\r\nGUST  105KT\r\n45HF  120600UTC 30.0N 118.4E 55NM 70%\r\nMOVE  NW 14KT\r\nPRES  975HPA\r\nMXWD  045KT\r\nGUST  065KT\r\n69HF  130600UTC 33.0N 116.8E 80NM 70%\r\nMOVE  NNW 08KT\r\nPRES  985HPA\r\nMXWD  035KT\r\nGUST  050KT\r\n93HF  140600UTC 36.7N 118.4E 125NM 70% TROPICAL DEPRESSION =",
+      "WTPQ51RJTD102100": "WTPQ51 RJTD 102100\r\nRSMC TROPICAL CYCLONE ADVISORY\r\nNAME  TY 2609 BAVI (2609)\r\nANALYSIS\r\nPSTN  102100UTC 24.2N 125.0E GOOD\r\nMOVE  NW 11KT\r\nPRES  940HPA\r\nMXWD  080KT\r\nGUST  115KT\r\n50KT  210NM NORTHEAST 180NM SOUTHWEST\r\n30KT  400NM\r\nFORECAST\r\n12HF  110900UTC 26.8N 122.5E 25NM 70%\r\nMOVE  NW 18KT\r\nPRES  955HPA\r\nMXWD  070KT\r\nGUST  100KT\r\n24HF  112100UTC 29.0N 120.0E 35NM 70%\r\nMOVE  NW 15KT\r\nPRES  975HPA\r\nMXWD  055KT\r\nGUST  080KT\r\n45HF  121800UTC 32.0N 117.9E 55NM 70%\r\nMOVE  NNW 11KT\r\nPRES  985HPA\r\nMXWD  035KT\r\nGUST  050KT\r\n69HF  131800UTC 35.1N 118.3E 100NM 70% TROPICAL DEPRESSION =",
+      "WTPN51PGTW100900": "WTPN51 PGTW 100900\nWARNING    ATCG MIL 09W NWP 260710073407\n2026071006 09W BAVI       038  01 340 12 SATL 030\nT000 219N 1269E 075 R064 140 NE QD 150 SE QD 120 SW QD 115 NW QD R050 190 NE QD 200 SE QD 160 SW QD 160 NW QD R034 310 NE QD 320 SE QD 300 SW QD 280 NW QD\nT012 240N 1252E 075 R064 100 NE QD 110 SE QD 080 SW QD 060 NW QD R050 170 NE QD 200 SE QD 140 SW QD 140 NW QD R034 300 NE QD 340 SE QD 290 SW QD 260 NW QD\nT024 261N 1231E 075 R064 090 NE QD 100 SE QD 050 SW QD 060 NW QD R050 170 NE QD 200 SE QD 130 SW QD 130 NW QD R034 300 NE QD 340 SE QD 280 SW QD 230 NW QD\nT036 284N 1207E 065 R064 060 NE QD 080 SE QD 040 SW QD 030 NW QD R050 130 NE QD 170 SE QD 090 SW QD 070 NW QD R034 290 NE QD 340 SE QD 210 SW QD 130 NW QD\nT048 305N 1187E 045 R034 280 NE QD 320 SE QD 080 SW QD 020 NW QD\nT060 322N 1176E 030\nT072 335N 1173E 020\nAMP\n    036HR DISSIPATING AS A SIGNIFICANT TROPICAL CYCLONE OVER LAND\n    048HR DISSIPATING AS A SIGNIFICANT TROPICAL CYCLONE OVER LAND\n    060HR DISSIPATING AS A SIGNIFICANT TROPICAL CYCLONE OVER LAND\n    072HR DISSIPATED AS A SIGNIFICANT TROPICAL CYCLONE OVER LAND\nSUBJ:  TYPHOON 09W (BAVI) WARNING NR 038\n1. TYPHOON 09W (BAVI) WARNING NR 038\n   01 ACTIVE TROPICAL CYCLONE IN NORTHWESTPAC\n   MAX SUSTAINED WINDS BASED ON ONE-MINUTE AVERAGE\n   WIND RADII VALID OVER OPEN WATER ONLY\n    ---\n   WARNING POSITION:\n   100600Z --- NEAR 21.9N 126.9E\n     MOVEMENT PAST SIX HOURS - 340 DEGREES AT 12 KTS\n     POSITION ACCURATE TO WITHIN 030 NM\n     POSITION BASED ON CENTER LOCATED BY SATELLITE\n   PRESENT WIND DISTRIBUTION:\n   MAX SUSTAINED WINDS - 075 KT, GUSTS 090 KT\n   WIND RADII VALID OVER OPEN WATER ONLY\n   RADIUS OF 064 KT WINDS - 140 NM NORTHEAST QUADRANT\n                            150 NM SOUTHEAST QUADRANT\n                            120 NM SOUTHWEST QUADRANT\n                            115 NM NORTHWEST QUADRANT\n   RADIUS OF 050 KT WINDS - 190 NM NORTHEAST QUADRANT\n                            200 NM SOUTHEAST QUADRANT"
+    },
+    "nmc_selected_records": {
+      "initial": {
+        "valid_dtg": "202607100900",
+        "classification": "TY",
+        "longitude": 126.6,
+        "latitude": 22.2,
+        "pressure_hpa": 960,
+        "wind_ms": 40.0,
+        "raw_record_id": 3269394
+      },
+      "forecast": {
+        "base_dtg": "202607100900",
+        "valid_at_utc": "2026-07-10T21:00:00Z",
+        "lead_hours": 12,
+        "longitude": 124.7,
+        "latitude": 24.3,
+        "pressure_hpa": 955,
+        "wind_ms": 42.0,
+        "center": "BABJ",
+        "classification": "STY"
+      },
+      "truth": {
+        "valid_dtg": "202607102100",
+        "classification": "STY",
+        "longitude": 125.0,
+        "latitude": 24.2,
+        "pressure_hpa": 955,
+        "wind_ms": 42.0,
+        "raw_record_id": 3269956
+      }
+    }
+  }
+}

@@ -1,0 +1,260 @@
+{
+  "S088": {
+    "detected_first_ocean_to_land_crossings": 368,
+    "complete_five_original_crossings": 108,
+    "station_truth_fields": [],
+    "truth_error_status": "unidentifiable_from_ibtracs",
+    "truth_error_reason": "The IBTrACS schema has no independent station wind, station location, observation time, or station averaging-window field.",
+    "cma_home_advantage": "CMA analysis can ingest Chinese station information; CMA-relative differences share the reference term and are descriptive reference contrasts.",
+    "reference_relative_summary": {
+      "JTWC": {
+        "mean_difference_ms": -1.3550077241245437,
+        "mean_interval": [
+          -1.9748183711247422,
+          -0.7579650146579976
+        ],
+        "sd_difference_ms": 3.2138649312747796
+      },
+      "JMA": {
+        "mean_difference_ms": -0.7707740431690889,
+        "mean_interval": [
+          -1.4772790933443734,
+          -0.0957930557589984
+        ],
+        "sd_difference_ms": 3.655180994199355
+      },
+      "HKO": {
+        "mean_difference_ms": 1.412181364835867,
+        "mean_interval": [
+          0.8765762386728815,
+          1.9268848434695025
+        ],
+        "sd_difference_ms": 2.889028374771861
+      },
+      "KMA": {
+        "mean_difference_ms": -1.2201485539402954,
+        "mean_interval": [
+          -2.004124183366391,
+          -0.4297497322093795
+        ],
+        "sd_difference_ms": 4.17138008370517
+      }
+    },
+    "reference_relative_correlation": {
+      "agencies": [
+        "JTWC",
+        "JMA",
+        "HKO",
+        "KMA"
+      ],
+      "point": [
+        [
+          1.0,
+          0.050911763457957386,
+          0.41630832164753007,
+          0.04751722670944578
+        ],
+        [
+          0.050911763457957386,
+          1.0,
+          0.1515844270802472,
+          0.6894705783068764
+        ],
+        [
+          0.41630832164753007,
+          0.1515844270802472,
+          1.0,
+          0.30874912536138494
+        ],
+        [
+          0.04751722670944579,
+          0.6894705783068764,
+          0.30874912536138494,
+          1.0
+        ]
+      ],
+      "lower": [
+        [
+          1.0,
+          -0.16669943408293167,
+          0.21445568604615564,
+          -0.18274114627440058
+        ],
+        [
+          -0.16669943408293167,
+          1.0,
+          -0.05432950242141332,
+          0.5775625524099862
+        ],
+        [
+          0.21445568604615564,
+          -0.05432950242141332,
+          1.0,
+          0.0791918574763134
+        ],
+        [
+          -0.18274114627440058,
+          0.5775625524099862,
+          0.0791918574763134,
+          1.0
+        ]
+      ],
+      "upper": [
+        [
+          1.0,
+          0.2612713201286857,
+          0.5840529167958978,
+          0.26387081852537647
+        ],
+        [
+          0.2612713201286857,
+          1.0,
+          0.3631994416090991,
+          0.7876194831935849
+        ],
+        [
+          0.5840529167958978,
+          0.3631994416090991,
+          1.0,
+          0.5156637219026636
+        ],
+        [
+          0.26387081852537647,
+          0.7876194831935849,
+          0.5156637219026636,
+          1.0
+        ]
+      ]
+    },
+    "records_file": "outputs/landfall_records_S088.csv"
+  },
+  "S093": {
+    "detected_first_ocean_to_land_crossings": 368,
+    "complete_five_original_crossings": 108,
+    "station_truth_fields": [],
+    "truth_error_status": "unidentifiable_from_ibtracs",
+    "truth_error_reason": "The IBTrACS schema has no independent station wind, station location, observation time, or station averaging-window field.",
+    "cma_home_advantage": "CMA analysis can ingest Chinese station information; CMA-relative differences share the reference term and are descriptive reference contrasts.",
+    "reference_relative_summary": {
+      "JTWC": {
+        "mean_difference_ms": 0.37553051087682116,
+        "mean_interval": [
+          -0.33339171278490703,
+          1.0855702835726295
+        ],
+        "sd_difference_ms": 3.6310343045646243
+      },
+      "JMA": {
+        "mean_difference_ms": -0.7707740431690889,
+        "mean_interval": [
+          -1.4796908146832208,
+          -0.11816408469800632
+        ],
+        "sd_difference_ms": 3.655180994199355
+      },
+      "HKO": {
+        "mean_difference_ms": 1.412181364835867,
+        "mean_interval": [
+          0.8660209550704288,
+          1.9599316802820694
+        ],
+        "sd_difference_ms": 2.889028374771861
+      },
+      "KMA": {
+        "mean_difference_ms": -1.2201485539402954,
+        "mean_interval": [
+          -2.035720758225193,
+          -0.44097838328291245
+        ],
+        "sd_difference_ms": 4.17138008370517
+      }
+    },
+    "reference_relative_correlation": {
+      "agencies": [
+        "JTWC",
+        "JMA",
+        "HKO",
+        "KMA"
+      ],
+      "point": [
+        [
+          1.0,
+          -0.05230852087815274,
+          0.41488121110945286,
+          -0.05190058606096067
+        ],
+        [
+          -0.05230852087815274,
+          1.0,
+          0.1515844270802472,
+          0.6894705783068764
+        ],
+        [
+          0.41488121110945286,
+          0.1515844270802472,
+          1.0,
+          0.30874912536138494
+        ],
+        [
+          -0.05190058606096067,
+          0.6894705783068764,
+          0.30874912536138494,
+          1.0
+        ]
+      ],
+      "lower": [
+        [
+          1.0,
+          -0.26893758838661475,
+          0.2125360689906253,
+          -0.2717038763320182
+        ],
+        [
+          -0.26893758838661475,
+          1.0,
+          -0.05036838325414613,
+          0.5831677027658737
+        ],
+        [
+          0.2125360689906253,
+          -0.05036838325414613,
+          1.0,
+          0.0634553692448774
+        ],
+        [
+          -0.2717038763320182,
+          0.5831677027658737,
+          0.0634553692448774,
+          1.0
+        ]
+      ],
+      "upper": [
+        [
+          1.0,
+          0.1729603471866683,
+          0.584538934695509,
+          0.16878820350796794
+        ],
+        [
+          0.1729603471866683,
+          1.0,
+          0.3611479233837009,
+          0.7863364232208676
+        ],
+        [
+          0.584538934695509,
+          0.3611479233837009,
+          1.0,
+          0.511142746135219
+        ],
+        [
+          0.16878820350796794,
+          0.7863364232208676,
+          0.511142746135219,
+          1.0
+        ]
+      ]
+    },
+    "records_file": "outputs/landfall_records_S093.csv"
+  }
+}

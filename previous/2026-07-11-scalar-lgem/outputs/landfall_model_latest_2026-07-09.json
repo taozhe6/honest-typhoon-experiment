@@ -1,0 +1,523 @@
+{
+  "run_time_utc": "2026-07-09T17:11:44.232833+00:00",
+  "sources": {
+    "nmc": "https://typhoon.nmc.cn/weatherservice/typhoon/jsons/view_3257931",
+    "jma": "https://www.jma.go.jp/bosai/typhoon/data/TC2611/specifications.json",
+    "jtwc": "https://www.metoc.navy.mil/jtwc/products/wp0926web.txt",
+    "hko": "https://www.hko.gov.hk/wxinfo/currwx/tc_posc_2614.json",
+    "cwa": "https://www.cwa.gov.tw/Data/js/typhoon/TY_NEWS-Data.js",
+    "natural_earth_coastline": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_10m_coastline.geojson"
+  },
+  "source_status": [
+    {
+      "source": "NMC",
+      "ok": true,
+      "issue": "2026年07月09日23时00分",
+      "warnings": [],
+      "current": {
+        "lat": 19.4,
+        "lon": 128.5,
+        "wind_ms": 45.0,
+        "valid": "2026-07-09 23:00 BJT"
+      },
+      "current_distance_from_multisource_median_km": 24.6
+    },
+    {
+      "source": "JMA",
+      "ok": true,
+      "issue": "2026-07-10T00:50:00+09:00",
+      "warnings": [],
+      "current": {
+        "lat": 19.4,
+        "lon": 128.5,
+        "wind_ms": 45.0,
+        "valid": "2026-07-10T00:00:00+09:00"
+      },
+      "current_distance_from_multisource_median_km": 24.6
+    },
+    {
+      "source": "JTWC",
+      "ok": true,
+      "issue": "warning 035",
+      "warnings": [],
+      "current": {
+        "lat": 19.2,
+        "lon": 128.8,
+        "wind_ms": 45.271072000000004,
+        "valid": "091200Z"
+      },
+      "current_distance_from_multisource_median_km": 21.0
+    },
+    {
+      "source": "HKO",
+      "ok": true,
+      "issue": "在香港時間 2026 年 07 月 09 日 20 時的最新資料",
+      "warnings": [],
+      "current": {
+        "lat": 19.1,
+        "lon": 128.9,
+        "wind_ms": 48.61111111111111,
+        "valid": "在香港時間 2026 年 07 月 09 日 20 時的最新資料"
+      },
+      "current_distance_from_multisource_median_km": 33.4
+    },
+    {
+      "source": "CWA",
+      "ok": true,
+      "issue": "2026-07-09T12:00:00+00:00",
+      "warnings": [
+        "TLS verification failed; retried without verification: URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Missing Subject Key Identifier (_ssl.c:1081)>"
+      ],
+      "current": {
+        "lat": 19.2,
+        "lon": 128.6,
+        "wind_ms": 51.0,
+        "valid": "2026-07-09 20:00 BJT"
+      },
+      "current_distance_from_multisource_median_km": 0.0
+    }
+  ],
+  "model": {
+    "name": "piecewise LGE with Natural Earth coastline intersection",
+    "lge_beta_h": 0.023,
+    "lge_n": 2.3,
+    "potential_intensity_margin_ms": 18.108428800000002,
+    "source_consistency_limit_km": 450.0,
+    "preferred_column": "landfall_lge_ms",
+    "note": "landfall_lge_ms is the LGE curve fitted to the segment that crosses the mainland coastline. landfall_linear_ms is a straight-line sanity check at the same coastline intersection. pre_land_ocean_lge_ms is an upper-bound reference when the previous ocean segment is extrapolated."
+  },
+  "coastline_segments_used": 2273,
+  "estimates": [
+    {
+      "source": "NMC",
+      "issue": "2026年07月09日23时00分",
+      "source_warnings": [],
+      "current_distance_from_multisource_median_km": 24.6,
+      "method": "natural_earth_intersection",
+      "landfall_time_bjt": "2026-07-12 03:17",
+      "landfall_h_from_base": 52.289,
+      "landfall_lat": 26.708,
+      "landfall_lon": 120.135,
+      "event_segment_index": 4,
+      "event_segment_speed_kmh": 36.34,
+      "raw_segment_lge_ms": 41.61,
+      "raw_segment_lge_grade": "14",
+      "raw_segment_linear_ms": 42.64,
+      "raw_segment_linear_grade": "14",
+      "landfall_lge_ms": 41.61,
+      "landfall_lge_grade": "14",
+      "landfall_linear_ms": 42.64,
+      "landfall_linear_grade": "14",
+      "landfall_interpolated_ms": 42.64,
+      "landfall_interpolated_grade": "14",
+      "pre_land_ocean_lge_ms": 46.88,
+      "pre_land_ocean_grade": "15",
+      "pre_land_ocean_basis": "previous_ocean_segment",
+      "pre_land_ocean_kappa_h": 0.003849,
+      "points": [
+        {
+          "h": 0.0,
+          "lat": 19.4,
+          "lon": 128.5,
+          "wind_ms": 45.0,
+          "valid": "2026-07-09 23:00 BJT"
+        },
+        {
+          "h": 12.0,
+          "lat": 21.2,
+          "lon": 127.2,
+          "wind_ms": 48.0,
+          "pressure_hpa": 940.0,
+          "org": "BABJ",
+          "strength": "STY",
+          "valid": "2026-07-10 11:00 BJT",
+          "forecast_issued_at": "202607091500"
+        },
+        {
+          "h": 24.0,
+          "lat": 23.1,
+          "lon": 125.3,
+          "wind_ms": 52.0,
+          "pressure_hpa": 930.0,
+          "org": "BABJ",
+          "strength": "SuperTY",
+          "valid": "2026-07-10 23:00 BJT",
+          "forecast_issued_at": "202607091500"
+        },
+        {
+          "h": 36.0,
+          "lat": 25.0,
+          "lon": 123.0,
+          "wind_ms": 52.0,
+          "pressure_hpa": 930.0,
+          "org": "BABJ",
+          "strength": "SuperTY",
+          "valid": "2026-07-11 11:00 BJT",
+          "forecast_issued_at": "202607091500"
+        },
+        {
+          "h": 48.0,
+          "lat": 25.6,
+          "lon": 121.1,
+          "wind_ms": 48.0,
+          "pressure_hpa": 935.0,
+          "org": "BABJ",
+          "strength": "STY",
+          "valid": "2026-07-11 23:00 BJT",
+          "forecast_issued_at": "202607091500"
+        },
+        {
+          "h": 60.0,
+          "lat": 28.7,
+          "lon": 118.4,
+          "wind_ms": 33.0,
+          "pressure_hpa": 975.0,
+          "org": "BABJ",
+          "strength": "TY",
+          "valid": "2026-07-12 11:00 BJT",
+          "forecast_issued_at": "202607091500"
+        },
+        {
+          "h": 72.0,
+          "lat": 30.9,
+          "lon": 116.2,
+          "wind_ms": 20.0,
+          "pressure_hpa": 995.0,
+          "org": "BABJ",
+          "strength": "TS",
+          "valid": "2026-07-12 23:00 BJT",
+          "forecast_issued_at": "202607091500"
+        },
+        {
+          "h": 96.0,
+          "lat": 32.9,
+          "lon": 115.0,
+          "wind_ms": 15.0,
+          "pressure_hpa": 998.0,
+          "org": "BABJ",
+          "strength": "TD",
+          "valid": "2026-07-13 23:00 BJT",
+          "forecast_issued_at": "202607091500"
+        }
+      ]
+    },
+    {
+      "source": "JMA",
+      "issue": "2026-07-10T00:50:00+09:00",
+      "source_warnings": [],
+      "current_distance_from_multisource_median_km": 24.6,
+      "method": "natural_earth_intersection",
+      "landfall_time_bjt": "2026-07-12 00:02",
+      "landfall_h_from_base": 49.037,
+      "landfall_lat": 27.2728,
+      "landfall_lon": 120.5262,
+      "event_segment_index": 3,
+      "event_segment_speed_kmh": 26.33,
+      "raw_segment_lge_ms": 34.42,
+      "raw_segment_lge_grade": "12",
+      "raw_segment_linear_ms": 36.3,
+      "raw_segment_linear_grade": "12",
+      "landfall_lge_ms": 34.42,
+      "landfall_lge_grade": "12",
+      "landfall_linear_ms": 36.3,
+      "landfall_linear_grade": "12",
+      "landfall_interpolated_ms": 36.3,
+      "landfall_interpolated_grade": "12",
+      "pre_land_ocean_lge_ms": 39.31,
+      "pre_land_ocean_grade": "13",
+      "pre_land_ocean_basis": "previous_ocean_segment",
+      "pre_land_ocean_kappa_h": 0.003555,
+      "points": [
+        {
+          "h": 0.0,
+          "lat": 19.4,
+          "lon": 128.5,
+          "wind_ms": 45.0,
+          "valid": "2026-07-10T00:00:00+09:00"
+        },
+        {
+          "h": 12.0,
+          "lat": 21.3,
+          "lon": 127.1,
+          "wind_ms": 45.0,
+          "valid": "2026-07-10T12:00:00+09:00"
+        },
+        {
+          "h": 24.0,
+          "lat": 23.2,
+          "lon": 125.4,
+          "wind_ms": 45.0,
+          "valid": "2026-07-11T00:00:00+09:00"
+        },
+        {
+          "h": 45.0,
+          "lat": 26.6,
+          "lon": 121.3,
+          "wind_ms": 40.0,
+          "valid": "2026-07-11T21:00:00+09:00"
+        },
+        {
+          "h": 69.0,
+          "lat": 30.6,
+          "lon": 116.7,
+          "wind_ms": 18.0,
+          "valid": "2026-07-12T21:00:00+09:00"
+        }
+      ]
+    },
+    {
+      "source": "JTWC",
+      "issue": "warning 035",
+      "source_warnings": [],
+      "current_distance_from_multisource_median_km": 21.0,
+      "method": "natural_earth_intersection",
+      "landfall_time_bjt": "2026-07-12 00:09",
+      "landfall_h_from_base": 52.152,
+      "landfall_lat": 27.4267,
+      "landfall_lon": 120.6387,
+      "event_segment_index": 4,
+      "event_segment_speed_kmh": 26.53,
+      "raw_segment_lge_ms": 31.58,
+      "raw_segment_lge_grade": "10-11",
+      "raw_segment_linear_ms": 32.3,
+      "raw_segment_linear_grade": "10-11",
+      "landfall_lge_ms": 31.58,
+      "landfall_lge_grade": "10-11",
+      "landfall_linear_ms": 32.3,
+      "landfall_linear_grade": "10-11",
+      "landfall_interpolated_ms": 32.3,
+      "landfall_interpolated_grade": "10-11",
+      "pre_land_ocean_lge_ms": 34.97,
+      "pre_land_ocean_grade": "12",
+      "pre_land_ocean_basis": "previous_ocean_segment",
+      "pre_land_ocean_kappa_h": -0.001213,
+      "points": [
+        {
+          "h": 0.0,
+          "lat": 19.2,
+          "lon": 128.8,
+          "wind_ms": 45.271072000000004,
+          "valid": "091200Z"
+        },
+        {
+          "h": 12.0,
+          "lat": 20.8,
+          "lon": 127.5,
+          "wind_ms": 43.0075184,
+          "valid": "100000Z"
+        },
+        {
+          "h": 24.0,
+          "lat": 22.7,
+          "lon": 126.0,
+          "wind_ms": 40.7439648,
+          "valid": "101200Z"
+        },
+        {
+          "h": 36.0,
+          "lat": 24.7,
+          "lon": 123.8,
+          "wind_ms": 40.7439648,
+          "valid": "110000Z"
+        },
+        {
+          "h": 48.0,
+          "lat": 26.7,
+          "lon": 121.4,
+          "wind_ms": 36.216857600000004,
+          "valid": "111200Z"
+        },
+        {
+          "h": 60.0,
+          "lat": 28.8,
+          "lon": 119.2,
+          "wind_ms": 24.899089600000003,
+          "valid": "120000Z"
+        },
+        {
+          "h": 72.0,
+          "lat": 30.7,
+          "lon": 117.8,
+          "wind_ms": 15.8448752,
+          "valid": "121200Z"
+        },
+        {
+          "h": 96.0,
+          "lat": 33.6,
+          "lon": 117.1,
+          "wind_ms": 9.054214400000001,
+          "valid": "131200Z"
+        }
+      ]
+    },
+    {
+      "source": "HKO",
+      "issue": "在香港時間 2026 年 07 月 09 日 20 時的最新資料",
+      "source_warnings": [],
+      "current_distance_from_multisource_median_km": 33.4,
+      "method": "natural_earth_intersection",
+      "landfall_time_bjt": "2026-07-11 22:01",
+      "landfall_h_from_base": 50.025,
+      "landfall_lat": 27.4375,
+      "landfall_lon": 121.071,
+      "event_segment_index": 2,
+      "event_segment_speed_kmh": 24.34,
+      "raw_segment_lge_ms": 43.79,
+      "raw_segment_lge_grade": "14",
+      "raw_segment_linear_ms": 44.43,
+      "raw_segment_linear_grade": "14",
+      "landfall_lge_ms": 43.79,
+      "landfall_lge_grade": "14",
+      "landfall_linear_ms": 44.43,
+      "landfall_linear_grade": "14",
+      "landfall_interpolated_ms": 44.43,
+      "landfall_interpolated_grade": "14",
+      "pre_land_ocean_lge_ms": 45.67,
+      "pre_land_ocean_grade": "14",
+      "pre_land_ocean_basis": "previous_ocean_segment",
+      "pre_land_ocean_kappa_h": 0.007866,
+      "points": [
+        {
+          "h": 0.0,
+          "lat": 19.1,
+          "lon": 128.9,
+          "wind_ms": 48.61111111111111,
+          "valid": "在香港時間 2026 年 07 月 09 日 20 時的最新資料"
+        },
+        {
+          "h": 24.0,
+          "lat": 22.9,
+          "lon": 125.8,
+          "wind_ms": 48.61111111111111,
+          "valid": "2026 年 07 月 10 日 20 時"
+        },
+        {
+          "h": 48.0,
+          "lat": 27.1,
+          "lon": 121.4,
+          "wind_ms": 45.833333333333336,
+          "valid": "2026 年 07 月 11 日 20 時"
+        },
+        {
+          "h": 72.0,
+          "lat": 31.1,
+          "lon": 117.5,
+          "wind_ms": 29.166666666666664,
+          "valid": "2026 年 07 月 12 日 20 時"
+        },
+        {
+          "h": 96.0,
+          "lat": 33.5,
+          "lon": 117.2,
+          "wind_ms": 12.5,
+          "valid": "2026 年 07 月 13 日 20 時"
+        },
+        {
+          "h": 120.0,
+          "lat": 34.9,
+          "lon": 118.2,
+          "wind_ms": 6.944444444444445,
+          "valid": "2026 年 07 月 14 日 20 時"
+        }
+      ]
+    },
+    {
+      "source": "CWA",
+      "issue": "2026-07-09T12:00:00+00:00",
+      "source_warnings": [
+        "TLS verification failed; retried without verification: URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Missing Subject Key Identifier (_ssl.c:1081)>"
+      ],
+      "current_distance_from_multisource_median_km": 0.0,
+      "method": "natural_earth_intersection",
+      "landfall_time_bjt": "2026-07-11 23:04",
+      "landfall_h_from_base": 51.07,
+      "landfall_lat": 27.6988,
+      "landfall_lon": 120.6756,
+      "event_segment_index": 6,
+      "event_segment_speed_kmh": 24.53,
+      "raw_segment_lge_ms": 39.21,
+      "raw_segment_lge_grade": "13",
+      "raw_segment_linear_ms": 40.44,
+      "raw_segment_linear_grade": "13",
+      "landfall_lge_ms": 39.21,
+      "landfall_lge_grade": "13",
+      "landfall_linear_ms": 40.44,
+      "landfall_linear_grade": "13",
+      "landfall_interpolated_ms": 40.44,
+      "landfall_interpolated_grade": "13",
+      "pre_land_ocean_lge_ms": 41.98,
+      "pre_land_ocean_grade": "14",
+      "pre_land_ocean_basis": "previous_ocean_segment",
+      "pre_land_ocean_kappa_h": 0.000511,
+      "points": [
+        {
+          "h": 0.0,
+          "lat": 19.2,
+          "lon": 128.6,
+          "wind_ms": 51.0,
+          "valid": "2026-07-09 20:00 BJT"
+        },
+        {
+          "h": 6.0,
+          "lat": 20.0,
+          "lon": 128.0,
+          "wind_ms": 51.0,
+          "valid": "2026-07-10 02:00 BJT"
+        },
+        {
+          "h": 12.0,
+          "lat": 21.0,
+          "lon": 127.3,
+          "wind_ms": 51.0,
+          "valid": "2026-07-10 08:00 BJT"
+        },
+        {
+          "h": 18.0,
+          "lat": 21.9,
+          "lon": 126.5,
+          "wind_ms": 51.0,
+          "valid": "2026-07-10 14:00 BJT"
+        },
+        {
+          "h": 24.0,
+          "lat": 22.9,
+          "lon": 125.7,
+          "wind_ms": 48.0,
+          "valid": "2026-07-10 20:00 BJT"
+        },
+        {
+          "h": 36.0,
+          "lat": 25.1,
+          "lon": 123.7,
+          "wind_ms": 48.0,
+          "valid": "2026-07-11 08:00 BJT"
+        },
+        {
+          "h": 48.0,
+          "lat": 27.2,
+          "lon": 121.2,
+          "wind_ms": 43.0,
+          "valid": "2026-07-11 20:00 BJT"
+        },
+        {
+          "h": 72.0,
+          "lat": 31.1,
+          "lon": 117.1,
+          "wind_ms": 23.0,
+          "valid": "2026-07-12 20:00 BJT"
+        }
+      ]
+    }
+  ],
+  "statistics": {
+    "mean_landfall_lge_ms": 38.12,
+    "median_landfall_lge_ms": 39.21,
+    "min_landfall_lge_ms": 31.58,
+    "max_landfall_lge_ms": 43.79,
+    "mean_landfall_linear_ms": 39.22,
+    "median_landfall_linear_ms": 40.44,
+    "mean_upper_bound_ocean_lge_ms": 41.76,
+    "median_upper_bound_ocean_lge_ms": 41.98,
+    "mean_grade": "13"
+  }
+}

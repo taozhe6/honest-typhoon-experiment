@@ -1,0 +1,113 @@
+{
+  "generated_at_utc": "2026-07-12T12:39:26.933983+00:00",
+  "case_id": "bavi-2026-prelandfall-reintensification-v1",
+  "model_id": "tc-msrom-v0.1",
+  "model_status": "research-rejected",
+  "native_channel_scores": {
+    "NMC": {
+      "agency": "NMC",
+      "averaging_period_seconds": 120,
+      "native_unit": "m/s",
+      "lead_hours": 12.0,
+      "initial_wind_native": 40.0,
+      "forecast_wind_native": 42.0,
+      "observed_wind_native": 42.0,
+      "forecast_change_native": 2.0,
+      "observed_change_native": 2.0,
+      "forecast_error_native": 0.0,
+      "absolute_error_native": 0.0,
+      "forecast_change_ms": 2.0,
+      "observed_change_ms": 2.0,
+      "forecast_error_ms": 0.0,
+      "forecast_direction": "intensifying",
+      "observed_direction": "intensifying",
+      "event_direction_captured": true
+    },
+    "JMA": {
+      "agency": "JMA",
+      "averaging_period_seconds": 600,
+      "native_unit": "kt",
+      "lead_hours": 12.0,
+      "initial_wind_native": 85.0,
+      "forecast_wind_native": 85.0,
+      "observed_wind_native": 80.0,
+      "forecast_change_native": 0.0,
+      "observed_change_native": -5.0,
+      "forecast_error_native": 5.0,
+      "absolute_error_native": 5.0,
+      "forecast_change_ms": 0.0,
+      "observed_change_ms": -2.5722222222222224,
+      "forecast_error_ms": 2.5722222222222224,
+      "forecast_direction": "quasi_steady",
+      "observed_direction": "weakening",
+      "event_direction_captured": false
+    },
+    "JTWC": {
+      "agency": "JTWC",
+      "averaging_period_seconds": 60,
+      "native_unit": "kt",
+      "lead_hours": 12.0,
+      "initial_wind_native": 75.0,
+      "forecast_wind_native": 75.0,
+      "observed_wind_native": 85.0,
+      "forecast_change_native": 0.0,
+      "observed_change_native": 10.0,
+      "forecast_error_native": -10.0,
+      "absolute_error_native": 10.0,
+      "forecast_change_ms": 0.0,
+      "observed_change_ms": 5.144444444444445,
+      "forecast_error_ms": -5.144444444444445,
+      "forecast_direction": "quasi_steady",
+      "observed_direction": "intensifying",
+      "event_direction_captured": false
+    }
+  },
+  "averaging_period_trace": {
+    "NMC": {
+      "initial_analysis": 120,
+      "forecast": 120,
+      "truth": 120
+    },
+    "JMA": {
+      "initial_analysis": 600,
+      "forecast": 600,
+      "truth": 600
+    },
+    "JTWC": {
+      "initial_analysis": 60,
+      "forecast": 60,
+      "truth": 60
+    }
+  },
+  "cross_channel_score_performed": false,
+  "cross_channel_reason": "No registered agency observation operator with uncertainty exists. All benchmark scores remain in native channels.",
+  "regime_structural_audit": {
+    "influences_wind_tendency": false,
+    "wind_tendency_ms_per_day": {
+      "weakening": -1.2393618976299454,
+      "quasi_steady": -1.2393618976299454,
+      "intensifying": -1.2393618976299454
+    },
+    "maximum_pairwise_difference_ms_per_day": 0.0,
+    "tolerance_ms_per_day": 1e-09
+  },
+  "full_model_case_eligibility": {
+    "eligible": false,
+    "verdict": "structural-fail-regime-has-zero-wind-effect",
+    "checks": {
+      "regime_changes_wind_tendency": false,
+      "formal_identifiability_audit_passed": false,
+      "model_status_is_research_accepted": false,
+      "all_free_parameters_are_fitted": false,
+      "authoritative_forecast_enabled": false,
+      "all_case_artifacts_exist": false
+    },
+    "missing_artifacts": [
+      "accepted_calibration",
+      "forecast_time_initial_state",
+      "forecast_time_environmental_forcing",
+      "agency_observation_operators"
+    ]
+  },
+  "case_scope": "One diagnostic case. It cannot replace the storm-disjoint sealed hindcast."
+}

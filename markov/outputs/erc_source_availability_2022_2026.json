@@ -1,0 +1,205 @@
+{
+  "archer_current_west_pacific": {
+    "season": 2026,
+    "storm_ids": [
+      "2026_01W",
+      "2026_02W",
+      "2026_03W",
+      "2026_04W",
+      "2026_05W",
+      "2026_06W",
+      "2026_07W"
+    ]
+  },
+  "cyclobs_current_storm": {
+    "acquisition_count": 16,
+    "acquisition_count_by_mission": {
+      "RADARSAT Constellation 1": 4,
+      "RADARSAT Constellation 2": 3,
+      "RADARSAT Constellation 3": 4,
+      "SENTINEL-1 C": 3,
+      "SENTINEL-1 D": 2
+    },
+    "analysis_vmax_available_count": 16,
+    "eye_in_acquisition_count": 13,
+    "sid": "wp092026",
+    "storm_count": 1
+  },
+  "cyclobs_sealed_period": {
+    "2022": {
+      "acquisition_count": 18,
+      "acquisition_count_by_mission": {
+        "RADARSAT Constellation 1": 1,
+        "RADARSAT Constellation 2": 2,
+        "RADARSAT Constellation 3": 2,
+        "RADARSAT-2": 7,
+        "SENTINEL-1 A": 6
+      },
+      "analysis_vmax_available_count": 14,
+      "eye_in_acquisition_count": 11,
+      "storm_count": 7
+    },
+    "2023": {
+      "acquisition_count": 135,
+      "acquisition_count_by_mission": {
+        "RADARSAT Constellation 1": 33,
+        "RADARSAT Constellation 2": 29,
+        "RADARSAT Constellation 3": 54,
+        "RADARSAT-2": 3,
+        "SENTINEL-1 A": 16
+      },
+      "analysis_vmax_available_count": 109,
+      "eye_in_acquisition_count": 95,
+      "storm_count": 16
+    },
+    "2024": {
+      "acquisition_count": 156,
+      "acquisition_count_by_mission": {
+        "RADARSAT Constellation 1": 31,
+        "RADARSAT Constellation 2": 53,
+        "RADARSAT Constellation 3": 47,
+        "RADARSAT-2": 3,
+        "SENTINEL-1 A": 22
+      },
+      "analysis_vmax_available_count": 125,
+      "eye_in_acquisition_count": 111,
+      "storm_count": 22
+    }
+  },
+  "generated_at_utc": "2026-07-12T12:41:58.282759+00:00",
+  "implementation": {
+    "path": "/Users/taozhe/Documents/New project/typhoon/markov/scripts/audit_erc_source_availability.py",
+    "sha256": "09b641ec547931ea64a59ae8330811d99fe11529e0f50d4801be04cb2dadac8a"
+  },
+  "interpretation_limits": [
+    "TC PRIMED file counts measure inventory; per-pass inner-core coverage requires NetCDF quality inspection.",
+    "CyclObs acquisition counts measure sparse direct-wind opportunities and remain mission-planning dependent.",
+    "ARCHER public directory presence measures exposed public products at retrieval time."
+  ],
+  "report_id": "erc-observation-source-availability",
+  "source_evidence": {
+    "archer_archive": {
+      "bytes": 244605,
+      "sha256": "03e774fc23068dcc08d88548cdb71bc688a96a108364b4818366f82cfc8d1689",
+      "url": "https://tropic.ssec.wisc.edu/real-time/archerOnline/cyclones/"
+    },
+    "cyclobs_current_storm": {
+      "bytes": 1382,
+      "sha256": "227550c9a5dd809967154675781ff10f31df6313dd9a3209d74c8e8bdb6bc25a",
+      "url": "https://cyclobs.ifremer.fr/app/api/getData?acquisition_start_time=2026-01-01&acquisition_stop_time=2027-01-01&include_cols=sid%2Cmission%2Cacquisition_start_time%2Ceye_in_acq%2Canalysis_vmax%2Canalysis_rmax&sid=wp092026"
+    },
+    "cyclobs_sealed_period": {
+      "bytes": 24379,
+      "sha256": "064d2975551450bdedc49cc977d2cdff2eb3ac4a1c392ae5a076bfa0fcf2e014",
+      "url": "https://cyclobs.ifremer.fr/app/api/getData?acquisition_start_time=2022-01-01&acquisition_stop_time=2025-01-01&include_cols=sid%2Cmission%2Cacquisition_start_time%2Ceye_in_acq%2Canalysis_vmax%2Canalysis_rmax&basin=NWP"
+    },
+    "tcprimed_current_preliminary": {
+      "bytes": 466,
+      "sha256": "f17a150fcdaadd1693d1ea071f0347287f1c1d27321be723cfdcf787a4cc5cc5",
+      "url": "https://noaa-nesdis-tcprimed-pds.s3.amazonaws.com/?list-type=2&prefix=v01r01%2Fpreliminary%2F2026%2FWP%2F&delimiter=%2F&max-keys=1000"
+    },
+    "tcprimed_final_2022": [
+      {
+        "bytes": 290673,
+        "sha256": "1bfc41f6d5cbbc0de7655f1af7f08f1cd50a46e7e8b2bf461c2e8727c06a3ad0",
+        "url": "https://noaa-nesdis-tcprimed-pds.s3.amazonaws.com/?list-type=2&prefix=v01r01%2Ffinal%2F2022%2FWP%2F&max-keys=1000"
+      },
+      {
+        "bytes": 290663,
+        "sha256": "594c7e078bebcde05d3c351ebb00e074fc2fb99240d4a394ba954c787de94496",
+        "url": "https://noaa-nesdis-tcprimed-pds.s3.amazonaws.com/?list-type=2&prefix=v01r01%2Ffinal%2F2022%2FWP%2F&max-keys=1000"
+      },
+      {
+        "bytes": 183306,
+        "sha256": "6342ca72bf3058745f5b07e968e51351980fe4e862a03f9f655ae7c24f2c7cd2",
+        "url": "https://noaa-nesdis-tcprimed-pds.s3.amazonaws.com/?list-type=2&prefix=v01r01%2Ffinal%2F2022%2FWP%2F&max-keys=1000"
+      }
+    ],
+    "tcprimed_final_2023": [
+      {
+        "bytes": 290178,
+        "sha256": "4b4e30918a812089a2bbf04260bfceea5eb50d77ce72e504d277ef6d9da271ba",
+        "url": "https://noaa-nesdis-tcprimed-pds.s3.amazonaws.com/?list-type=2&prefix=v01r01%2Ffinal%2F2023%2FWP%2F&max-keys=1000"
+      },
+      {
+        "bytes": 290309,
+        "sha256": "792d79a4338710cf23223a7269c9dcbf8ee0560b24d951ea1ed9134c1093681f",
+        "url": "https://noaa-nesdis-tcprimed-pds.s3.amazonaws.com/?list-type=2&prefix=v01r01%2Ffinal%2F2023%2FWP%2F&max-keys=1000"
+      },
+      {
+        "bytes": 242914,
+        "sha256": "b2d77a2e0030c550ad938f1eaa701bb40d54cd533b2f31d91d4f7b5b2adc3be8",
+        "url": "https://noaa-nesdis-tcprimed-pds.s3.amazonaws.com/?list-type=2&prefix=v01r01%2Ffinal%2F2023%2FWP%2F&max-keys=1000"
+      }
+    ],
+    "tcprimed_final_2024": [
+      {
+        "bytes": 377795,
+        "sha256": "1b0d42050cf40aafabe54ce650f77839b7b7cb8099770e810ac8437b8cb62fa3",
+        "url": "https://noaa-nesdis-tcprimed-pds.s3.amazonaws.com/?list-type=2&prefix=v01r01%2Ffinal%2F2024%2FWP%2F&max-keys=1000"
+      },
+      {
+        "bytes": 377994,
+        "sha256": "2905471e43d103541ecba453b8405d2dfdc97018721a33e0a5b8f32bd123d713",
+        "url": "https://noaa-nesdis-tcprimed-pds.s3.amazonaws.com/?list-type=2&prefix=v01r01%2Ffinal%2F2024%2FWP%2F&max-keys=1000"
+      },
+      {
+        "bytes": 377983,
+        "sha256": "e596beec866534f838a3cb92c4cdc3bdb93a5f7f1eb6d65d7c49ce97f262227d",
+        "url": "https://noaa-nesdis-tcprimed-pds.s3.amazonaws.com/?list-type=2&prefix=v01r01%2Ffinal%2F2024%2FWP%2F&max-keys=1000"
+      },
+      {
+        "bytes": 113618,
+        "sha256": "8aaa4740852db7e8a1b162592c9d92909aa3d576e418333039a4431a9279eb81",
+        "url": "https://noaa-nesdis-tcprimed-pds.s3.amazonaws.com/?list-type=2&prefix=v01r01%2Ffinal%2F2024%2FWP%2F&max-keys=1000"
+      }
+    ]
+  },
+  "source_registry": "/Users/taozhe/Documents/New project/typhoon/markov/config/erc_observation_sources.json",
+  "tc_primed_current_preliminary": {
+    "available_annual_numbers": [
+      "01",
+      "02"
+    ],
+    "basin": "WP",
+    "season": 2026
+  },
+  "tc_primed_final": {
+    "2022": {
+      "environment_file_count": 29,
+      "overpass_count_by_sensor": {
+        "AMSR2": 219,
+        "ATMS": 648,
+        "GMI": 152,
+        "MHS": 882,
+        "SSMIS": 700
+      },
+      "overpass_file_count": 2601,
+      "storm_count": 29
+    },
+    "2023": {
+      "environment_file_count": 18,
+      "overpass_count_by_sensor": {
+        "AMSR2": 213,
+        "ATMS": 952,
+        "GMI": 145,
+        "MHS": 845,
+        "SSMIS": 663
+      },
+      "overpass_file_count": 2818,
+      "storm_count": 18
+    },
+    "2024": {
+      "environment_file_count": 28,
+      "overpass_count_by_sensor": {
+        "AMSR2": 260,
+        "ATMS": 1099,
+        "GMI": 182,
+        "MHS": 1000,
+        "SSMIS": 731
+      },
+      "overpass_file_count": 3272,
+      "storm_count": 28
+    }
+  }
+}

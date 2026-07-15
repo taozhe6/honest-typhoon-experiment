@@ -1,0 +1,153 @@
+{
+  "model_id": "tc-msrom-v0.1",
+  "status": "research-rejected",
+  "authoritative_forecast_enabled": false,
+  "structural_rejection": {
+    "date": "2026-07-11",
+    "test_id": "bavi-2026-regime-wind-influence",
+    "reason": "The hidden regime changes central-pressure tendency but has exactly zero effect on wind tendency. It cannot serve as an intensification regime for wind prediction.",
+    "full_bavi_case_integration_status": "ineligible",
+    "additional_gate_failures": [
+      "Observation-error covariance and a whitened sensitivity/Fisher or profile-likelihood audit have not been completed."
+    ],
+    "non_gating_diagnostics": [
+      "JTWC western North Pacific V/Pc/RMW participation-ratio effective dimension is 1.4641, indicating strong channel redundancy."
+    ]
+  },
+  "time_step_hours": 6,
+  "state_vector": [
+    "wind_ms",
+    "core_moisture",
+    "central_pressure_pa",
+    "rmw_m"
+  ],
+  "hidden_regimes": [
+    "weakening",
+    "quasi_steady",
+    "intensifying"
+  ],
+  "scored_observables": [
+    "wind_ms",
+    "central_pressure_pa",
+    "rmw_m"
+  ],
+  "free_parameters": {
+    "persistence_logit": {
+      "bounds": [0.0, 20.0],
+      "synthetic_demo_value": 1.2,
+      "status": "unfitted"
+    },
+    "regime_width": {
+      "bounds": [0.05, 3.0],
+      "synthetic_demo_value": 0.6,
+      "status": "unfitted"
+    }
+  },
+  "parameter_budget": {
+    "global_free_numeric_parameters": 2,
+    "scored_observation_field_count": 3,
+    "required_sensitivity_rank": 2,
+    "effective_observation_dimension_method": "participation ratio of the complete-case JTWC V/Pc/RMW correlation matrix",
+    "measured_effective_observation_dimension": 1.464133937313892,
+    "effective_observation_dimension_role": "redundancy_diagnostic_only",
+    "observation_error_covariance_status": "not_estimated",
+    "formal_identifiability_audit_status": "not_run",
+    "formal_identifiability_methods_required": [
+      "parameter-scaled sensitivity matrix whitened by observation-error covariance",
+      "Fisher-information rank and conditioning",
+      "profile-likelihood interval audit"
+    ],
+    "minimum_scalar_observations_per_parameter": 20,
+    "minimum_training_storms": 30,
+    "minimum_holdout_storms": 10
+  },
+  "fixed_constants": {
+    "surface_exchange_coefficient": {
+      "value": 0.0012,
+      "source": "Lin et al. 2023 open FAST implementation",
+      "calibratable": false
+    },
+    "western_north_pacific_boundary_layer_depth_m": {
+      "value": 1800.0,
+      "source": "Lin et al. 2023 open FAST implementation",
+      "calibratable": false
+    },
+    "thermodynamic_efficiency": {
+      "value": 0.33,
+      "source": "Lin et al. 2023 open FAST implementation",
+      "calibratable": false
+    },
+    "fast_kappa": {
+      "value": 0.1,
+      "source": "Lin et al. 2023 open FAST implementation",
+      "calibratable": false
+    },
+    "intensifying_column_speed_km_day": {
+      "value": 0.29,
+      "source": "Sparks and Toumi 2022 observational estimate",
+      "calibratable": false
+    },
+    "weakening_column_speed_km_day": {
+      "value": -0.24,
+      "source": "Sparks and Toumi 2022 observational estimate",
+      "calibratable": false
+    },
+    "rapid_intensification_threshold_kt_24h": {
+      "value": 30.0,
+      "source": "Kaplan-DeMaria definition used by Jing and Lin 2019",
+      "calibratable": false
+    },
+    "regime_centers_in_ri_units": {
+      "value": [-1.0, 0.0, 1.0],
+      "source": "preregistered structural hypothesis",
+      "calibratable": false
+    }
+  },
+  "required_forcing": {
+    "potential_intensity_ms": "full atmospheric profile PI only",
+    "shear_ms": "250-850 hPa vector difference",
+    "entropy_deficit": "normalized mid-level saturation entropy deficit",
+    "mixed_layer_depth_m": "GLORYS12 hindcast or GLO12 operational ocean profile",
+    "submixed_stratification_k_per_100m": "temperature gradient over 100 m below MLD from GLORYS12/GLO12",
+    "translation_speed_ms": "track-derived",
+    "surface_exchange_multiplier": "surface-roughness-derived; forbidden as a tuning control",
+    "land_fraction": "high-resolution all-land mask",
+    "latitude_deg": "track-derived"
+  },
+  "observation_contract": {
+    "wind_definition": "near-surface axisymmetric maximum sustained wind",
+    "training_agency": "JTWC",
+    "training_wind_average_seconds": 60,
+    "translation_component_removed_using_past_and_current_track_data": true,
+    "cross_agency_winds_retained_in_native_averaging_periods": true
+  },
+  "quality_gates": {
+    "open_ocean_pi_ms": [20.0, 100.0],
+    "wind_averaging_period_metadata_required": true,
+    "storm_disjoint_train_holdout_split": true,
+    "current_storm_parameter_tuning_forbidden": true,
+    "invalid_environment_aborts_run": true,
+    "regime_memory_scales_with_ocean_fraction": true,
+    "fully_inland_intensifying_regime_probability": 0.0
+  },
+  "falsification": {
+    "wind_mae_improvement_over_persistence": 0.05,
+    "pressure_mae_must_beat_persistence": true,
+    "rmw_mae_must_beat_persistence": true,
+    "landfall_wind_mae_must_beat_persistence": true,
+    "ri_brier_must_beat_climatology": true,
+    "central_80_interval_coverage_bounds": [0.72, 0.88],
+    "physical_qc_failures_allowed": 0
+  },
+  "solver": {
+    "method": "Dormand-Prince 5(4), ode45 family",
+    "relative_tolerance": 1e-6,
+    "maximum_step_seconds": 900
+  },
+  "public_reporting_rounding": {
+    "wind_ms": 1,
+    "central_pressure_hpa": 1,
+    "rmw_km": 1,
+    "probability_decimal_places": 2
+  }
+}

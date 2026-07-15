@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "canonical_storage_unit": "m/s",
+  "required_record_fields": [
+    "agency",
+    "stage",
+    "issued_at_utc",
+    "valid_at_utc",
+    "wind_value_native",
+    "wind_unit_native",
+    "wind_value_ms",
+    "wind_averaging_period_seconds",
+    "wind_height_m",
+    "source_id"
+  ],
+  "comparison_policy": {
+    "native_channel_score": "Forecast and verifying analysis must use the same agency, wind definition, averaging period, height, and native unit.",
+    "cross_channel_score": "A registered observation operator with an uncertainty model is required before winds with different definitions or averaging periods are compared.",
+    "deterministic_conversion_for_scoring_allowed": false,
+    "print_averaging_period_at_ingest_forecast_truth_and_score": true
+  },
+  "agencies": {
+    "NMC": {
+      "authority": "China Meteorological Administration / National Meteorological Centre",
+      "wind_averaging_period_seconds": 120,
+      "wind_height_m": 10,
+      "wind_definition": "maximum sustained wind near the tropical-cyclone center",
+      "reference_url": "https://www.cma.gov.cn/wmhd/gzly/cjwt/202311/t20231127_5912128.html"
+    },
+    "JMA": {
+      "authority": "Japan Meteorological Agency / RSMC Tokyo",
+      "wind_averaging_period_seconds": 600,
+      "wind_height_m": 10,
+      "wind_definition": "maximum sustained wind near the tropical-cyclone center",
+      "reference_url": "https://www.jma.go.jp/jma/jma-eng/jma-center/rsmc-hp-pub-eg/advisory.html"
+    },
+    "JTWC": {
+      "authority": "Joint Typhoon Warning Center",
+      "wind_averaging_period_seconds": 60,
+      "wind_height_m": 10,
+      "wind_definition": "maximum sustained wind",
+      "reference_url": "https://www.metoc.navy.mil/jtwc/products/best-tracks/tc-bt-report.html"
+    }
+  }
+}

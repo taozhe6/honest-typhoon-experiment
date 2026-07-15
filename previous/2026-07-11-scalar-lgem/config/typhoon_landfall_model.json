@@ -1,0 +1,189 @@
+{
+  "schema_version": 3,
+  "target": {
+    "country_codes": ["CHN"],
+    "transition": "outside_to_inside",
+    "natural_earth_countries_url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_10m_admin_0_countries.geojson",
+    "physical_land_scope": "all_natural_earth_country_polygons"
+  },
+  "sources": {
+    "nmc": {
+      "catalog_url": "https://typhoon.nmc.cn/weatherservice/typhoon/jsons/list_default?callback=typhoon_jsons_list_default",
+      "detail_url_template": "https://typhoon.nmc.cn/weatherservice/typhoon/jsons/view_{storm_id}?callback=typhoon_jsons_view_{storm_id}",
+      "forecast_center_key": "BABJ",
+      "wind_averaging_minutes": 2,
+      "comparison_10min_factor": null,
+      "wind_provenance": "CMA tropical-cyclone maximum sustained wind uses a 2-minute averaging period; no undocumented conversion is applied."
+    },
+    "jma": {
+      "catalog_url": "https://www.jma.go.jp/bosai/typhoon/data/targetTc.json",
+      "detail_url_template": "https://www.jma.go.jp/bosai/typhoon/data/{tropical_cyclone}/specifications.json",
+      "wind_averaging_minutes": 10
+    },
+    "jtwc": {
+      "catalog_url": "https://www.metoc.navy.mil/jtwc/products/abpwweb.txt",
+      "detail_url_template": "https://www.metoc.navy.mil/jtwc/products/wp{ordinal:02d}{year2}web.txt",
+      "reported_wind_averaging_minutes": 1,
+      "target_wind_averaging_minutes": 10,
+      "one_to_ten_minute_factor": 0.93,
+      "minimum_same_host_request_spacing_seconds": 6,
+      "conversion_provenance": "WMO at-sea conversion factor K=0.93 for 1-minute to 10-minute sustained wind; native 1-minute values remain primary."
+    },
+    "hko": {
+      "catalog_url": "https://www.hko.gov.hk/wxinfo/currwx/tc_gis_list.js",
+      "detail_url_template": "https://www.hko.gov.hk/wxinfo/currwx/tc_gis_posinfo_15a_{hko_id}.txt",
+      "wind_averaging_minutes": 10,
+      "reported_wind_unit": "km/h"
+    },
+    "cwa": {
+      "detail_url": "https://www.cwa.gov.tw/Data/js/typhoon/TY_NEWS-Data.js",
+      "wind_averaging_minutes": 10
+    }
+  },
+  "quality_control": {
+    "analysis_projection_warning_hours": 6,
+    "max_analysis_projection_hours": 12,
+    "wind_bounds_ms": [0.0, 100.0],
+    "category_minimum_wind_ms": 17.2,
+    "relative_low_wind_ratio": 0.25,
+    "minimum_position_precision_km": 30.0,
+    "position_mad_multiplier": 3.0,
+    "intensity_divergence_warning_ms": 8.0,
+    "intensity_divergence_severe_ms": 15.0,
+    "maximum_track_translation_speed_kmh": 150.0,
+    "terminal_zero_wind_categories": ["TD", "EX", "LOW"],
+    "provenance": "Thresholds are quality-control flags. Identity evidence and physical bounds govern exclusion; inter-agency divergence remains visible."
+  },
+  "wind_scales": {
+    "cma_2min": {
+      "averaging_minutes": 2,
+      "above_17_threshold_ms": 61.2,
+      "levels": [
+        {"minimum_ms": 56.1, "label": "17"},
+        {"minimum_ms": 51.0, "label": "16"},
+        {"minimum_ms": 46.2, "label": "15"},
+        {"minimum_ms": 41.5, "label": "14"},
+        {"minimum_ms": 37.0, "label": "13"},
+        {"minimum_ms": 32.7, "label": "12"},
+        {"minimum_ms": 24.5, "label": "10-11"}
+      ],
+      "below_label": "<10",
+      "provenance": "CMA national tropical-cyclone intensity scale applied only to native 2-minute sustained wind. Exactly 61.2 m/s remains level 17; values above it are labeled 17+."
+    }
+  },
+  "geometry": {
+    "root_tolerance_seconds": 20,
+    "maximum_boundary_chord_km": 2.0,
+    "cubic_spline_guard_deviation_km": 100.0,
+    "provenance": "Track positions are evaluated as a time-parametric spherical curve. Spatial chord-boundary intersections detect entries even when both temporal endpoints are over water."
+  },
+  "environment": {
+    "sample_count_per_track": 3,
+    "pre_landfall_ocean_offset_minutes": 20,
+    "maximum_time_offset_hours": 2,
+    "atmosphere": {
+      "endpoint": "https://api.open-meteo.com/v1/forecast",
+      "model": "gfs_global",
+      "forecast_days": 7,
+      "minimum_same_host_request_spacing_seconds": 1.0,
+      "hourly_variables": [
+        "temperature_2m",
+        "relative_humidity_2m",
+        "surface_pressure",
+        "pressure_msl",
+        "wind_speed_850hPa",
+        "wind_direction_850hPa",
+        "wind_speed_200hPa",
+        "wind_direction_200hPa"
+      ],
+      "pressure_levels_hpa": [1000, 975, 950, 925, 900, 850, 800, 700, 600, 500, 400, 300, 250, 200, 150, 100, 70, 50],
+      "profile_variables": ["temperature", "relative_humidity"],
+      "minimum_profile_top_hpa": 100,
+      "spatial_sampling": {
+        "method": "two_ring_approximation_to_5_degree_environment",
+        "radii_km": [250.0, 500.0],
+        "azimuths_degrees": [0, 45, 90, 135, 180, 225, 270, 315],
+        "maximum_elevation_m": 500.0,
+        "exclude_global_land_points": true,
+        "minimum_valid_samples": 8,
+        "minimum_outer_ring_samples": 4
+      },
+      "provenance": "NCEP GFS global fields requested through Open-Meteo. Full thermodynamic profiles and vector shear are averaged over a transparent two-ring approximation to the roughly 5-degree LGEM environment; the storm-center pressure is excluded from PI."
+    },
+    "ocean": {
+      "endpoint": "https://ncss.hycom.org/thredds/ncss/grid/GLBy0.08/latest",
+      "profile_variable": "water_temp",
+      "threshold_temperature_c": 26.0,
+      "minimum_same_host_request_spacing_seconds": 2.0,
+      "coastal_profile_backtrack_step_minutes": 10,
+      "maximum_coastal_profile_backtrack_minutes": 90,
+      "provenance": "HYCOM ESPC-D-V02 global 1/12 degree temperature profiles; OHC is integrated above the 26 C isotherm. A masked coastal cell uses the nearest earlier valid open-water track point and records the backtrack."
+    },
+    "spatial_quality_control": {
+      "comparison_radius_km": 100.0,
+      "maximum_time_difference_hours": 2.0,
+      "maximum_sst_difference_c": 2.0,
+      "minimum_neighbor_count": 1,
+      "provenance": "Nearby, near-synchronous track samples are compared to expose isolated ocean-mask or backtracking artifacts."
+    },
+    "shared_sample_cache": {
+      "maximum_distance_km": 30.0,
+      "maximum_time_difference_minutes": 30.0,
+      "provenance": "Near-identical agency path nodes share one fetched environment while retaining reuse distance and time metadata."
+    }
+  },
+  "physics": {
+    "c_k_over_c_d": 0.9,
+    "pi_surface_wind_reduction": 0.8,
+    "pi_dependency": {
+      "package": "tcpyPI",
+      "version": "1.4",
+      "wheel_sha256": "8be34cb3f7ca6db1f98a94537ae1797dd85e94773d28cfdaecc6f97da91cad02",
+      "algorithm": "Bister and Emanuel (2002) pcmin full-column potential intensity",
+      "minimum_profile_levels": 6,
+      "minimum_profile_bottom_hpa": 850.0,
+      "maximum_profile_top_hpa": 100.0
+    },
+    "lgem_n": 2.6,
+    "lgem_beta_per_hour": 0.0256,
+    "lgem_parameter_provenance": "DeMaria (2009) Atlantic benchmark values used only while fitting and testing the calibration framework; an activated WNP artifact must carry its own n and beta.",
+    "land_decay_alpha_per_hour": 0.095,
+    "land_background_wind_ms": 13.7,
+    "land_entry_reduction_factor": 0.9,
+    "post_landfall_hours": 6.0,
+    "specific_heat_seawater_j_kg_k": 3990.0,
+    "seawater_density_kg_m3": 1025.0,
+    "references": [
+      "Bister and Emanuel (2002), implemented by tcpyPI 1.4: full-column thermodynamic potential intensity.",
+      "DeMaria (2009): logistic-growth-equation intensity model; coefficients require basin-specific calibration.",
+      "Kaplan and DeMaria inland decay: V(t)=Vb+(R*V0-Vb)exp(-alpha*t), R=0.9.",
+      "NOAA CoastWatch/AOML: OHC is heat integrated above the 26 C isotherm."
+    ]
+  },
+  "calibration": {
+    "status": "uncalibrated_research",
+    "basin": "western_north_pacific",
+    "minimum_hindcast_storms": 5,
+    "required_lead_hours": 40.0,
+    "wind_averaging_minutes": 10,
+    "artifact": null,
+    "acceptance_thresholds": {
+      "landfall_wind_mae_ms": 8.0,
+      "absolute_bias_ms": 4.0
+    },
+    "provenance": "Activation requires archived forecast-cycle predictors available by issue time and leave-one-storm-out validation on at least five WNP landfalls."
+  },
+  "output": {
+    "decision_wind_increment_ms": 1.0,
+    "decision_position_decimal_places": 1,
+    "decision_time_increment_minutes": 30
+  },
+  "solver": {
+    "relative_tolerance": 0.00001,
+    "absolute_tolerance": 0.0001,
+    "initial_step_hours": 0.25,
+    "maximum_step_hours": 0.5,
+    "minimum_step_hours": 0.00001,
+    "method": "Dormand-Prince 5(4), ode45 family"
+  }
+}

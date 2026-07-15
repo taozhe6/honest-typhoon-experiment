@@ -1,0 +1,24 @@
+{
+  "status": "complete",
+  "bootstrap_replicates": 2000,
+  "outputs": [
+    "outputs/analysis_dataset.csv",
+    "outputs/coast_binned_medians.csv",
+    "outputs/coast_effect.json",
+    "outputs/conversion_windows.json",
+    "outputs/disagreement_vs_coast.png",
+    "outputs/landfall_audit.json",
+    "outputs/landfall_records_S088.csv",
+    "outputs/landfall_records_S093.csv",
+    "outputs/missingness.json",
+    "outputs/neff_sensitivity.json",
+    "outputs/pairwise_disagreement_S088.csv",
+    "outputs/pairwise_disagreement_S093.csv",
+    "outputs/pairwise_disagreement_intervals.json",
+    "outputs/provenance.json",
+    "outputs/run_manifest.json"
+  ],
+  "report": "report.md",
+  "preregistration_commit": "f6b9b63",
+  "pre_result_deviation_commit": "c10d3b5"
+}

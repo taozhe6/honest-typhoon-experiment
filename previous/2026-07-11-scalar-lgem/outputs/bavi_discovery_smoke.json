@@ -1,0 +1,422 @@
+{
+  "run_time_utc": "2026-07-09T23:30:31.884161+00:00",
+  "storm": {
+    "name": "BAVI",
+    "number": "2609",
+    "aliases": [
+      "BAVI",
+      "巴威"
+    ],
+    "nmc_id": "3257931"
+  },
+  "configuration": {
+    "schema_version": 2,
+    "target_country_codes": [
+      "CHN"
+    ],
+    "physics": {
+      "c_k_over_c_d": 0.9,
+      "drag_coefficient": 0.0015,
+      "surface_wind_reduction": 0.9,
+      "relaxation_time_hours": 24.0,
+      "minimum_flux_wind_ms": 5.0,
+      "land_decay_alpha_per_hour": 0.095,
+      "land_background_wind_ms": 13.7,
+      "post_landfall_hours": 6.0,
+      "specific_heat_air_j_kg_k": 1004.0,
+      "latent_heat_vaporization_j_kg": 2500000.0,
+      "specific_heat_seawater_j_kg_k": 3990.0,
+      "seawater_density_kg_m3": 1025.0,
+      "gas_constant_dry_air_j_kg_k": 287.05,
+      "references": [
+        "Emanuel (1986, 1995): thermodynamic potential intensity framework.",
+        "Kaplan and DeMaria (1995): exponential inland wind decay with nonzero background wind.",
+        "NOAA CoastWatch/AOML: OHC is heat integrated above the 26 C isotherm."
+      ]
+    },
+    "solver": {
+      "relative_tolerance": 1e-05,
+      "absolute_tolerance": 0.0001,
+      "initial_step_hours": 0.25,
+      "maximum_step_hours": 0.5,
+      "minimum_step_hours": 1e-05,
+      "method": "Dormand-Prince 5(4), ode45 family"
+    },
+    "geometry": {
+      "sample_step_minutes": 10,
+      "root_tolerance_seconds": 20,
+      "cubic_spline_guard_deviation_km": 100.0,
+      "provenance": "Track positions are evaluated as a time-parametric spherical curve; landfall is a time-domain outside-to-inside root."
+    }
+  },
+  "common_effective_time_utc": "2026-07-09T21:00:00+00:00",
+  "source_status": {
+    "NMC": {
+      "source": "NMC",
+      "discovery_ok": true,
+      "resolved_url": "https://typhoon.nmc.cn/weatherservice/typhoon/jsons/view_3257931?callback=typhoon_jsons_view_3257931",
+      "quality_control": {
+        "source": "NMC",
+        "usable": true,
+        "resolved_url": "https://typhoon.nmc.cn/weatherservice/typhoon/jsons/view_3257931?callback=typhoon_jsons_view_3257931",
+        "identity_evidence": [
+          "NMC active catalog matched BAVI/2609",
+          "NMC internal id=3257931"
+        ],
+        "warnings": [
+          "interagency_intensity_divergence:elevated"
+        ],
+        "analysis_time_utc": "2026-07-09T21:00:00+00:00",
+        "alignment_projection_hours": 0.0,
+        "aligned_state": {
+          "valid_utc": "2026-07-09T21:00:00+00:00",
+          "lat": 20.4,
+          "lon": 128.0,
+          "wind_ms": 45.0,
+          "kind": "analysis",
+          "pressure_hpa": 945.0,
+          "category": "STY"
+        },
+        "distance_to_position_medoid_km": 24.834
+      }
+    },
+    "JMA": {
+      "source": "JMA",
+      "discovery_ok": true,
+      "resolved_url": "https://www.jma.go.jp/bosai/typhoon/data/TC2611/specifications.json",
+      "quality_control": {
+        "source": "JMA",
+        "usable": true,
+        "resolved_url": "https://www.jma.go.jp/bosai/typhoon/data/TC2611/specifications.json",
+        "identity_evidence": [
+          "JMA targetTc typhoonNumber=2609",
+          "JMA tropicalCyclone=TC2611"
+        ],
+        "warnings": [
+          "interagency_intensity_divergence:elevated"
+        ],
+        "analysis_time_utc": "2026-07-09T21:00:00+00:00",
+        "alignment_projection_hours": 0.0,
+        "aligned_state": {
+          "valid_utc": "2026-07-09T21:00:00+00:00",
+          "lat": 20.5,
+          "lon": 127.6,
+          "wind_ms": 45.0,
+          "kind": "analysis",
+          "pressure_hpa": null,
+          "category": "TY",
+          "metadata": {
+            "advanced_hours": 0.0
+          }
+        },
+        "distance_to_position_medoid_km": 27.7
+      }
+    },
+    "JTWC": {
+      "source": "JTWC",
+      "discovery_ok": true,
+      "resolved_url": "https://www.metoc.navy.mil/jtwc/products/wp0926web.txt",
+      "quality_control": {
+        "source": "JTWC",
+        "usable": true,
+        "resolved_url": "https://www.metoc.navy.mil/jtwc/products/wp0926web.txt",
+        "identity_evidence": [
+          "JTWC active summary matched 09W/BAVI"
+        ],
+        "warnings": [
+          "interagency_intensity_divergence:elevated"
+        ],
+        "analysis_time_utc": "2026-07-09T18:00:00+00:00",
+        "alignment_projection_hours": 3.0,
+        "aligned_state": {
+          "valid_utc": "2026-07-09T21:00:00+00:00",
+          "lat": 20.57606,
+          "lon": 127.85332,
+          "wind_ms": 40.178,
+          "kind": "time_interpolated",
+          "pressure_hpa": null,
+          "category": null,
+          "metadata": {
+            "method": "great_circle_time_linear"
+          }
+        },
+        "distance_to_position_medoid_km": 0.0
+      }
+    },
+    "HKO": {
+      "source": "HKO",
+      "discovery_ok": true,
+      "resolved_url": "https://www.hko.gov.hk/wxinfo/currwx/tc_gis_posinfo_15a_2614.txt",
+      "quality_control": {
+        "source": "HKO",
+        "usable": true,
+        "resolved_url": "https://www.hko.gov.hk/wxinfo/currwx/tc_gis_posinfo_15a_2614.txt",
+        "identity_evidence": [
+          "HKO GIS catalog matched BAVI; tcid=2614"
+        ],
+        "warnings": [
+          "interagency_intensity_divergence:elevated"
+        ],
+        "analysis_time_utc": "2026-07-09T18:00:00+00:00",
+        "alignment_projection_hours": 3.0,
+        "aligned_state": {
+          "valid_utc": "2026-07-09T21:00:00+00:00",
+          "lat": 20.5908,
+          "lon": 127.90938,
+          "wind_ms": 48.611,
+          "kind": "time_interpolated",
+          "pressure_hpa": null,
+          "category": "ST",
+          "metadata": {
+            "method": "great_circle_time_linear"
+          }
+        },
+        "distance_to_position_medoid_km": 6.061
+      }
+    },
+    "CWA": {
+      "source": "CWA",
+      "discovery_ok": true,
+      "resolved_url": "https://www.cwa.gov.tw/Data/js/typhoon/TY_NEWS-Data.js",
+      "quality_control": {
+        "source": "CWA",
+        "usable": true,
+        "resolved_url": "https://www.cwa.gov.tw/Data/js/typhoon/TY_NEWS-Data.js",
+        "identity_evidence": [
+          "CWA active list matched BAVI/2609"
+        ],
+        "warnings": [
+          "interagency_intensity_divergence:elevated"
+        ],
+        "analysis_time_utc": "2026-07-09T18:00:00+00:00",
+        "alignment_projection_hours": 3.0,
+        "aligned_state": {
+          "valid_utc": "2026-07-09T21:00:00+00:00",
+          "lat": 21.25027,
+          "lon": 127.2259,
+          "wind_ms": 48.0,
+          "kind": "time_interpolated",
+          "pressure_hpa": null,
+          "category": null,
+          "metadata": {
+            "method": "great_circle_time_linear"
+          }
+        },
+        "distance_to_position_medoid_km": 99.335
+      }
+    }
+  },
+  "source_quality": {
+    "position": {
+      "medoid_source": "JTWC",
+      "medoid_lat": 20.5761,
+      "medoid_lon": 127.8533,
+      "robust_outlier_threshold_km": 108.331,
+      "range_km": 99.335
+    },
+    "current_intensity": {
+      "minimum_ms": 40.178,
+      "maximum_ms": 48.611,
+      "spread_ms": 8.433,
+      "divergence_level": "elevated",
+      "values_by_source_ms": {
+        "NMC": 45.0,
+        "JMA": 45.0,
+        "JTWC": 40.178,
+        "HKO": 48.611,
+        "CWA": 48.0
+      }
+    },
+    "rule": "Identity evidence and physical plausibility govern source eligibility. Position and intensity disagreement remain in the output as decision-relevant uncertainty."
+  },
+  "landfall_by_track": {
+    "NMC": {
+      "status": "landfall",
+      "time_utc": "2026-07-11T18:22:11.250000+00:00",
+      "lon": 120.545,
+      "lat": 27.3977,
+      "curve_method": "cubic_cartesian_hermite",
+      "transition": "outside_to_inside",
+      "root_tolerance_seconds": 20.0,
+      "time_bjt": "2026-07-12T02:22:11.250000+08:00"
+    },
+    "JMA": {
+      "status": "landfall",
+      "time_utc": "2026-07-11T15:11:15+00:00",
+      "lon": 120.5191,
+      "lat": 27.2664,
+      "curve_method": "cubic_cartesian_hermite",
+      "transition": "outside_to_inside",
+      "root_tolerance_seconds": 20.0,
+      "time_bjt": "2026-07-11T23:11:15+08:00"
+    },
+    "JTWC": {
+      "status": "landfall",
+      "time_utc": "2026-07-11T14:45:18.750000+00:00",
+      "lon": 121.1005,
+      "lat": 27.4525,
+      "curve_method": "cubic_cartesian_hermite",
+      "transition": "outside_to_inside",
+      "root_tolerance_seconds": 20.0,
+      "time_bjt": "2026-07-11T22:45:18.750000+08:00"
+    },
+    "HKO": {
+      "status": "landfall",
+      "time_utc": "2026-07-11T17:20:56.250000+00:00",
+      "lon": 120.8048,
+      "lat": 27.9931,
+      "curve_method": "cubic_cartesian_hermite",
+      "transition": "outside_to_inside",
+      "root_tolerance_seconds": 20.0,
+      "time_bjt": "2026-07-12T01:20:56.250000+08:00"
+    },
+    "CWA": {
+      "status": "landfall",
+      "time_utc": "2026-07-11T13:07:11.250000+00:00",
+      "lon": 121.0827,
+      "lat": 27.4553,
+      "curve_method": "cubic_cartesian_hermite",
+      "transition": "outside_to_inside",
+      "root_tolerance_seconds": 20.0,
+      "time_bjt": "2026-07-11T21:07:11.250000+08:00"
+    }
+  },
+  "official_guidance": {
+    "definition": "Each agency's own forecast wind at that agency's track-derived landfall time. These values are guidance branches, not an averaged decision value.",
+    "by_source": [
+      {
+        "source": "NMC",
+        "resolved_url": "https://typhoon.nmc.cn/weatherservice/typhoon/jsons/view_3257931?callback=typhoon_jsons_view_3257931",
+        "landfall": {
+          "status": "landfall",
+          "time_utc": "2026-07-11T18:22:11.250000+00:00",
+          "lon": 120.545,
+          "lat": 27.3977,
+          "curve_method": "cubic_cartesian_hermite",
+          "transition": "outside_to_inside",
+          "root_tolerance_seconds": 20.0,
+          "time_bjt": "2026-07-12T02:22:11.250000+08:00"
+        },
+        "official_guidance_wind_ms": 41.753,
+        "official_guidance_grade": "14",
+        "interpolation_method": "time_linear_between_official_forecast_fixes",
+        "status": "available"
+      },
+      {
+        "source": "JMA",
+        "resolved_url": "https://www.jma.go.jp/bosai/typhoon/data/TC2611/specifications.json",
+        "landfall": {
+          "status": "landfall",
+          "time_utc": "2026-07-11T15:11:15+00:00",
+          "lon": 120.5191,
+          "lat": 27.2664,
+          "curve_method": "cubic_cartesian_hermite",
+          "transition": "outside_to_inside",
+          "root_tolerance_seconds": 20.0,
+          "time_bjt": "2026-07-11T23:11:15+08:00"
+        },
+        "official_guidance_wind_ms": 32.009,
+        "official_guidance_grade": "10-11",
+        "interpolation_method": "time_linear_between_official_forecast_fixes",
+        "status": "available"
+      },
+      {
+        "source": "JTWC",
+        "resolved_url": "https://www.metoc.navy.mil/jtwc/products/wp0926web.txt",
+        "landfall": {
+          "status": "landfall",
+          "time_utc": "2026-07-11T14:45:18.750000+00:00",
+          "lon": 121.1005,
+          "lat": 27.4525,
+          "curve_method": "cubic_cartesian_hermite",
+          "transition": "outside_to_inside",
+          "root_tolerance_seconds": 20.0,
+          "time_bjt": "2026-07-11T22:45:18.750000+08:00"
+        },
+        "official_guidance_wind_ms": 31.874,
+        "official_guidance_grade": "10-11",
+        "interpolation_method": "time_linear_between_official_forecast_fixes",
+        "status": "available"
+      },
+      {
+        "source": "HKO",
+        "resolved_url": "https://www.hko.gov.hk/wxinfo/currwx/tc_gis_posinfo_15a_2614.txt",
+        "landfall": {
+          "status": "landfall",
+          "time_utc": "2026-07-11T17:20:56.250000+00:00",
+          "lon": 120.8048,
+          "lat": 27.9931,
+          "curve_method": "cubic_cartesian_hermite",
+          "transition": "outside_to_inside",
+          "root_tolerance_seconds": 20.0,
+          "time_bjt": "2026-07-12T01:20:56.250000+08:00"
+        },
+        "official_guidance_wind_ms": 45.909,
+        "official_guidance_grade": "14",
+        "interpolation_method": "time_linear_between_official_forecast_fixes",
+        "status": "available"
+      },
+      {
+        "source": "CWA",
+        "resolved_url": "https://www.cwa.gov.tw/Data/js/typhoon/TY_NEWS-Data.js",
+        "landfall": {
+          "status": "landfall",
+          "time_utc": "2026-07-11T13:07:11.250000+00:00",
+          "lon": 121.0827,
+          "lat": 27.4553,
+          "curve_method": "cubic_cartesian_hermite",
+          "transition": "outside_to_inside",
+          "root_tolerance_seconds": 20.0,
+          "time_bjt": "2026-07-11T21:07:11.250000+08:00"
+        },
+        "official_guidance_wind_ms": 38.253,
+        "official_guidance_grade": "13",
+        "interpolation_method": "time_linear_between_official_forecast_fixes",
+        "status": "available"
+      }
+    ],
+    "interagency_envelope": {
+      "count": 5,
+      "minimum_ms": 31.874,
+      "p25_ms": 32.009,
+      "descriptive_median_ms": 38.253,
+      "p75_ms": 41.753,
+      "maximum_ms": 45.909,
+      "spread_ms": 14.034,
+      "grade_span": {
+        "minimum": "10-11",
+        "maximum": "14"
+      }
+    }
+  },
+  "mechanistic_scenarios": {
+    "definition": "Dormand-Prince RK45 scenarios use the common-time initial analysis, a source track, GFS environmental fields, HYCOM temperature profiles, thermodynamic PI, OHC energy availability, and Kaplan-DeMaria land decay. Future agency wind endpoints are excluded from the ODE tendency.",
+    "environment_by_track": {
+      "status": "skipped_by_command_line"
+    },
+    "scenarios": [],
+    "scenario_envelope": null,
+    "failed_scenarios": []
+  },
+  "decision_view": {
+    "single_deterministic_landfall_value": null,
+    "official_guidance_envelope": {
+      "count": 5,
+      "minimum_ms": 31.874,
+      "p25_ms": 32.009,
+      "descriptive_median_ms": 38.253,
+      "p75_ms": 41.753,
+      "maximum_ms": 45.909,
+      "spread_ms": 14.034,
+      "grade_span": {
+        "minimum": "10-11",
+        "maximum": "14"
+      }
+    },
+    "mechanistic_scenario_envelope": null,
+    "interpretation": "Use the envelopes and source branches for preparedness decisions. The model intentionally does not select a mean wind or a mean grade as a preferred answer."
+  },
+  "network_transport_warnings": {
+    "https://www.cwa.gov.tw/Data/js/typhoon/TY_NEWS-Data.js": "TLS compatibility mode removed VERIFY_X509_STRICT after a missing Subject Key Identifier; certificate-chain and hostname verification remained enabled."
+  }
+}

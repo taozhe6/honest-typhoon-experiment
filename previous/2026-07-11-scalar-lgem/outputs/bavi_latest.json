@@ -1,0 +1,2490 @@
+{
+  "run_time_utc": "2026-07-11T07:19:44.642003+00:00",
+  "storm": {
+    "name": "BAVI",
+    "number": "2609",
+    "aliases": [
+      "BAVI",
+      "巴威"
+    ],
+    "nmc_id": "3257931"
+  },
+  "configuration": {
+    "schema_version": 3,
+    "target_country_codes": [
+      "CHN"
+    ],
+    "physics": {
+      "c_k_over_c_d": 0.9,
+      "pi_surface_wind_reduction": 0.8,
+      "pi_dependency": {
+        "package": "tcpyPI",
+        "version": "1.4",
+        "wheel_sha256": "8be34cb3f7ca6db1f98a94537ae1797dd85e94773d28cfdaecc6f97da91cad02",
+        "algorithm": "Bister and Emanuel (2002) pcmin full-column potential intensity",
+        "minimum_profile_levels": 6,
+        "minimum_profile_bottom_hpa": 850.0,
+        "maximum_profile_top_hpa": 100.0
+      },
+      "lgem_n": 2.6,
+      "lgem_beta_per_hour": 0.0256,
+      "lgem_parameter_provenance": "DeMaria (2009) Atlantic benchmark values used only while fitting and testing the calibration framework; an activated WNP artifact must carry its own n and beta.",
+      "land_decay_alpha_per_hour": 0.095,
+      "land_background_wind_ms": 13.7,
+      "land_entry_reduction_factor": 0.9,
+      "post_landfall_hours": 6.0,
+      "specific_heat_seawater_j_kg_k": 3990.0,
+      "seawater_density_kg_m3": 1025.0,
+      "references": [
+        "Bister and Emanuel (2002), implemented by tcpyPI 1.4: full-column thermodynamic potential intensity.",
+        "DeMaria (2009): logistic-growth-equation intensity model; coefficients require basin-specific calibration.",
+        "Kaplan and DeMaria inland decay: V(t)=Vb+(R*V0-Vb)exp(-alpha*t), R=0.9.",
+        "NOAA CoastWatch/AOML: OHC is heat integrated above the 26 C isotherm."
+      ]
+    },
+    "solver": {
+      "relative_tolerance": 1e-05,
+      "absolute_tolerance": 0.0001,
+      "initial_step_hours": 0.25,
+      "maximum_step_hours": 0.5,
+      "minimum_step_hours": 1e-05,
+      "method": "Dormand-Prince 5(4), ode45 family"
+    },
+    "geometry": {
+      "root_tolerance_seconds": 20,
+      "maximum_boundary_chord_km": 2.0,
+      "cubic_spline_guard_deviation_km": 100.0,
+      "provenance": "Track positions are evaluated as a time-parametric spherical curve. Spatial chord-boundary intersections detect entries even when both temporal endpoints are over water."
+    }
+  },
+  "common_effective_time_utc": "2026-07-11T07:00:00+00:00",
+  "source_status": {
+    "NMC": {
+      "source": "NMC",
+      "catalog_ok": true,
+      "discovery_ok": true,
+      "resolved_url": "https://typhoon.nmc.cn/weatherservice/typhoon/jsons/view_3257931?callback=typhoon_jsons_view_3257931",
+      "quality_control": {
+        "source": "NMC",
+        "usable": true,
+        "resolved_url": "https://typhoon.nmc.cn/weatherservice/typhoon/jsons/view_3257931?callback=typhoon_jsons_view_3257931",
+        "identity_evidence": [
+          "NMC active catalog matched BAVI/2609",
+          "NMC internal id=3257931"
+        ],
+        "warnings": [],
+        "analysis_time_utc": "2026-07-11T07:00:00+00:00",
+        "alignment_projection_hours": 0.0,
+        "native_wind_averaging_minutes": 2,
+        "aligned_state": {
+          "valid_utc": "2026-07-11T07:00:00+00:00",
+          "lat": 26.8,
+          "lon": 123.0,
+          "wind_ms": 40.0,
+          "kind": "analysis",
+          "pressure_hpa": 950.0,
+          "category": "TY",
+          "raw_wind": 40.0,
+          "raw_wind_unit": "m/s_2min"
+        },
+        "distance_to_position_medoid_km": 9.189
+      }
+    },
+    "JMA": {
+      "source": "JMA",
+      "catalog_ok": true,
+      "discovery_ok": true,
+      "resolved_url": "https://www.jma.go.jp/bosai/typhoon/data/TC2611/specifications.json",
+      "quality_control": {
+        "source": "JMA",
+        "usable": true,
+        "resolved_url": "https://www.jma.go.jp/bosai/typhoon/data/TC2611/specifications.json",
+        "identity_evidence": [
+          "JMA targetTc typhoonNumber=2609",
+          "JMA tropicalCyclone=TC2611"
+        ],
+        "warnings": [],
+        "analysis_time_utc": "2026-07-11T06:00:00+00:00",
+        "alignment_projection_hours": 1.0,
+        "native_wind_averaging_minutes": 10,
+        "aligned_state": {
+          "valid_utc": "2026-07-11T07:00:00+00:00",
+          "lat": 26.9,
+          "lon": 123.0,
+          "wind_ms": 40.0,
+          "kind": "official_forecast",
+          "pressure_hpa": null,
+          "category": "TY",
+          "raw_wind": 40.0,
+          "raw_wind_unit": "m/s_10min",
+          "metadata": {
+            "advanced_hours": 1.0
+          }
+        },
+        "distance_to_position_medoid_km": 20.308
+      }
+    },
+    "JTWC": {
+      "source": "JTWC",
+      "catalog_ok": true,
+      "discovery_ok": true,
+      "resolved_url": "https://www.metoc.navy.mil/jtwc/products/wp0926web.txt",
+      "quality_control": {
+        "source": "JTWC",
+        "usable": true,
+        "resolved_url": "https://www.metoc.navy.mil/jtwc/products/wp0926web.txt",
+        "identity_evidence": [
+          "JTWC active summary matched 09W/BAVI"
+        ],
+        "warnings": [
+          "analysis_projection_exceeds_warning_horizon"
+        ],
+        "analysis_time_utc": "2026-07-11T00:00:00+00:00",
+        "alignment_projection_hours": 7.0,
+        "native_wind_averaging_minutes": 1,
+        "aligned_state": {
+          "valid_utc": "2026-07-11T07:00:00+00:00",
+          "lat": 26.34574,
+          "lon": 123.32725,
+          "wind_ms": 39.655,
+          "kind": "time_interpolated",
+          "pressure_hpa": null,
+          "category": null,
+          "metadata": {
+            "method": "great_circle_time_linear"
+          }
+        },
+        "distance_to_position_medoid_km": 52.543
+      }
+    },
+    "HKO": {
+      "source": "HKO",
+      "catalog_ok": true,
+      "discovery_ok": true,
+      "resolved_url": "https://www.hko.gov.hk/wxinfo/currwx/tc_gis_posinfo_15a_2614.txt",
+      "quality_control": {
+        "source": "HKO",
+        "usable": true,
+        "resolved_url": "https://www.hko.gov.hk/wxinfo/currwx/tc_gis_posinfo_15a_2614.txt",
+        "identity_evidence": [
+          "HKO GIS catalog matched BAVI; tcid=2614"
+        ],
+        "warnings": [],
+        "analysis_time_utc": "2026-07-11T03:00:00+00:00",
+        "alignment_projection_hours": 4.0,
+        "native_wind_averaging_minutes": 10,
+        "aligned_state": {
+          "valid_utc": "2026-07-11T07:00:00+00:00",
+          "lat": 26.56125,
+          "lon": 123.22721,
+          "wind_ms": 37.731,
+          "kind": "time_interpolated",
+          "pressure_hpa": null,
+          "category": "T",
+          "metadata": {
+            "method": "great_circle_time_linear"
+          }
+        },
+        "distance_to_position_medoid_km": 28.403
+      }
+    },
+    "CWA": {
+      "source": "CWA",
+      "catalog_ok": true,
+      "discovery_ok": true,
+      "resolved_url": "https://www.cwa.gov.tw/Data/js/typhoon/TY_NEWS-Data.js",
+      "quality_control": {
+        "source": "CWA",
+        "usable": true,
+        "resolved_url": "https://www.cwa.gov.tw/Data/js/typhoon/TY_NEWS-Data.js",
+        "identity_evidence": [
+          "CWA active list matched BAVI/2609"
+        ],
+        "warnings": [],
+        "analysis_time_utc": "2026-07-11T06:00:00+00:00",
+        "alignment_projection_hours": 1.0,
+        "native_wind_averaging_minutes": 10,
+        "aligned_state": {
+          "valid_utc": "2026-07-11T07:00:00+00:00",
+          "lat": 26.71737,
+          "lon": 123.00103,
+          "wind_ms": 37.5,
+          "kind": "time_interpolated",
+          "pressure_hpa": null,
+          "category": null,
+          "metadata": {
+            "method": "great_circle_time_linear"
+          }
+        },
+        "distance_to_position_medoid_km": 0.0
+      }
+    }
+  },
+  "source_quality": {
+    "position": {
+      "medoid_source": "CWA",
+      "medoid_lat": 26.7174,
+      "medoid_lon": 123.001,
+      "robust_outlier_threshold_km": 69.764,
+      "range_km": 52.543
+    },
+    "current_intensity": {
+      "comparison_wind_averaging_minutes": 10,
+      "minimum_ms": 36.879,
+      "maximum_ms": 40.0,
+      "spread_ms": 3.121,
+      "divergence_level": "normal",
+      "comparison_values_by_source_ms": {
+        "JMA": 40.0,
+        "JTWC": 36.879,
+        "HKO": 37.731,
+        "CWA": 37.5
+      },
+      "native_values_by_source": {
+        "NMC": {
+          "wind_ms": 40.0,
+          "averaging_minutes": 2
+        },
+        "JMA": {
+          "wind_ms": 40.0,
+          "averaging_minutes": 10
+        },
+        "JTWC": {
+          "wind_ms": 39.655,
+          "averaging_minutes": 1
+        },
+        "HKO": {
+          "wind_ms": 37.731,
+          "averaging_minutes": 10
+        },
+        "CWA": {
+          "wind_ms": 37.5,
+          "averaging_minutes": 10
+        }
+      },
+      "excluded_from_10min_comparison": [
+        "NMC"
+      ]
+    },
+    "rule": "Identity evidence and physical plausibility govern source eligibility. Position and intensity disagreement remain in the output as decision-relevant uncertainty."
+  },
+  "landfall_by_track": {
+    "NMC": {
+      "status": "landfall",
+      "time_utc": "2026-07-11T15:00:00+00:00",
+      "lon": 121.2,
+      "lat": 28.0,
+      "curve_method": "cubic_cartesian_hermite+spatial_chord_boundary_intersection",
+      "transition": "outside_to_inside",
+      "maximum_boundary_chord_km": 2.0,
+      "time_bjt": "2026-07-11T23:00:00+08:00",
+      "computational_crossing": {
+        "time_utc": "2026-07-11T15:04:48.405812+00:00",
+        "lat": 28.04882,
+        "lon": 121.19384
+      }
+    },
+    "JMA": {
+      "status": "landfall",
+      "time_utc": "2026-07-11T15:00:00+00:00",
+      "lon": 121.2,
+      "lat": 27.8,
+      "curve_method": "cubic_cartesian_hermite+spatial_chord_boundary_intersection",
+      "transition": "outside_to_inside",
+      "maximum_boundary_chord_km": 2.0,
+      "time_bjt": "2026-07-11T23:00:00+08:00",
+      "computational_crossing": {
+        "time_utc": "2026-07-11T15:07:39.440540+00:00",
+        "lat": 27.82117,
+        "lon": 121.17243
+      }
+    },
+    "JTWC": {
+      "status": "landfall",
+      "time_utc": "2026-07-11T17:00:00+00:00",
+      "lon": 121.4,
+      "lat": 28.3,
+      "curve_method": "cubic_cartesian_hermite+spatial_chord_boundary_intersection",
+      "transition": "outside_to_inside",
+      "maximum_boundary_chord_km": 2.0,
+      "time_bjt": "2026-07-12T01:00:00+08:00",
+      "computational_crossing": {
+        "time_utc": "2026-07-11T17:02:27.078287+00:00",
+        "lat": 28.29286,
+        "lon": 121.3976
+      }
+    },
+    "HKO": {
+      "status": "landfall",
+      "time_utc": "2026-07-11T15:00:00+00:00",
+      "lon": 121.4,
+      "lat": 28.2,
+      "curve_method": "cubic_cartesian_hermite+spatial_chord_boundary_intersection",
+      "transition": "outside_to_inside",
+      "maximum_boundary_chord_km": 2.0,
+      "time_bjt": "2026-07-11T23:00:00+08:00",
+      "computational_crossing": {
+        "time_utc": "2026-07-11T15:12:43.703748+00:00",
+        "lat": 28.20984,
+        "lon": 121.36023
+      }
+    },
+    "CWA": {
+      "status": "landfall",
+      "time_utc": "2026-07-11T16:30:00+00:00",
+      "lon": 121.4,
+      "lat": 28.2,
+      "curve_method": "cubic_cartesian_hermite+spatial_chord_boundary_intersection",
+      "transition": "outside_to_inside",
+      "maximum_boundary_chord_km": 2.0,
+      "time_bjt": "2026-07-12T00:30:00+08:00",
+      "computational_crossing": {
+        "time_utc": "2026-07-11T16:19:53.352673+00:00",
+        "lat": 28.22146,
+        "lon": 121.36337
+      }
+    }
+  },
+  "official_guidance": {
+    "definition": "Each agency's native forecast wind at its own track-derived target-China landfall time. A separate 10-minute comparison appears only when a documented conversion exists.",
+    "by_source": [
+      {
+        "source": "NMC",
+        "resolved_url": "https://typhoon.nmc.cn/weatherservice/typhoon/jsons/view_3257931?callback=typhoon_jsons_view_3257931",
+        "landfall": {
+          "status": "landfall",
+          "time_utc": "2026-07-11T15:00:00+00:00",
+          "lon": 121.2,
+          "lat": 28.0,
+          "curve_method": "cubic_cartesian_hermite+spatial_chord_boundary_intersection",
+          "transition": "outside_to_inside",
+          "maximum_boundary_chord_km": 2.0,
+          "time_bjt": "2026-07-11T23:00:00+08:00",
+          "computational_crossing": {
+            "time_utc": "2026-07-11T15:04:48.405812+00:00",
+            "lat": 28.04882,
+            "lon": 121.19384
+          }
+        },
+        "official_guidance_native_wind_ms": 35,
+        "computational_native_wind_ms": 34.533,
+        "native_wind_averaging_minutes": 2,
+        "official_category_near_landfall": "TY",
+        "interpolation_method": "time_linear_between_official_forecast_fixes",
+        "status": "available",
+        "cma_2min_wind_grade": "12",
+        "comparison_10min_status": "unavailable_without_documented_conversion"
+      },
+      {
+        "source": "JMA",
+        "resolved_url": "https://www.jma.go.jp/bosai/typhoon/data/TC2611/specifications.json",
+        "landfall": {
+          "status": "landfall",
+          "time_utc": "2026-07-11T15:00:00+00:00",
+          "lon": 121.2,
+          "lat": 27.8,
+          "curve_method": "cubic_cartesian_hermite+spatial_chord_boundary_intersection",
+          "transition": "outside_to_inside",
+          "maximum_boundary_chord_km": 2.0,
+          "time_bjt": "2026-07-11T23:00:00+08:00",
+          "computational_crossing": {
+            "time_utc": "2026-07-11T15:07:39.440540+00:00",
+            "lat": 27.82117,
+            "lon": 121.17243
+          }
+        },
+        "official_guidance_native_wind_ms": 35,
+        "computational_native_wind_ms": 34.787,
+        "native_wind_averaging_minutes": 10,
+        "official_category_near_landfall": "TY",
+        "interpolation_method": "time_linear_between_official_forecast_fixes",
+        "status": "available",
+        "cma_grade_status": "unavailable_without_documented_conversion_to_2min",
+        "comparison_10min_wind_ms": 35,
+        "computational_comparison_10min_wind_ms": 34.787
+      },
+      {
+        "source": "JTWC",
+        "resolved_url": "https://www.metoc.navy.mil/jtwc/products/wp0926web.txt",
+        "landfall": {
+          "status": "landfall",
+          "time_utc": "2026-07-11T17:00:00+00:00",
+          "lon": 121.4,
+          "lat": 28.3,
+          "curve_method": "cubic_cartesian_hermite+spatial_chord_boundary_intersection",
+          "transition": "outside_to_inside",
+          "maximum_boundary_chord_km": 2.0,
+          "time_bjt": "2026-07-12T01:00:00+08:00",
+          "computational_crossing": {
+            "time_utc": "2026-07-11T17:02:27.078287+00:00",
+            "lat": 28.29286,
+            "lon": 121.3976
+          }
+        },
+        "official_guidance_native_wind_ms": 34,
+        "computational_native_wind_ms": 34.261,
+        "native_wind_averaging_minutes": 1,
+        "official_category_near_landfall": null,
+        "interpolation_method": "time_linear_between_official_forecast_fixes",
+        "status": "available",
+        "cma_grade_status": "unavailable_without_documented_conversion_to_2min",
+        "comparison_10min_wind_ms": 32,
+        "computational_comparison_10min_wind_ms": 31.863
+      },
+      {
+        "source": "HKO",
+        "resolved_url": "https://www.hko.gov.hk/wxinfo/currwx/tc_gis_posinfo_15a_2614.txt",
+        "landfall": {
+          "status": "landfall",
+          "time_utc": "2026-07-11T15:00:00+00:00",
+          "lon": 121.4,
+          "lat": 28.2,
+          "curve_method": "cubic_cartesian_hermite+spatial_chord_boundary_intersection",
+          "transition": "outside_to_inside",
+          "maximum_boundary_chord_km": 2.0,
+          "time_bjt": "2026-07-11T23:00:00+08:00",
+          "computational_crossing": {
+            "time_utc": "2026-07-11T15:12:43.703748+00:00",
+            "lat": 28.20984,
+            "lon": 121.36023
+          }
+        },
+        "official_guidance_native_wind_ms": 33,
+        "computational_native_wind_ms": 32.504,
+        "native_wind_averaging_minutes": 10,
+        "official_category_near_landfall": "STS",
+        "interpolation_method": "time_linear_between_official_forecast_fixes",
+        "status": "available",
+        "cma_grade_status": "unavailable_without_documented_conversion_to_2min",
+        "comparison_10min_wind_ms": 33,
+        "computational_comparison_10min_wind_ms": 32.504
+      },
+      {
+        "source": "CWA",
+        "resolved_url": "https://www.cwa.gov.tw/Data/js/typhoon/TY_NEWS-Data.js",
+        "landfall": {
+          "status": "landfall",
+          "time_utc": "2026-07-11T16:30:00+00:00",
+          "lon": 121.4,
+          "lat": 28.2,
+          "curve_method": "cubic_cartesian_hermite+spatial_chord_boundary_intersection",
+          "transition": "outside_to_inside",
+          "maximum_boundary_chord_km": 2.0,
+          "time_bjt": "2026-07-12T00:30:00+08:00",
+          "computational_crossing": {
+            "time_utc": "2026-07-11T16:19:53.352673+00:00",
+            "lat": 28.22146,
+            "lon": 121.36337
+          }
+        },
+        "official_guidance_native_wind_ms": 34,
+        "computational_native_wind_ms": 33.556,
+        "native_wind_averaging_minutes": 10,
+        "official_category_near_landfall": null,
+        "interpolation_method": "time_linear_between_official_forecast_fixes",
+        "status": "available",
+        "cma_grade_status": "unavailable_without_documented_conversion_to_2min",
+        "comparison_10min_wind_ms": 34,
+        "computational_comparison_10min_wind_ms": 33.556
+      }
+    ],
+    "comparison_10min_envelope": {
+      "count": 4,
+      "minimum_ms": 32,
+      "maximum_ms": 35,
+      "spread_ms": 3,
+      "semantics": "named-branch range; no probability interpretation"
+    },
+    "excluded_from_10min_envelope": [
+      "NMC"
+    ]
+  },
+  "environmental_diagnostics": {
+    "environment_by_track": {
+      "NMC": {
+        "status": "available",
+        "nodes": [
+          {
+            "requested_utc": "2026-07-11T07:00:00+00:00",
+            "sampled_utc": "2026-07-11T07:00:00+00:00",
+            "coastal_backtrack_minutes": 0.0,
+            "atmospheric_valid_utc": "2026-07-11T07:00:00+00:00",
+            "ocean_valid_utc": "2026-07-11T06:00:00+00:00",
+            "lat": 26.8,
+            "lon": 123.0,
+            "air_temperature_c": 28.96,
+            "relative_humidity_pct": 80.0,
+            "surface_pressure_hpa": 996.46,
+            "sea_level_pressure_hpa": 996.46,
+            "deep_layer_shear_ms": 5.161,
+            "sst_c": 27.972,
+            "ohc_kj_cm2": 32.423,
+            "profile_pressure_hpa": [
+              975.0,
+              950.0,
+              925.0,
+              900.0,
+              850.0,
+              800.0,
+              700.0,
+              600.0,
+              500.0,
+              400.0,
+              300.0,
+              250.0,
+              200.0,
+              150.0,
+              100.0,
+              70.0,
+              50.0
+            ],
+            "profile_temperature_c": [
+              27.72,
+              25.92,
+              24.04,
+              22.36,
+              19.86,
+              17.76,
+              12.14,
+              5.8,
+              -1.24,
+              -10.24,
+              -23.8,
+              -32.9,
+              -45.2,
+              -60.4,
+              -77.7,
+              -72.8,
+              -62.7
+            ],
+            "profile_mixing_ratio_kg_kg": [
+              0.0183683,
+              0.0176153,
+              0.0171198,
+              0.0163521,
+              0.0143518,
+              0.0128561,
+              0.0108584,
+              0.0086566,
+              0.0057424,
+              0.0031072,
+              0.0011981,
+              0.0006308,
+              0.0002792,
+              7.09e-05,
+              5.9e-06,
+              3.1e-06,
+              1e-06
+            ],
+            "atmosphere_url": "https://api.open-meteo.com/v1/forecast?latitude=29.04830%2C28.37828%2C26.77772%2C25.19942%2C24.55170%2C25.19942%2C26.77772%2C28.37828%2C31.29660%2C29.93202%2C26.71095%2C23.57864%2C22.30340%2C23.57864%2C26.71095%2C29.93202&longitude=123.00000%2C124.80677%2C125.51853%2C124.75682%2C123.00000%2C121.24318%2C120.48147%2C121.19323%2C123.00000%2C126.66769%2C128.03509%2C126.46777%2C123.00000%2C119.53223%2C117.96491%2C119.33231&hourly=temperature_2m%2Crelative_humidity_2m%2Csurface_pressure%2Cpressure_msl%2Cwind_speed_850hPa%2Cwind_direction_850hPa%2Cwind_speed_200hPa%2Cwind_direction_200hPa%2Ctemperature_1000hPa%2Crelative_humidity_1000hPa%2Ctemperature_975hPa%2Crelative_humidity_975hPa%2Ctemperature_950hPa%2Crelative_humidity_950hPa%2Ctemperature_925hPa%2Crelative_humidity_925hPa%2Ctemperature_900hPa%2Crelative_humidity_900hPa%2Ctemperature_850hPa%2Crelative_humidity_850hPa%2Ctemperature_800hPa%2Crelative_humidity_800hPa%2Ctemperature_700hPa%2Crelative_humidity_700hPa%2Ctemperature_600hPa%2Crelative_humidity_600hPa%2Ctemperature_500hPa%2Crelative_humidity_500hPa%2Ctemperature_400hPa%2Crelative_humidity_400hPa%2Ctemperature_300hPa%2Crelative_humidity_300hPa%2Ctemperature_250hPa%2Crelative_humidity_250hPa%2Ctemperature_200hPa%2Crelative_humidity_200hPa%2Ctemperature_150hPa%2Crelative_humidity_150hPa%2Ctemperature_100hPa%2Crelative_humidity_100hPa%2Ctemperature_70hPa%2Crelative_humidity_70hPa%2Ctemperature_50hPa%2Crelative_humidity_50hPa&models=gfs_global&start_date=2026-07-11&end_date=2026-07-11&timezone=UTC",
+            "ocean_url": "https://ncss.hycom.org/thredds/ncss/grid/GLBy0.08/latest?var=water_temp&latitude=26.80000&longitude=123.00000&time=2026-07-11T07%3A00%3A00Z&vertStride=1&accept=csv",
+            "atmosphere_sampling": {
+              "method": "two_ring_approximation_to_5_degree_environment",
+              "radii_km": [
+                250.0,
+                500.0
+              ],
+              "requested_count": 16,
+              "retained_count": 16,
+              "pi_outer_ring_radius_km": 500.0,
+              "pi_outer_ring_retained_count": 5,
+              "pi_sampling_valid": true,
+              "pi_sampling_reason": null,
+              "land_points_used_for_deep_layer_shear": 5,
+              "excluded": [],
+              "mean_environmental_mslp_hpa": 996.46
+            },
+            "potential_intensity": {
+              "valid": true,
+              "wind_ms": 53.53153073711511,
+              "minimum_pressure_hpa": 958.7483465819946,
+              "outflow_temperature_k": 195.50992103992897,
+              "outflow_level_hpa": 99.63313649023064,
+              "backend_flag": 1,
+              "backend": "tcpyPI.pi",
+              "profile_level_count": 17
+            }
+          },
+          {
+            "requested_utc": "2026-07-11T10:52:24.202906+00:00",
+            "sampled_utc": "2026-07-11T10:52:24.202906+00:00",
+            "coastal_backtrack_minutes": 0.0,
+            "atmospheric_valid_utc": "2026-07-11T11:00:00+00:00",
+            "ocean_valid_utc": "2026-07-11T12:00:00+00:00",
+            "lat": 27.3548,
+            "lon": 122.1386,
+            "air_temperature_c": 28.583,
+            "relative_humidity_pct": 82.5,
+            "surface_pressure_hpa": 996.533,
+            "sea_level_pressure_hpa": 996.533,
+            "deep_layer_shear_ms": 6.321,
+            "sst_c": 27.611,
+            "ohc_kj_cm2": 19.365,
+            "profile_pressure_hpa": [
+              975.0,
+              950.0,
+              925.0,
+              900.0,
+              850.0,
+              800.0,
+              700.0,
+              600.0,
+              500.0,
+              400.0,
+              300.0,
+              250.0,
+              200.0,
+              150.0,
+              100.0,
+              70.0,
+              50.0
+            ],
+            "profile_temperature_c": [
+              27.42,
+              25.65,
+              24.1,
+              23.15,
+              21.05,
+              18.65,
+              12.7,
+              6.43,
+              -1.3,
+              -9.5,
+              -23.5,
+              -33.17,
+              -45.25,
+              -60.83,
+              -79.0,
+              -71.25,
+              -62.0
+            ],
+            "profile_mixing_ratio_kg_kg": [
+              0.0185066,
+              0.0179451,
+              0.0171205,
+              0.0156998,
+              0.0137358,
+              0.0126111,
+              0.0107563,
+              0.0088025,
+              0.0063039,
+              0.003011,
+              0.0013551,
+              0.0007318,
+              0.0002889,
+              6.82e-05,
+              5.8e-06,
+              3.2e-06,
+              0.0
+            ],
+            "atmosphere_url": "https://api.open-meteo.com/v1/forecast?latitude=29.60308%2C28.93278%2C27.33196%2C25.75394%2C25.10648%2C25.75394%2C27.33196%2C28.93278%2C31.85138%2C30.48566%2C27.26358%2C24.13239%2C22.85818%2C24.13239%2C27.26358%2C30.48566&longitude=122.13859%2C123.95494%2C124.66960%2C123.90353%2C122.13859%2C120.37364%2C119.60757%2C120.32224%2C122.13859%2C125.82700%2C127.19854%2C125.62123%2C122.13859%2C118.65594%2C117.07864%2C118.45018&hourly=temperature_2m%2Crelative_humidity_2m%2Csurface_pressure%2Cpressure_msl%2Cwind_speed_850hPa%2Cwind_direction_850hPa%2Cwind_speed_200hPa%2Cwind_direction_200hPa%2Ctemperature_1000hPa%2Crelative_humidity_1000hPa%2Ctemperature_975hPa%2Crelative_humidity_975hPa%2Ctemperature_950hPa%2Crelative_humidity_950hPa%2Ctemperature_925hPa%2Crelative_humidity_925hPa%2Ctemperature_900hPa%2Crelative_humidity_900hPa%2Ctemperature_850hPa%2Crelative_humidity_850hPa%2Ctemperature_800hPa%2Crelative_humidity_800hPa%2Ctemperature_700hPa%2Crelative_humidity_700hPa%2Ctemperature_600hPa%2Crelative_humidity_600hPa%2Ctemperature_500hPa%2Crelative_humidity_500hPa%2Ctemperature_400hPa%2Crelative_humidity_400hPa%2Ctemperature_300hPa%2Crelative_humidity_300hPa%2Ctemperature_250hPa%2Crelative_humidity_250hPa%2Ctemperature_200hPa%2Crelative_humidity_200hPa%2Ctemperature_150hPa%2Crelative_humidity_150hPa%2Ctemperature_100hPa%2Crelative_humidity_100hPa%2Ctemperature_70hPa%2Crelative_humidity_70hPa%2Ctemperature_50hPa%2Crelative_humidity_50hPa&models=gfs_global&start_date=2026-07-11&end_date=2026-07-11&timezone=UTC",
+            "ocean_url": "https://ncss.hycom.org/thredds/ncss/grid/GLBy0.08/latest?var=water_temp&latitude=27.35478&longitude=122.13859&time=2026-07-11T10%3A52%3A24Z&vertStride=1&accept=csv",
+            "atmosphere_sampling": {
+              "method": "two_ring_approximation_to_5_degree_environment",
+              "radii_km": [
+                250.0,
+                500.0
+              ],
+              "requested_count": 16,
+              "retained_count": 15,
+              "pi_outer_ring_radius_km": 500.0,
+              "pi_outer_ring_retained_count": 6,
+              "pi_sampling_valid": true,
+              "pi_sampling_reason": null,
+              "land_points_used_for_deep_layer_shear": 3,
+              "excluded": [
+                {
+                  "lat": 27.332,
+                  "lon": 119.608,
+                  "reason": "elevation_above_limit:521m"
+                }
+              ],
+              "mean_environmental_mslp_hpa": 996.53
+            },
+            "potential_intensity": {
+              "valid": true,
+              "wind_ms": 45.9269093161582,
+              "minimum_pressure_hpa": 968.5961113404816,
+              "outflow_temperature_k": 194.62141539938955,
+              "outflow_level_hpa": 101.29747357630164,
+              "backend_flag": 1,
+              "backend": "tcpyPI.pi",
+              "profile_level_count": 17
+            }
+          },
+          {
+            "requested_utc": "2026-07-11T14:44:48.405812+00:00",
+            "sampled_utc": "2026-07-11T14:44:48.405812+00:00",
+            "coastal_backtrack_minutes": 0.0,
+            "atmospheric_valid_utc": "2026-07-11T15:00:00+00:00",
+            "ocean_valid_utc": "2026-07-11T15:00:00+00:00",
+            "lat": 27.9878,
+            "lon": 121.2706,
+            "air_temperature_c": 28.833,
+            "relative_humidity_pct": 82.333,
+            "surface_pressure_hpa": 1000.133,
+            "sea_level_pressure_hpa": 1000.133,
+            "deep_layer_shear_ms": 9.986,
+            "sst_c": 29.261,
+            "ohc_kj_cm2": 13.312,
+            "profile_pressure_hpa": [
+              1000.0,
+              975.0,
+              950.0,
+              925.0,
+              900.0,
+              850.0,
+              800.0,
+              700.0,
+              600.0,
+              500.0,
+              400.0,
+              300.0,
+              250.0,
+              200.0,
+              150.0,
+              100.0,
+              70.0,
+              50.0
+            ],
+            "profile_temperature_c": [
+              28.93,
+              27.17,
+              25.23,
+              23.73,
+              22.3,
+              20.13,
+              17.7,
+              12.4,
+              5.87,
+              -1.47,
+              -9.77,
+              -23.83,
+              -33.17,
+              -45.33,
+              -61.67,
+              -79.5,
+              -71.0,
+              -61.5
+            ],
+            "profile_mixing_ratio_kg_kg": [
+              0.0206009,
+              0.0198162,
+              0.019357,
+              0.0186282,
+              0.0174614,
+              0.0142324,
+              0.0122763,
+              0.0104979,
+              0.0084951,
+              0.0067436,
+              0.0040308,
+              0.0011545,
+              0.0009041,
+              0.0003154,
+              5.96e-05,
+              6.3e-06,
+              3.1e-06,
+              1.9e-06
+            ],
+            "atmosphere_url": "https://api.open-meteo.com/v1/forecast?latitude=30.23615%2C29.56553%2C27.96441%2C26.38671%2C25.73955%2C26.38671%2C27.96441%2C29.56553%2C32.48445%2C31.11740%2C27.89416%2C24.76429%2C23.49124%2C24.76429%2C27.89416%2C31.11740&longitude=121.27062%2C123.09824%2C123.81632%2C123.04514%2C121.27062%2C119.49611%2C118.72492%2C119.44300%2C121.27062%2C124.98339%2C126.35982%2C124.77079%2C121.27062%2C117.77045%2C116.18143%2C117.55785&hourly=temperature_2m%2Crelative_humidity_2m%2Csurface_pressure%2Cpressure_msl%2Cwind_speed_850hPa%2Cwind_direction_850hPa%2Cwind_speed_200hPa%2Cwind_direction_200hPa%2Ctemperature_1000hPa%2Crelative_humidity_1000hPa%2Ctemperature_975hPa%2Crelative_humidity_975hPa%2Ctemperature_950hPa%2Crelative_humidity_950hPa%2Ctemperature_925hPa%2Crelative_humidity_925hPa%2Ctemperature_900hPa%2Crelative_humidity_900hPa%2Ctemperature_850hPa%2Crelative_humidity_850hPa%2Ctemperature_800hPa%2Crelative_humidity_800hPa%2Ctemperature_700hPa%2Crelative_humidity_700hPa%2Ctemperature_600hPa%2Crelative_humidity_600hPa%2Ctemperature_500hPa%2Crelative_humidity_500hPa%2Ctemperature_400hPa%2Crelative_humidity_400hPa%2Ctemperature_300hPa%2Crelative_humidity_300hPa%2Ctemperature_250hPa%2Crelative_humidity_250hPa%2Ctemperature_200hPa%2Crelative_humidity_200hPa%2Ctemperature_150hPa%2Crelative_humidity_150hPa%2Ctemperature_100hPa%2Crelative_humidity_100hPa%2Ctemperature_70hPa%2Crelative_humidity_70hPa%2Ctemperature_50hPa%2Crelative_humidity_50hPa&models=gfs_global&start_date=2026-07-11&end_date=2026-07-11&timezone=UTC",
+            "ocean_url": "https://ncss.hycom.org/thredds/ncss/grid/GLBy0.08/latest?var=water_temp&latitude=27.98785&longitude=121.27062&time=2026-07-11T14%3A44%3A48Z&vertStride=1&accept=csv",
+            "atmosphere_sampling": {
+              "method": "two_ring_approximation_to_5_degree_environment",
+              "radii_km": [
+                250.0,
+                500.0
+              ],
+              "requested_count": 16,
+              "retained_count": 14,
+              "pi_outer_ring_radius_km": 500.0,
+              "pi_outer_ring_retained_count": 3,
+              "pi_sampling_valid": false,
+              "pi_sampling_reason": "insufficient_outer_ocean_samples",
+              "land_points_used_for_deep_layer_shear": 7,
+              "excluded": [
+                {
+                  "lat": 27.964,
+                  "lon": 118.725,
+                  "reason": "elevation_above_limit:580m"
+                },
+                {
+                  "lat": 23.491,
+                  "lon": 121.271,
+                  "reason": "elevation_above_limit:887m"
+                }
+              ],
+              "mean_environmental_mslp_hpa": 1000.13
+            },
+            "potential_intensity": {
+              "valid": false,
+              "reason": "insufficient_outer_ocean_samples",
+              "outer_ocean_sample_count": 3
+            }
+          }
+        ]
+      },
+      "JMA": {
+        "status": "available",
+        "nodes": [
+          {
+            "requested_utc": "2026-07-11T07:00:00+00:00",
+            "sampled_utc": "2026-07-11T07:00:00+00:00",
+            "coastal_backtrack_minutes": 0.0,
+            "atmospheric_valid_utc": "2026-07-11T07:00:00+00:00",
+            "ocean_valid_utc": "2026-07-11T06:00:00+00:00",
+            "lat": 26.8,
+            "lon": 123.0,
+            "air_temperature_c": 28.96,
+            "relative_humidity_pct": 80.0,
+            "surface_pressure_hpa": 996.46,
+            "sea_level_pressure_hpa": 996.46,
+            "deep_layer_shear_ms": 5.161,
+            "sst_c": 27.972,
+            "ohc_kj_cm2": 32.423,
+            "profile_pressure_hpa": [
+              975.0,
+              950.0,
+              925.0,
+              900.0,
+              850.0,
+              800.0,
+              700.0,
+              600.0,
+              500.0,
+              400.0,
+              300.0,
+              250.0,
+              200.0,
+              150.0,
+              100.0,
+              70.0,
+              50.0
+            ],
+            "profile_temperature_c": [
+              27.72,
+              25.92,
+              24.04,
+              22.36,
+              19.86,
+              17.76,
+              12.14,
+              5.8,
+              -1.24,
+              -10.24,
+              -23.8,
+              -32.9,
+              -45.2,
+              -60.4,
+              -77.7,
+              -72.8,
+              -62.7
+            ],
+            "profile_mixing_ratio_kg_kg": [
+              0.0183683,
+              0.0176153,
+              0.0171198,
+              0.0163521,
+              0.0143518,
+              0.0128561,
+              0.0108584,
+              0.0086566,
+              0.0057424,
+              0.0031072,
+              0.0011981,
+              0.0006308,
+              0.0002792,
+              7.09e-05,
+              5.9e-06,
+              3.1e-06,
+              1e-06
+            ],
+            "atmosphere_url": "https://api.open-meteo.com/v1/forecast?latitude=29.04830%2C28.37828%2C26.77772%2C25.19942%2C24.55170%2C25.19942%2C26.77772%2C28.37828%2C31.29660%2C29.93202%2C26.71095%2C23.57864%2C22.30340%2C23.57864%2C26.71095%2C29.93202&longitude=123.00000%2C124.80677%2C125.51853%2C124.75682%2C123.00000%2C121.24318%2C120.48147%2C121.19323%2C123.00000%2C126.66769%2C128.03509%2C126.46777%2C123.00000%2C119.53223%2C117.96491%2C119.33231&hourly=temperature_2m%2Crelative_humidity_2m%2Csurface_pressure%2Cpressure_msl%2Cwind_speed_850hPa%2Cwind_direction_850hPa%2Cwind_speed_200hPa%2Cwind_direction_200hPa%2Ctemperature_1000hPa%2Crelative_humidity_1000hPa%2Ctemperature_975hPa%2Crelative_humidity_975hPa%2Ctemperature_950hPa%2Crelative_humidity_950hPa%2Ctemperature_925hPa%2Crelative_humidity_925hPa%2Ctemperature_900hPa%2Crelative_humidity_900hPa%2Ctemperature_850hPa%2Crelative_humidity_850hPa%2Ctemperature_800hPa%2Crelative_humidity_800hPa%2Ctemperature_700hPa%2Crelative_humidity_700hPa%2Ctemperature_600hPa%2Crelative_humidity_600hPa%2Ctemperature_500hPa%2Crelative_humidity_500hPa%2Ctemperature_400hPa%2Crelative_humidity_400hPa%2Ctemperature_300hPa%2Crelative_humidity_300hPa%2Ctemperature_250hPa%2Crelative_humidity_250hPa%2Ctemperature_200hPa%2Crelative_humidity_200hPa%2Ctemperature_150hPa%2Crelative_humidity_150hPa%2Ctemperature_100hPa%2Crelative_humidity_100hPa%2Ctemperature_70hPa%2Crelative_humidity_70hPa%2Ctemperature_50hPa%2Crelative_humidity_50hPa&models=gfs_global&start_date=2026-07-11&end_date=2026-07-11&timezone=UTC",
+            "ocean_url": "https://ncss.hycom.org/thredds/ncss/grid/GLBy0.08/latest?var=water_temp&latitude=26.80000&longitude=123.00000&time=2026-07-11T07%3A00%3A00Z&vertStride=1&accept=csv",
+            "atmosphere_sampling": {
+              "method": "two_ring_approximation_to_5_degree_environment",
+              "radii_km": [
+                250.0,
+                500.0
+              ],
+              "requested_count": 16,
+              "retained_count": 16,
+              "pi_outer_ring_radius_km": 500.0,
+              "pi_outer_ring_retained_count": 5,
+              "pi_sampling_valid": true,
+              "pi_sampling_reason": null,
+              "land_points_used_for_deep_layer_shear": 5,
+              "excluded": [],
+              "mean_environmental_mslp_hpa": 996.46,
+              "shared_environment_reuse": {
+                "distance_km": 11.12,
+                "time_difference_minutes": 0.0,
+                "sampled_utc": "2026-07-11T07:00:00+00:00",
+                "lat": 26.8,
+                "lon": 123.0
+              }
+            },
+            "potential_intensity": {
+              "valid": true,
+              "wind_ms": 53.53153073711511,
+              "minimum_pressure_hpa": 958.7483465819946,
+              "outflow_temperature_k": 195.50992103992897,
+              "outflow_level_hpa": 99.63313649023064,
+              "backend_flag": 1,
+              "backend": "tcpyPI.pi",
+              "profile_level_count": 17
+            }
+          },
+          {
+            "requested_utc": "2026-07-11T10:53:49.720270+00:00",
+            "sampled_utc": "2026-07-11T10:52:24.202906+00:00",
+            "coastal_backtrack_minutes": 0.0,
+            "atmospheric_valid_utc": "2026-07-11T11:00:00+00:00",
+            "ocean_valid_utc": "2026-07-11T12:00:00+00:00",
+            "lat": 27.3548,
+            "lon": 122.1386,
+            "air_temperature_c": 28.583,
+            "relative_humidity_pct": 82.5,
+            "surface_pressure_hpa": 996.533,
+            "sea_level_pressure_hpa": 996.533,
+            "deep_layer_shear_ms": 6.321,
+            "sst_c": 27.611,
+            "ohc_kj_cm2": 19.365,
+            "profile_pressure_hpa": [
+              975.0,
+              950.0,
+              925.0,
+              900.0,
+              850.0,
+              800.0,
+              700.0,
+              600.0,
+              500.0,
+              400.0,
+              300.0,
+              250.0,
+              200.0,
+              150.0,
+              100.0,
+              70.0,
+              50.0
+            ],
+            "profile_temperature_c": [
+              27.42,
+              25.65,
+              24.1,
+              23.15,
+              21.05,
+              18.65,
+              12.7,
+              6.43,
+              -1.3,
+              -9.5,
+              -23.5,
+              -33.17,
+              -45.25,
+              -60.83,
+              -79.0,
+              -71.25,
+              -62.0
+            ],
+            "profile_mixing_ratio_kg_kg": [
+              0.0185066,
+              0.0179451,
+              0.0171205,
+              0.0156998,
+              0.0137358,
+              0.0126111,
+              0.0107563,
+              0.0088025,
+              0.0063039,
+              0.003011,
+              0.0013551,
+              0.0007318,
+              0.0002889,
+              6.82e-05,
+              5.8e-06,
+              3.2e-06,
+              0.0
+            ],
+            "atmosphere_url": "https://api.open-meteo.com/v1/forecast?latitude=29.60308%2C28.93278%2C27.33196%2C25.75394%2C25.10648%2C25.75394%2C27.33196%2C28.93278%2C31.85138%2C30.48566%2C27.26358%2C24.13239%2C22.85818%2C24.13239%2C27.26358%2C30.48566&longitude=122.13859%2C123.95494%2C124.66960%2C123.90353%2C122.13859%2C120.37364%2C119.60757%2C120.32224%2C122.13859%2C125.82700%2C127.19854%2C125.62123%2C122.13859%2C118.65594%2C117.07864%2C118.45018&hourly=temperature_2m%2Crelative_humidity_2m%2Csurface_pressure%2Cpressure_msl%2Cwind_speed_850hPa%2Cwind_direction_850hPa%2Cwind_speed_200hPa%2Cwind_direction_200hPa%2Ctemperature_1000hPa%2Crelative_humidity_1000hPa%2Ctemperature_975hPa%2Crelative_humidity_975hPa%2Ctemperature_950hPa%2Crelative_humidity_950hPa%2Ctemperature_925hPa%2Crelative_humidity_925hPa%2Ctemperature_900hPa%2Crelative_humidity_900hPa%2Ctemperature_850hPa%2Crelative_humidity_850hPa%2Ctemperature_800hPa%2Crelative_humidity_800hPa%2Ctemperature_700hPa%2Crelative_humidity_700hPa%2Ctemperature_600hPa%2Crelative_humidity_600hPa%2Ctemperature_500hPa%2Crelative_humidity_500hPa%2Ctemperature_400hPa%2Crelative_humidity_400hPa%2Ctemperature_300hPa%2Crelative_humidity_300hPa%2Ctemperature_250hPa%2Crelative_humidity_250hPa%2Ctemperature_200hPa%2Crelative_humidity_200hPa%2Ctemperature_150hPa%2Crelative_humidity_150hPa%2Ctemperature_100hPa%2Crelative_humidity_100hPa%2Ctemperature_70hPa%2Crelative_humidity_70hPa%2Ctemperature_50hPa%2Crelative_humidity_50hPa&models=gfs_global&start_date=2026-07-11&end_date=2026-07-11&timezone=UTC",
+            "ocean_url": "https://ncss.hycom.org/thredds/ncss/grid/GLBy0.08/latest?var=water_temp&latitude=27.35478&longitude=122.13859&time=2026-07-11T10%3A52%3A24Z&vertStride=1&accept=csv",
+            "atmosphere_sampling": {
+              "method": "two_ring_approximation_to_5_degree_environment",
+              "radii_km": [
+                250.0,
+                500.0
+              ],
+              "requested_count": 16,
+              "retained_count": 15,
+              "pi_outer_ring_radius_km": 500.0,
+              "pi_outer_ring_retained_count": 6,
+              "pi_sampling_valid": true,
+              "pi_sampling_reason": null,
+              "land_points_used_for_deep_layer_shear": 3,
+              "excluded": [
+                {
+                  "lat": 27.332,
+                  "lon": 119.608,
+                  "reason": "elevation_above_limit:521m"
+                }
+              ],
+              "mean_environmental_mslp_hpa": 996.53,
+              "shared_environment_reuse": {
+                "distance_km": 20.67,
+                "time_difference_minutes": 1.43,
+                "sampled_utc": "2026-07-11T10:52:24.202906+00:00",
+                "lat": 27.3548,
+                "lon": 122.1386
+              }
+            },
+            "potential_intensity": {
+              "valid": true,
+              "wind_ms": 45.9269093161582,
+              "minimum_pressure_hpa": 968.5961113404816,
+              "outflow_temperature_k": 194.62141539938955,
+              "outflow_level_hpa": 101.29747357630164,
+              "backend_flag": 1,
+              "backend": "tcpyPI.pi",
+              "profile_level_count": 17
+            }
+          },
+          {
+            "requested_utc": "2026-07-11T14:47:39.440540+00:00",
+            "sampled_utc": "2026-07-11T14:44:48.405812+00:00",
+            "coastal_backtrack_minutes": 0.0,
+            "atmospheric_valid_utc": "2026-07-11T15:00:00+00:00",
+            "ocean_valid_utc": "2026-07-11T15:00:00+00:00",
+            "lat": 27.9878,
+            "lon": 121.2706,
+            "air_temperature_c": 28.833,
+            "relative_humidity_pct": 82.333,
+            "surface_pressure_hpa": 1000.133,
+            "sea_level_pressure_hpa": 1000.133,
+            "deep_layer_shear_ms": 9.986,
+            "sst_c": 29.261,
+            "ohc_kj_cm2": 13.312,
+            "profile_pressure_hpa": [
+              1000.0,
+              975.0,
+              950.0,
+              925.0,
+              900.0,
+              850.0,
+              800.0,
+              700.0,
+              600.0,
+              500.0,
+              400.0,
+              300.0,
+              250.0,
+              200.0,
+              150.0,
+              100.0,
+              70.0,
+              50.0
+            ],
+            "profile_temperature_c": [
+              28.93,
+              27.17,
+              25.23,
+              23.73,
+              22.3,
+              20.13,
+              17.7,
+              12.4,
+              5.87,
+              -1.47,
+              -9.77,
+              -23.83,
+              -33.17,
+              -45.33,
+              -61.67,
+              -79.5,
+              -71.0,
+              -61.5
+            ],
+            "profile_mixing_ratio_kg_kg": [
+              0.0206009,
+              0.0198162,
+              0.019357,
+              0.0186282,
+              0.0174614,
+              0.0142324,
+              0.0122763,
+              0.0104979,
+              0.0084951,
+              0.0067436,
+              0.0040308,
+              0.0011545,
+              0.0009041,
+              0.0003154,
+              5.96e-05,
+              6.3e-06,
+              3.1e-06,
+              1.9e-06
+            ],
+            "atmosphere_url": "https://api.open-meteo.com/v1/forecast?latitude=30.23615%2C29.56553%2C27.96441%2C26.38671%2C25.73955%2C26.38671%2C27.96441%2C29.56553%2C32.48445%2C31.11740%2C27.89416%2C24.76429%2C23.49124%2C24.76429%2C27.89416%2C31.11740&longitude=121.27062%2C123.09824%2C123.81632%2C123.04514%2C121.27062%2C119.49611%2C118.72492%2C119.44300%2C121.27062%2C124.98339%2C126.35982%2C124.77079%2C121.27062%2C117.77045%2C116.18143%2C117.55785&hourly=temperature_2m%2Crelative_humidity_2m%2Csurface_pressure%2Cpressure_msl%2Cwind_speed_850hPa%2Cwind_direction_850hPa%2Cwind_speed_200hPa%2Cwind_direction_200hPa%2Ctemperature_1000hPa%2Crelative_humidity_1000hPa%2Ctemperature_975hPa%2Crelative_humidity_975hPa%2Ctemperature_950hPa%2Crelative_humidity_950hPa%2Ctemperature_925hPa%2Crelative_humidity_925hPa%2Ctemperature_900hPa%2Crelative_humidity_900hPa%2Ctemperature_850hPa%2Crelative_humidity_850hPa%2Ctemperature_800hPa%2Crelative_humidity_800hPa%2Ctemperature_700hPa%2Crelative_humidity_700hPa%2Ctemperature_600hPa%2Crelative_humidity_600hPa%2Ctemperature_500hPa%2Crelative_humidity_500hPa%2Ctemperature_400hPa%2Crelative_humidity_400hPa%2Ctemperature_300hPa%2Crelative_humidity_300hPa%2Ctemperature_250hPa%2Crelative_humidity_250hPa%2Ctemperature_200hPa%2Crelative_humidity_200hPa%2Ctemperature_150hPa%2Crelative_humidity_150hPa%2Ctemperature_100hPa%2Crelative_humidity_100hPa%2Ctemperature_70hPa%2Crelative_humidity_70hPa%2Ctemperature_50hPa%2Crelative_humidity_50hPa&models=gfs_global&start_date=2026-07-11&end_date=2026-07-11&timezone=UTC",
+            "ocean_url": "https://ncss.hycom.org/thredds/ncss/grid/GLBy0.08/latest?var=water_temp&latitude=27.98785&longitude=121.27062&time=2026-07-11T14%3A44%3A48Z&vertStride=1&accept=csv",
+            "atmosphere_sampling": {
+              "method": "two_ring_approximation_to_5_degree_environment",
+              "radii_km": [
+                250.0,
+                500.0
+              ],
+              "requested_count": 16,
+              "retained_count": 14,
+              "pi_outer_ring_radius_km": 500.0,
+              "pi_outer_ring_retained_count": 3,
+              "pi_sampling_valid": false,
+              "pi_sampling_reason": "insufficient_outer_ocean_samples",
+              "land_points_used_for_deep_layer_shear": 7,
+              "excluded": [
+                {
+                  "lat": 27.964,
+                  "lon": 118.725,
+                  "reason": "elevation_above_limit:580m"
+                },
+                {
+                  "lat": 23.491,
+                  "lon": 121.271,
+                  "reason": "elevation_above_limit:887m"
+                }
+              ],
+              "mean_environmental_mslp_hpa": 1000.13,
+              "shared_environment_reuse": {
+                "distance_km": 24.87,
+                "time_difference_minutes": 2.85,
+                "sampled_utc": "2026-07-11T14:44:48.405812+00:00",
+                "lat": 27.9878,
+                "lon": 121.2706
+              }
+            },
+            "potential_intensity": {
+              "valid": false,
+              "reason": "insufficient_outer_ocean_samples",
+              "outer_ocean_sample_count": 3
+            }
+          }
+        ]
+      },
+      "JTWC": {
+        "status": "available",
+        "nodes": [
+          {
+            "requested_utc": "2026-07-11T07:00:00+00:00",
+            "sampled_utc": "2026-07-11T07:00:00+00:00",
+            "coastal_backtrack_minutes": 0.0,
+            "atmospheric_valid_utc": "2026-07-11T07:00:00+00:00",
+            "ocean_valid_utc": "2026-07-11T06:00:00+00:00",
+            "lat": 26.3434,
+            "lon": 123.3275,
+            "air_temperature_c": 29.033,
+            "relative_humidity_pct": 81.333,
+            "surface_pressure_hpa": 997.767,
+            "sea_level_pressure_hpa": 997.767,
+            "deep_layer_shear_ms": 7.64,
+            "sst_c": 28.246,
+            "ohc_kj_cm2": 33.184,
+            "profile_pressure_hpa": [
+              975.0,
+              950.0,
+              925.0,
+              900.0,
+              850.0,
+              800.0,
+              700.0,
+              600.0,
+              500.0,
+              400.0,
+              300.0,
+              250.0,
+              200.0,
+              150.0,
+              100.0,
+              70.0,
+              50.0
+            ],
+            "profile_temperature_c": [
+              27.45,
+              25.5,
+              23.62,
+              22.18,
+              20.27,
+              17.57,
+              11.62,
+              5.07,
+              -1.83,
+              -10.57,
+              -23.75,
+              -32.92,
+              -45.17,
+              -60.5,
+              -78.33,
+              -73.75,
+              -62.33
+            ],
+            "profile_mixing_ratio_kg_kg": [
+              0.0193349,
+              0.0184374,
+              0.0176543,
+              0.0166741,
+              0.0140895,
+              0.0128299,
+              0.0106145,
+              0.0086269,
+              0.006223,
+              0.0032243,
+              0.0014209,
+              0.0008364,
+              0.0003158,
+              7.33e-05,
+              6.1e-06,
+              3.6e-06,
+              0.0
+            ],
+            "atmosphere_url": "https://api.open-meteo.com/v1/forecast?latitude=28.59173%2C27.92193%2C26.32159%2C24.74306%2C24.09513%2C24.74306%2C26.32159%2C27.92193%2C30.84003%2C29.47638%2C26.25613%2C23.12290%2C21.84683%2C23.12290%2C26.25613%2C29.47638&longitude=123.32747%2C125.12655%2C125.83599%2C125.07778%2C123.32747%2C121.57715%2C120.81894%2C121.52839%2C123.32747%2C126.97853%2C128.34263%2C126.78334%2C123.32747%2C119.87160%2C118.31230%2C119.67640&hourly=temperature_2m%2Crelative_humidity_2m%2Csurface_pressure%2Cpressure_msl%2Cwind_speed_850hPa%2Cwind_direction_850hPa%2Cwind_speed_200hPa%2Cwind_direction_200hPa%2Ctemperature_1000hPa%2Crelative_humidity_1000hPa%2Ctemperature_975hPa%2Crelative_humidity_975hPa%2Ctemperature_950hPa%2Crelative_humidity_950hPa%2Ctemperature_925hPa%2Crelative_humidity_925hPa%2Ctemperature_900hPa%2Crelative_humidity_900hPa%2Ctemperature_850hPa%2Crelative_humidity_850hPa%2Ctemperature_800hPa%2Crelative_humidity_800hPa%2Ctemperature_700hPa%2Crelative_humidity_700hPa%2Ctemperature_600hPa%2Crelative_humidity_600hPa%2Ctemperature_500hPa%2Crelative_humidity_500hPa%2Ctemperature_400hPa%2Crelative_humidity_400hPa%2Ctemperature_300hPa%2Crelative_humidity_300hPa%2Ctemperature_250hPa%2Crelative_humidity_250hPa%2Ctemperature_200hPa%2Crelative_humidity_200hPa%2Ctemperature_150hPa%2Crelative_humidity_150hPa%2Ctemperature_100hPa%2Crelative_humidity_100hPa%2Ctemperature_70hPa%2Crelative_humidity_70hPa%2Ctemperature_50hPa%2Crelative_humidity_50hPa&models=gfs_global&start_date=2026-07-11&end_date=2026-07-11&timezone=UTC",
+            "ocean_url": "https://ncss.hycom.org/thredds/ncss/grid/GLBy0.08/latest?var=water_temp&latitude=26.34343&longitude=123.32747&time=2026-07-11T07%3A00%3A00Z&vertStride=1&accept=csv",
+            "atmosphere_sampling": {
+              "method": "two_ring_approximation_to_5_degree_environment",
+              "radii_km": [
+                250.0,
+                500.0
+              ],
+              "requested_count": 16,
+              "retained_count": 14,
+              "pi_outer_ring_radius_km": 500.0,
+              "pi_outer_ring_retained_count": 6,
+              "pi_sampling_valid": true,
+              "pi_sampling_reason": null,
+              "land_points_used_for_deep_layer_shear": 1,
+              "excluded": [
+                {
+                  "lat": 24.743,
+                  "lon": 121.577,
+                  "reason": "elevation_above_limit:572m"
+                },
+                {
+                  "lat": 29.476,
+                  "lon": 119.676,
+                  "reason": "elevation_above_limit:648m"
+                }
+              ],
+              "mean_environmental_mslp_hpa": 997.77
+            },
+            "potential_intensity": {
+              "valid": true,
+              "wind_ms": 59.366673901516805,
+              "minimum_pressure_hpa": 951.4780786240798,
+              "outflow_temperature_k": 195.24336588514106,
+              "outflow_level_hpa": 97.20705966089484,
+              "backend_flag": 1,
+              "backend": "tcpyPI.pi",
+              "profile_level_count": 17
+            }
+          },
+          {
+            "requested_utc": "2026-07-11T11:51:13.539144+00:00",
+            "sampled_utc": "2026-07-11T11:51:13.539144+00:00",
+            "coastal_backtrack_minutes": 0.0,
+            "atmospheric_valid_utc": "2026-07-11T12:00:00+00:00",
+            "ocean_valid_utc": "2026-07-11T12:00:00+00:00",
+            "lat": 27.272,
+            "lon": 122.4274,
+            "air_temperature_c": 28.867,
+            "relative_humidity_pct": 82.0,
+            "surface_pressure_hpa": 997.917,
+            "sea_level_pressure_hpa": 997.917,
+            "deep_layer_shear_ms": 14.644,
+            "sst_c": 27.992,
+            "ohc_kj_cm2": 29.494,
+            "profile_pressure_hpa": [
+              975.0,
+              950.0,
+              925.0,
+              900.0,
+              850.0,
+              800.0,
+              700.0,
+              600.0,
+              500.0,
+              400.0,
+              300.0,
+              250.0,
+              200.0,
+              150.0,
+              100.0,
+              70.0,
+              50.0
+            ],
+            "profile_temperature_c": [
+              27.6,
+              25.72,
+              24.18,
+              23.52,
+              21.32,
+              18.77,
+              12.95,
+              6.03,
+              -1.72,
+              -9.65,
+              -23.58,
+              -33.08,
+              -45.67,
+              -61.08,
+              -79.33,
+              -71.17,
+              -62.08
+            ],
+            "profile_mixing_ratio_kg_kg": [
+              0.0192673,
+              0.0183769,
+              0.0174537,
+              0.0153328,
+              0.013186,
+              0.0122179,
+              0.0099733,
+              0.0078422,
+              0.0061443,
+              0.003228,
+              0.0011462,
+              0.0007531,
+              0.0002779,
+              6.79e-05,
+              5.5e-06,
+              3.3e-06,
+              0.0
+            ],
+            "atmosphere_url": "https://api.open-meteo.com/v1/forecast?latitude=29.52028%2C28.85002%2C27.24924%2C25.67118%2C25.02367%2C25.67118%2C27.24924%2C28.85002%2C31.76858%2C30.40303%2C27.18110%2C24.04974%2C22.77537%2C24.04974%2C27.18110%2C30.40303&longitude=122.42737%2C124.24227%2C124.95650%2C124.19109%2C122.42737%2C120.66365%2C119.89824%2C120.61247%2C122.42737%2C126.11265%2C127.48356%2C125.90777%2C122.42737%2C118.94698%2C117.37118%2C118.74209&hourly=temperature_2m%2Crelative_humidity_2m%2Csurface_pressure%2Cpressure_msl%2Cwind_speed_850hPa%2Cwind_direction_850hPa%2Cwind_speed_200hPa%2Cwind_direction_200hPa%2Ctemperature_1000hPa%2Crelative_humidity_1000hPa%2Ctemperature_975hPa%2Crelative_humidity_975hPa%2Ctemperature_950hPa%2Crelative_humidity_950hPa%2Ctemperature_925hPa%2Crelative_humidity_925hPa%2Ctemperature_900hPa%2Crelative_humidity_900hPa%2Ctemperature_850hPa%2Crelative_humidity_850hPa%2Ctemperature_800hPa%2Crelative_humidity_800hPa%2Ctemperature_700hPa%2Crelative_humidity_700hPa%2Ctemperature_600hPa%2Crelative_humidity_600hPa%2Ctemperature_500hPa%2Crelative_humidity_500hPa%2Ctemperature_400hPa%2Crelative_humidity_400hPa%2Ctemperature_300hPa%2Crelative_humidity_300hPa%2Ctemperature_250hPa%2Crelative_humidity_250hPa%2Ctemperature_200hPa%2Crelative_humidity_200hPa%2Ctemperature_150hPa%2Crelative_humidity_150hPa%2Ctemperature_100hPa%2Crelative_humidity_100hPa%2Ctemperature_70hPa%2Crelative_humidity_70hPa%2Ctemperature_50hPa%2Crelative_humidity_50hPa&models=gfs_global&start_date=2026-07-11&end_date=2026-07-11&timezone=UTC",
+            "ocean_url": "https://ncss.hycom.org/thredds/ncss/grid/GLBy0.08/latest?var=water_temp&latitude=27.27198&longitude=122.42737&time=2026-07-11T11%3A51%3A13Z&vertStride=1&accept=csv",
+            "atmosphere_sampling": {
+              "method": "two_ring_approximation_to_5_degree_environment",
+              "radii_km": [
+                250.0,
+                500.0
+              ],
+              "requested_count": 16,
+              "retained_count": 12,
+              "pi_outer_ring_radius_km": 500.0,
+              "pi_outer_ring_retained_count": 6,
+              "pi_sampling_valid": true,
+              "pi_sampling_reason": null,
+              "land_points_used_for_deep_layer_shear": 0,
+              "excluded": [
+                {
+                  "lat": 27.249,
+                  "lon": 119.898,
+                  "reason": "elevation_above_limit:704m"
+                },
+                {
+                  "lat": 28.85,
+                  "lon": 120.612,
+                  "reason": "elevation_above_limit:659m"
+                },
+                {
+                  "lat": 27.181,
+                  "lon": 117.371,
+                  "reason": "elevation_above_limit:507m"
+                },
+                {
+                  "lat": 30.403,
+                  "lon": 118.742,
+                  "reason": "elevation_above_limit:523m"
+                }
+              ],
+              "mean_environmental_mslp_hpa": 997.92
+            },
+            "potential_intensity": {
+              "valid": true,
+              "wind_ms": 54.10711384929169,
+              "minimum_pressure_hpa": 959.343180098866,
+              "outflow_temperature_k": 194.40494857479692,
+              "outflow_level_hpa": 97.83896441911338,
+              "backend_flag": 1,
+              "backend": "tcpyPI.pi",
+              "profile_level_count": 17
+            }
+          },
+          {
+            "requested_utc": "2026-07-11T16:42:27.078287+00:00",
+            "sampled_utc": "2026-07-11T16:42:27.078287+00:00",
+            "coastal_backtrack_minutes": 0.0,
+            "atmospheric_valid_utc": "2026-07-11T17:00:00+00:00",
+            "ocean_valid_utc": "2026-07-11T18:00:00+00:00",
+            "lat": 28.2267,
+            "lon": 121.4655,
+            "air_temperature_c": 27.975,
+            "relative_humidity_pct": 85.25,
+            "surface_pressure_hpa": 1000.7,
+            "sea_level_pressure_hpa": 1000.7,
+            "deep_layer_shear_ms": 10.192,
+            "sst_c": 29.31,
+            "ohc_kj_cm2": 5.4,
+            "profile_pressure_hpa": [
+              1000.0,
+              975.0,
+              950.0,
+              925.0,
+              900.0,
+              850.0,
+              800.0,
+              700.0,
+              600.0,
+              500.0,
+              400.0,
+              300.0,
+              250.0,
+              200.0,
+              150.0,
+              100.0,
+              70.0,
+              50.0
+            ],
+            "profile_temperature_c": [
+              28.07,
+              26.48,
+              24.62,
+              23.2,
+              22.23,
+              20.67,
+              18.25,
+              12.5,
+              6.05,
+              -0.97,
+              -10.0,
+              -23.62,
+              -33.12,
+              -45.75,
+              -61.38,
+              -78.12,
+              -70.62,
+              -61.75
+            ],
+            "profile_mixing_ratio_kg_kg": [
+              0.0203464,
+              0.0197584,
+              0.0193082,
+              0.0185345,
+              0.0170845,
+              0.013697,
+              0.0121063,
+              0.0096103,
+              0.0072829,
+              0.0059628,
+              0.0030095,
+              0.0010679,
+              0.0007998,
+              0.0003027,
+              5.77e-05,
+              6.3e-06,
+              2.8e-06,
+              0.0
+            ],
+            "atmosphere_url": "https://api.open-meteo.com/v1/forecast?latitude=30.47499%2C29.80425%2C28.20301%2C26.62543%2C25.97839%2C26.62543%2C28.20301%2C29.80425%2C32.72329%2C31.35574%2C28.13206%2C25.00268%2C23.73009%2C25.00268%2C28.13206%2C31.35574&longitude=121.46550%2C123.29747%2C124.01687%2C123.24370%2C121.46550%2C119.68729%2C118.91413%2C119.63353%2C121.46550%2C125.18766%2C126.56598%2C124.97244%2C121.46550%2C117.95856%2C116.36502%2C117.74334&hourly=temperature_2m%2Crelative_humidity_2m%2Csurface_pressure%2Cpressure_msl%2Cwind_speed_850hPa%2Cwind_direction_850hPa%2Cwind_speed_200hPa%2Cwind_direction_200hPa%2Ctemperature_1000hPa%2Crelative_humidity_1000hPa%2Ctemperature_975hPa%2Crelative_humidity_975hPa%2Ctemperature_950hPa%2Crelative_humidity_950hPa%2Ctemperature_925hPa%2Crelative_humidity_925hPa%2Ctemperature_900hPa%2Crelative_humidity_900hPa%2Ctemperature_850hPa%2Crelative_humidity_850hPa%2Ctemperature_800hPa%2Crelative_humidity_800hPa%2Ctemperature_700hPa%2Crelative_humidity_700hPa%2Ctemperature_600hPa%2Crelative_humidity_600hPa%2Ctemperature_500hPa%2Crelative_humidity_500hPa%2Ctemperature_400hPa%2Crelative_humidity_400hPa%2Ctemperature_300hPa%2Crelative_humidity_300hPa%2Ctemperature_250hPa%2Crelative_humidity_250hPa%2Ctemperature_200hPa%2Crelative_humidity_200hPa%2Ctemperature_150hPa%2Crelative_humidity_150hPa%2Ctemperature_100hPa%2Crelative_humidity_100hPa%2Ctemperature_70hPa%2Crelative_humidity_70hPa%2Ctemperature_50hPa%2Crelative_humidity_50hPa&models=gfs_global&start_date=2026-07-11&end_date=2026-07-11&timezone=UTC",
+            "ocean_url": "https://ncss.hycom.org/thredds/ncss/grid/GLBy0.08/latest?var=water_temp&latitude=28.22669&longitude=121.46550&time=2026-07-11T16%3A42%3A27Z&vertStride=1&accept=csv",
+            "atmosphere_sampling": {
+              "method": "two_ring_approximation_to_5_degree_environment",
+              "radii_km": [
+                250.0,
+                500.0
+              ],
+              "requested_count": 16,
+              "retained_count": 14,
+              "pi_outer_ring_radius_km": 500.0,
+              "pi_outer_ring_retained_count": 4,
+              "pi_sampling_valid": true,
+              "pi_sampling_reason": null,
+              "land_points_used_for_deep_layer_shear": 5,
+              "excluded": [
+                {
+                  "lat": 28.203,
+                  "lon": 118.914,
+                  "reason": "elevation_above_limit:830m"
+                },
+                {
+                  "lat": 25.003,
+                  "lon": 117.959,
+                  "reason": "elevation_above_limit:897m"
+                }
+              ],
+              "mean_environmental_mslp_hpa": 1000.7
+            },
+            "potential_intensity": {
+              "valid": true,
+              "wind_ms": 73.19438029940906,
+              "minimum_pressure_hpa": 930.6637291522849,
+              "outflow_temperature_k": 196.9226564580816,
+              "outflow_level_hpa": 92.40937416767353,
+              "backend_flag": 1,
+              "backend": "tcpyPI.pi",
+              "profile_level_count": 18
+            }
+          }
+        ]
+      },
+      "HKO": {
+        "status": "available",
+        "nodes": [
+          {
+            "requested_utc": "2026-07-11T07:00:00+00:00",
+            "sampled_utc": "2026-07-11T07:00:00+00:00",
+            "coastal_backtrack_minutes": 0.0,
+            "atmospheric_valid_utc": "2026-07-11T07:00:00+00:00",
+            "ocean_valid_utc": "2026-07-11T06:00:00+00:00",
+            "lat": 26.8,
+            "lon": 123.0,
+            "air_temperature_c": 28.96,
+            "relative_humidity_pct": 80.0,
+            "surface_pressure_hpa": 996.46,
+            "sea_level_pressure_hpa": 996.46,
+            "deep_layer_shear_ms": 5.161,
+            "sst_c": 27.972,
+            "ohc_kj_cm2": 32.423,
+            "profile_pressure_hpa": [
+              975.0,
+              950.0,
+              925.0,
+              900.0,
+              850.0,
+              800.0,
+              700.0,
+              600.0,
+              500.0,
+              400.0,
+              300.0,
+              250.0,
+              200.0,
+              150.0,
+              100.0,
+              70.0,
+              50.0
+            ],
+            "profile_temperature_c": [
+              27.72,
+              25.92,
+              24.04,
+              22.36,
+              19.86,
+              17.76,
+              12.14,
+              5.8,
+              -1.24,
+              -10.24,
+              -23.8,
+              -32.9,
+              -45.2,
+              -60.4,
+              -77.7,
+              -72.8,
+              -62.7
+            ],
+            "profile_mixing_ratio_kg_kg": [
+              0.0183683,
+              0.0176153,
+              0.0171198,
+              0.0163521,
+              0.0143518,
+              0.0128561,
+              0.0108584,
+              0.0086566,
+              0.0057424,
+              0.0031072,
+              0.0011981,
+              0.0006308,
+              0.0002792,
+              7.09e-05,
+              5.9e-06,
+              3.1e-06,
+              1e-06
+            ],
+            "atmosphere_url": "https://api.open-meteo.com/v1/forecast?latitude=29.04830%2C28.37828%2C26.77772%2C25.19942%2C24.55170%2C25.19942%2C26.77772%2C28.37828%2C31.29660%2C29.93202%2C26.71095%2C23.57864%2C22.30340%2C23.57864%2C26.71095%2C29.93202&longitude=123.00000%2C124.80677%2C125.51853%2C124.75682%2C123.00000%2C121.24318%2C120.48147%2C121.19323%2C123.00000%2C126.66769%2C128.03509%2C126.46777%2C123.00000%2C119.53223%2C117.96491%2C119.33231&hourly=temperature_2m%2Crelative_humidity_2m%2Csurface_pressure%2Cpressure_msl%2Cwind_speed_850hPa%2Cwind_direction_850hPa%2Cwind_speed_200hPa%2Cwind_direction_200hPa%2Ctemperature_1000hPa%2Crelative_humidity_1000hPa%2Ctemperature_975hPa%2Crelative_humidity_975hPa%2Ctemperature_950hPa%2Crelative_humidity_950hPa%2Ctemperature_925hPa%2Crelative_humidity_925hPa%2Ctemperature_900hPa%2Crelative_humidity_900hPa%2Ctemperature_850hPa%2Crelative_humidity_850hPa%2Ctemperature_800hPa%2Crelative_humidity_800hPa%2Ctemperature_700hPa%2Crelative_humidity_700hPa%2Ctemperature_600hPa%2Crelative_humidity_600hPa%2Ctemperature_500hPa%2Crelative_humidity_500hPa%2Ctemperature_400hPa%2Crelative_humidity_400hPa%2Ctemperature_300hPa%2Crelative_humidity_300hPa%2Ctemperature_250hPa%2Crelative_humidity_250hPa%2Ctemperature_200hPa%2Crelative_humidity_200hPa%2Ctemperature_150hPa%2Crelative_humidity_150hPa%2Ctemperature_100hPa%2Crelative_humidity_100hPa%2Ctemperature_70hPa%2Crelative_humidity_70hPa%2Ctemperature_50hPa%2Crelative_humidity_50hPa&models=gfs_global&start_date=2026-07-11&end_date=2026-07-11&timezone=UTC",
+            "ocean_url": "https://ncss.hycom.org/thredds/ncss/grid/GLBy0.08/latest?var=water_temp&latitude=26.80000&longitude=123.00000&time=2026-07-11T07%3A00%3A00Z&vertStride=1&accept=csv",
+            "atmosphere_sampling": {
+              "method": "two_ring_approximation_to_5_degree_environment",
+              "radii_km": [
+                250.0,
+                500.0
+              ],
+              "requested_count": 16,
+              "retained_count": 16,
+              "pi_outer_ring_radius_km": 500.0,
+              "pi_outer_ring_retained_count": 5,
+              "pi_sampling_valid": true,
+              "pi_sampling_reason": null,
+              "land_points_used_for_deep_layer_shear": 5,
+              "excluded": [],
+              "mean_environmental_mslp_hpa": 996.46,
+              "shared_environment_reuse": {
+                "distance_km": 28.29,
+                "time_difference_minutes": 0.0,
+                "sampled_utc": "2026-07-11T07:00:00+00:00",
+                "lat": 26.8,
+                "lon": 123.0
+              }
+            },
+            "potential_intensity": {
+              "valid": true,
+              "wind_ms": 53.53153073711511,
+              "minimum_pressure_hpa": 958.7483465819946,
+              "outflow_temperature_k": 195.50992103992897,
+              "outflow_level_hpa": 99.63313649023064,
+              "backend_flag": 1,
+              "backend": "tcpyPI.pi",
+              "profile_level_count": 17
+            }
+          },
+          {
+            "requested_utc": "2026-07-11T10:56:21.851874+00:00",
+            "sampled_utc": "2026-07-11T10:52:24.202906+00:00",
+            "coastal_backtrack_minutes": 0.0,
+            "atmospheric_valid_utc": "2026-07-11T11:00:00+00:00",
+            "ocean_valid_utc": "2026-07-11T12:00:00+00:00",
+            "lat": 27.3548,
+            "lon": 122.1386,
+            "air_temperature_c": 28.583,
+            "relative_humidity_pct": 82.5,
+            "surface_pressure_hpa": 996.533,
+            "sea_level_pressure_hpa": 996.533,
+            "deep_layer_shear_ms": 6.321,
+            "sst_c": 27.611,
+            "ohc_kj_cm2": 19.365,
+            "profile_pressure_hpa": [
+              975.0,
+              950.0,
+              925.0,
+              900.0,
+              850.0,
+              800.0,
+              700.0,
+              600.0,
+              500.0,
+              400.0,
+              300.0,
+              250.0,
+              200.0,
+              150.0,
+              100.0,
+              70.0,
+              50.0
+            ],
+            "profile_temperature_c": [
+              27.42,
+              25.65,
+              24.1,
+              23.15,
+              21.05,
+              18.65,
+              12.7,
+              6.43,
+              -1.3,
+              -9.5,
+              -23.5,
+              -33.17,
+              -45.25,
+              -60.83,
+              -79.0,
+              -71.25,
+              -62.0
+            ],
+            "profile_mixing_ratio_kg_kg": [
+              0.0185066,
+              0.0179451,
+              0.0171205,
+              0.0156998,
+              0.0137358,
+              0.0126111,
+              0.0107563,
+              0.0088025,
+              0.0063039,
+              0.003011,
+              0.0013551,
+              0.0007318,
+              0.0002889,
+              6.82e-05,
+              5.8e-06,
+              3.2e-06,
+              0.0
+            ],
+            "atmosphere_url": "https://api.open-meteo.com/v1/forecast?latitude=29.60308%2C28.93278%2C27.33196%2C25.75394%2C25.10648%2C25.75394%2C27.33196%2C28.93278%2C31.85138%2C30.48566%2C27.26358%2C24.13239%2C22.85818%2C24.13239%2C27.26358%2C30.48566&longitude=122.13859%2C123.95494%2C124.66960%2C123.90353%2C122.13859%2C120.37364%2C119.60757%2C120.32224%2C122.13859%2C125.82700%2C127.19854%2C125.62123%2C122.13859%2C118.65594%2C117.07864%2C118.45018&hourly=temperature_2m%2Crelative_humidity_2m%2Csurface_pressure%2Cpressure_msl%2Cwind_speed_850hPa%2Cwind_direction_850hPa%2Cwind_speed_200hPa%2Cwind_direction_200hPa%2Ctemperature_1000hPa%2Crelative_humidity_1000hPa%2Ctemperature_975hPa%2Crelative_humidity_975hPa%2Ctemperature_950hPa%2Crelative_humidity_950hPa%2Ctemperature_925hPa%2Crelative_humidity_925hPa%2Ctemperature_900hPa%2Crelative_humidity_900hPa%2Ctemperature_850hPa%2Crelative_humidity_850hPa%2Ctemperature_800hPa%2Crelative_humidity_800hPa%2Ctemperature_700hPa%2Crelative_humidity_700hPa%2Ctemperature_600hPa%2Crelative_humidity_600hPa%2Ctemperature_500hPa%2Crelative_humidity_500hPa%2Ctemperature_400hPa%2Crelative_humidity_400hPa%2Ctemperature_300hPa%2Crelative_humidity_300hPa%2Ctemperature_250hPa%2Crelative_humidity_250hPa%2Ctemperature_200hPa%2Crelative_humidity_200hPa%2Ctemperature_150hPa%2Crelative_humidity_150hPa%2Ctemperature_100hPa%2Crelative_humidity_100hPa%2Ctemperature_70hPa%2Crelative_humidity_70hPa%2Ctemperature_50hPa%2Crelative_humidity_50hPa&models=gfs_global&start_date=2026-07-11&end_date=2026-07-11&timezone=UTC",
+            "ocean_url": "https://ncss.hycom.org/thredds/ncss/grid/GLBy0.08/latest?var=water_temp&latitude=27.35478&longitude=122.13859&time=2026-07-11T10%3A52%3A24Z&vertStride=1&accept=csv",
+            "atmosphere_sampling": {
+              "method": "two_ring_approximation_to_5_degree_environment",
+              "radii_km": [
+                250.0,
+                500.0
+              ],
+              "requested_count": 16,
+              "retained_count": 15,
+              "pi_outer_ring_radius_km": 500.0,
+              "pi_outer_ring_retained_count": 6,
+              "pi_sampling_valid": true,
+              "pi_sampling_reason": null,
+              "land_points_used_for_deep_layer_shear": 3,
+              "excluded": [
+                {
+                  "lat": 27.332,
+                  "lon": 119.608,
+                  "reason": "elevation_above_limit:521m"
+                }
+              ],
+              "mean_environmental_mslp_hpa": 996.53,
+              "shared_environment_reuse": {
+                "distance_km": 16.8,
+                "time_difference_minutes": 3.96,
+                "sampled_utc": "2026-07-11T10:52:24.202906+00:00",
+                "lat": 27.3548,
+                "lon": 122.1386
+              }
+            },
+            "potential_intensity": {
+              "valid": true,
+              "wind_ms": 45.9269093161582,
+              "minimum_pressure_hpa": 968.5961113404816,
+              "outflow_temperature_k": 194.62141539938955,
+              "outflow_level_hpa": 101.29747357630164,
+              "backend_flag": 1,
+              "backend": "tcpyPI.pi",
+              "profile_level_count": 17
+            }
+          },
+          {
+            "requested_utc": "2026-07-11T14:52:43.703748+00:00",
+            "sampled_utc": "2026-07-11T14:44:48.405812+00:00",
+            "coastal_backtrack_minutes": 0.0,
+            "atmospheric_valid_utc": "2026-07-11T15:00:00+00:00",
+            "ocean_valid_utc": "2026-07-11T15:00:00+00:00",
+            "lat": 27.9878,
+            "lon": 121.2706,
+            "air_temperature_c": 28.833,
+            "relative_humidity_pct": 82.333,
+            "surface_pressure_hpa": 1000.133,
+            "sea_level_pressure_hpa": 1000.133,
+            "deep_layer_shear_ms": 9.986,
+            "sst_c": 29.261,
+            "ohc_kj_cm2": 13.312,
+            "profile_pressure_hpa": [
+              1000.0,
+              975.0,
+              950.0,
+              925.0,
+              900.0,
+              850.0,
+              800.0,
+              700.0,
+              600.0,
+              500.0,
+              400.0,
+              300.0,
+              250.0,
+              200.0,
+              150.0,
+              100.0,
+              70.0,
+              50.0
+            ],
+            "profile_temperature_c": [
+              28.93,
+              27.17,
+              25.23,
+              23.73,
+              22.3,
+              20.13,
+              17.7,
+              12.4,
+              5.87,
+              -1.47,
+              -9.77,
+              -23.83,
+              -33.17,
+              -45.33,
+              -61.67,
+              -79.5,
+              -71.0,
+              -61.5
+            ],
+            "profile_mixing_ratio_kg_kg": [
+              0.0206009,
+              0.0198162,
+              0.019357,
+              0.0186282,
+              0.0174614,
+              0.0142324,
+              0.0122763,
+              0.0104979,
+              0.0084951,
+              0.0067436,
+              0.0040308,
+              0.0011545,
+              0.0009041,
+              0.0003154,
+              5.96e-05,
+              6.3e-06,
+              3.1e-06,
+              1.9e-06
+            ],
+            "atmosphere_url": "https://api.open-meteo.com/v1/forecast?latitude=30.23615%2C29.56553%2C27.96441%2C26.38671%2C25.73955%2C26.38671%2C27.96441%2C29.56553%2C32.48445%2C31.11740%2C27.89416%2C24.76429%2C23.49124%2C24.76429%2C27.89416%2C31.11740&longitude=121.27062%2C123.09824%2C123.81632%2C123.04514%2C121.27062%2C119.49611%2C118.72492%2C119.44300%2C121.27062%2C124.98339%2C126.35982%2C124.77079%2C121.27062%2C117.77045%2C116.18143%2C117.55785&hourly=temperature_2m%2Crelative_humidity_2m%2Csurface_pressure%2Cpressure_msl%2Cwind_speed_850hPa%2Cwind_direction_850hPa%2Cwind_speed_200hPa%2Cwind_direction_200hPa%2Ctemperature_1000hPa%2Crelative_humidity_1000hPa%2Ctemperature_975hPa%2Crelative_humidity_975hPa%2Ctemperature_950hPa%2Crelative_humidity_950hPa%2Ctemperature_925hPa%2Crelative_humidity_925hPa%2Ctemperature_900hPa%2Crelative_humidity_900hPa%2Ctemperature_850hPa%2Crelative_humidity_850hPa%2Ctemperature_800hPa%2Crelative_humidity_800hPa%2Ctemperature_700hPa%2Crelative_humidity_700hPa%2Ctemperature_600hPa%2Crelative_humidity_600hPa%2Ctemperature_500hPa%2Crelative_humidity_500hPa%2Ctemperature_400hPa%2Crelative_humidity_400hPa%2Ctemperature_300hPa%2Crelative_humidity_300hPa%2Ctemperature_250hPa%2Crelative_humidity_250hPa%2Ctemperature_200hPa%2Crelative_humidity_200hPa%2Ctemperature_150hPa%2Crelative_humidity_150hPa%2Ctemperature_100hPa%2Crelative_humidity_100hPa%2Ctemperature_70hPa%2Crelative_humidity_70hPa%2Ctemperature_50hPa%2Crelative_humidity_50hPa&models=gfs_global&start_date=2026-07-11&end_date=2026-07-11&timezone=UTC",
+            "ocean_url": "https://ncss.hycom.org/thredds/ncss/grid/GLBy0.08/latest?var=water_temp&latitude=27.98785&longitude=121.27062&time=2026-07-11T14%3A44%3A48Z&vertStride=1&accept=csv",
+            "atmosphere_sampling": {
+              "method": "two_ring_approximation_to_5_degree_environment",
+              "radii_km": [
+                250.0,
+                500.0
+              ],
+              "requested_count": 16,
+              "retained_count": 14,
+              "pi_outer_ring_radius_km": 500.0,
+              "pi_outer_ring_retained_count": 3,
+              "pi_sampling_valid": false,
+              "pi_sampling_reason": "insufficient_outer_ocean_samples",
+              "land_points_used_for_deep_layer_shear": 7,
+              "excluded": [
+                {
+                  "lat": 27.964,
+                  "lon": 118.725,
+                  "reason": "elevation_above_limit:580m"
+                },
+                {
+                  "lat": 23.491,
+                  "lon": 121.271,
+                  "reason": "elevation_above_limit:887m"
+                }
+              ],
+              "mean_environmental_mslp_hpa": 1000.13,
+              "shared_environment_reuse": {
+                "distance_km": 23.73,
+                "time_difference_minutes": 7.92,
+                "sampled_utc": "2026-07-11T14:44:48.405812+00:00",
+                "lat": 27.9878,
+                "lon": 121.2706
+              }
+            },
+            "potential_intensity": {
+              "valid": false,
+              "reason": "insufficient_outer_ocean_samples",
+              "outer_ocean_sample_count": 3
+            }
+          }
+        ]
+      },
+      "CWA": {
+        "status": "available",
+        "nodes": [
+          {
+            "requested_utc": "2026-07-11T07:00:00+00:00",
+            "sampled_utc": "2026-07-11T07:00:00+00:00",
+            "coastal_backtrack_minutes": 0.0,
+            "atmospheric_valid_utc": "2026-07-11T07:00:00+00:00",
+            "ocean_valid_utc": "2026-07-11T06:00:00+00:00",
+            "lat": 26.8,
+            "lon": 123.0,
+            "air_temperature_c": 28.96,
+            "relative_humidity_pct": 80.0,
+            "surface_pressure_hpa": 996.46,
+            "sea_level_pressure_hpa": 996.46,
+            "deep_layer_shear_ms": 5.161,
+            "sst_c": 27.972,
+            "ohc_kj_cm2": 32.423,
+            "profile_pressure_hpa": [
+              975.0,
+              950.0,
+              925.0,
+              900.0,
+              850.0,
+              800.0,
+              700.0,
+              600.0,
+              500.0,
+              400.0,
+              300.0,
+              250.0,
+              200.0,
+              150.0,
+              100.0,
+              70.0,
+              50.0
+            ],
+            "profile_temperature_c": [
+              27.72,
+              25.92,
+              24.04,
+              22.36,
+              19.86,
+              17.76,
+              12.14,
+              5.8,
+              -1.24,
+              -10.24,
+              -23.8,
+              -32.9,
+              -45.2,
+              -60.4,
+              -77.7,
+              -72.8,
+              -62.7
+            ],
+            "profile_mixing_ratio_kg_kg": [
+              0.0183683,
+              0.0176153,
+              0.0171198,
+              0.0163521,
+              0.0143518,
+              0.0128561,
+              0.0108584,
+              0.0086566,
+              0.0057424,
+              0.0031072,
+              0.0011981,
+              0.0006308,
+              0.0002792,
+              7.09e-05,
+              5.9e-06,
+              3.1e-06,
+              1e-06
+            ],
+            "atmosphere_url": "https://api.open-meteo.com/v1/forecast?latitude=29.04830%2C28.37828%2C26.77772%2C25.19942%2C24.55170%2C25.19942%2C26.77772%2C28.37828%2C31.29660%2C29.93202%2C26.71095%2C23.57864%2C22.30340%2C23.57864%2C26.71095%2C29.93202&longitude=123.00000%2C124.80677%2C125.51853%2C124.75682%2C123.00000%2C121.24318%2C120.48147%2C121.19323%2C123.00000%2C126.66769%2C128.03509%2C126.46777%2C123.00000%2C119.53223%2C117.96491%2C119.33231&hourly=temperature_2m%2Crelative_humidity_2m%2Csurface_pressure%2Cpressure_msl%2Cwind_speed_850hPa%2Cwind_direction_850hPa%2Cwind_speed_200hPa%2Cwind_direction_200hPa%2Ctemperature_1000hPa%2Crelative_humidity_1000hPa%2Ctemperature_975hPa%2Crelative_humidity_975hPa%2Ctemperature_950hPa%2Crelative_humidity_950hPa%2Ctemperature_925hPa%2Crelative_humidity_925hPa%2Ctemperature_900hPa%2Crelative_humidity_900hPa%2Ctemperature_850hPa%2Crelative_humidity_850hPa%2Ctemperature_800hPa%2Crelative_humidity_800hPa%2Ctemperature_700hPa%2Crelative_humidity_700hPa%2Ctemperature_600hPa%2Crelative_humidity_600hPa%2Ctemperature_500hPa%2Crelative_humidity_500hPa%2Ctemperature_400hPa%2Crelative_humidity_400hPa%2Ctemperature_300hPa%2Crelative_humidity_300hPa%2Ctemperature_250hPa%2Crelative_humidity_250hPa%2Ctemperature_200hPa%2Crelative_humidity_200hPa%2Ctemperature_150hPa%2Crelative_humidity_150hPa%2Ctemperature_100hPa%2Crelative_humidity_100hPa%2Ctemperature_70hPa%2Crelative_humidity_70hPa%2Ctemperature_50hPa%2Crelative_humidity_50hPa&models=gfs_global&start_date=2026-07-11&end_date=2026-07-11&timezone=UTC",
+            "ocean_url": "https://ncss.hycom.org/thredds/ncss/grid/GLBy0.08/latest?var=water_temp&latitude=26.80000&longitude=123.00000&time=2026-07-11T07%3A00%3A00Z&vertStride=1&accept=csv",
+            "atmosphere_sampling": {
+              "method": "two_ring_approximation_to_5_degree_environment",
+              "radii_km": [
+                250.0,
+                500.0
+              ],
+              "requested_count": 16,
+              "retained_count": 16,
+              "pi_outer_ring_radius_km": 500.0,
+              "pi_outer_ring_retained_count": 5,
+              "pi_sampling_valid": true,
+              "pi_sampling_reason": null,
+              "land_points_used_for_deep_layer_shear": 5,
+              "excluded": [],
+              "mean_environmental_mslp_hpa": 996.46,
+              "shared_environment_reuse": {
+                "distance_km": 9.97,
+                "time_difference_minutes": 0.0,
+                "sampled_utc": "2026-07-11T07:00:00+00:00",
+                "lat": 26.8,
+                "lon": 123.0
+              }
+            },
+            "potential_intensity": {
+              "valid": true,
+              "wind_ms": 53.53153073711511,
+              "minimum_pressure_hpa": 958.7483465819946,
+              "outflow_temperature_k": 195.50992103992897,
+              "outflow_level_hpa": 99.63313649023064,
+              "backend_flag": 1,
+              "backend": "tcpyPI.pi",
+              "profile_level_count": 17
+            }
+          },
+          {
+            "requested_utc": "2026-07-11T11:29:56.676336+00:00",
+            "sampled_utc": "2026-07-11T11:29:56.676336+00:00",
+            "coastal_backtrack_minutes": 0.0,
+            "atmospheric_valid_utc": "2026-07-11T11:00:00+00:00",
+            "ocean_valid_utc": "2026-07-11T12:00:00+00:00",
+            "lat": 27.2206,
+            "lon": 122.0896,
+            "air_temperature_c": 28.75,
+            "relative_humidity_pct": 82.5,
+            "surface_pressure_hpa": 996.4,
+            "sea_level_pressure_hpa": 996.4,
+            "deep_layer_shear_ms": 6.855,
+            "sst_c": 27.482,
+            "ohc_kj_cm2": 17.905,
+            "profile_pressure_hpa": [
+              975.0,
+              950.0,
+              925.0,
+              900.0,
+              850.0,
+              800.0,
+              700.0,
+              600.0,
+              500.0,
+              400.0,
+              300.0,
+              250.0,
+              200.0,
+              150.0,
+              100.0,
+              70.0,
+              50.0
+            ],
+            "profile_temperature_c": [
+              27.45,
+              25.85,
+              24.88,
+              23.7,
+              21.27,
+              18.73,
+              12.82,
+              6.13,
+              -1.33,
+              -9.6,
+              -23.5,
+              -33.33,
+              -45.17,
+              -60.83,
+              -79.25,
+              -71.17,
+              -62.08
+            ],
+            "profile_mixing_ratio_kg_kg": [
+              0.0187112,
+              0.0178672,
+              0.0166877,
+              0.0157089,
+              0.0135346,
+              0.0125918,
+              0.010759,
+              0.0087657,
+              0.0062456,
+              0.0030068,
+              0.0011743,
+              0.0006801,
+              0.0002953,
+              6.92e-05,
+              5.9e-06,
+              3.5e-06,
+              1.9e-06
+            ],
+            "atmosphere_url": "https://api.open-meteo.com/v1/forecast?latitude=29.46895%2C28.79872%2C27.19796%2C25.61987%2C24.97235%2C25.61987%2C27.19796%2C28.79872%2C31.71725%2C30.35180%2C27.12997%2C23.99851%2C22.72404%2C23.99851%2C27.12997%2C30.35180&longitude=122.08958%2C123.90359%2C124.61754%2C123.85254%2C122.08958%2C120.32662%2C119.56162%2C120.27557%2C122.08958%2C125.77293%2C127.14345%2C125.56859%2C122.08958%2C118.61057%2C117.03571%2C118.40623&hourly=temperature_2m%2Crelative_humidity_2m%2Csurface_pressure%2Cpressure_msl%2Cwind_speed_850hPa%2Cwind_direction_850hPa%2Cwind_speed_200hPa%2Cwind_direction_200hPa%2Ctemperature_1000hPa%2Crelative_humidity_1000hPa%2Ctemperature_975hPa%2Crelative_humidity_975hPa%2Ctemperature_950hPa%2Crelative_humidity_950hPa%2Ctemperature_925hPa%2Crelative_humidity_925hPa%2Ctemperature_900hPa%2Crelative_humidity_900hPa%2Ctemperature_850hPa%2Crelative_humidity_850hPa%2Ctemperature_800hPa%2Crelative_humidity_800hPa%2Ctemperature_700hPa%2Crelative_humidity_700hPa%2Ctemperature_600hPa%2Crelative_humidity_600hPa%2Ctemperature_500hPa%2Crelative_humidity_500hPa%2Ctemperature_400hPa%2Crelative_humidity_400hPa%2Ctemperature_300hPa%2Crelative_humidity_300hPa%2Ctemperature_250hPa%2Crelative_humidity_250hPa%2Ctemperature_200hPa%2Crelative_humidity_200hPa%2Ctemperature_150hPa%2Crelative_humidity_150hPa%2Ctemperature_100hPa%2Crelative_humidity_100hPa%2Ctemperature_70hPa%2Crelative_humidity_70hPa%2Ctemperature_50hPa%2Crelative_humidity_50hPa&models=gfs_global&start_date=2026-07-11&end_date=2026-07-11&timezone=UTC",
+            "ocean_url": "https://ncss.hycom.org/thredds/ncss/grid/GLBy0.08/latest?var=water_temp&latitude=27.22065&longitude=122.08958&time=2026-07-11T11%3A29%3A56Z&vertStride=1&accept=csv",
+            "atmosphere_sampling": {
+              "method": "two_ring_approximation_to_5_degree_environment",
+              "radii_km": [
+                250.0,
+                500.0
+              ],
+              "requested_count": 16,
+              "retained_count": 15,
+              "pi_outer_ring_radius_km": 500.0,
+              "pi_outer_ring_retained_count": 6,
+              "pi_sampling_valid": true,
+              "pi_sampling_reason": null,
+              "land_points_used_for_deep_layer_shear": 3,
+              "excluded": [
+                {
+                  "lat": 27.13,
+                  "lon": 117.036,
+                  "reason": "elevation_above_limit:773m"
+                }
+              ],
+              "mean_environmental_mslp_hpa": 996.4
+            },
+            "potential_intensity": {
+              "valid": true,
+              "wind_ms": 43.279879430944945,
+              "minimum_pressure_hpa": 971.5486864905084,
+              "outflow_temperature_k": 195.92076830146692,
+              "outflow_level_hpa": 105.48624878226325,
+              "backend_flag": 1,
+              "backend": "tcpyPI.pi",
+              "profile_level_count": 17
+            }
+          },
+          {
+            "requested_utc": "2026-07-11T15:59:53.352673+00:00",
+            "sampled_utc": "2026-07-11T15:59:53.352673+00:00",
+            "coastal_backtrack_minutes": 0.0,
+            "atmospheric_valid_utc": "2026-07-11T16:00:00+00:00",
+            "ocean_valid_utc": "2026-07-11T15:00:00+00:00",
+            "lat": 28.1437,
+            "lon": 121.4111,
+            "air_temperature_c": 28.175,
+            "relative_humidity_pct": 84.0,
+            "surface_pressure_hpa": 1000.9,
+            "sea_level_pressure_hpa": 1000.9,
+            "deep_layer_shear_ms": 10.149,
+            "sst_c": 29.299,
+            "ohc_kj_cm2": 5.378,
+            "profile_pressure_hpa": [
+              1000.0,
+              975.0,
+              950.0,
+              925.0,
+              900.0,
+              850.0,
+              800.0,
+              700.0,
+              600.0,
+              500.0,
+              400.0,
+              300.0,
+              250.0,
+              200.0,
+              150.0,
+              100.0,
+              70.0,
+              50.0
+            ],
+            "profile_temperature_c": [
+              28.18,
+              26.5,
+              24.6,
+              23.1,
+              21.8,
+              20.08,
+              18.1,
+              12.55,
+              6.12,
+              -1.1,
+              -9.88,
+              -23.62,
+              -33.0,
+              -45.75,
+              -61.25,
+              -78.38,
+              -71.12,
+              -62.0
+            ],
+            "profile_mixing_ratio_kg_kg": [
+              0.0203391,
+              0.0197347,
+              0.0193786,
+              0.0186776,
+              0.0175211,
+              0.0142178,
+              0.0122162,
+              0.0097818,
+              0.0080043,
+              0.0058996,
+              0.003033,
+              0.00091,
+              0.0007598,
+              0.0002767,
+              6.08e-05,
+              6.2e-06,
+              2.9e-06,
+              0.0
+            ],
+            "atmosphere_url": "https://api.open-meteo.com/v1/forecast?latitude=30.39199%2C29.72129%2C28.12010%2C26.54247%2C25.89539%2C26.54247%2C28.12010%2C29.72129%2C32.64029%2C31.27292%2C28.04939%2C24.91984%2C23.64709%2C24.91984%2C28.04939%2C31.27292&longitude=121.41111%2C123.24157%2C123.96051%2C123.18803%2C121.41111%2C119.63420%2C118.86172%2C119.58066%2C121.41111%2C125.13000%2C126.50766%2C124.91569%2C121.41111%2C117.90653%2C116.31457%2C117.69223&hourly=temperature_2m%2Crelative_humidity_2m%2Csurface_pressure%2Cpressure_msl%2Cwind_speed_850hPa%2Cwind_direction_850hPa%2Cwind_speed_200hPa%2Cwind_direction_200hPa%2Ctemperature_1000hPa%2Crelative_humidity_1000hPa%2Ctemperature_975hPa%2Crelative_humidity_975hPa%2Ctemperature_950hPa%2Crelative_humidity_950hPa%2Ctemperature_925hPa%2Crelative_humidity_925hPa%2Ctemperature_900hPa%2Crelative_humidity_900hPa%2Ctemperature_850hPa%2Crelative_humidity_850hPa%2Ctemperature_800hPa%2Crelative_humidity_800hPa%2Ctemperature_700hPa%2Crelative_humidity_700hPa%2Ctemperature_600hPa%2Crelative_humidity_600hPa%2Ctemperature_500hPa%2Crelative_humidity_500hPa%2Ctemperature_400hPa%2Crelative_humidity_400hPa%2Ctemperature_300hPa%2Crelative_humidity_300hPa%2Ctemperature_250hPa%2Crelative_humidity_250hPa%2Ctemperature_200hPa%2Crelative_humidity_200hPa%2Ctemperature_150hPa%2Crelative_humidity_150hPa%2Ctemperature_100hPa%2Crelative_humidity_100hPa%2Ctemperature_70hPa%2Crelative_humidity_70hPa%2Ctemperature_50hPa%2Crelative_humidity_50hPa&models=gfs_global&start_date=2026-07-11&end_date=2026-07-11&timezone=UTC",
+            "ocean_url": "https://ncss.hycom.org/thredds/ncss/grid/GLBy0.08/latest?var=water_temp&latitude=28.14369&longitude=121.41111&time=2026-07-11T15%3A59%3A53Z&vertStride=1&accept=csv",
+            "atmosphere_sampling": {
+              "method": "two_ring_approximation_to_5_degree_environment",
+              "radii_km": [
+                250.0,
+                500.0
+              ],
+              "requested_count": 16,
+              "retained_count": 13,
+              "pi_outer_ring_radius_km": 500.0,
+              "pi_outer_ring_retained_count": 4,
+              "pi_sampling_valid": true,
+              "pi_sampling_reason": null,
+              "land_points_used_for_deep_layer_shear": 5,
+              "excluded": [
+                {
+                  "lat": 26.542,
+                  "lon": 119.634,
+                  "reason": "elevation_above_limit:612m"
+                },
+                {
+                  "lat": 28.12,
+                  "lon": 118.862,
+                  "reason": "elevation_above_limit:1010m"
+                },
+                {
+                  "lat": 24.92,
+                  "lon": 117.907,
+                  "reason": "elevation_above_limit:863m"
+                }
+              ],
+              "mean_environmental_mslp_hpa": 1000.9
+            },
+            "potential_intensity": {
+              "valid": true,
+              "wind_ms": 73.11664684139711,
+              "minimum_pressure_hpa": 930.9150825863773,
+              "outflow_temperature_k": 196.68284795021677,
+              "outflow_level_hpa": 92.10545675772364,
+              "backend_flag": 1,
+              "backend": "tcpyPI.pi",
+              "profile_level_count": 18
+            }
+          }
+        ]
+      }
+    },
+    "spatial_sst_quality_control": {
+      "status": "passed",
+      "rule": "difference <= 2.0 C within 100 km and 2.0 h",
+      "comparisons": []
+    },
+    "global_surface_segments_by_track": {
+      "NMC": [
+        {
+          "start_utc": "2026-07-11T07:00:00+00:00",
+          "end_utc": "2026-07-11T15:04:48.405812+00:00",
+          "surface": "ocean"
+        }
+      ],
+      "JMA": [
+        {
+          "start_utc": "2026-07-11T07:00:00+00:00",
+          "end_utc": "2026-07-11T15:07:39.342283+00:00",
+          "surface": "ocean"
+        },
+        {
+          "start_utc": "2026-07-11T15:07:39.342283+00:00",
+          "end_utc": "2026-07-11T15:07:39.440540+00:00",
+          "surface": "land"
+        }
+      ],
+      "JTWC": [
+        {
+          "start_utc": "2026-07-11T07:00:00+00:00",
+          "end_utc": "2026-07-11T17:02:27.072747+00:00",
+          "surface": "ocean"
+        },
+        {
+          "start_utc": "2026-07-11T17:02:27.072747+00:00",
+          "end_utc": "2026-07-11T17:02:27.078287+00:00",
+          "surface": "land"
+        }
+      ],
+      "HKO": [
+        {
+          "start_utc": "2026-07-11T07:00:00+00:00",
+          "end_utc": "2026-07-11T15:12:43.685877+00:00",
+          "surface": "ocean"
+        },
+        {
+          "start_utc": "2026-07-11T15:12:43.685877+00:00",
+          "end_utc": "2026-07-11T15:12:43.703748+00:00",
+          "surface": "land"
+        }
+      ],
+      "CWA": [
+        {
+          "start_utc": "2026-07-11T07:00:00+00:00",
+          "end_utc": "2026-07-11T16:19:53.352673+00:00",
+          "surface": "ocean"
+        }
+      ]
+    },
+    "land_mask_scope": "all Natural Earth country polygons",
+    "reporting_target_scope": [
+      "CHN"
+    ]
+  },
+  "mechanistic_scenarios": {
+    "status": "uncalibrated_research",
+    "calibration_gate": {
+      "valid": false,
+      "status": "uncalibrated_research",
+      "reason": "missing_western_north_pacific_hindcast_artifact",
+      "minimum_hindcast_storms": 5
+    },
+    "definition": "Scenarios require full-column tcpyPI, calibrated WNP LGEM growth coefficients, shear, OHC diagnostics, and global-land Kaplan-DeMaria segments. Official future wind endpoints remain outside the tendency equation.",
+    "scenarios": [],
+    "scenario_envelope": null,
+    "failed_scenarios": []
+  },
+  "repair_evidence": {
+    "cwa_track_isolation": {
+      "before": "global_regex_could_cross_splice_storm_panels",
+      "after": "single_identity_panel_then_whole_track_validation",
+      "passed": true
+    },
+    "pi_fail_closed": {
+      "before_wind_ms": 0.0,
+      "after_wind_ms": null,
+      "after_status": "invalid",
+      "passed": true
+    },
+    "ohc_threshold_crossing": {
+      "before_kj_cm2": 8.1795,
+      "after_kj_cm2": 4.08975,
+      "exact_kj_cm2": 4.08975,
+      "passed": true
+    },
+    "kaplan_demaria_r_factor": {
+      "before_ms": 28.573,
+      "after_ms": 26.311,
+      "passed": true
+    },
+    "post_land_monotonicity": {
+      "initial_ms": 12.681,
+      "before_6h_ms": 13.124,
+      "after_6h_ms": 6.454,
+      "passed": true
+    },
+    "shear_coupling": {
+      "before_growth_rate_delta": 0.0,
+      "after_growth_rate_delta": 0.03928571428571429,
+      "passed": true
+    },
+    "nmc_outage_isolation": {
+      "before": "fatal_before_other_adapters",
+      "after": "independent_catalog_status",
+      "passed": true
+    },
+    "narrow_land_intersection": {
+      "before": "endpoint_sampling",
+      "after": "spatial_boundary_intersection",
+      "passed": true
+    },
+    "scenario_statistics": {
+      "before": "cross_product_quantiles",
+      "after": "named_branches_and_range",
+      "passed": true
+    }
+  },
+  "decision_view": {
+    "single_deterministic_landfall_value": null,
+    "official_10min_comparison_envelope": {
+      "count": 4,
+      "minimum_ms": 32,
+      "maximum_ms": 35,
+      "spread_ms": 3,
+      "semantics": "named-branch range; no probability interpretation"
+    },
+    "native_official_branches": [
+      {
+        "source": "NMC",
+        "resolved_url": "https://typhoon.nmc.cn/weatherservice/typhoon/jsons/view_3257931?callback=typhoon_jsons_view_3257931",
+        "landfall": {
+          "status": "landfall",
+          "time_utc": "2026-07-11T15:00:00+00:00",
+          "lon": 121.2,
+          "lat": 28.0,
+          "curve_method": "cubic_cartesian_hermite+spatial_chord_boundary_intersection",
+          "transition": "outside_to_inside",
+          "maximum_boundary_chord_km": 2.0,
+          "time_bjt": "2026-07-11T23:00:00+08:00",
+          "computational_crossing": {
+            "time_utc": "2026-07-11T15:04:48.405812+00:00",
+            "lat": 28.04882,
+            "lon": 121.19384
+          }
+        },
+        "official_guidance_native_wind_ms": 35,
+        "computational_native_wind_ms": 34.533,
+        "native_wind_averaging_minutes": 2,
+        "official_category_near_landfall": "TY",
+        "interpolation_method": "time_linear_between_official_forecast_fixes",
+        "status": "available",
+        "cma_2min_wind_grade": "12",
+        "comparison_10min_status": "unavailable_without_documented_conversion"
+      },
+      {
+        "source": "JMA",
+        "resolved_url": "https://www.jma.go.jp/bosai/typhoon/data/TC2611/specifications.json",
+        "landfall": {
+          "status": "landfall",
+          "time_utc": "2026-07-11T15:00:00+00:00",
+          "lon": 121.2,
+          "lat": 27.8,
+          "curve_method": "cubic_cartesian_hermite+spatial_chord_boundary_intersection",
+          "transition": "outside_to_inside",
+          "maximum_boundary_chord_km": 2.0,
+          "time_bjt": "2026-07-11T23:00:00+08:00",
+          "computational_crossing": {
+            "time_utc": "2026-07-11T15:07:39.440540+00:00",
+            "lat": 27.82117,
+            "lon": 121.17243
+          }
+        },
+        "official_guidance_native_wind_ms": 35,
+        "computational_native_wind_ms": 34.787,
+        "native_wind_averaging_minutes": 10,
+        "official_category_near_landfall": "TY",
+        "interpolation_method": "time_linear_between_official_forecast_fixes",
+        "status": "available",
+        "cma_grade_status": "unavailable_without_documented_conversion_to_2min",
+        "comparison_10min_wind_ms": 35,
+        "computational_comparison_10min_wind_ms": 34.787
+      },
+      {
+        "source": "JTWC",
+        "resolved_url": "https://www.metoc.navy.mil/jtwc/products/wp0926web.txt",
+        "landfall": {
+          "status": "landfall",
+          "time_utc": "2026-07-11T17:00:00+00:00",
+          "lon": 121.4,
+          "lat": 28.3,
+          "curve_method": "cubic_cartesian_hermite+spatial_chord_boundary_intersection",
+          "transition": "outside_to_inside",
+          "maximum_boundary_chord_km": 2.0,
+          "time_bjt": "2026-07-12T01:00:00+08:00",
+          "computational_crossing": {
+            "time_utc": "2026-07-11T17:02:27.078287+00:00",
+            "lat": 28.29286,
+            "lon": 121.3976
+          }
+        },
+        "official_guidance_native_wind_ms": 34,
+        "computational_native_wind_ms": 34.261,
+        "native_wind_averaging_minutes": 1,
+        "official_category_near_landfall": null,
+        "interpolation_method": "time_linear_between_official_forecast_fixes",
+        "status": "available",
+        "cma_grade_status": "unavailable_without_documented_conversion_to_2min",
+        "comparison_10min_wind_ms": 32,
+        "computational_comparison_10min_wind_ms": 31.863
+      },
+      {
+        "source": "HKO",
+        "resolved_url": "https://www.hko.gov.hk/wxinfo/currwx/tc_gis_posinfo_15a_2614.txt",
+        "landfall": {
+          "status": "landfall",
+          "time_utc": "2026-07-11T15:00:00+00:00",
+          "lon": 121.4,
+          "lat": 28.2,
+          "curve_method": "cubic_cartesian_hermite+spatial_chord_boundary_intersection",
+          "transition": "outside_to_inside",
+          "maximum_boundary_chord_km": 2.0,
+          "time_bjt": "2026-07-11T23:00:00+08:00",
+          "computational_crossing": {
+            "time_utc": "2026-07-11T15:12:43.703748+00:00",
+            "lat": 28.20984,
+            "lon": 121.36023
+          }
+        },
+        "official_guidance_native_wind_ms": 33,
+        "computational_native_wind_ms": 32.504,
+        "native_wind_averaging_minutes": 10,
+        "official_category_near_landfall": "STS",
+        "interpolation_method": "time_linear_between_official_forecast_fixes",
+        "status": "available",
+        "cma_grade_status": "unavailable_without_documented_conversion_to_2min",
+        "comparison_10min_wind_ms": 33,
+        "computational_comparison_10min_wind_ms": 32.504
+      },
+      {
+        "source": "CWA",
+        "resolved_url": "https://www.cwa.gov.tw/Data/js/typhoon/TY_NEWS-Data.js",
+        "landfall": {
+          "status": "landfall",
+          "time_utc": "2026-07-11T16:30:00+00:00",
+          "lon": 121.4,
+          "lat": 28.2,
+          "curve_method": "cubic_cartesian_hermite+spatial_chord_boundary_intersection",
+          "transition": "outside_to_inside",
+          "maximum_boundary_chord_km": 2.0,
+          "time_bjt": "2026-07-12T00:30:00+08:00",
+          "computational_crossing": {
+            "time_utc": "2026-07-11T16:19:53.352673+00:00",
+            "lat": 28.22146,
+            "lon": 121.36337
+          }
+        },
+        "official_guidance_native_wind_ms": 34,
+        "computational_native_wind_ms": 33.556,
+        "native_wind_averaging_minutes": 10,
+        "official_category_near_landfall": null,
+        "interpolation_method": "time_linear_between_official_forecast_fixes",
+        "status": "available",
+        "cma_grade_status": "unavailable_without_documented_conversion_to_2min",
+        "comparison_10min_wind_ms": 34,
+        "computational_comparison_10min_wind_ms": 33.556
+      }
+    ],
+    "mechanistic_scenario_range": null,
+    "mechanistic_status": "uncalibrated_research",
+    "interpretation": "Preparedness uses named official branches and their documented 10-minute comparison range. The mechanistic range remains research-only until the WNP hindcast gate passes."
+  },
+  "network_transport_warnings": {}
+}

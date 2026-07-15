@@ -1,0 +1,116 @@
+{
+  "schema_version": "1.0",
+  "audited_at_utc": "2026-07-12T00:00:00Z",
+  "purpose": "Source registry for concentric-eyewall and eyewall-replacement observations.",
+  "sources": {
+    "tc_primed": {
+      "role": "historical_passive_microwave_training_and_holdout",
+      "provider": "NOAA NCEI and CSU/CIRA",
+      "product_url": "https://rammb-data.cira.colostate.edu/tcprimed/products.html",
+      "documentation_url": "https://rammb-data.cira.colostate.edu/tcprimed/TCPRIMED_v01r01_documentation.pdf",
+      "bucket_url": "https://noaa-nesdis-tcprimed-pds.s3.amazonaws.com",
+      "bucket_prefix_template": "v01r01/{version_type}/{season}/{basin}/{annual_number}/",
+      "format": "NetCDF-4 with hierarchical groups",
+      "access": "public_without_credentials",
+      "latency": {
+        "preliminary": "around one week after storm dissipation",
+        "final": "several months after the hemisphere season"
+      },
+      "primary_fields": [
+        "overpass_metadata/time",
+        "overpass_metadata/coverage_fraction",
+        "overpass_storm_metadata/storm_latitude",
+        "overpass_storm_metadata/storm_longitude",
+        "passive_microwave/*/TB_*",
+        "passive_microwave/*/x",
+        "passive_microwave/*/y"
+      ],
+      "scientific_semantics": "Intercalibrated passive-microwave brightness temperature and precipitation structure. Final files use final best-track centers; preliminary files use operational best-track centers.",
+      "known_limits": [
+        "The product supplies brightness temperatures rather than an ERC label or a surface-wind secondary maximum.",
+        "Coverage fraction is calculated from the S1 geolocation swath within 750 km and does not guarantee inner-core coverage in every channel.",
+        "The dataset deliberately omits best-track RMW because that field lacks historical post-season quality control."
+      ]
+    },
+    "nasa_pps_l1c_nrt": {
+      "role": "near_real_time_passive_microwave_swaths",
+      "provider": "NASA GPM Precipitation Processing System",
+      "product_url": "https://gpm.nasa.gov/node/3313",
+      "download_url": "https://jsimpsonhttps.pps.eosdis.nasa.gov/1C/",
+      "format": "HDF5",
+      "access": "PPS registration required",
+      "latency": "near real time; most recent two weeks retained in the NRT endpoint",
+      "primary_fields": [
+        "intercalibrated_microwave_brightness_temperature",
+        "scan_time",
+        "latitude",
+        "longitude",
+        "instrument_and_platform"
+      ],
+      "scientific_semantics": "Raw multisensor Level-1C brightness temperatures for operational storm-centered extraction."
+    },
+    "archer_mperc": {
+      "role": "derived_ring_structure_and_erc_benchmark",
+      "provider": "University of Wisconsin CIMSS",
+      "product_url": "https://tropic.ssec.wisc.edu/real-time/archerOnline/web/index_erc.shtml",
+      "archive_url": "https://tropic.ssec.wisc.edu/real-time/archerOnline/cyclones/",
+      "format": "text tables and diagnostic images",
+      "access": "public_without_credentials",
+      "latency": "operational updates following adequate microwave overpasses",
+      "primary_fields": [
+        "M-PERC_probability",
+        "ARCHER_center_fix",
+        "center_uncertainty",
+        "ring_score_hovmoller_image"
+      ],
+      "scientific_semantics": "ARCHER evaluates 85-92 GHz circular convective structure; M-PERC diagnoses ERC-onset probability from ring-score evolution and intensity history.",
+      "known_limits": [
+        "Public storm folders expose probabilities and diagnostic images; a stable public numeric ring-score vector endpoint was not found in this audit.",
+        "Microwave overpasses are irregular and a full 24-hour predictor history is required by M-PERC."
+      ]
+    },
+    "cyclobs_sar": {
+      "role": "direct_surface_wind_structure_validation",
+      "provider": "ESA CYMS, IFREMER, and CLS",
+      "product_url": "https://www.esa-cyms.org/data-access/",
+      "documentation_url": "https://www.esa-cyms.org/wp-content/uploads/2020/11/PUM_L2_CYMSproducts_20201119.pdf",
+      "api_url": "https://cyclobs.ifremer.fr/app/api/getData",
+      "format": "CSV-like API metadata and NetCDF-4 wind products",
+      "access": "public_without_credentials",
+      "latency": "data driven; target delivery within one hour of source-SAR availability",
+      "primary_fields": [
+        "wind_speed",
+        "quality_level",
+        "rad",
+        "theta",
+        "lat_storm_center",
+        "lon_storm_center",
+        "center_quality_flag",
+        "msw",
+        "rmw",
+        "vmx",
+        "rmx"
+      ],
+      "scientific_semantics": "Instantaneous ocean 10 m wind field on a 3 km effective-resolution product; cyclone-polar files use 1 km radial and 1 degree azimuthal sampling.",
+      "known_limits": [
+        "SAR acquisitions are sparse and mission-planning dependent.",
+        "Rain, retrieval physics, swath geometry, center quality, and azimuthal coverage remain part of the observation error model."
+      ]
+    },
+    "hursat_archer_eye": {
+      "role": "historical_eye_geometry_supplement",
+      "provider": "NOAA NCEI",
+      "product_url": "https://www.ncei.noaa.gov/products/hurricane-satellite-data",
+      "format": "NetCDF",
+      "access": "public_without_credentials",
+      "temporal_coverage": "1978-2015 for HURSAT-B1 v06",
+      "primary_fields": [
+        "ARCHER_eye_radius",
+        "ARCHER_eyewall_radius",
+        "eye_probability",
+        "eye_completeness"
+      ],
+      "scientific_semantics": "Infrared-derived eye geometry for supplementary pretraining and climatology."
+    }
+  }
+}

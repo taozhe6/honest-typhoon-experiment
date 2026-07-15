@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "case_id": "bavi-2026-prelandfall-reintensification-v1",
+  "storm": {
+    "name": "BAVI",
+    "international_number": "2609",
+    "jtwc_id": "09W",
+    "basin": "western_north_pacific"
+  },
+  "purpose": "Frozen post-event falsification case for a 12-hour pre-landfall intensity reversal.",
+  "selection_rule": "Use each agency's forecast and later analysis in its native sustained-wind averaging period. Keep agency channels separate.",
+  "sources": {
+    "nmc_detail": {
+      "url": "https://typhoon.nmc.cn/weatherservice/typhoon/jsons/view_3257931?callback=typhoon_jsons_view_3257931",
+      "authority": "NMC",
+      "archive_role": "official historical storm detail"
+    },
+    "gdacs_gts": {
+      "url": "https://www.gdacs.org/gts.aspx?eventid=1001279&eventtype=TC",
+      "authority": "GDACS archive relaying original WMO/JMA/JTWC bulletins",
+      "archive_role": "historical bulletin archive"
+    },
+    "ucar_adeck": {
+      "url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/awp092026.dat",
+      "authority": "NCAR Research Applications Laboratory archive of ATCF data",
+      "archive_role": "historical operational CARQ analyses"
+    }
+  },
+  "channels": {
+    "NMC": {
+      "source_id": "nmc_detail",
+      "parser": "nmc_typhoon_detail",
+      "forecast_center": "BABJ",
+      "initial_valid_at_utc": "2026-07-10T09:00:00Z",
+      "forecast_issued_at_utc": "2026-07-10T09:00:00Z",
+      "lead_hours": 12,
+      "target_valid_at_utc": "2026-07-10T21:00:00Z",
+      "wind_unit_native": "m/s"
+    },
+    "JMA": {
+      "source_id": "gdacs_gts",
+      "parser": "jma_rsmc_advisory",
+      "forecast_message_id": "WTPQ51RJTD100900",
+      "truth_message_id": "WTPQ51RJTD102100",
+      "initial_valid_at_utc": "2026-07-10T09:00:00Z",
+      "forecast_issued_at_utc": "2026-07-10T09:00:00Z",
+      "lead_hours": 12,
+      "target_valid_at_utc": "2026-07-10T21:00:00Z",
+      "wind_unit_native": "kt"
+    },
+    "JTWC": {
+      "forecast_source_id": "gdacs_gts",
+      "truth_source_id": "ucar_adeck",
+      "parser": "jtwc_warning_and_carq",
+      "forecast_message_id": "WTPN51PGTW100900",
+      "initial_carq_dtg": "2026071006",
+      "target_carq_dtg": "2026071018",
+      "initial_valid_at_utc": "2026-07-10T06:00:00Z",
+      "forecast_issued_at_utc": "2026-07-10T09:00:00Z",
+      "lead_hours": 12,
+      "target_valid_at_utc": "2026-07-10T18:00:00Z",
+      "wind_unit_native": "kt"
+    }
+  },
+  "model_evaluation": {
+    "primary_native_channel": "JTWC",
+    "required_artifacts": [
+      {
+        "id": "accepted_calibration",
+        "path": "calibration/accepted.json"
+      },
+      {
+        "id": "forecast_time_initial_state",
+        "path": "cases/bavi_2026/operational_initial_state.json"
+      },
+      {
+        "id": "forecast_time_environmental_forcing",
+        "path": "cases/bavi_2026/forecast_time_forcing.json"
+      },
+      {
+        "id": "agency_observation_operators",
+        "path": "config/observation_operators.json"
+      }
+    ],
+    "event_diagnostics": [
+      "median_12h_wind_change",
+      "probability_positive_12h_wind_change",
+      "probability_at_least_10kt_12h_wind_change",
+      "probability_any_intensifying_regime",
+      "central_80_interval_for_12h_wind_change"
+    ],
+    "case_reproduction_rule": "Observed 12-hour change lies inside the forecast central 80% interval and the forecast median change is positive.",
+    "scope": "One diagnostic case. It cannot replace the storm-disjoint sealed hindcast."
+  }
+}

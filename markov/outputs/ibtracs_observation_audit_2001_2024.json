@@ -1,0 +1,389 @@
+{
+  "channel_order": [
+    "USA_WIND",
+    "USA_PRES",
+    "USA_RMW"
+  ],
+  "dataset": {
+    "bytes": 113976897,
+    "name": "NOAA NCEI IBTrACS v04r01 Western Pacific CSV",
+    "path": "/private/tmp/ibtracs.WP.list.v04r01.csv",
+    "sha256": "f6dd323ad940774b98c747a639a5a1c66d94a342db50423db47f6b3e8456b687"
+  },
+  "interpretation_limits": [
+    "Cross-channel effective dimension diagnoses redundancy; it does not by itself prove parameter non-identifiability.",
+    "Parameter identifiability requires a real-data sensitivity or Fisher-information analysis with observation-error covariance.",
+    "RMW quantization and persistence diagnose limited precision; provenance flags are required before treating RMW as an independent measurement."
+  ],
+  "selection": {
+    "complete_positive_channels": [
+      "USA_WIND",
+      "USA_PRES",
+      "USA_RMW"
+    ],
+    "track_type": "main",
+    "years": [
+      2001,
+      2024
+    ]
+  },
+  "subsets": {
+    "all_complete": {
+      "correlation_eigenvalues": [
+        2.392714131378753,
+        0.5873437081095862,
+        0.019942160511660756
+      ],
+      "correlation_matrix": [
+        [
+          1.0,
+          -0.9789225624213421,
+          -0.5564621365163956
+        ],
+        [
+          -0.9789225624213421,
+          1.0,
+          0.516997219786266
+        ],
+        [
+          -0.5564621365163956,
+          0.516997219786266,
+          1.0
+        ]
+      ],
+      "effective_dimensions": {
+        "entropy_effective_rank": 1.7040306612937868,
+        "participation_ratio": 1.482591598304883
+      },
+      "record_count": 33308,
+      "rmw_quality_diagnostics": {
+        "consecutive_pair_count": 32629,
+        "consecutive_unchanged_fraction": 0.6613442030095927,
+        "integer_fraction": 1.0,
+        "multiple_of_10_nm_fraction": 0.46901645250390295,
+        "multiple_of_5_nm_fraction": 0.8567911612825747,
+        "top_values_nm": [
+          {
+            "count": 3612,
+            "value": 30.0
+          },
+          {
+            "count": 3374,
+            "value": 40.0
+          },
+          {
+            "count": 3282,
+            "value": 45.0
+          },
+          {
+            "count": 3273,
+            "value": 20.0
+          },
+          {
+            "count": 2946,
+            "value": 25.0
+          },
+          {
+            "count": 2885,
+            "value": 15.0
+          },
+          {
+            "count": 2361,
+            "value": 35.0
+          },
+          {
+            "count": 1995,
+            "value": 50.0
+          },
+          {
+            "count": 1389,
+            "value": 10.0
+          },
+          {
+            "count": 954,
+            "value": 60.0
+          },
+          {
+            "count": 468,
+            "value": 12.0
+          },
+          {
+            "count": 451,
+            "value": 55.0
+          },
+          {
+            "count": 447,
+            "value": 23.0
+          },
+          {
+            "count": 438,
+            "value": 5.0
+          },
+          {
+            "count": 420,
+            "value": 18.0
+          },
+          {
+            "count": 386,
+            "value": 28.0
+          },
+          {
+            "count": 345,
+            "value": 70.0
+          },
+          {
+            "count": 344,
+            "value": 33.0
+          },
+          {
+            "count": 336,
+            "value": 38.0
+          },
+          {
+            "count": 290,
+            "value": 13.0
+          }
+        ]
+      },
+      "storm_count": 679
+    },
+    "jtwc_wp_only": {
+      "correlation_eigenvalues": [
+        2.4127780438892765,
+        0.5702568813129466,
+        0.01696507479777687
+      ],
+      "correlation_matrix": [
+        [
+          1.0,
+          -0.981735776370014,
+          -0.5726400573445509
+        ],
+        [
+          -0.981735776370014,
+          1.0,
+          0.5308178000788114
+        ],
+        [
+          -0.5726400573445509,
+          0.5308178000788114,
+          1.0
+        ]
+      ],
+      "effective_dimensions": {
+        "entropy_effective_rank": 1.6821219346955378,
+        "participation_ratio": 1.464133937313892
+      },
+      "record_count": 16225,
+      "rmw_quality_diagnostics": {
+        "consecutive_pair_count": 15565,
+        "consecutive_unchanged_fraction": 0.6582075168647606,
+        "integer_fraction": 1.0,
+        "multiple_of_10_nm_fraction": 0.524191063174114,
+        "multiple_of_5_nm_fraction": 0.9579661016949153,
+        "top_values_nm": [
+          {
+            "count": 1973,
+            "value": 30.0
+          },
+          {
+            "count": 1854,
+            "value": 40.0
+          },
+          {
+            "count": 1769,
+            "value": 20.0
+          },
+          {
+            "count": 1768,
+            "value": 45.0
+          },
+          {
+            "count": 1640,
+            "value": 25.0
+          },
+          {
+            "count": 1576,
+            "value": 15.0
+          },
+          {
+            "count": 1285,
+            "value": 35.0
+          },
+          {
+            "count": 1119,
+            "value": 50.0
+          },
+          {
+            "count": 757,
+            "value": 10.0
+          },
+          {
+            "count": 476,
+            "value": 60.0
+          },
+          {
+            "count": 298,
+            "value": 12.0
+          },
+          {
+            "count": 262,
+            "value": 5.0
+          },
+          {
+            "count": 233,
+            "value": 55.0
+          },
+          {
+            "count": 192,
+            "value": 70.0
+          },
+          {
+            "count": 163,
+            "value": 17.0
+          },
+          {
+            "count": 111,
+            "value": 65.0
+          },
+          {
+            "count": 99,
+            "value": 7.0
+          },
+          {
+            "count": 97,
+            "value": 80.0
+          },
+          {
+            "count": 90,
+            "value": 90.0
+          },
+          {
+            "count": 80,
+            "value": 100.0
+          }
+        ]
+      },
+      "storm_count": 660
+    },
+    "synoptic_6h": {
+      "correlation_eigenvalues": [
+        2.3816645356978796,
+        0.5980655789121,
+        0.020269885390020392
+      ],
+      "correlation_matrix": [
+        [
+          1.0,
+          -0.9786670221765202,
+          -0.5468069284813551
+        ],
+        [
+          -0.9786670221765202,
+          1.0,
+          0.5083529044237093
+        ],
+        [
+          -0.5468069284813551,
+          0.5083529044237093,
+          1.0
+        ]
+      ],
+      "effective_dimensions": {
+        "entropy_effective_rank": 1.7134304119140422,
+        "participation_ratio": 1.4924335446190178
+      },
+      "record_count": 16947,
+      "rmw_quality_diagnostics": {
+        "consecutive_pair_count": 16268,
+        "consecutive_unchanged_fraction": 0.6600073764445538,
+        "integer_fraction": 1.0,
+        "multiple_of_10_nm_fraction": 0.5285301233256624,
+        "multiple_of_5_nm_fraction": 0.9594618516551602,
+        "top_values_nm": [
+          {
+            "count": 2031,
+            "value": 30.0
+          },
+          {
+            "count": 1897,
+            "value": 40.0
+          },
+          {
+            "count": 1897,
+            "value": 20.0
+          },
+          {
+            "count": 1816,
+            "value": 45.0
+          },
+          {
+            "count": 1697,
+            "value": 25.0
+          },
+          {
+            "count": 1686,
+            "value": 15.0
+          },
+          {
+            "count": 1317,
+            "value": 35.0
+          },
+          {
+            "count": 1154,
+            "value": 50.0
+          },
+          {
+            "count": 820,
+            "value": 10.0
+          },
+          {
+            "count": 544,
+            "value": 60.0
+          },
+          {
+            "count": 301,
+            "value": 12.0
+          },
+          {
+            "count": 272,
+            "value": 5.0
+          },
+          {
+            "count": 231,
+            "value": 55.0
+          },
+          {
+            "count": 200,
+            "value": 70.0
+          },
+          {
+            "count": 167,
+            "value": 17.0
+          },
+          {
+            "count": 111,
+            "value": 65.0
+          },
+          {
+            "count": 105,
+            "value": 90.0
+          },
+          {
+            "count": 104,
+            "value": 80.0
+          },
+          {
+            "count": 103,
+            "value": 7.0
+          },
+          {
+            "count": 82,
+            "value": 100.0
+          }
+        ]
+      },
+      "storm_count": 679
+    }
+  }
+}
