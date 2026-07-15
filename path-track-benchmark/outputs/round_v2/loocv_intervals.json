@@ -1,0 +1,272 @@
+[
+  {
+    "lead_hours": 24,
+    "status": "estimated",
+    "quantile": 0.5,
+    "record_count": 328,
+    "storm_count": 26,
+    "training_storm_count_per_fold": 25,
+    "median_radius_km": 55.6310814360687,
+    "radius_range_km": [
+      54.036128973357144,
+      58.254072611669216
+    ],
+    "coverage": 0.5121951219512195,
+    "coverage_ci95": [
+      0.4259065202927479,
+      0.5978260869565217
+    ]
+  },
+  {
+    "lead_hours": 24,
+    "status": "estimated",
+    "quantile": 0.8,
+    "record_count": 328,
+    "storm_count": 26,
+    "training_storm_count_per_fold": 25,
+    "median_radius_km": 106.42577481201022,
+    "radius_range_km": [
+      101.92781826703612,
+      107.6149935131316
+    ],
+    "coverage": 0.801829268292683,
+    "coverage_ci95": [
+      0.7275862068965517,
+      0.8613171664761234
+    ]
+  },
+  {
+    "lead_hours": 24,
+    "status": "estimated",
+    "quantile": 0.95,
+    "record_count": 328,
+    "storm_count": 26,
+    "training_storm_count_per_fold": 25,
+    "median_radius_km": 177.02921085629436,
+    "radius_range_km": [
+      163.42828051979592,
+      177.76197498791072
+    ],
+    "coverage": 0.9390243902439024,
+    "coverage_ci95": [
+      0.8937484426910299,
+      0.9774204906860517
+    ]
+  },
+  {
+    "lead_hours": 48,
+    "status": "estimated",
+    "quantile": 0.5,
+    "record_count": 284,
+    "storm_count": 26,
+    "training_storm_count_per_fold": 25,
+    "median_radius_km": 99.64246975475697,
+    "radius_range_km": [
+      96.07781045763682,
+      103.31552747092269
+    ],
+    "coverage": 0.5035211267605634,
+    "coverage_ci95": [
+      0.4143254292068673,
+      0.5816326530612245
+    ]
+  },
+  {
+    "lead_hours": 48,
+    "status": "estimated",
+    "quantile": 0.8,
+    "record_count": 284,
+    "storm_count": 26,
+    "training_storm_count_per_fold": 25,
+    "median_radius_km": 177.61329788616376,
+    "radius_range_km": [
+      169.20625122744173,
+      187.38908349217678
+    ],
+    "coverage": 0.8028169014084507,
+    "coverage_ci95": [
+      0.7177794879576839,
+      0.880292191746973
+    ]
+  },
+  {
+    "lead_hours": 48,
+    "status": "estimated",
+    "quantile": 0.95,
+    "record_count": 284,
+    "storm_count": 26,
+    "training_storm_count_per_fold": 25,
+    "median_radius_km": 325.0883289438722,
+    "radius_range_km": [
+      282.60572033349257,
+      330.5190308844848
+    ],
+    "coverage": 0.9366197183098591,
+    "coverage_ci95": [
+      0.8847322070452911,
+      0.9803332908081903
+    ]
+  },
+  {
+    "lead_hours": 72,
+    "status": "estimated",
+    "quantile": 0.5,
+    "record_count": 242,
+    "storm_count": 26,
+    "training_storm_count_per_fold": 25,
+    "median_radius_km": 155.64330934408724,
+    "radius_range_km": [
+      153.01967253683648,
+      158.37960628363533
+    ],
+    "coverage": 0.5,
+    "coverage_ci95": [
+      0.42646456123432974,
+      0.5800161290322579
+    ]
+  },
+  {
+    "lead_hours": 72,
+    "status": "estimated",
+    "quantile": 0.8,
+    "record_count": 242,
+    "storm_count": 26,
+    "training_storm_count_per_fold": 25,
+    "median_radius_km": 295.57080860359713,
+    "radius_range_km": [
+      278.5373540671154,
+      299.0412111643021
+    ],
+    "coverage": 0.8057851239669421,
+    "coverage_ci95": [
+      0.7234977504963479,
+      0.8790489328159107
+    ]
+  },
+  {
+    "lead_hours": 72,
+    "status": "estimated",
+    "quantile": 0.95,
+    "record_count": 242,
+    "storm_count": 26,
+    "training_storm_count_per_fold": 25,
+    "median_radius_km": 526.5611127799363,
+    "radius_range_km": [
+      494.1213409820542,
+      527.5274247304009
+    ],
+    "coverage": 0.9421487603305785,
+    "coverage_ci95": [
+      0.9032258064516129,
+      0.9763779527559056
+    ]
+  },
+  {
+    "lead_hours": 96,
+    "status": "estimated",
+    "quantile": 0.5,
+    "record_count": 196,
+    "storm_count": 25,
+    "training_storm_count_per_fold": 24,
+    "median_radius_km": 220.3512208702216,
+    "radius_range_km": [
+      218.90844432419073,
+      230.46253812847925
+    ],
+    "coverage": 0.5,
+    "coverage_ci95": [
+      0.4235267620561738,
+      0.590246841022627
+    ]
+  },
+  {
+    "lead_hours": 96,
+    "status": "estimated",
+    "quantile": 0.8,
+    "record_count": 196,
+    "storm_count": 25,
+    "training_storm_count_per_fold": 24,
+    "median_radius_km": 411.05215154489275,
+    "radius_range_km": [
+      391.759402119641,
+      431.0466366776642
+    ],
+    "coverage": 0.7959183673469388,
+    "coverage_ci95": [
+      0.7127629004646613,
+      0.8677259609077791
+    ]
+  },
+  {
+    "lead_hours": 96,
+    "status": "estimated",
+    "quantile": 0.95,
+    "record_count": 196,
+    "storm_count": 25,
+    "training_storm_count_per_fold": 24,
+    "median_radius_km": 749.2870733524217,
+    "radius_range_km": [
+      674.9193643150428,
+      760.8737528170127
+    ],
+    "coverage": 0.9438775510204082,
+    "coverage_ci95": [
+      0.8979487286717966,
+      0.981484321745058
+    ]
+  },
+  {
+    "lead_hours": 120,
+    "status": "estimated",
+    "quantile": 0.5,
+    "record_count": 153,
+    "storm_count": 23,
+    "training_storm_count_per_fold": 22,
+    "median_radius_km": 335.5769261938419,
+    "radius_range_km": [
+      325.7023578050347,
+      346.8051269341619
+    ],
+    "coverage": 0.49019607843137253,
+    "coverage_ci95": [
+      0.3841453319334518,
+      0.6
+    ]
+  },
+  {
+    "lead_hours": 120,
+    "status": "estimated",
+    "quantile": 0.8,
+    "record_count": 153,
+    "storm_count": 23,
+    "training_storm_count_per_fold": 22,
+    "median_radius_km": 575.6077672005562,
+    "radius_range_km": [
+      548.1960271227038,
+      582.4429646452711
+    ],
+    "coverage": 0.7973856209150327,
+    "coverage_ci95": [
+      0.7013755341880342,
+      0.8764705882352941
+    ]
+  },
+  {
+    "lead_hours": 120,
+    "status": "estimated",
+    "quantile": 0.95,
+    "record_count": 153,
+    "storm_count": 23,
+    "training_storm_count_per_fold": 22,
+    "median_radius_km": 987.3501803997065,
+    "radius_range_km": [
+      948.32872744275,
+      1017.5045112001969
+    ],
+    "coverage": 0.9411764705882353,
+    "coverage_ci95": [
+      0.9,
+      0.975609756097561
+    ]
+  }
+]

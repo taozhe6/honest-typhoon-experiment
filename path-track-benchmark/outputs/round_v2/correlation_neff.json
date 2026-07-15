@@ -1,0 +1,129 @@
+{
+  "assumption": "exchangeable two-source correlation; neff=2/(1+rho)",
+  "scope_disclaimer": "n_eff measures agreement of paired radial track errors, not model dynamical independence or forecast accuracy.",
+  "primary": {
+    "method": "pearson",
+    "lead_centered": true,
+    "rho": 0.3632563234187115,
+    "rho_ci95": [
+      0.23292318036702273,
+      0.49163124711976897
+    ],
+    "record_count": 1203,
+    "storm_count": 26,
+    "neff": 1.4670755349841267,
+    "neff_ci95": [
+      1.3408139606075953,
+      1.6221610866002878
+    ]
+  },
+  "raw_pearson_sensitivity": {
+    "method": "pearson",
+    "lead_centered": false,
+    "rho": 0.5632535620644339,
+    "rho_ci95": [
+      0.4721285450872109,
+      0.6553549197963342
+    ],
+    "record_count": 1203,
+    "storm_count": 26,
+    "neff": 1.2793829795332745,
+    "neff_ci95": [
+      1.208200112429171,
+      1.3585770119855562
+    ]
+  },
+  "lead_centered_spearman_sensitivity": {
+    "method": "spearman",
+    "lead_centered": true,
+    "rho": 0.30215183245853167,
+    "rho_ci95": [
+      0.16406555992108973,
+      0.43656534558007637
+    ],
+    "record_count": 1203,
+    "storm_count": 26
+  },
+  "raw_pearson_by_lead": {
+    "24": {
+      "method": "pearson",
+      "lead_centered": false,
+      "rho": 0.46429412079180193,
+      "rho_ci95": [
+        0.3614605413600591,
+        0.5491000554687252
+      ],
+      "record_count": 328,
+      "storm_count": 26,
+      "neff": 1.3658458171767573,
+      "neff_ci95": [
+        1.2910721895281836,
+        1.4690106272042645
+      ]
+    },
+    "48": {
+      "method": "pearson",
+      "lead_centered": false,
+      "rho": 0.42899294572511304,
+      "rho_ci95": [
+        0.26626406292223304,
+        0.5446260995194537
+      ],
+      "record_count": 284,
+      "storm_count": 26,
+      "neff": 1.3995870350396595,
+      "neff_ci95": [
+        1.29481173551072,
+        1.5794493886270797
+      ]
+    },
+    "72": {
+      "method": "pearson",
+      "lead_centered": false,
+      "rho": 0.38587561183439656,
+      "rho_ci95": [
+        0.26660343263375746,
+        0.4800888772636258
+      ],
+      "record_count": 242,
+      "storm_count": 26,
+      "neff": 1.4431309584506835,
+      "neff_ci95": [
+        1.3512702058808896,
+        1.5790262052639308
+      ]
+    },
+    "96": {
+      "method": "pearson",
+      "lead_centered": false,
+      "rho": 0.42502105198283235,
+      "rho_ci95": [
+        0.22729208437407808,
+        0.5793225026908699
+      ],
+      "record_count": 196,
+      "storm_count": 25,
+      "neff": 1.403488037750122,
+      "neff_ci95": [
+        1.2663657975016394,
+        1.6296039597857557
+      ]
+    },
+    "120": {
+      "method": "pearson",
+      "lead_centered": false,
+      "rho": 0.292503505166526,
+      "rho_ci95": [
+        0.0851037975434339,
+        0.5138986028534359
+      ],
+      "record_count": 153,
+      "storm_count": 23,
+      "neff": 1.5473845850362475,
+      "neff_ci95": [
+        1.3210924811154063,
+        1.843141646494191
+      ]
+    }
+  }
+}

@@ -1,0 +1,203 @@
+{
+  "generated_at_utc": "2026-07-15T11:13:02.343877+00:00",
+  "status": "prospective-expanded-sample-learning-reproduction",
+  "qualification": "unvalidated",
+  "git_commit": "52199e35b9afcecce7cc2afc5b5539800277f6f4",
+  "config_sha256": "90369275a600446eb5588dd4e4cfd3bb9ebd06b779249b4d2bdcef07a1afe97f",
+  "eligibility_manifest_sha256": "ab759ff0d43a59543701c009537f51b9fa4a3f4aff80f1d3ac4caca720598534",
+  "parsed_forecast_point_count": 3523,
+  "truth_point_count": 2114,
+  "paired_row_count": 1203,
+  "paired_storm_count": 26,
+  "sources": {
+    "WP012024": {
+      "url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2024/awp012024.dat",
+      "local_path": "data/raw/awp012024.dat",
+      "source_mode": "cached",
+      "bytes": 4957916,
+      "sha256": "0dfd6a5c7cb1f850dda9c88c07abffbf11a26228a4a4599d0727d65c63081c19"
+    },
+    "WP022022": {
+      "url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2022/awp022022.dat",
+      "local_path": "data/raw/awp022022.dat",
+      "source_mode": "cached",
+      "bytes": 10375054,
+      "sha256": "ee11a82b5220f7b5b75dfebd3d558fe465c44abc74f6382fc08115ceac35e581"
+    },
+    "WP022023": {
+      "url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2023/awp022023.dat",
+      "local_path": "data/raw/awp022023.dat",
+      "source_mode": "cached",
+      "bytes": 18051977,
+      "sha256": "34b9795178bf8702348fb6ac958ed6a21c308b6d5aee3d74fbfe7ce9a0efdab5"
+    },
+    "WP032023": {
+      "url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2023/awp032023.dat",
+      "local_path": "data/raw/awp032023.dat",
+      "source_mode": "cached",
+      "bytes": 7542021,
+      "sha256": "461810d80cb4aff9b70504ec63758f71bd96f97f5c9152dca02b3dcc3813757c"
+    },
+    "WP052023": {
+      "url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2023/awp052023.dat",
+      "local_path": "data/raw/awp052023.dat",
+      "source_mode": "cached",
+      "bytes": 7501743,
+      "sha256": "40ea457944234606ee6eb84148b23c6c39fcf9dfe2fc6dbbe2620b0439686dad"
+    },
+    "WP052024": {
+      "url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2024/awp052024.dat",
+      "local_path": "data/raw/awp052024.dat",
+      "source_mode": "cached",
+      "bytes": 5566413,
+      "sha256": "a111440f783f18648dcb34b5bb702856f0283a1d58fe375086fea33e9a438827"
+    },
+    "WP062023": {
+      "url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2023/awp062023.dat",
+      "local_path": "data/raw/awp062023.dat",
+      "source_mode": "cached",
+      "bytes": 17976562,
+      "sha256": "458258ba19c42cbbf3deebd2016f6c41c42e96a86c0464d6c2f0690239599eeb"
+    },
+    "WP072023": {
+      "url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2023/awp072023.dat",
+      "local_path": "data/raw/awp072023.dat",
+      "source_mode": "cached",
+      "bytes": 9533768,
+      "sha256": "9aa79103be2f63c6ea2eaab7e0d475b1c7d802e04f29c3f15f09dc6c8e0780a6"
+    },
+    "WP082024": {
+      "url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2024/awp082024.dat",
+      "local_path": "data/raw/awp082024.dat",
+      "source_mode": "cached",
+      "bytes": 6976013,
+      "sha256": "043c3d737131b2d841bdf89efbb19a02dcb7e5d947dc17d1348843560557edaa"
+    },
+    "WP092023": {
+      "url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2023/awp092023.dat",
+      "local_path": "data/raw/awp092023.dat",
+      "source_mode": "cached",
+      "bytes": 11132888,
+      "sha256": "e1b19d951d362125329532f927a73b5771250d00e1cb3c04891c1c1b7b9fa049"
+    },
+    "WP102023": {
+      "url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2023/awp102023.dat",
+      "local_path": "data/raw/awp102023.dat",
+      "source_mode": "cached",
+      "bytes": 6893797,
+      "sha256": "ca6dfde7106d71a9d3002794ce67e7ba5406efcff8e6e3719c438a9e1d79f864"
+    },
+    "WP112022": {
+      "url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2022/awp112022.dat",
+      "local_path": "data/raw/awp112022.dat",
+      "source_mode": "cached",
+      "bytes": 1609716,
+      "sha256": "9df4065b2c3909e340fe86e15db738312eb5d8eb6e175f2b1e3402c1498d812a"
+    },
+    "WP112024": {
+      "url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2024/awp112024.dat",
+      "local_path": "data/raw/awp112024.dat",
+      "source_mode": "cached",
+      "bytes": 10566957,
+      "sha256": "0ceb8010dc801087ec74de181aefadd45f85b0b6aa8532946d17e9aa25128bbd"
+    },
+    "WP122022": {
+      "url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2022/awp122022.dat",
+      "local_path": "data/raw/awp122022.dat",
+      "source_mode": "cached",
+      "bytes": 11021730,
+      "sha256": "07e66dd2d6fab26a831d12893b155b5e563b634285e4cee2d8b26e1c88d369dc"
+    },
+    "WP122024": {
+      "url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2024/awp122024.dat",
+      "local_path": "data/raw/awp122024.dat",
+      "source_mode": "cached",
+      "bytes": 4642745,
+      "sha256": "e563199fe70768fe143bb88db29e07611f4a8f9de986824e275c24ec9ba95ecb"
+    },
+    "WP142022": {
+      "url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2022/awp142022.dat",
+      "local_path": "data/raw/awp142022.dat",
+      "source_mode": "cached",
+      "bytes": 8406049,
+      "sha256": "dc2af32890333299b081655a187e77f54a60f5e5e387870958a693bcb4d30336"
+    },
+    "WP142023": {
+      "url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2023/awp142023.dat",
+      "local_path": "data/raw/awp142023.dat",
+      "source_mode": "cached",
+      "bytes": 8273176,
+      "sha256": "a042dea8ea6beb8731e40b5fd13ba0094fbbae50cc09b0b61b5d3f76541e017a"
+    },
+    "WP142024": {
+      "url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2024/awp142024.dat",
+      "local_path": "data/raw/awp142024.dat",
+      "source_mode": "cached",
+      "bytes": 3789962,
+      "sha256": "41eb096bcaa28ee4a5c68358e971c8f182a396438bfe561871bc68e2a8f34c0b"
+    },
+    "WP152023": {
+      "url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2023/awp152023.dat",
+      "local_path": "data/raw/awp152023.dat",
+      "source_mode": "cached",
+      "bytes": 11784409,
+      "sha256": "9847404d04342208fa2e301c99b0ceaf94e8788eb0f68377a242d599815b4ff1"
+    },
+    "WP162022": {
+      "url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2022/awp162022.dat",
+      "local_path": "data/raw/awp162022.dat",
+      "source_mode": "cached",
+      "bytes": 6622396,
+      "sha256": "5c565b71c88fd6e8b22dc32c52a945dbf70c91436d3b01243f7a9558d10c44e6"
+    },
+    "WP182022": {
+      "url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2022/awp182022.dat",
+      "local_path": "data/raw/awp182022.dat",
+      "source_mode": "cached",
+      "bytes": 4830398,
+      "sha256": "60dbff956a039c67579513aaee499d32713a6fbf249fecb7d3ff1c771bb08ec8"
+    },
+    "WP232022": {
+      "url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2022/awp232022.dat",
+      "local_path": "data/raw/awp232022.dat",
+      "source_mode": "cached",
+      "bytes": 2991949,
+      "sha256": "6d6036f8472be3613aea60d9dc367fa7309662b0ff3cc5a0c9cc9cd33bfd6a1c"
+    },
+    "WP232024": {
+      "url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2024/awp232024.dat",
+      "local_path": "data/raw/awp232024.dat",
+      "source_mode": "cached",
+      "bytes": 7316764,
+      "sha256": "1a5a49bb18d9b406e9e0c71c9d3b6cc3787220b9bac86563312d947e7acc42bf"
+    },
+    "WP242024": {
+      "url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2024/awp242024.dat",
+      "local_path": "data/raw/awp242024.dat",
+      "source_mode": "cached",
+      "bytes": 6448493,
+      "sha256": "7ced9f96fbd56e3f53d816a3f9c719fa17671389c4c286e72560bbea62656f0c"
+    },
+    "WP252024": {
+      "url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2024/awp252024.dat",
+      "local_path": "data/raw/awp252024.dat",
+      "source_mode": "cached",
+      "bytes": 7857261,
+      "sha256": "dc346053869036e3f6b2628373d4e625d043913dce4af7e93243997aa4d932ec"
+    },
+    "WP272024": {
+      "url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2024/awp272024.dat",
+      "local_path": "data/raw/awp272024.dat",
+      "source_mode": "cached",
+      "bytes": 3259572,
+      "sha256": "c8a45ea1bd38ce32ecab4e292680cbaa0182b15c5728527424f18227194cb056"
+    },
+    "IBTrACS": {
+      "url": "https://www.ncei.noaa.gov/data/international-best-track-archive-for-climate-stewardship-ibtracs/v04r01/access/csv/ibtracs.WP.list.v04r01.csv",
+      "local_path": "data/raw/ibtracs.WP.list.v04r01.csv",
+      "source_mode": "cached",
+      "bytes": 113976897,
+      "sha256": "f6dd323ad940774b98c747a639a5a1c66d94a342db50423db47f6b3e8456b687"
+    }
+  }
+}
