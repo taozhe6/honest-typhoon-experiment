@@ -1,0 +1,71 @@
+{
+  "status": "frozen-before-v2-label-rate-read",
+  "qualification": [
+    "research-baseline",
+    "unvalidated"
+  ],
+  "source": {
+    "dataset": "IBTrACS Western Pacific v04r01",
+    "wind_column": "USA_WIND",
+    "wind_average_window_minutes": 1,
+    "native_unit": "kt",
+    "kt_to_ms": 0.514444
+  },
+  "season_split": {
+    "development": [
+      2001,
+      2018
+    ],
+    "sealed_validation": [
+      2019,
+      2024
+    ]
+  },
+  "base_window": {
+    "past_hours": 24,
+    "future_hours": 24,
+    "step_hours": 6,
+    "requires_exact_nine_points": true
+  },
+  "physical_domain": {
+    "minimum_initial_intensity_ms": 33.0,
+    "future_window_all_dist2land_gt_km": 0.0
+  },
+  "candidates": {
+    "horizon_hours": [
+      12,
+      18,
+      24
+    ],
+    "threshold_ms": [
+      2.5,
+      3.0,
+      4.0,
+      5.0
+    ],
+    "target_rate_interval": [
+      0.05,
+      0.15
+    ],
+    "target_rate_midpoint": 0.1,
+    "ranking": [
+      "minimum absolute distance from target midpoint",
+      "larger threshold",
+      "shorter horizon"
+    ],
+    "failure_when_none_in_target_interval": true
+  },
+  "probability_baselines": {
+    "jeffreys_alpha": 0.5,
+    "climatology_parameter_count": 1,
+    "persistence_parameter_count": 2
+  },
+  "bootstrap": {
+    "cluster": "SID",
+    "replicates": 2000,
+    "seed": 20260715,
+    "confidence": 0.95
+  },
+  "primary_score": "Brier score on sealed validation seasons"
+}
+
