@@ -1,0 +1,6 @@
+agency,landfall_events,matched_independent_truth_events,truth_coverage_fraction,bias_ms,mae_ms,rmse_ms,error_sd_ms,status,cma_home_advantage
+JTWC,108,0,0.0,,,,,unidentifiable_zero_independent_truth_coverage,False
+JMA,108,0,0.0,,,,,unidentifiable_zero_independent_truth_coverage,False
+CMA,108,0,0.0,,,,,unidentifiable_zero_independent_truth_coverage,True
+HKO,108,0,0.0,,,,,unidentifiable_zero_independent_truth_coverage,False
+KMA,108,0,0.0,,,,,unidentifiable_zero_independent_truth_coverage,False

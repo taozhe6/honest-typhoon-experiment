@@ -15,6 +15,11 @@ from ibtracs_measurement.stats import (
     neff_from_rho,
     pairwise_sd_matrix,
 )
+from ibtracs_measurement.wind_pressure import (
+    bootstrap_error_intervals,
+    cross_validate_pressure_only,
+    diagnose_wind_pressure,
+)
 
 
 class ConversionTests(unittest.TestCase):
@@ -86,6 +91,52 @@ class StatisticalTests(unittest.TestCase):
         far = x[:, names.index("distance_far_per_100km")]
         np.testing.assert_allclose(near, [1.0, 4.0, 4.0])
         np.testing.assert_allclose(far, [0.0, 0.0, 3.0])
+
+    def test_wind_pressure_diagnostic_recovers_linear_relation(self) -> None:
+        rows = []
+        for storm in range(12):
+            for step in range(5):
+                deficit = 10.0 + 5.0 * step + storm
+                rows.append(
+                    {
+                        "SID": f"S{storm:02d}",
+                        "wind_ms": 7.0 + 0.55 * deficit + (storm % 3 - 1) * 0.2,
+                        "pressure_hpa": 1010.0 - deficit,
+                        "pressure_deficit_hpa": deficit,
+                    }
+                )
+        frame = pd.DataFrame(rows)
+        result = diagnose_wind_pressure(frame, replicates=100, seed=19)
+        self.assertAlmostEqual(result["wind_from_pressure"]["slope"], 0.55, delta=0.01)
+        self.assertLess(result["wind_pressure_pearson_r"], -0.99)
+
+    def test_pressure_only_cross_validation_groups_by_storm(self) -> None:
+        rows = []
+        base_time = pd.Timestamp("2020-01-01", tz="UTC")
+        for storm in range(15):
+            for step in range(4):
+                deficit = 8.0 + 4.0 * step + storm
+                rows.append(
+                    {
+                        "SID": f"S{storm:02d}",
+                        "time": base_time + pd.Timedelta(6 * step, unit="h"),
+                        "wind_ms": 8.0 + 0.5 * deficit,
+                        "pressure_hpa": 1010.0 - deficit,
+                        "pressure_deficit_hpa": deficit,
+                    }
+                )
+        frame = pd.DataFrame(rows)
+        predictions, summary = cross_validate_pressure_only(frame, folds=5, seed=23)
+        self.assertTrue(predictions.groupby("SID")["fold"].nunique().eq(1).all())
+        self.assertLess(summary["pressure_only"]["rmse_ms"], 1e-10)
+        intervals = bootstrap_error_intervals(
+            predictions["wind_ms"].to_numpy(),
+            predictions["predicted_wind_ms"].to_numpy(),
+            predictions["SID"].to_numpy(),
+            replicates=100,
+            seed=29,
+        )
+        self.assertLess(intervals["rmse_ms"][1], 1e-9)
 
 
 class GeometryTests(unittest.TestCase):

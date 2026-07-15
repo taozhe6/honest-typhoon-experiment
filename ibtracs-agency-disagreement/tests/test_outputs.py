@@ -74,6 +74,55 @@ class OutputAuditTests(unittest.TestCase):
         image = np.asarray(Image.open(OUTPUTS / "disagreement_vs_coast.png").convert("RGB"))
         self.assertGreater(float(image.std()), 5.0)
 
+    def test_b_branch_required_deliverables_exist(self) -> None:
+        branch = OUTPUTS / "b_branch"
+        required = (
+            ROOT / "report_b_branch.md",
+            branch / "independent_truth_error_table.csv",
+            branch / "source_truth_audit.json",
+            branch / "landfall_cma_reference_error_table.csv",
+            branch / "landfall_cma_reference_correlation_point.csv",
+            branch / "wind_pressure_results.json",
+            branch / "pressure_only_cross_validation_rows.csv",
+            branch / "wind_pressure_diagnostic.png",
+            branch / "run_manifest.json",
+        )
+        self.assertTrue(all(path.exists() and path.stat().st_size > 0 for path in required))
+
+    def test_b_branch_truth_gate_and_legacy_reproduction(self) -> None:
+        branch = OUTPUTS / "b_branch"
+        truth = pd.read_csv(branch / "independent_truth_error_table.csv")
+        self.assertEqual(len(truth), 5)
+        self.assertTrue(truth["matched_independent_truth_events"].eq(0).all())
+        self.assertTrue(truth["mae_ms"].isna().all())
+        source = json.loads((branch / "source_truth_audit.json").read_text(encoding="utf-8"))
+        self.assertEqual(source["cma_2015_2024_owd_present_rows"], 0)
+        self.assertGreater(source["content_candidate_file_count"], 0)
+        self.assertEqual(source["wp_agency_content_candidate_file_count"], 0)
+        result = json.loads(
+            (branch / "wind_pressure_results.json").read_text(encoding="utf-8")
+        )
+        legacy = result["legacy_reproduction"]
+        self.assertEqual(legacy["rows"], 16225)
+        self.assertLess(abs(legacy["difference"]), 1e-12)
+
+    def test_b_branch_cross_validation_has_no_storm_leakage(self) -> None:
+        branch = OUTPUTS / "b_branch"
+        rows = pd.read_csv(branch / "pressure_only_cross_validation_rows.csv")
+        self.assertTrue(rows.groupby("SID")["fold"].nunique().eq(1).all())
+        rmse = float(np.sqrt(np.mean((rows["predicted_wind_ms"] - rows["wind_ms"]) ** 2)))
+        result = json.loads(
+            (branch / "wind_pressure_results.json").read_text(encoding="utf-8")
+        )
+        reported = result["pressure_only_cross_validation"]["pressure_only"]["rmse_ms"]
+        self.assertAlmostEqual(rmse, reported, places=12)
+
+    def test_b_branch_plot_has_nonblank_pixel_variance(self) -> None:
+        image = np.asarray(
+            Image.open(OUTPUTS / "b_branch" / "wind_pressure_diagnostic.png").convert("RGB")
+        )
+        self.assertGreater(float(image.std()), 5.0)
+
 
 if __name__ == "__main__":
     unittest.main()

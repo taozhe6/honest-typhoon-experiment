@@ -1,0 +1,163 @@
+{
+  "source_url": "https://www.ncei.noaa.gov/data/international-best-track-archive-for-climate-stewardship-ibtracs/v04r01/input/final/ibtracs_v04r01_input-bt_c20260706.tar.gz",
+  "path": "/private/tmp/ibtracs_v04r01_input-bt_c20260706.tar.gz",
+  "bytes": 61363391,
+  "sha256": "b20a2cce2bf526fc64ae04e0f7a0df1e2ecf2473c32a70076a737e59b60e36eb",
+  "archive_file_count": 14358,
+  "tier1_station_anemometer_radar_filename_candidates": [],
+  "tier1_candidate_count": 0,
+  "station_anemometer_radar_content_candidates": [
+    {
+      "member": "./bom/IDCKMSTM0S(1).csv",
+      "term_occurrences": 19,
+      "source_directory": "bom",
+      "western_north_pacific_agency_source": false
+    },
+    {
+      "member": "./bom/IDCKMSTM0S.csv",
+      "term_occurrences": 157,
+      "source_directory": "bom",
+      "western_north_pacific_agency_source": false
+    },
+    {
+      "member": "./bom/IDCKMSTM0S.csv.original_before_removing_2020-2021_season",
+      "term_occurrences": 88,
+      "source_directory": "bom",
+      "western_north_pacific_agency_source": false
+    },
+    {
+      "member": "./bom/IDCKMSTM0S.csv.to2022",
+      "term_occurrences": 110,
+      "source_directory": "bom",
+      "western_north_pacific_agency_source": false
+    },
+    {
+      "member": "./bom/IDCKMSTM0S_7_30_24.csv",
+      "term_occurrences": 130,
+      "source_directory": "bom",
+      "western_north_pacific_agency_source": false
+    },
+    {
+      "member": "./bom/IDCKMSTM0S.old.csv",
+      "term_occurrences": 130,
+      "source_directory": "bom",
+      "western_north_pacific_agency_source": false
+    },
+    {
+      "member": "./nadi/orig-files/RSMC Nadi BT Data 2007_8.txt",
+      "term_occurrences": 1,
+      "source_directory": "nadi",
+      "western_north_pacific_agency_source": false
+    },
+    {
+      "member": "./neumann/tracks.sh",
+      "term_occurrences": 5,
+      "source_directory": "neumann",
+      "western_north_pacific_agency_source": false
+    },
+    {
+      "member": "./reunion/json_files/B20012002_6.DINA.json",
+      "term_occurrences": 3,
+      "source_directory": "reunion",
+      "western_north_pacific_agency_source": false
+    },
+    {
+      "member": "./wellington/TC_BT_2006-current.csv.through_2020-2021_season",
+      "term_occurrences": 1,
+      "source_directory": "wellington",
+      "western_north_pacific_agency_source": false
+    },
+    {
+      "member": "./wellington/TC_BT_2006-current.csv.through_2019-2020_season",
+      "term_occurrences": 1,
+      "source_directory": "wellington",
+      "western_north_pacific_agency_source": false
+    },
+    {
+      "member": "./wellington/TC_BT_2006-current.csv.through_2021-2022_season",
+      "term_occurrences": 1,
+      "source_directory": "wellington",
+      "western_north_pacific_agency_source": false
+    },
+    {
+      "member": "./wellington/TC_BT_2006-current.csv",
+      "term_occurrences": 1,
+      "source_directory": "wellington",
+      "western_north_pacific_agency_source": false
+    },
+    {
+      "member": "./wellington/TC_BT_2006-current.csv.through_2022-2023_season",
+      "term_occurrences": 1,
+      "source_directory": "wellington",
+      "western_north_pacific_agency_source": false
+    }
+  ],
+  "content_candidate_file_count": 14,
+  "content_term_occurrence_count": 648,
+  "wp_agency_content_candidate_file_count": 0,
+  "cma_annual_2015_2024": {
+    "2015": {
+      "files": 1,
+      "data_rows": 1141,
+      "owd_present_rows": 0,
+      "positive_owd_rows": 0
+    },
+    "2016": {
+      "files": 1,
+      "data_rows": 725,
+      "owd_present_rows": 0,
+      "positive_owd_rows": 0
+    },
+    "2017": {
+      "files": 1,
+      "data_rows": 827,
+      "owd_present_rows": 0,
+      "positive_owd_rows": 0
+    },
+    "2018": {
+      "files": 1,
+      "data_rows": 1251,
+      "owd_present_rows": 0,
+      "positive_owd_rows": 0
+    },
+    "2019": {
+      "files": 1,
+      "data_rows": 1003,
+      "owd_present_rows": 0,
+      "positive_owd_rows": 0
+    },
+    "2020": {
+      "files": 1,
+      "data_rows": 733,
+      "owd_present_rows": 0,
+      "positive_owd_rows": 0
+    },
+    "2021": {
+      "files": 1,
+      "data_rows": 926,
+      "owd_present_rows": 0,
+      "positive_owd_rows": 0
+    },
+    "2022": {
+      "files": 1,
+      "data_rows": 741,
+      "owd_present_rows": 0,
+      "positive_owd_rows": 0
+    },
+    "2023": {
+      "files": 1,
+      "data_rows": 789,
+      "owd_present_rows": 0,
+      "positive_owd_rows": 0
+    },
+    "2024": {
+      "files": 1,
+      "data_rows": 877,
+      "owd_present_rows": 0,
+      "positive_owd_rows": 0
+    }
+  },
+  "cma_2015_2024_data_rows": 9013,
+  "cma_2015_2024_owd_present_rows": 0,
+  "cma_2015_2024_positive_owd_rows": 0
+}
