@@ -8,6 +8,8 @@
 
 [支线 C 发布报告](report_c_branch.md)已完成：IBTrACS 自动波形事件、风暴分组折外 Brier、公开 CE/ERC 资源审计、Kuo et al. 62 行 CE formation 表，以及巴威 CyclObs `V·R` 时序。主结果证伪了持续性概率增益；巴威 SAR 支持一个观测双环时段。
 
+[巴威一手覆盖纠错报告](report_c_coverage_correction.md)已经撤回旧版 ERC 数量否定：CyclObs 确证 1 个连续双环风结构观测时段；7 月 4 日和 7 日两个二手待核窗口不可判定；TC PRIMED WP09 在审计时无 preliminary 文件。二手叙述与一手 tally 完全分栏。
+
 ```bash
 cd "/Users/taozhe/Documents/New project/typhoon"
 markov/.venv/bin/python markov/scripts/run_c_branch.py

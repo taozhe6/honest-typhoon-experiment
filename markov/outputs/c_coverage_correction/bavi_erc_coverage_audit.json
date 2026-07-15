@@ -1,0 +1,447 @@
+{
+  "authoritative_forecast": false,
+  "evidence_rule": "Primary observations can confirm scene-level structure or remain indeterminate. Physical absence requires sufficient sampling and a validated observation operator. Secondary narrative is a lead only.",
+  "generated_at_utc": "2026-07-15T12:51:03.292929+00:00",
+  "primary_evidence": {
+    "cyclobs": {
+      "evidence_class": "primary_sar_wind_structure_observation",
+      "first_scene_utc": "2026-07-02T07:25:53+00:00",
+      "last_scene_utc": "2026-07-11T09:52:31+00:00",
+      "observed_double_ring_intervals": [
+        {
+          "end_utc": "2026-07-09T21:27:40+00:00",
+          "evidence_class": "primary_observed_double_ring_interval",
+          "interpretation": "At least one double-ring wind-structure interval is observed; unobserved gaps prevent ERC-cycle boundary counting.",
+          "observed_times_utc": [
+            "2026-07-08T09:19:41+00:00",
+            "2026-07-08T21:14:23+00:00",
+            "2026-07-09T09:26:47+00:00",
+            "2026-07-09T21:27:40+00:00"
+          ],
+          "positive_scene_count": 4,
+          "scene_ids": [
+            "rcm1-sc50mc-owi-ca-20260708t091941-20260708t092055-00003-xxxxx_sw_wp092026_cyclone_polar.nc",
+            "rcm1-sc50ma-owi-ca-20260708t211423-20260708t211534-00003-xxxxx_sw_wp092026_cyclone_polar.nc",
+            "rcm1-sc50ma-owi-ca-20260709t092647-20260709t093203-00003-xxxxx_sw_wp092026_cyclone_polar.nc",
+            "s1d-ew-owi-ca-20260709t212740-20260709t212843-000003-00668F_sw_wp092026_cyclone_polar.nc"
+          ],
+          "start_utc": "2026-07-08T09:19:41+00:00"
+        }
+      ],
+      "passes": [
+        {
+          "center_latitude_deg": 11.886950492858887,
+          "center_longitude_deg": 158.79107666015625,
+          "center_quality_flag": 1.0,
+          "dual_ring_structure_observed": false,
+          "evidence_class": "primary_structurally_eligible_no_operator_trigger",
+          "eye_in_acquisition": true,
+          "ineligibility_reasons": [],
+          "inner_peak_prominence_ms": null,
+          "inner_peak_radius_km": null,
+          "mission": "RADARSAT Constellation 3",
+          "outer_peak_prominence_ms": null,
+          "outer_peak_radius_km": null,
+          "quality_eligible": true,
+          "scene_id": "rcm3-sclna-owi-ca-20260702t072553-20260702t072729-00003-xxxxx_sw_wp092026_cyclone_polar.nc",
+          "source_sha256": "7ba092fd29a49e4dd1a9994edd8d8766eac6bc1bb9990a4e40f8e000b8f887b8",
+          "valid_at_utc": "2026-07-02T07:25:53+00:00"
+        },
+        {
+          "center_latitude_deg": 12.561976432800293,
+          "center_longitude_deg": 156.2108154296875,
+          "center_quality_flag": 0.0,
+          "dual_ring_structure_observed": false,
+          "evidence_class": "primary_structurally_eligible_no_operator_trigger",
+          "eye_in_acquisition": true,
+          "ineligibility_reasons": [],
+          "inner_peak_prominence_ms": null,
+          "inner_peak_radius_km": null,
+          "mission": "RADARSAT Constellation 3",
+          "outer_peak_prominence_ms": null,
+          "outer_peak_radius_km": null,
+          "quality_eligible": true,
+          "scene_id": "rcm3-sclna-owi-ca-20260702t192355-20260702t192447-00003-xxxxx_sw_wp092026_cyclone_polar.nc",
+          "source_sha256": "e2a274dbbfaa280d20324382361722dce16168fcdfc8a28f286398dae0128363",
+          "valid_at_utc": "2026-07-02T19:23:55+00:00"
+        },
+        {
+          "center_latitude_deg": 12.672112464904785,
+          "center_longitude_deg": 152.00889587402344,
+          "center_quality_flag": 0.0,
+          "dual_ring_structure_observed": false,
+          "evidence_class": "primary_structurally_eligible_no_operator_trigger",
+          "eye_in_acquisition": true,
+          "ineligibility_reasons": [],
+          "inner_peak_prominence_ms": null,
+          "inner_peak_radius_km": null,
+          "mission": "RADARSAT Constellation 3",
+          "outer_peak_prominence_ms": null,
+          "outer_peak_radius_km": null,
+          "quality_eligible": true,
+          "scene_id": "rcm3-sclnd-owi-ca-20260703t193147-20260703t193257-00003-xxxxx_sw_wp092026_cyclone_polar.nc",
+          "source_sha256": "6bad25ab844fe079e189d1fae8e76b6a5ff094adeaf176a223844e190ba05685",
+          "valid_at_utc": "2026-07-03T19:31:47+00:00"
+        },
+        {
+          "center_latitude_deg": 12.719483375549316,
+          "center_longitude_deg": 149.60208129882812,
+          "center_quality_flag": 1.899999976158142,
+          "dual_ring_structure_observed": false,
+          "evidence_class": "primary_indeterminate_quality_or_spatial_coverage",
+          "eye_in_acquisition": false,
+          "ineligibility_reasons": [
+            "eye_not_in_acquisition"
+          ],
+          "inner_peak_prominence_ms": null,
+          "inner_peak_radius_km": null,
+          "mission": "RADARSAT Constellation 3",
+          "outer_peak_prominence_ms": null,
+          "outer_peak_radius_km": null,
+          "quality_eligible": false,
+          "scene_id": "rcm3-sclnd-owi-ca-20260704t193944-20260704t194054-00003-xxxxx_sw_wp092026_cyclone_polar.nc",
+          "source_sha256": "426fa465d6303b076c90c52f0e49536c3ce984bfadfc5e42f9b06c1eebdd9e47",
+          "valid_at_utc": "2026-07-04T19:39:44+00:00"
+        },
+        {
+          "center_latitude_deg": 13.527851104736328,
+          "center_longitude_deg": 147.68960571289062,
+          "center_quality_flag": 0.5,
+          "dual_ring_structure_observed": false,
+          "evidence_class": "primary_structurally_eligible_no_operator_trigger",
+          "eye_in_acquisition": true,
+          "ineligibility_reasons": [],
+          "inner_peak_prominence_ms": null,
+          "inner_peak_radius_km": null,
+          "mission": "SENTINEL-1 D",
+          "outer_peak_prominence_ms": null,
+          "outer_peak_radius_km": null,
+          "quality_eligible": true,
+          "scene_id": "s1d-ew-owi-ca-20260705t081033-20260705t081136-000003-006459_sw_wp092026_cyclone_polar.nc",
+          "source_sha256": "8f932b9ba7d8035f6396c1c7e13a35f22e6c393925983b15265080ef9de6227f",
+          "valid_at_utc": "2026-07-05T08:10:33+00:00"
+        },
+        {
+          "center_latitude_deg": 13.537541389465332,
+          "center_longitude_deg": 147.67947387695312,
+          "center_quality_flag": 0.6000000238418579,
+          "dual_ring_structure_observed": false,
+          "evidence_class": "primary_structurally_eligible_no_operator_trigger",
+          "eye_in_acquisition": true,
+          "ineligibility_reasons": [],
+          "inner_peak_prominence_ms": null,
+          "inner_peak_radius_km": null,
+          "mission": "RADARSAT Constellation 2",
+          "outer_peak_prominence_ms": null,
+          "outer_peak_radius_km": null,
+          "quality_eligible": true,
+          "scene_id": "rcm2-sclnc-owi-ca-20260705t082237-20260705t082342-00003-xxxxx_sw_wp092026_cyclone_polar.nc",
+          "source_sha256": "50f71ef6728a7449ebe7f870c35da699c04fd87d970f9be75554b10f8e7ed93c",
+          "valid_at_utc": "2026-07-05T08:22:37+00:00"
+        },
+        {
+          "center_latitude_deg": 15.05228328704834,
+          "center_longitude_deg": 143.4355926513672,
+          "center_quality_flag": 0.0,
+          "dual_ring_structure_observed": false,
+          "evidence_class": "primary_structurally_eligible_no_operator_trigger",
+          "eye_in_acquisition": true,
+          "ineligibility_reasons": [],
+          "inner_peak_prominence_ms": null,
+          "inner_peak_radius_km": null,
+          "mission": "RADARSAT Constellation 2",
+          "outer_peak_prominence_ms": null,
+          "outer_peak_radius_km": null,
+          "quality_eligible": true,
+          "scene_id": "rcm2-sclna-owi-ca-20260706t083129-20260706t083215-00003-xxxxx_sw_wp092026_cyclone_polar.nc",
+          "source_sha256": "989c313693dffa04ee8792048425884f80b9f37dd785bdd59347f01c06ddde4b",
+          "valid_at_utc": "2026-07-06T08:31:29+00:00"
+        },
+        {
+          "center_latitude_deg": 15.846488952636719,
+          "center_longitude_deg": 140.546142578125,
+          "center_quality_flag": 0.699999988079071,
+          "dual_ring_structure_observed": false,
+          "evidence_class": "primary_structurally_eligible_no_operator_trigger",
+          "eye_in_acquisition": true,
+          "ineligibility_reasons": [],
+          "inner_peak_prominence_ms": null,
+          "inner_peak_radius_km": null,
+          "mission": "RADARSAT Constellation 2",
+          "outer_peak_prominence_ms": null,
+          "outer_peak_radius_km": null,
+          "quality_eligible": true,
+          "scene_id": "rcm2-sclnc-owi-ca-20260706t202705-20260706t202818-00003-xxxxx_sw_wp092026_cyclone_polar.nc",
+          "source_sha256": "91dac658eae136793155f4325ea0204b74838a2bc64bf28c12be7bdddecd8c80",
+          "valid_at_utc": "2026-07-06T20:27:05+00:00"
+        },
+        {
+          "center_latitude_deg": 16.732707977294922,
+          "center_longitude_deg": 134.822509765625,
+          "center_quality_flag": 2.0,
+          "dual_ring_structure_observed": false,
+          "evidence_class": "primary_indeterminate_quality_or_spatial_coverage",
+          "eye_in_acquisition": true,
+          "ineligibility_reasons": [
+            "center_quality_not_below_threshold"
+          ],
+          "inner_peak_prominence_ms": null,
+          "inner_peak_radius_km": null,
+          "mission": "SENTINEL-1 C",
+          "outer_peak_prominence_ms": null,
+          "outer_peak_radius_km": null,
+          "quality_eligible": false,
+          "scene_id": "s1c-ew-owi-ca-20260707t205532-20260707t205636-000003-010B4B_sw_wp092026_cyclone_polar.nc",
+          "source_sha256": "a9fd24af770650a89ebf743a25850c02f04d5e6725dccf08ffad229d7427a545",
+          "valid_at_utc": "2026-07-07T20:55:32+00:00"
+        },
+        {
+          "center_latitude_deg": 17.03367042541504,
+          "center_longitude_deg": 132.9807891845703,
+          "center_quality_flag": 3.200000047683716,
+          "dual_ring_structure_observed": false,
+          "evidence_class": "primary_indeterminate_quality_or_spatial_coverage",
+          "eye_in_acquisition": false,
+          "ineligibility_reasons": [
+            "eye_not_in_acquisition",
+            "center_quality_not_below_threshold"
+          ],
+          "inner_peak_prominence_ms": null,
+          "inner_peak_radius_km": null,
+          "mission": "RADARSAT Constellation 1",
+          "outer_peak_prominence_ms": null,
+          "outer_peak_radius_km": null,
+          "quality_eligible": false,
+          "scene_id": "rcm1-sc50ma-owi-ca-20260707t210637-20260707t210746-00003-xxxxx_sw_wp092026_cyclone_polar.nc",
+          "source_sha256": "5198e2433b9caf1640be0e1316dd853c0080c593b75a9b9b8da9ef5ba0a99b65",
+          "valid_at_utc": "2026-07-07T21:06:37+00:00"
+        },
+        {
+          "center_latitude_deg": 17.17641830444336,
+          "center_longitude_deg": 132.43173217773438,
+          "center_quality_flag": 1.2999999523162842,
+          "dual_ring_structure_observed": true,
+          "evidence_class": "primary_double_ring_wind_structure",
+          "eye_in_acquisition": true,
+          "ineligibility_reasons": [],
+          "inner_peak_prominence_ms": 3.384479,
+          "inner_peak_radius_km": 37.0,
+          "mission": "RADARSAT Constellation 1",
+          "outer_peak_prominence_ms": 0.782805,
+          "outer_peak_radius_km": 141.0,
+          "quality_eligible": true,
+          "scene_id": "rcm1-sc50mc-owi-ca-20260708t091941-20260708t092055-00003-xxxxx_sw_wp092026_cyclone_polar.nc",
+          "source_sha256": "7dced9ede920fc0289abf5e61db89fd4bcf55ca46c37d2edbd786030734781ca",
+          "valid_at_utc": "2026-07-08T09:19:41+00:00"
+        },
+        {
+          "center_latitude_deg": 17.133140563964844,
+          "center_longitude_deg": 131.9364776611328,
+          "center_quality_flag": 2.700000047683716,
+          "dual_ring_structure_observed": false,
+          "evidence_class": "primary_indeterminate_quality_or_spatial_coverage",
+          "eye_in_acquisition": false,
+          "ineligibility_reasons": [
+            "eye_not_in_acquisition",
+            "center_quality_not_below_threshold"
+          ],
+          "inner_peak_prominence_ms": null,
+          "inner_peak_radius_km": null,
+          "mission": "SENTINEL-1 C",
+          "outer_peak_prominence_ms": null,
+          "outer_peak_radius_km": null,
+          "quality_eligible": false,
+          "scene_id": "s1c-ew-owi-ca-20260708t092510-20260708t092613-000003-010B8C_sw_wp092026_cyclone_polar.nc",
+          "source_sha256": "0daeae67dcd8077703cebd964eea286bc5e34e96e7e31eeee35d27b6134df890",
+          "valid_at_utc": "2026-07-08T09:25:10+00:00"
+        },
+        {
+          "center_latitude_deg": 17.885154724121094,
+          "center_longitude_deg": 130.40362548828125,
+          "center_quality_flag": 1.0,
+          "dual_ring_structure_observed": true,
+          "evidence_class": "primary_double_ring_wind_structure",
+          "eye_in_acquisition": true,
+          "ineligibility_reasons": [],
+          "inner_peak_prominence_ms": 2.126067,
+          "inner_peak_radius_km": 45.0,
+          "mission": "RADARSAT Constellation 1",
+          "outer_peak_prominence_ms": 2.115232,
+          "outer_peak_radius_km": 106.0,
+          "quality_eligible": true,
+          "scene_id": "rcm1-sc50ma-owi-ca-20260708t211423-20260708t211534-00003-xxxxx_sw_wp092026_cyclone_polar.nc",
+          "source_sha256": "0b1f35bd44405c5b157a0c957500aa18d8b2d7c5dccf2c68d52fd9a11275feb3",
+          "valid_at_utc": "2026-07-08T21:14:23+00:00"
+        },
+        {
+          "center_latitude_deg": 18.8486270904541,
+          "center_longitude_deg": 129.0580596923828,
+          "center_quality_flag": 0.0,
+          "dual_ring_structure_observed": true,
+          "evidence_class": "primary_double_ring_wind_structure",
+          "eye_in_acquisition": true,
+          "ineligibility_reasons": [],
+          "inner_peak_prominence_ms": 1.676842,
+          "inner_peak_radius_km": 43.0,
+          "mission": "RADARSAT Constellation 1",
+          "outer_peak_prominence_ms": 1.39232,
+          "outer_peak_radius_km": 104.0,
+          "quality_eligible": true,
+          "scene_id": "rcm1-sc50ma-owi-ca-20260709t092647-20260709t093203-00003-xxxxx_sw_wp092026_cyclone_polar.nc",
+          "source_sha256": "7d2b69996308a531cd777af1921d59117080f6388208f430ef5e1becb21eab50",
+          "valid_at_utc": "2026-07-09T09:26:47+00:00"
+        },
+        {
+          "center_latitude_deg": 20.63089942932129,
+          "center_longitude_deg": 127.75904846191406,
+          "center_quality_flag": 0.0,
+          "dual_ring_structure_observed": true,
+          "evidence_class": "primary_double_ring_wind_structure",
+          "eye_in_acquisition": true,
+          "ineligibility_reasons": [],
+          "inner_peak_prominence_ms": 1.371371,
+          "inner_peak_radius_km": 37.0,
+          "mission": "SENTINEL-1 D",
+          "outer_peak_prominence_ms": 0.968916,
+          "outer_peak_radius_km": 123.0,
+          "quality_eligible": true,
+          "scene_id": "s1d-ew-owi-ca-20260709t212740-20260709t212843-000003-00668F_sw_wp092026_cyclone_polar.nc",
+          "source_sha256": "e3edf81281d5fd26ca41e13f1c19d86d3c48700e012f489d68921f5e956da153",
+          "valid_at_utc": "2026-07-09T21:27:40+00:00"
+        },
+        {
+          "center_latitude_deg": 27.21016502380371,
+          "center_longitude_deg": 122.11211395263672,
+          "center_quality_flag": 1.7999999523162842,
+          "dual_ring_structure_observed": false,
+          "evidence_class": "primary_structurally_eligible_no_operator_trigger",
+          "eye_in_acquisition": true,
+          "ineligibility_reasons": [],
+          "inner_peak_prominence_ms": null,
+          "inner_peak_radius_km": null,
+          "mission": "SENTINEL-1 C",
+          "outer_peak_prominence_ms": null,
+          "outer_peak_radius_km": null,
+          "quality_eligible": true,
+          "scene_id": "s1c-ew-owi-ca-20260711t095231-20260711t095335-000003-010D12_sw_wp092026_cyclone_polar.nc",
+          "source_sha256": "29cc4f8881595592c4a4b20812bad69e5509e6bbd552e802bd816d9e7cf228c0",
+          "valid_at_utc": "2026-07-11T09:52:31+00:00"
+        }
+      ],
+      "quality_eligible_scene_count": 12,
+      "scene_count": 16
+    },
+    "narrative_window_audit": [
+      {
+        "double_ring_positive_scene_count": 0,
+        "eligible_scene_ids": [],
+        "end_utc": "2026-07-05T00:00:00Z",
+        "evidence_class": "secondary_narrative_hypothesis_window",
+        "id": "narrative_window_jul04",
+        "maximum_quality_eligible_sampling_gap_hours": 24.0,
+        "narrative": "Secondary sources describe an ERC on July 4.",
+        "positive_scene_ids": [],
+        "primary_verdict": "primary_indeterminate",
+        "quality_eligible_pass_count": 0,
+        "start_utc": "2026-07-04T00:00:00Z",
+        "sufficient_to_assert_physical_absence": false,
+        "temporal_pass_count": 1,
+        "temporal_scene_ids": [
+          "rcm3-sclnd-owi-ca-20260704t193944-20260704t194054-00003-xxxxx_sw_wp092026_cyclone_polar.nc"
+        ]
+      },
+      {
+        "double_ring_positive_scene_count": 0,
+        "eligible_scene_ids": [],
+        "end_utc": "2026-07-08T00:00:00Z",
+        "evidence_class": "secondary_narrative_hypothesis_window",
+        "id": "narrative_window_jul07",
+        "maximum_quality_eligible_sampling_gap_hours": 24.0,
+        "narrative": "Secondary sources describe another ERC on July 7.",
+        "positive_scene_ids": [],
+        "primary_verdict": "primary_indeterminate",
+        "quality_eligible_pass_count": 0,
+        "start_utc": "2026-07-07T00:00:00Z",
+        "sufficient_to_assert_physical_absence": false,
+        "temporal_pass_count": 2,
+        "temporal_scene_ids": [
+          "s1c-ew-owi-ca-20260707t205532-20260707t205636-000003-010B4B_sw_wp092026_cyclone_polar.nc",
+          "rcm1-sc50ma-owi-ca-20260707t210637-20260707t210746-00003-xxxxx_sw_wp092026_cyclone_polar.nc"
+        ]
+      },
+      {
+        "double_ring_positive_scene_count": 2,
+        "eligible_scene_ids": [
+          "rcm1-sc50ma-owi-ca-20260709t092647-20260709t093203-00003-xxxxx_sw_wp092026_cyclone_polar.nc",
+          "s1d-ew-owi-ca-20260709t212740-20260709t212843-000003-00668F_sw_wp092026_cyclone_polar.nc"
+        ],
+        "end_utc": "2026-07-10T00:00:00Z",
+        "evidence_class": "secondary_narrative_hypothesis_window",
+        "id": "narrative_window_jul09",
+        "maximum_quality_eligible_sampling_gap_hours": 12.014722222222222,
+        "narrative": "Secondary sources describe a further ERC on July 9.",
+        "positive_scene_ids": [
+          "rcm1-sc50ma-owi-ca-20260709t092647-20260709t093203-00003-xxxxx_sw_wp092026_cyclone_polar.nc",
+          "s1d-ew-owi-ca-20260709t212740-20260709t212843-000003-00668F_sw_wp092026_cyclone_polar.nc"
+        ],
+        "primary_verdict": "primary_double_ring_structure_observed_in_window",
+        "quality_eligible_pass_count": 2,
+        "start_utc": "2026-07-09T00:00:00Z",
+        "sufficient_to_assert_physical_absence": false,
+        "temporal_pass_count": 2,
+        "temporal_scene_ids": [
+          "rcm1-sc50ma-owi-ca-20260709t092647-20260709t093203-00003-xxxxx_sw_wp092026_cyclone_polar.nc",
+          "s1d-ew-owi-ca-20260709t212740-20260709t212843-000003-00668F_sw_wp092026_cyclone_polar.nc"
+        ]
+      }
+    ],
+    "required_tally": {
+      "confirmed_primary_double_ring_intervals": 1,
+      "indeterminate_narrative_windows": 2,
+      "narrative_windows_without_primary_temporal_coverage": 0
+    },
+    "tc_primed": {
+      "coverage_status": "no_wp09_primary_files_at_retrieval_time",
+      "evidence_class_if_files_exist": "primary_passive_microwave_observation",
+      "file_count": 0,
+      "keys": [],
+      "source_evidence": {
+        "response_bytes": 285,
+        "response_sha256": "a951283672c0101faffc36502f58b46be459839d1d0a3dbd96c71b9a6c386164",
+        "retrieved_at_utc": "2026-07-15T12:51:03.292823+00:00",
+        "url": "https://noaa-nesdis-tcprimed-pds.s3.amazonaws.com/?list-type=2&prefix=v01r01%2Fpreliminary%2F2026%2FWP%2F09%2F&max-keys=1000"
+      },
+      "storm_prefix": "v01r01/preliminary/2026/WP/09/"
+    }
+  },
+  "report_id": "bavi-primary-erc-coverage-correction-v1",
+  "secondary_narrative": {
+    "other_sources": [
+      {
+        "name": "Wikipedia Typhoon Bavi (2026)",
+        "role": "secondary_narrative_cross_check_only",
+        "url": "https://en.wikipedia.org/wiki/Typhoon_Bavi_(2026)"
+      },
+      {
+        "name": "CIMSS Satellite Blog",
+        "role": "secondary_imagery_context_without_project_verified_erc_count",
+        "url": "https://cimss.ssec.wisc.edu/satellite-blog/archives/71044"
+      }
+    ],
+    "role": "hypothesis_windows_only; excluded from primary tally",
+    "source": {
+      "claim_scope": "Narrative calls July 4, July 7, and July 9, 2026 eyewall replacement cycles and describes a GPM double eyewall at 12:27 UTC July 10.",
+      "evidence_class": "secondary_narrative_not_project_verified_microwave_truth",
+      "name": "NASA Scientific Visualization Studio",
+      "url": "https://svs.gsfc.nasa.gov/5662"
+    }
+  },
+  "source_integrity": {
+    "config_path": "/Users/taozhe/Documents/New project/typhoon/markov/config/bavi_erc_coverage_audit.json",
+    "config_sha256": "fbd16ca8b7812d02203814e34c8e4eea0cef0c44fd884902925f2328926f4e74",
+    "cyclobs_input_path": "/Users/taozhe/Documents/New project/typhoon/markov/outputs/bavi_2026_cyclobs_structure_audit.json",
+    "cyclobs_input_sha256": "a15a45ce0d906e58755e97ed48d14d2244fd0371b2242508a37920300df6f6e6",
+    "implementation_sha256": "a10b45ef645303b69330c25e78417ec07c4ffaaa363aa56e12a75d1a1e9723d8"
+  },
+  "status": "retrospective-primary-coverage-audit"
+}

@@ -1,0 +1,18 @@
+{
+  "bavi_erc_coverage_audit.json": {
+    "bytes": 21750,
+    "sha256": "2dd026728785eef3501281203b9b5c7fd94c459a0e2e503ee5343ef06604180b"
+  },
+  "bavi_primary_coverage_timeline.png": {
+    "bytes": 71621,
+    "sha256": "cb2bf065918ce5b6c862cf97392c23f3418815f6c160262a76e72b8f4c0ac3fa"
+  },
+  "cyclobs_scene_evidence.csv": {
+    "bytes": 5733,
+    "sha256": "17f64299c3ae1ea6927847cba14608ea2cab801e2d3f1e79ce7851b12230508c"
+  },
+  "narrative_window_coverage.csv": {
+    "bytes": 1787,
+    "sha256": "7bbb8ee4f21c1d211f61d5ea3cc92a62258a6db16b54d81720a52f935b74fcb2"
+  }
+}

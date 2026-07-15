@@ -1,5 +1,7 @@
 # 支线 C 预注册：零人工标签的强度波动事件
 
+> **发布后纠错（2026-07-15）：** 本文件第 10 节原判据把“只观测到一个连续双环时段”解释为对完整 ERC 周期数的否定。该判据已撤销，仅保留为历史预注册记录。当前证据规则与一手裁决见 [c-coverage-correction-protocol.md](c-coverage-correction-protocol.md) 和 [覆盖纠错报告](../report_c_coverage_correction.md)。
+
 预注册日期：2026-07-15。
 
 状态：`preregistered-before-waveform-analysis`。本文提交后才运行自动事件标签、基准率、折外概率和 Brier score。

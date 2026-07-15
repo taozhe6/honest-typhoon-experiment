@@ -54,7 +54,8 @@
     "evidence_class": "primary_sar_wind_structure_observation",
     "eye_required": true,
     "maximum_center_quality_exclusive": 2.0,
-    "maximum_sufficient_sampling_gap_hours": 6.0
+    "maximum_sufficient_sampling_gap_hours": 6.0,
+    "validated_erc_detection_rate_available": false
   },
   "tc_primed": {
     "bucket_url": "https://noaa-nesdis-tcprimed-pds.s3.amazonaws.com",

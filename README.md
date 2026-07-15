@@ -41,5 +41,13 @@
 - [A 路径发布报告](path-track-benchmark/report_round_v2.md)
 - [B 登陆强度与风压报告](ibtracs-agency-disagreement/report_b_branch.md)
 - [C 零人工标签与 ERC 资源报告](markov/report_c_branch.md)
+- [C 一手微波覆盖纠错报告](markov/report_c_coverage_correction.md)
 - [FAST 固定常量敏感性报告](markov/report_global_sensitivity.md)
 - [统一验证脚本](scripts/verify_all.sh)
+
+## 证据宪法
+
+- 一手观测可以确证景级结构，也可以给出不可判定。
+- 物理缺席结论必须先证明时间覆盖、空间覆盖、采样密度和观测算子足以看见目标现象。
+- 二手叙述只提供待核线索，单独列示，不进入一手确证或否定 tally。
+- 连续双环观测时段属于采样记录；完整 ERC 周期数需要形成、收缩、内环消失和周期边界证据。
