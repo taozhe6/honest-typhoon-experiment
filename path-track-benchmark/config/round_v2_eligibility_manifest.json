@@ -1,0 +1,824 @@
+{
+  "generated_at_utc": "2026-07-15T11:02:44.885713+00:00",
+  "status": "eligibility-frozen-before-round-v2-errors",
+  "selection_rule": {
+    "seasons": [
+      2022,
+      2023,
+      2024
+    ],
+    "basin": "WP",
+    "atcf_serial_range": "01-49",
+    "track_type": "main",
+    "peak_field": "CMA_WIND",
+    "peak_native_window": "2-minute",
+    "knot_to_ms": 0.5144444444444445,
+    "strong_typhoon_threshold_ms": 41.5,
+    "coverage_aids": [
+      "CMC",
+      "NGX"
+    ],
+    "required_common_lead_hours": 72,
+    "coverage_requires_same_cycle": true,
+    "reads_track_error": false
+  },
+  "counts": {
+    "wp_atcf_storms_2022_2024": 75,
+    "missing_cma_peak": 1,
+    "strong_typhoon_intensity_candidates": 27,
+    "qualified_storms": 26
+  },
+  "sources": {
+    "IBTrACS": {
+      "url": "https://www.ncei.noaa.gov/data/international-best-track-archive-for-climate-stewardship-ibtracs/v04r01/access/csv/ibtracs.WP.list.v04r01.csv",
+      "local_path": "data/raw/ibtracs.WP.list.v04r01.csv",
+      "source_mode": "cached",
+      "bytes": 113976897,
+      "sha256": "f6dd323ad940774b98c747a639a5a1c66d94a342db50423db47f6b3e8456b687"
+    },
+    "adecks": {
+      "WP012024": {
+        "url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2024/awp012024.dat",
+        "local_path": "data/raw/awp012024.dat",
+        "source_mode": "download",
+        "bytes": 4957916,
+        "sha256": "0dfd6a5c7cb1f850dda9c88c07abffbf11a26228a4a4599d0727d65c63081c19"
+      },
+      "WP022022": {
+        "url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2022/awp022022.dat",
+        "local_path": "data/raw/awp022022.dat",
+        "source_mode": "download",
+        "bytes": 10375054,
+        "sha256": "ee11a82b5220f7b5b75dfebd3d558fe465c44abc74f6382fc08115ceac35e581"
+      },
+      "WP022023": {
+        "url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2023/awp022023.dat",
+        "local_path": "data/raw/awp022023.dat",
+        "source_mode": "download",
+        "bytes": 18051977,
+        "sha256": "34b9795178bf8702348fb6ac958ed6a21c308b6d5aee3d74fbfe7ce9a0efdab5"
+      },
+      "WP032023": {
+        "url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2023/awp032023.dat",
+        "local_path": "data/raw/awp032023.dat",
+        "source_mode": "download",
+        "bytes": 7542021,
+        "sha256": "461810d80cb4aff9b70504ec63758f71bd96f97f5c9152dca02b3dcc3813757c"
+      },
+      "WP052023": {
+        "url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2023/awp052023.dat",
+        "local_path": "data/raw/awp052023.dat",
+        "source_mode": "cached",
+        "bytes": 7501743,
+        "sha256": "40ea457944234606ee6eb84148b23c6c39fcf9dfe2fc6dbbe2620b0439686dad"
+      },
+      "WP052024": {
+        "url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2024/awp052024.dat",
+        "local_path": "data/raw/awp052024.dat",
+        "source_mode": "cached",
+        "bytes": 5566413,
+        "sha256": "a111440f783f18648dcb34b5bb702856f0283a1d58fe375086fea33e9a438827"
+      },
+      "WP062023": {
+        "url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2023/awp062023.dat",
+        "local_path": "data/raw/awp062023.dat",
+        "source_mode": "download",
+        "bytes": 17976562,
+        "sha256": "458258ba19c42cbbf3deebd2016f6c41c42e96a86c0464d6c2f0690239599eeb"
+      },
+      "WP072023": {
+        "url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2023/awp072023.dat",
+        "local_path": "data/raw/awp072023.dat",
+        "source_mode": "download",
+        "bytes": 9533768,
+        "sha256": "9aa79103be2f63c6ea2eaab7e0d475b1c7d802e04f29c3f15f09dc6c8e0780a6"
+      },
+      "WP082024": {
+        "url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2024/awp082024.dat",
+        "local_path": "data/raw/awp082024.dat",
+        "source_mode": "download",
+        "bytes": 6976013,
+        "sha256": "043c3d737131b2d841bdf89efbb19a02dcb7e5d947dc17d1348843560557edaa"
+      },
+      "WP092023": {
+        "url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2023/awp092023.dat",
+        "local_path": "data/raw/awp092023.dat",
+        "source_mode": "download",
+        "bytes": 11132888,
+        "sha256": "e1b19d951d362125329532f927a73b5771250d00e1cb3c04891c1c1b7b9fa049"
+      },
+      "WP102023": {
+        "url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2023/awp102023.dat",
+        "local_path": "data/raw/awp102023.dat",
+        "source_mode": "download",
+        "bytes": 6893797,
+        "sha256": "ca6dfde7106d71a9d3002794ce67e7ba5406efcff8e6e3719c438a9e1d79f864"
+      },
+      "WP112022": {
+        "url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2022/awp112022.dat",
+        "local_path": "data/raw/awp112022.dat",
+        "source_mode": "download",
+        "bytes": 1609716,
+        "sha256": "9df4065b2c3909e340fe86e15db738312eb5d8eb6e175f2b1e3402c1498d812a"
+      },
+      "WP112024": {
+        "url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2024/awp112024.dat",
+        "local_path": "data/raw/awp112024.dat",
+        "source_mode": "download",
+        "bytes": 10566957,
+        "sha256": "0ceb8010dc801087ec74de181aefadd45f85b0b6aa8532946d17e9aa25128bbd"
+      },
+      "WP122022": {
+        "url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2022/awp122022.dat",
+        "local_path": "data/raw/awp122022.dat",
+        "source_mode": "cached",
+        "bytes": 11021730,
+        "sha256": "07e66dd2d6fab26a831d12893b155b5e563b634285e4cee2d8b26e1c88d369dc"
+      },
+      "WP122024": {
+        "url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2024/awp122024.dat",
+        "local_path": "data/raw/awp122024.dat",
+        "source_mode": "cached",
+        "bytes": 4642745,
+        "sha256": "e563199fe70768fe143bb88db29e07611f4a8f9de986824e275c24ec9ba95ecb"
+      },
+      "WP142022": {
+        "url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2022/awp142022.dat",
+        "local_path": "data/raw/awp142022.dat",
+        "source_mode": "download",
+        "bytes": 8406049,
+        "sha256": "dc2af32890333299b081655a187e77f54a60f5e5e387870958a693bcb4d30336"
+      },
+      "WP142023": {
+        "url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2023/awp142023.dat",
+        "local_path": "data/raw/awp142023.dat",
+        "source_mode": "download",
+        "bytes": 8273176,
+        "sha256": "a042dea8ea6beb8731e40b5fd13ba0094fbbae50cc09b0b61b5d3f76541e017a"
+      },
+      "WP142024": {
+        "url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2024/awp142024.dat",
+        "local_path": "data/raw/awp142024.dat",
+        "source_mode": "download",
+        "bytes": 3789962,
+        "sha256": "41eb096bcaa28ee4a5c68358e971c8f182a396438bfe561871bc68e2a8f34c0b"
+      },
+      "WP152023": {
+        "url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2023/awp152023.dat",
+        "local_path": "data/raw/awp152023.dat",
+        "source_mode": "download",
+        "bytes": 11784409,
+        "sha256": "9847404d04342208fa2e301c99b0ceaf94e8788eb0f68377a242d599815b4ff1"
+      },
+      "WP162022": {
+        "url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2022/awp162022.dat",
+        "local_path": "data/raw/awp162022.dat",
+        "source_mode": "download",
+        "bytes": 6622396,
+        "sha256": "5c565b71c88fd6e8b22dc32c52a945dbf70c91436d3b01243f7a9558d10c44e6"
+      },
+      "WP182022": {
+        "url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2022/awp182022.dat",
+        "local_path": "data/raw/awp182022.dat",
+        "source_mode": "download",
+        "bytes": 4830398,
+        "sha256": "60dbff956a039c67579513aaee499d32713a6fbf249fecb7d3ff1c771bb08ec8"
+      },
+      "WP202024": {
+        "url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2024/awp202024.dat",
+        "local_path": "data/raw/awp202024.dat",
+        "source_mode": "download",
+        "bytes": 5218492,
+        "sha256": "9911910bffbf18e62a9ab2292a4752d741e670b41fc2378b8892c17cb24174a2"
+      },
+      "WP232022": {
+        "url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2022/awp232022.dat",
+        "local_path": "data/raw/awp232022.dat",
+        "source_mode": "download",
+        "bytes": 2991949,
+        "sha256": "6d6036f8472be3613aea60d9dc367fa7309662b0ff3cc5a0c9cc9cd33bfd6a1c"
+      },
+      "WP232024": {
+        "url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2024/awp232024.dat",
+        "local_path": "data/raw/awp232024.dat",
+        "source_mode": "download",
+        "bytes": 7316764,
+        "sha256": "1a5a49bb18d9b406e9e0c71c9d3b6cc3787220b9bac86563312d947e7acc42bf"
+      },
+      "WP242024": {
+        "url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2024/awp242024.dat",
+        "local_path": "data/raw/awp242024.dat",
+        "source_mode": "download",
+        "bytes": 6448493,
+        "sha256": "7ced9f96fbd56e3f53d816a3f9c719fa17671389c4c286e72560bbea62656f0c"
+      },
+      "WP252024": {
+        "url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2024/awp252024.dat",
+        "local_path": "data/raw/awp252024.dat",
+        "source_mode": "download",
+        "bytes": 7857261,
+        "sha256": "dc346053869036e3f6b2628373d4e625d043913dce4af7e93243997aa4d932ec"
+      },
+      "WP272024": {
+        "url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2024/awp272024.dat",
+        "local_path": "data/raw/awp272024.dat",
+        "source_mode": "download",
+        "bytes": 3259572,
+        "sha256": "c8a45ea1bd38ce32ecab4e292680cbaa0182b15c5728527424f18227194cb056"
+      }
+    }
+  },
+  "candidate_audit": [
+    {
+      "atcf_id": "WP012024",
+      "season": 2024,
+      "name": "EWINIAR",
+      "peak_cma_wind_kt": 81.0,
+      "peak_cma_wind_ms": 41.67,
+      "cma_peak_threshold_ms": 41.5,
+      "common_cycle_count_at_72h": 12,
+      "cycle_count_at_72h_by_aid": {
+        "CMC": 13,
+        "NGX": 12
+      },
+      "qualified": true,
+      "exclusion_reason": null,
+      "adeck_url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2024/awp012024.dat",
+      "adeck_sha256": "0dfd6a5c7cb1f850dda9c88c07abffbf11a26228a4a4599d0727d65c63081c19"
+    },
+    {
+      "atcf_id": "WP022022",
+      "season": 2022,
+      "name": "MALAKAS",
+      "peak_cma_wind_kt": 101.0,
+      "peak_cma_wind_ms": 51.95888888888889,
+      "cma_peak_threshold_ms": 41.5,
+      "common_cycle_count_at_72h": 16,
+      "cycle_count_at_72h_by_aid": {
+        "CMC": 17,
+        "NGX": 17
+      },
+      "qualified": true,
+      "exclusion_reason": null,
+      "adeck_url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2022/awp022022.dat",
+      "adeck_sha256": "ee11a82b5220f7b5b75dfebd3d558fe465c44abc74f6382fc08115ceac35e581"
+    },
+    {
+      "atcf_id": "WP022023",
+      "season": 2023,
+      "name": "MAWAR",
+      "peak_cma_wind_kt": 132.0,
+      "peak_cma_wind_ms": 67.90666666666667,
+      "cma_peak_threshold_ms": 41.5,
+      "common_cycle_count_at_72h": 22,
+      "cycle_count_at_72h_by_aid": {
+        "CMC": 25,
+        "NGX": 23
+      },
+      "qualified": true,
+      "exclusion_reason": null,
+      "adeck_url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2023/awp022023.dat",
+      "adeck_sha256": "34b9795178bf8702348fb6ac958ed6a21c308b6d5aee3d74fbfe7ce9a0efdab5"
+    },
+    {
+      "atcf_id": "WP032023",
+      "season": 2023,
+      "name": "GUCHOL",
+      "peak_cma_wind_kt": 81.0,
+      "peak_cma_wind_ms": 41.67,
+      "cma_peak_threshold_ms": 41.5,
+      "common_cycle_count_at_72h": 14,
+      "cycle_count_at_72h_by_aid": {
+        "CMC": 15,
+        "NGX": 14
+      },
+      "qualified": true,
+      "exclusion_reason": null,
+      "adeck_url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2023/awp032023.dat",
+      "adeck_sha256": "461810d80cb4aff9b70504ec63758f71bd96f97f5c9152dca02b3dcc3813757c"
+    },
+    {
+      "atcf_id": "WP052023",
+      "season": 2023,
+      "name": "DOKSURI",
+      "peak_cma_wind_kt": 120.0,
+      "peak_cma_wind_ms": 61.733333333333334,
+      "cma_peak_threshold_ms": 41.5,
+      "common_cycle_count_at_72h": 15,
+      "cycle_count_at_72h_by_aid": {
+        "CMC": 15,
+        "NGX": 16
+      },
+      "qualified": true,
+      "exclusion_reason": null,
+      "adeck_url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2023/awp052023.dat",
+      "adeck_sha256": "40ea457944234606ee6eb84148b23c6c39fcf9dfe2fc6dbbe2620b0439686dad"
+    },
+    {
+      "atcf_id": "WP052024",
+      "season": 2024,
+      "name": "GAEMI",
+      "peak_cma_wind_kt": 106.0,
+      "peak_cma_wind_ms": 54.531111111111116,
+      "cma_peak_threshold_ms": 41.5,
+      "common_cycle_count_at_72h": 9,
+      "cycle_count_at_72h_by_aid": {
+        "CMC": 13,
+        "NGX": 9
+      },
+      "qualified": true,
+      "exclusion_reason": null,
+      "adeck_url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2024/awp052024.dat",
+      "adeck_sha256": "a111440f783f18648dcb34b5bb702856f0283a1d58fe375086fea33e9a438827"
+    },
+    {
+      "atcf_id": "WP062023",
+      "season": 2023,
+      "name": "KHANUN",
+      "peak_cma_wind_kt": 106.0,
+      "peak_cma_wind_ms": 54.531111111111116,
+      "cma_peak_threshold_ms": 41.5,
+      "common_cycle_count_at_72h": 27,
+      "cycle_count_at_72h_by_aid": {
+        "CMC": 28,
+        "NGX": 28
+      },
+      "qualified": true,
+      "exclusion_reason": null,
+      "adeck_url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2023/awp062023.dat",
+      "adeck_sha256": "458258ba19c42cbbf3deebd2016f6c41c42e96a86c0464d6c2f0690239599eeb"
+    },
+    {
+      "atcf_id": "WP072023",
+      "season": 2023,
+      "name": "LAN",
+      "peak_cma_wind_kt": 112.0,
+      "peak_cma_wind_ms": 57.61777777777778,
+      "cma_peak_threshold_ms": 41.5,
+      "common_cycle_count_at_72h": 20,
+      "cycle_count_at_72h_by_aid": {
+        "CMC": 20,
+        "NGX": 20
+      },
+      "qualified": true,
+      "exclusion_reason": null,
+      "adeck_url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2023/awp072023.dat",
+      "adeck_sha256": "9aa79103be2f63c6ea2eaab7e0d475b1c7d802e04f29c3f15f09dc6c8e0780a6"
+    },
+    {
+      "atcf_id": "WP082024",
+      "season": 2024,
+      "name": "AMPIL",
+      "peak_cma_wind_kt": 97.0,
+      "peak_cma_wind_ms": 49.90111111111111,
+      "cma_peak_threshold_ms": 41.5,
+      "common_cycle_count_at_72h": 8,
+      "cycle_count_at_72h_by_aid": {
+        "CMC": 14,
+        "NGX": 8
+      },
+      "qualified": true,
+      "exclusion_reason": null,
+      "adeck_url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2024/awp082024.dat",
+      "adeck_sha256": "043c3d737131b2d841bdf89efbb19a02dcb7e5d947dc17d1348843560557edaa"
+    },
+    {
+      "atcf_id": "WP092023",
+      "season": 2023,
+      "name": "SAOLA",
+      "peak_cma_wind_kt": 120.0,
+      "peak_cma_wind_ms": 61.733333333333334,
+      "cma_peak_threshold_ms": 41.5,
+      "common_cycle_count_at_72h": 19,
+      "cycle_count_at_72h_by_aid": {
+        "CMC": 21,
+        "NGX": 20
+      },
+      "qualified": true,
+      "exclusion_reason": null,
+      "adeck_url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2023/awp092023.dat",
+      "adeck_sha256": "e1b19d951d362125329532f927a73b5771250d00e1cb3c04891c1c1b7b9fa049"
+    },
+    {
+      "atcf_id": "WP102023",
+      "season": 2023,
+      "name": "HAIKUI",
+      "peak_cma_wind_kt": 93.0,
+      "peak_cma_wind_ms": 47.843333333333334,
+      "cma_peak_threshold_ms": 41.5,
+      "common_cycle_count_at_72h": 12,
+      "cycle_count_at_72h_by_aid": {
+        "CMC": 15,
+        "NGX": 13
+      },
+      "qualified": true,
+      "exclusion_reason": null,
+      "adeck_url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2023/awp102023.dat",
+      "adeck_sha256": "ca6dfde7106d71a9d3002794ce67e7ba5406efcff8e6e3719c438a9e1d79f864"
+    },
+    {
+      "atcf_id": "WP112022",
+      "season": 2022,
+      "name": "TOKAGE",
+      "peak_cma_wind_kt": 81.0,
+      "peak_cma_wind_ms": 41.67,
+      "cma_peak_threshold_ms": 41.5,
+      "common_cycle_count_at_72h": 2,
+      "cycle_count_at_72h_by_aid": {
+        "CMC": 2,
+        "NGX": 3
+      },
+      "qualified": true,
+      "exclusion_reason": null,
+      "adeck_url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2022/awp112022.dat",
+      "adeck_sha256": "9df4065b2c3909e340fe86e15db738312eb5d8eb6e175f2b1e3402c1498d812a"
+    },
+    {
+      "atcf_id": "WP112024",
+      "season": 2024,
+      "name": "SHANSHAN",
+      "peak_cma_wind_kt": 101.0,
+      "peak_cma_wind_ms": 51.95888888888889,
+      "cma_peak_threshold_ms": 41.5,
+      "common_cycle_count_at_72h": 13,
+      "cycle_count_at_72h_by_aid": {
+        "CMC": 20,
+        "NGX": 13
+      },
+      "qualified": true,
+      "exclusion_reason": null,
+      "adeck_url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2024/awp112024.dat",
+      "adeck_sha256": "0ceb8010dc801087ec74de181aefadd45f85b0b6aa8532946d17e9aa25128bbd"
+    },
+    {
+      "atcf_id": "WP122022",
+      "season": 2022,
+      "name": "HINNAMNOR",
+      "peak_cma_wind_kt": 120.0,
+      "peak_cma_wind_ms": 61.733333333333334,
+      "cma_peak_threshold_ms": 41.5,
+      "common_cycle_count_at_72h": 17,
+      "cycle_count_at_72h_by_aid": {
+        "CMC": 19,
+        "NGX": 17
+      },
+      "qualified": true,
+      "exclusion_reason": null,
+      "adeck_url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2022/awp122022.dat",
+      "adeck_sha256": "07e66dd2d6fab26a831d12893b155b5e563b634285e4cee2d8b26e1c88d369dc"
+    },
+    {
+      "atcf_id": "WP122024",
+      "season": 2024,
+      "name": "YAGI",
+      "peak_cma_wind_kt": 120.0,
+      "peak_cma_wind_ms": 61.733333333333334,
+      "cma_peak_threshold_ms": 41.5,
+      "common_cycle_count_at_72h": 7,
+      "cycle_count_at_72h_by_aid": {
+        "CMC": 13,
+        "NGX": 7
+      },
+      "qualified": true,
+      "exclusion_reason": null,
+      "adeck_url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2024/awp122024.dat",
+      "adeck_sha256": "e563199fe70768fe143bb88db29e07611f4a8f9de986824e275c24ec9ba95ecb"
+    },
+    {
+      "atcf_id": "WP142022",
+      "season": 2022,
+      "name": "MUIFA",
+      "peak_cma_wind_kt": 97.0,
+      "peak_cma_wind_ms": 49.90111111111111,
+      "cma_peak_threshold_ms": 41.5,
+      "common_cycle_count_at_72h": 16,
+      "cycle_count_at_72h_by_aid": {
+        "CMC": 17,
+        "NGX": 17
+      },
+      "qualified": true,
+      "exclusion_reason": null,
+      "adeck_url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2022/awp142022.dat",
+      "adeck_sha256": "dc2af32890333299b081655a187e77f54a60f5e5e387870958a693bcb4d30336"
+    },
+    {
+      "atcf_id": "WP142023",
+      "season": 2023,
+      "name": "KOINU",
+      "peak_cma_wind_kt": 106.0,
+      "peak_cma_wind_ms": 54.531111111111116,
+      "cma_peak_threshold_ms": 41.5,
+      "common_cycle_count_at_72h": 16,
+      "cycle_count_at_72h_by_aid": {
+        "CMC": 17,
+        "NGX": 17
+      },
+      "qualified": true,
+      "exclusion_reason": null,
+      "adeck_url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2023/awp142023.dat",
+      "adeck_sha256": "a042dea8ea6beb8731e40b5fd13ba0094fbbae50cc09b0b61b5d3f76541e017a"
+    },
+    {
+      "atcf_id": "WP142024",
+      "season": 2024,
+      "name": "BEBINCA",
+      "peak_cma_wind_kt": 81.0,
+      "peak_cma_wind_ms": 41.67,
+      "cma_peak_threshold_ms": 41.5,
+      "common_cycle_count_at_72h": 3,
+      "cycle_count_at_72h_by_aid": {
+        "CMC": 12,
+        "NGX": 3
+      },
+      "qualified": true,
+      "exclusion_reason": null,
+      "adeck_url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2024/awp142024.dat",
+      "adeck_sha256": "41eb096bcaa28ee4a5c68358e971c8f182a396438bfe561871bc68e2a8f34c0b"
+    },
+    {
+      "atcf_id": "WP152023",
+      "season": 2023,
+      "name": "BOLAVEN",
+      "peak_cma_wind_kt": 132.0,
+      "peak_cma_wind_ms": 67.90666666666667,
+      "cma_peak_threshold_ms": 41.5,
+      "common_cycle_count_at_72h": 16,
+      "cycle_count_at_72h_by_aid": {
+        "CMC": 16,
+        "NGX": 16
+      },
+      "qualified": true,
+      "exclusion_reason": null,
+      "adeck_url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2023/awp152023.dat",
+      "adeck_sha256": "9847404d04342208fa2e301c99b0ceaf94e8788eb0f68377a242d599815b4ff1"
+    },
+    {
+      "atcf_id": "WP162022",
+      "season": 2022,
+      "name": "NANMADOL",
+      "peak_cma_wind_kt": 120.0,
+      "peak_cma_wind_ms": 61.733333333333334,
+      "cma_peak_threshold_ms": 41.5,
+      "common_cycle_count_at_72h": 8,
+      "cycle_count_at_72h_by_aid": {
+        "CMC": 9,
+        "NGX": 10
+      },
+      "qualified": true,
+      "exclusion_reason": null,
+      "adeck_url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2022/awp162022.dat",
+      "adeck_sha256": "5c565b71c88fd6e8b22dc32c52a945dbf70c91436d3b01243f7a9558d10c44e6"
+    },
+    {
+      "atcf_id": "WP182022",
+      "season": 2022,
+      "name": "NORU",
+      "peak_cma_wind_kt": 120.0,
+      "peak_cma_wind_ms": 61.733333333333334,
+      "cma_peak_threshold_ms": 41.5,
+      "common_cycle_count_at_72h": 11,
+      "cycle_count_at_72h_by_aid": {
+        "CMC": 12,
+        "NGX": 12
+      },
+      "qualified": true,
+      "exclusion_reason": null,
+      "adeck_url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2022/awp182022.dat",
+      "adeck_sha256": "60dbff956a039c67579513aaee499d32713a6fbf249fecb7d3ff1c771bb08ec8"
+    },
+    {
+      "atcf_id": "WP202024",
+      "season": 2024,
+      "name": "KRATHON",
+      "peak_cma_wind_kt": 116.0,
+      "peak_cma_wind_ms": 59.67555555555556,
+      "cma_peak_threshold_ms": 41.5,
+      "common_cycle_count_at_72h": 0,
+      "cycle_count_at_72h_by_aid": {
+        "CMC": 12,
+        "NGX": 0
+      },
+      "qualified": false,
+      "exclusion_reason": "no_common_CMC_NGX_72h_cycle",
+      "adeck_url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2024/awp202024.dat",
+      "adeck_sha256": "9911910bffbf18e62a9ab2292a4752d741e670b41fc2378b8892c17cb24174a2"
+    },
+    {
+      "atcf_id": "WP232022",
+      "season": 2022,
+      "name": "NESAT",
+      "peak_cma_wind_kt": 81.0,
+      "peak_cma_wind_ms": 41.67,
+      "cma_peak_threshold_ms": 41.5,
+      "common_cycle_count_at_72h": 2,
+      "cycle_count_at_72h_by_aid": {
+        "CMC": 8,
+        "NGX": 2
+      },
+      "qualified": true,
+      "exclusion_reason": null,
+      "adeck_url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2022/awp232022.dat",
+      "adeck_sha256": "6d6036f8472be3613aea60d9dc367fa7309662b0ff3cc5a0c9cc9cd33bfd6a1c"
+    },
+    {
+      "atcf_id": "WP232024",
+      "season": 2024,
+      "name": "KONG-REY",
+      "peak_cma_wind_kt": 116.0,
+      "peak_cma_wind_ms": 59.67555555555556,
+      "cma_peak_threshold_ms": 41.5,
+      "common_cycle_count_at_72h": 5,
+      "cycle_count_at_72h_by_aid": {
+        "CMC": 13,
+        "NGX": 6
+      },
+      "qualified": true,
+      "exclusion_reason": null,
+      "adeck_url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2024/awp232024.dat",
+      "adeck_sha256": "1a5a49bb18d9b406e9e0c71c9d3b6cc3787220b9bac86563312d947e7acc42bf"
+    },
+    {
+      "atcf_id": "WP242024",
+      "season": 2024,
+      "name": "YINXING",
+      "peak_cma_wind_kt": 120.0,
+      "peak_cma_wind_ms": 61.733333333333334,
+      "cma_peak_threshold_ms": 41.5,
+      "common_cycle_count_at_72h": 8,
+      "cycle_count_at_72h_by_aid": {
+        "CMC": 13,
+        "NGX": 11
+      },
+      "qualified": true,
+      "exclusion_reason": null,
+      "adeck_url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2024/awp242024.dat",
+      "adeck_sha256": "7ced9f96fbd56e3f53d816a3f9c719fa17671389c4c286e72560bbea62656f0c"
+    },
+    {
+      "atcf_id": "WP252024",
+      "season": 2024,
+      "name": "MAN-YI",
+      "peak_cma_wind_kt": 120.0,
+      "peak_cma_wind_ms": 61.733333333333334,
+      "cma_peak_threshold_ms": 41.5,
+      "common_cycle_count_at_72h": 14,
+      "cycle_count_at_72h_by_aid": {
+        "CMC": 18,
+        "NGX": 14
+      },
+      "qualified": true,
+      "exclusion_reason": null,
+      "adeck_url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2024/awp252024.dat",
+      "adeck_sha256": "dc346053869036e3f6b2628373d4e625d043913dce4af7e93243997aa4d932ec"
+    },
+    {
+      "atcf_id": "WP272024",
+      "season": 2024,
+      "name": "USAGI",
+      "peak_cma_wind_kt": 112.0,
+      "peak_cma_wind_ms": 57.61777777777778,
+      "cma_peak_threshold_ms": 41.5,
+      "common_cycle_count_at_72h": 5,
+      "cycle_count_at_72h_by_aid": {
+        "CMC": 7,
+        "NGX": 6
+      },
+      "qualified": true,
+      "exclusion_reason": null,
+      "adeck_url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2024/awp272024.dat",
+      "adeck_sha256": "c8a45ea1bd38ce32ecab4e292680cbaa0182b15c5728527424f18227194cb056"
+    }
+  ],
+  "qualified_storms": [
+    {
+      "atcf_id": "WP012024",
+      "name": "EWINIAR",
+      "adeck_url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2024/awp012024.dat"
+    },
+    {
+      "atcf_id": "WP022022",
+      "name": "MALAKAS",
+      "adeck_url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2022/awp022022.dat"
+    },
+    {
+      "atcf_id": "WP022023",
+      "name": "MAWAR",
+      "adeck_url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2023/awp022023.dat"
+    },
+    {
+      "atcf_id": "WP032023",
+      "name": "GUCHOL",
+      "adeck_url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2023/awp032023.dat"
+    },
+    {
+      "atcf_id": "WP052023",
+      "name": "DOKSURI",
+      "adeck_url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2023/awp052023.dat"
+    },
+    {
+      "atcf_id": "WP052024",
+      "name": "GAEMI",
+      "adeck_url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2024/awp052024.dat"
+    },
+    {
+      "atcf_id": "WP062023",
+      "name": "KHANUN",
+      "adeck_url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2023/awp062023.dat"
+    },
+    {
+      "atcf_id": "WP072023",
+      "name": "LAN",
+      "adeck_url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2023/awp072023.dat"
+    },
+    {
+      "atcf_id": "WP082024",
+      "name": "AMPIL",
+      "adeck_url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2024/awp082024.dat"
+    },
+    {
+      "atcf_id": "WP092023",
+      "name": "SAOLA",
+      "adeck_url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2023/awp092023.dat"
+    },
+    {
+      "atcf_id": "WP102023",
+      "name": "HAIKUI",
+      "adeck_url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2023/awp102023.dat"
+    },
+    {
+      "atcf_id": "WP112022",
+      "name": "TOKAGE",
+      "adeck_url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2022/awp112022.dat"
+    },
+    {
+      "atcf_id": "WP112024",
+      "name": "SHANSHAN",
+      "adeck_url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2024/awp112024.dat"
+    },
+    {
+      "atcf_id": "WP122022",
+      "name": "HINNAMNOR",
+      "adeck_url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2022/awp122022.dat"
+    },
+    {
+      "atcf_id": "WP122024",
+      "name": "YAGI",
+      "adeck_url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2024/awp122024.dat"
+    },
+    {
+      "atcf_id": "WP142022",
+      "name": "MUIFA",
+      "adeck_url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2022/awp142022.dat"
+    },
+    {
+      "atcf_id": "WP142023",
+      "name": "KOINU",
+      "adeck_url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2023/awp142023.dat"
+    },
+    {
+      "atcf_id": "WP142024",
+      "name": "BEBINCA",
+      "adeck_url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2024/awp142024.dat"
+    },
+    {
+      "atcf_id": "WP152023",
+      "name": "BOLAVEN",
+      "adeck_url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2023/awp152023.dat"
+    },
+    {
+      "atcf_id": "WP162022",
+      "name": "NANMADOL",
+      "adeck_url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2022/awp162022.dat"
+    },
+    {
+      "atcf_id": "WP182022",
+      "name": "NORU",
+      "adeck_url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2022/awp182022.dat"
+    },
+    {
+      "atcf_id": "WP232022",
+      "name": "NESAT",
+      "adeck_url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2022/awp232022.dat"
+    },
+    {
+      "atcf_id": "WP232024",
+      "name": "KONG-REY",
+      "adeck_url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2024/awp232024.dat"
+    },
+    {
+      "atcf_id": "WP242024",
+      "name": "YINXING",
+      "adeck_url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2024/awp242024.dat"
+    },
+    {
+      "atcf_id": "WP252024",
+      "name": "MAN-YI",
+      "adeck_url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2024/awp252024.dat"
+    },
+    {
+      "atcf_id": "WP272024",
+      "name": "USAGI",
+      "adeck_url": "https://hurricanes.ral.ucar.edu/repository/data/adecks_open/2024/awp272024.dat"
+    }
+  ]
+}
