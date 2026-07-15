@@ -1,6 +1,6 @@
 # Western North Pacific path-track benchmark
 
-Status: `round-v2-complete-learning-reproduction-unvalidated`.
+Status: `round-v3-complete-learning-reproduction-unvalidated`.
 
 The project goal and permanent rules are recorded verbatim in the
 [project document](../README.md).
@@ -14,6 +14,13 @@ Round v1 remains in [`report.md`](report.md). The mechanically selected 26-storm
 including the fixed spherical consensus, error correlation, `n_eff`, and storm-held-out
 uncertainty, is in [`report_round_v2.md`](report_round_v2.md). Machine-readable round-v2
 artifacts are under [`outputs/round_v2/`](outputs/round_v2/).
+
+Round v3 audits the apparent `DYC2` source, proves that the local file contains an
+equal-weight spherical CMC/NGX consensus with no official ATCF `DYC2` TECH rows, and
+compares that local consensus with the independently developed UK Met Office model.
+The source audit is in [`dyc2_source_audit.md`](dyc2_source_audit.md); the frozen design,
+results, and machine-readable artifacts are in [`preregistration_round_v3.md`](preregistration_round_v3.md),
+[`report_round_v3.md`](report_round_v3.md), and [`outputs/round_v3/`](outputs/round_v3/).
 
 The selection rule was frozen in commit `8528a77`, and the resulting eligibility manifest
 was frozen in commit `52199e3` before expanded-sample errors were read. This learning

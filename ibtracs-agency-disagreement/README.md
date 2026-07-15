@@ -26,3 +26,7 @@ landfall audit, analysis rows, and the required plot are under `outputs/`.
 Branch B's independent-truth audit, reusable wind-pressure diagnostic, storm-grouped
 cross-validation, and CMA-reference proxy are documented in `report_b_branch.md`; its
 machine-readable outputs are under `outputs/b_branch/`.
+
+The cross-project interpretation of truth coverage, agency redundancy, and structural
+parameter sensitivity is published in
+[`../INTENSITY_PREDICTABILITY_CEILINGS.md`](../INTENSITY_PREDICTABILITY_CEILINGS.md).

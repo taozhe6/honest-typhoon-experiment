@@ -39,10 +39,15 @@
 上方 `/goal` 保持原文。当前完整进展、数值、资格判决、三把刀审计和复现命令见 [阶段总报告](PROJECT_REPORT_2026-07-15.md)。
 
 - [A 路径发布报告](path-track-benchmark/report_round_v2.md)
+- [A 路径 DYC2/UKMET 深化报告](path-track-benchmark/report_round_v3.md)
+- [DYC2 来源审计](path-track-benchmark/dyc2_source_audit.md)
 - [B 登陆强度与风压报告](ibtracs-agency-disagreement/report_b_branch.md)
 - [C 零人工标签与 ERC 资源报告](markov/report_c_branch.md)
 - [C 一手微波覆盖纠错报告](markov/report_c_coverage_correction.md)
+- [C 事件标签 v2 与非退化 Brier 基线](markov/report_c_event_label_v2.md)
 - [FAST 固定常量敏感性报告](markov/report_global_sensitivity.md)
+- [`theta=Ck/h` 终值传播报告](markov/report_theta_propagation.md)
+- [西北太平洋强度可预报性的三重天花板](INTENSITY_PREDICTABILITY_CEILINGS.md)
 - [统一验证脚本](scripts/verify_all.sh)
 
 ## 证据宪法

@@ -10,6 +10,12 @@
 
 [巴威一手覆盖纠错报告](report_c_coverage_correction.md)已经撤回旧版 ERC 数量否定：CyclObs 确证 1 个连续双环风结构观测时段；7 月 4 日和 7 日两个二手待核窗口不可判定；TC PRIMED WP09 在审计时无 preliminary 文件。二手叙述与一手 tally 完全分栏。
 
+[C 事件标签 v2 报告](report_c_event_label_v2.md)把物理波形标签冻结为未来
+24 h 内先减弱、后恢复且两段均至少 `2.5 m/s`。开发期发生率为
+`5.9%` [4.7%, 7.2%]，密封验证期为 `14.4%` [9.9%, 19.4%]；
+验证集同时含正负类。气候 Brier 为 `0.130603`，持续性 Brier 为
+`0.131092`，持续性基线略差。该标签是强度波形代理，ERC 因果字段保持为空。
+
 ```bash
 cd "/Users/taozhe/Documents/New project/typhoon"
 markov/.venv/bin/python markov/scripts/run_c_branch.py
@@ -19,9 +25,19 @@ markov/.venv/bin/python markov/scripts/run_c_branch.py
 
 [全局敏感性发布报告](report_global_sensitivity.md)已完成：`Ck`、边界层深度 `h`、FAST `kappa` 分别运行 `+/-30%`，覆盖三个冻结合成场景。结构控制确认当前连续核心只识别 `Ck/h`；三态 regime 对风速路径的作用仍为 `0.0 m/s`。
 
+[`theta=Ck/h` 终值传播报告](report_theta_propagation.md)进一步用 61 点网格把
+可识别组合传播到 48 h 最终风速。三个合成场景的最大单侧变化为
+`3.54 m/s`，最大端点宽度为 `6.07 m/s`；该区间属于有界压力测试，
+概率分布语义为空。
+
 ```bash
 cd "/Users/taozhe/Documents/New project/typhoon"
 markov/.venv/bin/python markov/scripts/run_global_sensitivity.py
+```
+
+```bash
+cd "/Users/taozhe/Documents/New project/typhoon/markov"
+.venv/bin/python scripts/run_theta_propagation.py
 ```
 
 ## 巴威证伪结果
@@ -90,6 +106,8 @@ python3 typhoon/markov/scripts/audit_cyclobs_structure.py \
 - `config/erc_observation_sources.json`：微波、ARCHER 和 SAR 官方数据源注册表。
 - `config/eyewall_structure_observation_contract.json`：双风环观测语义、质量门槛和反泄漏规则。
 - `config/global_sensitivity.json`：FAST 固定常量敏感性的冻结场景、扰动和结构判据。
+- `config/theta_propagation.json`：`theta=Ck/h` 的冻结 61 点终值传播设计。
+- `config/c_event_label_v2.json`：5--15% 事件率目标、时间密封和 Brier 基线规则。
 - `cases/bavi_2026_reintensification_spec.json`：冻结的案例选择规则和时次。
 - `cases/bavi_2026_reintensification.json`：从归档报文生成的案例证据。
 - `src/typhoon_markov/model.py`：状态、FAST 核心、转移核、气压/RMW 方程。
@@ -104,4 +122,6 @@ python3 typhoon/markov/scripts/audit_cyclobs_structure.py \
 - `outputs/bavi_2026_cyclobs_structure_audit.json`：巴威 SAR 双风峰来源与径向廓线审计。
 - `outputs/erc_source_availability_2022_2026.json`：密封期与当前风暴的数据源库存、请求 URL 和响应哈希。
 - `outputs/global_sensitivity/`：逐步轨迹、场景级汇总、图和 SHA-256 manifest。
+- `outputs/theta_propagation/`：可识别组合的 48 h 终值网格、图和 manifest。
+- `outputs/c_event_label_v2/`：事件标签选择、密封验证、可靠性图和 manifest。
 - `../previous/2026-07-11-scalar-lgem/`：此前模型的只读归档。
