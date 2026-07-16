@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-07-15T11:35:28.128945+00:00",
+  "generated_utc": "2026-07-16T09:43:48.267328+00:00",
   "bootstrap_replicates": 2000,
   "bootstrap_seed": 20260715,
   "inputs": {
@@ -10,7 +10,7 @@
     },
     "source_tar": {
       "source_url": "https://www.ncei.noaa.gov/data/international-best-track-archive-for-climate-stewardship-ibtracs/v04r01/input/final/ibtracs_v04r01_input-bt_c20260706.tar.gz",
-      "path": "/private/tmp/ibtracs_v04r01_input-bt_c20260706.tar.gz",
+      "path": "/Users/taozhe/Documents/New project/typhoon/ibtracs-agency-disagreement/data/raw/ibtracs_v04r01_input-bt_c20260706.tar.gz",
       "bytes": 61363391,
       "sha256": "b20a2cce2bf526fc64ae04e0f7a0df1e2ecf2473c32a70076a737e59b60e36eb",
       "archive_file_count": 14358,
@@ -175,15 +175,38 @@
       "path": "/Users/taozhe/Documents/New project/typhoon/ibtracs-agency-disagreement/outputs/landfall_records_S093.csv",
       "bytes": 90407,
       "sha256": "d1a047a89c9028121461f187a1f752d86a9e3cc966015920c2fd386f6cf32d22"
+    },
+    "external_truth": {
+      "path": "/Users/taozhe/Documents/New project/typhoon/ibtracs-agency-disagreement/outputs/b_branch/independent_truth_error_table.csv",
+      "bytes": 1753,
+      "sha256": "15fd4899b8a73fd2711ffff9a20960a9f49597f044c8c543feabfe33aef774a5"
+    },
+    "external_truth_summary": {
+      "path": "/Users/taozhe/Documents/New project/typhoon/ibtracs-agency-disagreement/outputs/b_branch/landfall_truth_coverage_summary.json",
+      "bytes": 6484,
+      "sha256": "a86b4f376c5291b1c440bb6da2f1cbd6e733bd980787d818c0ef8cc31e9f8929"
     }
   },
   "outputs": [
+    "cwa_tdb_eyewall_review.csv",
+    "cwa_tdb_station_crosscheck.csv",
+    "independent_truth_error_correlation.csv",
+    "independent_truth_error_correlation_intervals.csv",
+    "independent_truth_error_rows.csv",
     "independent_truth_error_table.csv",
     "landfall_cma_reference_correlation_lower.csv",
     "landfall_cma_reference_correlation_point.csv",
     "landfall_cma_reference_correlation_upper.csv",
     "landfall_cma_reference_error_table.csv",
     "landfall_cma_reference_rows.csv",
+    "landfall_truth.csv",
+    "landfall_truth_coverage_summary.json",
+    "landfall_truth_event_coverage.csv",
+    "landfall_truth_exclusions.csv",
+    "landfall_truth_manifest.json",
+    "landfall_truth_source_audit.json",
+    "landfall_truth_source_event_status.csv",
+    "landfall_truth_support_evidence.csv",
     "pressure_only_cross_validation_rows.csv",
     "run_manifest.json",
     "source_truth_audit.json",

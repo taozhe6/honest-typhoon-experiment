@@ -1,0 +1,236 @@
+{
+  "bootstrap_replicates": 2000,
+  "collector_results": {
+    "CWA_CODIS": {
+      "events_with_records": 19,
+      "events_with_station_within_250km": 19,
+      "multi_station_requests": 89,
+      "records_retained": 8813,
+      "station_list_retrieved_at_utc": "2026-07-16T05:56:15+00:00",
+      "station_list_sha256": "363ddcd642b4e812111a5350e365391e812ef1074b0f6287dada0623b355d228",
+      "station_list_url": "https://codis.cwa.gov.tw/api/station_list",
+      "stations_without_ephemeral_log_token": 1265
+    },
+    "CWA_TDB_SUPPORT": {
+      "applicable_frozen_taiwan_events": 11,
+      "events_with_official_pdf": 11,
+      "events_with_radar_metadata": 11,
+      "products_requested_per_event": [
+        "Radar",
+        "WeatherInfo",
+        "GustHis",
+        "RainInfo"
+      ],
+      "station_crosscheck_matches": 4049,
+      "station_crosscheck_rows": 4086,
+      "support_rows": 88,
+      "warning_registry_matches": 11
+    },
+    "HKO_TC_IMPACT": {
+      "events_with_records": 34,
+      "impact_retrieved_at_utc": "2026-07-16T06:14:46+00:00",
+      "impact_sha256": "77256a99dfa28f488f437fce728368f5c598e9b07e818b84b54db3aa4c0a4187",
+      "impact_url": "https://www.hko.gov.hk/en/informtc/files/TC_Impact_Data_HKO.xlsx",
+      "records_retained": 2018,
+      "station_metadata_retrieved_at_utc": "2026-07-16T06:14:48+00:00",
+      "station_metadata_sha256": "5210d7f0cfe7f2c2e619a8ec51586e101f87397ecf6e64e5b52d1a7ded895832",
+      "station_metadata_url": "https://www.hko.gov.hk/en/cis/stn.htm"
+    },
+    "JMA_AMEDAS": {
+      "events_with_records": 29,
+      "events_with_station_within_250km": 29,
+      "multi_station_requests": 61,
+      "prefecture_index_retrieved_at_utc": "2026-07-16T06:07:26+00:00",
+      "prefecture_index_sha256": "6cc9936cb5b49d534d91c2625ca28bf600f23a68865a651c4dd27cd23fbf1527",
+      "prefecture_index_url": "https://www.data.jma.go.jp/stats/etrn/select/prefecture00.php",
+      "prefectures_scanned": 61,
+      "records_retained": 3393,
+      "wind_stations_discovered": 977
+    },
+    "NOAA_ISD": {
+      "events_with_records": 108,
+      "history_retrieved_at_utc": "2026-07-16T05:45:26+00:00",
+      "history_sha256": "1994747ab4af1b97e63adb434b4d0d022f2daee76f0c144ea9ab46be2d906604",
+      "history_url": "https://www.ncei.noaa.gov/pub/data/noaa/isd-history.csv",
+      "records_retained": 2065,
+      "station_event_pairs_within_250km": 2226,
+      "station_year_files_available": 1668,
+      "station_year_files_missing": 56,
+      "unique_station_year_files_requested": 1724
+    }
+  },
+  "cwa_eyewall_review": {
+    "grade_a_events": 4,
+    "method": "single-reviewer station overlay on official composite reflectivity; judgments labeled [推测]",
+    "path": "data/cwa_tdb_eyewall_review.csv",
+    "reviewed_events": 11,
+    "sha256": "1f04f9fdc1da5a74cad5e809dcfd7511fb3f84670c6e71763e3f163da28ee82e"
+  },
+  "evidence_labels": {
+    "documented": "[据文档] stated by the official source documentation",
+    "inferred": "[推测] interpretation requiring an explicit assumption",
+    "verified": "[验证过] directly accessed or computed in this run"
+  },
+  "frozen_event_count": 108,
+  "generated_at_utc": "2026-07-16T09:43:24+00:00",
+  "landfall_country_geometry": {
+    "country_polygons": 258,
+    "events_assigned": 108,
+    "maximum_assignment_distance_degrees": 1.2139991780182284e-14,
+    "retrieved_at_utc": "2026-07-16T06:25:34+00:00",
+    "sha256": "ce1ac7036499a0edd641fbc093cd209a98f96a49d2eca8480aaacad35138a7f6",
+    "taiwan_code_check": {
+      "ADM0_A3": "TWN",
+      "GU_A3": "TWN",
+      "ISO_A3": "TWN",
+      "SOV_A3": "TWN"
+    },
+    "url": "https://naturalearth.s3.amazonaws.com/10m_cultural/ne_10m_admin_0_countries.zip"
+  },
+  "protocol": "landfall_truth_protocol.md",
+  "source_catalog": [
+    {
+      "access": "anonymous HTTPS WAF",
+      "availability": "available",
+      "evidence": "[验证过] direct anonymous station-year CSV downloads succeeded",
+      "format": "CSV; WND field with report type and QC",
+      "independence": "raw station/GTS measurement; operational information-set overlap disclosed",
+      "source": "NOAA/NCEI Global Hourly (ISD/GTS)",
+      "source_id": "NOAA_ISD",
+      "url": "https://www.ncei.noaa.gov/products/land-based-station/integrated-surface-database",
+      "window": "WND type N has no universal encoded averaging period; H/R/T encode 5/60/180 min"
+    },
+    {
+      "access": "anonymous HTTPS web API used by CODiS",
+      "availability": "available",
+      "evidence": "[验证过] anonymous station-list and multi-station historical POST requests succeeded",
+      "format": "JSON; hourly bins with TenMinutelyMaximum/Mean/PeakGust and flags",
+      "independence": "instrument records; CWA and exchanged operational analyses can ingest them",
+      "source": "Taiwan CWA CODiS station archive",
+      "source_id": "CWA_CODIS",
+      "url": "https://codis.cwa.gov.tw/StationData",
+      "window": "CWA conventional stations expose native 10-minute maximum within each hour"
+    },
+    {
+      "access": "anonymous HTTPS endpoints used by the public database",
+      "availability": "partially_available",
+      "evidence": "[验证过] anonymous warning registry, station time series, 6-minute reflectivity images and official PDFs were enumerated for every frozen Taiwan case",
+      "format": "JSON metadata and station rows; JPEG/GIF/PDF products",
+      "independence": "station rows duplicate CODiS instruments; reflectivity locates structure but is not a surface-wind observation operator",
+      "source": "Taiwan CWA Typhoon Database radar and station support archive",
+      "source_id": "CWA_RADAR",
+      "url": "https://rdc28.cwa.gov.tw/TDB/public/",
+      "window": "official-station WSMax is native 10-minute within hourly bins; automatic-station WS window remains undocumented; radar cadence is nominally 6 minutes"
+    },
+    {
+      "access": "anonymous HTTPS",
+      "availability": "partially_available",
+      "evidence": "[验证过] anonymous official XLSX download contains station passage maxima through 2025",
+      "format": "XLSX; gust and maximum hourly mean wind by station",
+      "independence": "instrument summaries; HKO operational information-set overlap disclosed",
+      "source": "HKO Tropical Cyclone Impact Dataset and annual publications",
+      "source_id": "HKO_TC_IMPACT",
+      "url": "https://www.hko.gov.hk/en/informtc/tc_impact.html",
+      "window": "60-minute means and passage-wide maxima; exact peak time absent in workbook"
+    },
+    {
+      "access": "anonymous latest-only CSV",
+      "availability": "partially_available",
+      "evidence": "[据文档] public feed is explicitly the latest value; historical 2015-2024 snapshots are not supplied",
+      "format": "CSV",
+      "independence": "instrument observation",
+      "source": "HKO regional 10-minute wind open data",
+      "source_id": "HKO_10MIN_LATEST",
+      "url": "https://www.hko.gov.hk/en/abouthko/opendata_intro.htm",
+      "window": "native 10-minute"
+    },
+    {
+      "access": "anonymous official download service with session cookie",
+      "availability": "available",
+      "evidence": "[验证过] anonymous multi-station historical CSV POST requests succeeded",
+      "format": "Shift-JIS CSV with values, QC and homogeneity number",
+      "independence": "instrument records; JMA and exchanged operational analyses can ingest them",
+      "source": "JMA historical AMeDAS/surface observation download",
+      "source_id": "JMA_AMEDAS",
+      "url": "https://ds.data.jma.go.jp/risk/obsdl/",
+      "window": "hourly samples are the preceding 10-minute mean wind"
+    },
+    {
+      "access": "real-name registered users",
+      "availability": "unavailable",
+      "evidence": "[验证过] dataset page requires personal/unit real-name registration",
+      "format": "hourly/three-hourly/daily datasets",
+      "independence": "instrument records would be independent measurements with CMA home advantage",
+      "source": "CMA national ground observation archive",
+      "source_id": "CMA_GROUND",
+      "url": "https://m.data.cma.cn/data/cdcindex/cid/6d1b5efbdcbf9a58.html",
+      "window": "dataset-dependent"
+    },
+    {
+      "access": "real-name registration; raw archive not anonymously downloadable",
+      "availability": "unavailable",
+      "evidence": "[验证过] CMA radar product pages require real-name registration; public pages expose derived images",
+      "format": "radar base/product files or public derived images",
+      "independence": "raw radial velocity is observational; surface wind fields are inversions and grade C",
+      "source": "China coastal Doppler radar archive/products",
+      "source_id": "CMA_RADAR",
+      "url": "https://k.data.cma.cn/mekb/?dataCode=J.0019.0010.S001&r=data%2Fdetail",
+      "window": "typically 6-minute scans"
+    },
+    {
+      "access": "registration/application",
+      "availability": "unavailable",
+      "evidence": "[据文档] official OpenAPI requires a utilization application/key",
+      "format": "API",
+      "independence": "instrument observation",
+      "source": "KMA ASOS historical observations",
+      "source_id": "KMA_ASOS",
+      "url": "https://data.kma.go.kr/api/selectApiDetail.do?openApiNo=241",
+      "window": "dataset-dependent"
+    },
+    {
+      "access": "application and fee schedule",
+      "availability": "unavailable",
+      "evidence": "[据文档] official request path requires forms/supporting documents and can charge fees",
+      "format": "requested tables/files",
+      "independence": "instrument observation",
+      "source": "PAGASA historical station observations",
+      "source_id": "PAGASA_GROUND",
+      "url": "https://www.pagasa.dost.gov.ph/climate/climate-data",
+      "window": "dataset-dependent"
+    },
+    {
+      "access": "registration, application and payment",
+      "availability": "unavailable",
+      "evidence": "[验证过] official service lists login/request and per-station hourly fees",
+      "format": "download after approval/payment",
+      "independence": "instrument observation",
+      "source": "Thai Meteorological Department historical observations",
+      "source_id": "TMD_GROUND",
+      "url": "https://tmd.go.th/service/tmdData",
+      "window": "hourly/three-hourly"
+    },
+    {
+      "access": "formal request and possible fee",
+      "availability": "unavailable",
+      "evidence": "[据文档] official procedure requires a written request and payment where applicable",
+      "format": "provided on request",
+      "independence": "instrument observation",
+      "source": "Vietnam national hydrometeorological database",
+      "source_id": "VIETNAM_GROUND",
+      "url": "https://dichvucong.gov.vn/p/home/dvc-chi-tiet-cau-hoi.html?id=15399&row_limit=1",
+      "window": "dataset-dependent"
+    },
+    {
+      "access": "anonymous HTML/PDF where published",
+      "availability": "partially_available",
+      "evidence": "[验证过] case-specific public station/gust/radar values exist; coverage and observation operators vary",
+      "format": "HTML/PDF",
+      "independence": "raw quoted instrument values can be grade B; analyzed Vmax and inversion products are grade C",
+      "source": "Official post-storm reviews and peer-reviewed papers",
+      "source_id": "OFFICIAL_REVIEWS",
+      "url": "https://www.cma.gov.cn/2011xwzx/zdbk/jdbktp/202307/t20230728_5678350.html",
+      "window": "case-specific"
+    }
+  ]
+}

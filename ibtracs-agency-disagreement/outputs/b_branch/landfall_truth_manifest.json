@@ -1,0 +1,79 @@
+{
+  "bootstrap_replicates": 2000,
+  "bootstrap_seed": 20260715,
+  "generated_at_utc": "2026-07-16T09:43:24+00:00",
+  "inputs": {
+    "cwa_eyewall_review": {
+      "path": "data/cwa_tdb_eyewall_review.csv",
+      "sha256": "1f04f9fdc1da5a74cad5e809dcfd7511fb3f84670c6e71763e3f163da28ee82e"
+    },
+    "frozen_landfalls": {
+      "path": "outputs/b_branch/landfall_cma_reference_rows.csv",
+      "sha256": "343315afb42f4508cd9b8bbd57a26ea0e98b8db66a303899d099f6d766dcc1d3"
+    },
+    "protocol": {
+      "path": "landfall_truth_protocol.md",
+      "sha256": "be7bd1e4ef789f2603328890ad87e675f1bc465ac7418d03c8246ee43dc442f5"
+    }
+  },
+  "outputs": {
+    "landfall_truth_report.md": {
+      "bytes": 13259,
+      "sha256": "7251c0b738c1b5fd038d64db982e5723847e0d02ad160f3fe158daf4f030d8bc"
+    },
+    "outputs/b_branch/cwa_tdb_eyewall_review.csv": {
+      "bytes": 7404,
+      "sha256": "ba55b427470a1e59a93e964b248ff04759eb8a71c295c2ff79bff77440709a88"
+    },
+    "outputs/b_branch/cwa_tdb_station_crosscheck.csv": {
+      "bytes": 1614180,
+      "sha256": "62c57ce378e807197a478592af093ddf8bf049b086b4d83e3fab83c3eef774be"
+    },
+    "outputs/b_branch/independent_truth_error_correlation.csv": {
+      "bytes": 453,
+      "sha256": "5b5a2416bb4c6ab73fbf24941db3dd190889bee9ed3c8b7c675f4379c18c4ffa"
+    },
+    "outputs/b_branch/independent_truth_error_correlation_intervals.csv": {
+      "bytes": 1546,
+      "sha256": "2522e123139106c334360e47255d8b0f4a5c1aa101b1447178b144db1639f7b7"
+    },
+    "outputs/b_branch/independent_truth_error_rows.csv": {
+      "bytes": 1909,
+      "sha256": "557314d12b8419c9c2ae23c90c24266ca0b64beeafe8e0d743233d27548273a9"
+    },
+    "outputs/b_branch/independent_truth_error_table.csv": {
+      "bytes": 1753,
+      "sha256": "15fd4899b8a73fd2711ffff9a20960a9f49597f044c8c543feabfe33aef774a5"
+    },
+    "outputs/b_branch/landfall_truth.csv": {
+      "bytes": 12630569,
+      "sha256": "a7b298f720756fc65d1a14cb4869f8c250008a68e4ada20c74d4497f369ba032"
+    },
+    "outputs/b_branch/landfall_truth_coverage_summary.json": {
+      "bytes": 6484,
+      "sha256": "a86b4f376c5291b1c440bb6da2f1cbd6e733bd980787d818c0ef8cc31e9f8929"
+    },
+    "outputs/b_branch/landfall_truth_event_coverage.csv": {
+      "bytes": 27610,
+      "sha256": "e522a81c44bc389a8733ea5552ebbbe3a1126e87d9a7d9739843da075453860b"
+    },
+    "outputs/b_branch/landfall_truth_exclusions.csv": {
+      "bytes": 1523,
+      "sha256": "5f882d48e1974e900d44a2303c292a25af80f733a4acad80ed86aedb2d125fe6"
+    },
+    "outputs/b_branch/landfall_truth_source_audit.json": {
+      "bytes": 11460,
+      "sha256": "06ba059363f34ff697398b04883916c2d19f758fa4600fd77cfbe15d825e1ff4"
+    },
+    "outputs/b_branch/landfall_truth_source_event_status.csv": {
+      "bytes": 614760,
+      "sha256": "3df2a149e4177c44e73c76df0c914f954b691ed4aff1345174c96adcca247658"
+    },
+    "outputs/b_branch/landfall_truth_support_evidence.csv": {
+      "bytes": 42934,
+      "sha256": "d29750963a0f865f43635495ceb45306d610092553945dbee9bd3a61d92b8b32"
+    }
+  },
+  "search_radius_km": 250.0,
+  "search_window_hours": 12.0
+}

@@ -1,0 +1,274 @@
+{
+  "coverage_by_country": [
+    {
+      "events": 30,
+      "grade_a_events": 0,
+      "grade_a_fraction": 0.0,
+      "grade_a_or_b_events": 30,
+      "grade_a_or_b_fraction": 1.0,
+      "landfall_country_code": "CHN",
+      "landfall_country_name": "China"
+    },
+    {
+      "events": 21,
+      "grade_a_events": 0,
+      "grade_a_fraction": 0.0,
+      "grade_a_or_b_events": 21,
+      "grade_a_or_b_fraction": 1.0,
+      "landfall_country_code": "JPN",
+      "landfall_country_name": "Japan"
+    },
+    {
+      "events": 4,
+      "grade_a_events": 0,
+      "grade_a_fraction": 0.0,
+      "grade_a_or_b_events": 4,
+      "grade_a_or_b_fraction": 1.0,
+      "landfall_country_code": "KOR",
+      "landfall_country_name": "South Korea"
+    },
+    {
+      "events": 31,
+      "grade_a_events": 0,
+      "grade_a_fraction": 0.0,
+      "grade_a_or_b_events": 31,
+      "grade_a_or_b_fraction": 1.0,
+      "landfall_country_code": "PHL",
+      "landfall_country_name": "Philippines"
+    },
+    {
+      "events": 1,
+      "grade_a_events": 0,
+      "grade_a_fraction": 0.0,
+      "grade_a_or_b_events": 1,
+      "grade_a_or_b_fraction": 1.0,
+      "landfall_country_code": "PRK",
+      "landfall_country_name": "North Korea"
+    },
+    {
+      "events": 1,
+      "grade_a_events": 0,
+      "grade_a_fraction": 0.0,
+      "grade_a_or_b_events": 1,
+      "grade_a_or_b_fraction": 1.0,
+      "landfall_country_code": "THA",
+      "landfall_country_name": "Thailand"
+    },
+    {
+      "events": 11,
+      "grade_a_events": 4,
+      "grade_a_fraction": 0.36363636363636365,
+      "grade_a_or_b_events": 11,
+      "grade_a_or_b_fraction": 1.0,
+      "landfall_country_code": "TWN",
+      "landfall_country_name": "Taiwan"
+    },
+    {
+      "events": 9,
+      "grade_a_events": 0,
+      "grade_a_fraction": 0.0,
+      "grade_a_or_b_events": 9,
+      "grade_a_or_b_fraction": 1.0,
+      "landfall_country_code": "VNM",
+      "landfall_country_name": "Vietnam"
+    }
+  ],
+  "coverage_by_year": [
+    {
+      "events": 11,
+      "grade_a_events": 2,
+      "grade_a_fraction": 0.18181818181818182,
+      "grade_a_or_b_events": 11,
+      "grade_a_or_b_fraction": 1.0,
+      "landfall_year": 2015
+    },
+    {
+      "events": 11,
+      "grade_a_events": 0,
+      "grade_a_fraction": 0.0,
+      "grade_a_or_b_events": 11,
+      "grade_a_or_b_fraction": 1.0,
+      "landfall_year": 2016
+    },
+    {
+      "events": 13,
+      "grade_a_events": 1,
+      "grade_a_fraction": 0.07692307692307693,
+      "grade_a_or_b_events": 13,
+      "grade_a_or_b_fraction": 1.0,
+      "landfall_year": 2017
+    },
+    {
+      "events": 14,
+      "grade_a_events": 0,
+      "grade_a_fraction": 0.0,
+      "grade_a_or_b_events": 14,
+      "grade_a_or_b_fraction": 1.0,
+      "landfall_year": 2018
+    },
+    {
+      "events": 16,
+      "grade_a_events": 0,
+      "grade_a_fraction": 0.0,
+      "grade_a_or_b_events": 16,
+      "grade_a_or_b_fraction": 1.0,
+      "landfall_year": 2019
+    },
+    {
+      "events": 10,
+      "grade_a_events": 0,
+      "grade_a_fraction": 0.0,
+      "grade_a_or_b_events": 10,
+      "grade_a_or_b_fraction": 1.0,
+      "landfall_year": 2020
+    },
+    {
+      "events": 9,
+      "grade_a_events": 0,
+      "grade_a_fraction": 0.0,
+      "grade_a_or_b_events": 9,
+      "grade_a_or_b_fraction": 1.0,
+      "landfall_year": 2021
+    },
+    {
+      "events": 7,
+      "grade_a_events": 0,
+      "grade_a_fraction": 0.0,
+      "grade_a_or_b_events": 7,
+      "grade_a_or_b_fraction": 1.0,
+      "landfall_year": 2022
+    },
+    {
+      "events": 5,
+      "grade_a_events": 1,
+      "grade_a_fraction": 0.2,
+      "grade_a_or_b_events": 5,
+      "grade_a_or_b_fraction": 1.0,
+      "landfall_year": 2023
+    },
+    {
+      "events": 12,
+      "grade_a_events": 0,
+      "grade_a_fraction": 0.0,
+      "grade_a_or_b_events": 12,
+      "grade_a_or_b_fraction": 1.0,
+      "landfall_year": 2024
+    }
+  ],
+  "cwa_tdb_station_crosscheck_rows": 4086,
+  "cwa_tdb_support_events": 11,
+  "disclaimer": "This measures station-observation coverage and consistency with grade-A truth, not unobserved common agency error.",
+  "frozen_events": 108,
+  "grade_a_event_coverage": 0.037037037037037035,
+  "grade_a_events": 4,
+  "grade_a_or_b_event_coverage": 1.0,
+  "grade_a_or_b_events": 108,
+  "grade_a_records": 4,
+  "grade_a_scoring_status": "measured",
+  "grade_b_records": 16285,
+  "sensitivity": [
+    {
+      "grade_a_events": 2,
+      "grade_a_or_b_events": 68,
+      "radius_km": 50,
+      "window_hours": 3
+    },
+    {
+      "grade_a_events": 2,
+      "grade_a_or_b_events": 73,
+      "radius_km": 50,
+      "window_hours": 6
+    },
+    {
+      "grade_a_events": 2,
+      "grade_a_or_b_events": 80,
+      "radius_km": 50,
+      "window_hours": 12
+    },
+    {
+      "grade_a_events": 4,
+      "grade_a_or_b_events": 89,
+      "radius_km": 100,
+      "window_hours": 3
+    },
+    {
+      "grade_a_events": 4,
+      "grade_a_or_b_events": 99,
+      "radius_km": 100,
+      "window_hours": 6
+    },
+    {
+      "grade_a_events": 4,
+      "grade_a_or_b_events": 108,
+      "radius_km": 100,
+      "window_hours": 12
+    },
+    {
+      "grade_a_events": 4,
+      "grade_a_or_b_events": 98,
+      "radius_km": 150,
+      "window_hours": 3
+    },
+    {
+      "grade_a_events": 4,
+      "grade_a_or_b_events": 107,
+      "radius_km": 150,
+      "window_hours": 6
+    },
+    {
+      "grade_a_events": 4,
+      "grade_a_or_b_events": 108,
+      "radius_km": 150,
+      "window_hours": 12
+    },
+    {
+      "grade_a_events": 4,
+      "grade_a_or_b_events": 103,
+      "radius_km": 250,
+      "window_hours": 3
+    },
+    {
+      "grade_a_events": 4,
+      "grade_a_or_b_events": 108,
+      "radius_km": 250,
+      "window_hours": 6
+    },
+    {
+      "grade_a_events": 4,
+      "grade_a_or_b_events": 108,
+      "radius_km": 250,
+      "window_hours": 12
+    }
+  ],
+  "source_counts": [
+    {
+      "events": 19,
+      "grade_a_records": 4,
+      "grade_b_records": 8809,
+      "records": 8813,
+      "source_id": "CWA_CODIS"
+    },
+    {
+      "events": 34,
+      "grade_a_records": 0,
+      "grade_b_records": 2018,
+      "records": 2018,
+      "source_id": "HKO_TC_IMPACT"
+    },
+    {
+      "events": 29,
+      "grade_a_records": 0,
+      "grade_b_records": 3393,
+      "records": 3393,
+      "source_id": "JMA_AMEDAS"
+    },
+    {
+      "events": 108,
+      "grade_a_records": 0,
+      "grade_b_records": 2065,
+      "records": 2065,
+      "source_id": "NOAA_ISD"
+    }
+  ],
+  "truth_records": 16289
+}

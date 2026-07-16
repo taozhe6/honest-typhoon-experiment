@@ -9,6 +9,14 @@ from shapely.geometry import LineString, box
 from ibtracs_measurement.analysis import regression_design
 from ibtracs_measurement.data import KT_TO_MS, analysis_sample, normalize_winds
 from ibtracs_measurement.geometry import CoastGeometry
+from ibtracs_measurement.landfall_truth import (
+    Event,
+    bootstrap_error_correlations,
+    event_truth_from_grade_a,
+    finalize_records,
+    parse_isd_wnd,
+    source_event_status_table,
+)
 from ibtracs_measurement.stats import (
     average_off_diagonal,
     leave_one_out_deviations,
@@ -58,6 +66,110 @@ class ConversionTests(unittest.TestCase):
         sample = analysis_sample(normalized)
         middle = sample.loc[sample["time"].eq(times[1])].iloc[0]
         self.assertEqual(middle["stage"], "intensifying")
+
+
+class LandfallTruthTests(unittest.TestCase):
+    def test_isd_wnd_parser_preserves_window_and_quality(self) -> None:
+        normal = parse_isd_wnd("090,1,N,0123,1")
+        five_minute = parse_isd_wnd("180,1,H,0200,4")
+        rejected = parse_isd_wnd("270,1,N,0300,3")
+        self.assertEqual(normal["speed_ms"], 12.3)
+        self.assertIsNone(normal["averaging_window_minutes"])
+        self.assertEqual(five_minute["averaging_window_minutes"], 5.0)
+        self.assertTrue(five_minute["quality_passed"])
+        self.assertFalse(rejected["quality_passed"])
+
+    def test_grade_b_observations_never_enter_event_truth(self) -> None:
+        record = {
+            "SID": "S1",
+            "grade": "B",
+            "scoreable": False,
+            "comparable_10min_ms": 20.0,
+            "source_id": "TEST",
+            "station_id": "X",
+            "observation_time_utc": "2020-01-01T00:00:00+00:00",
+            "independent_measurement": True,
+            "quality_passed": True,
+        }
+        truth = finalize_records([record])
+        self.assertTrue(event_truth_from_grade_a(truth).empty)
+
+    def test_source_event_status_has_one_row_per_source(self) -> None:
+        event = Event(
+            sid="S1",
+            name="TEST",
+            crossing_time=pd.Timestamp("2020-01-01T00:00:00Z"),
+            latitude=10.0,
+            longitude=120.0,
+        )
+        record = {
+            "SID": "S1",
+            "source_id": "FOUND",
+            "grade": "B",
+            "scoreable": False,
+            "independent_measurement": True,
+            "quality_passed": True,
+        }
+        truth = finalize_records([record])
+        catalog = [
+            {
+                "source_id": "FOUND",
+                "source": "Found source",
+                "availability": "available",
+                "access": "anonymous",
+                "url": "https://example.test/found",
+                "evidence": "[验证过]",
+            },
+            {
+                "source_id": "BLOCKED",
+                "source": "Blocked source",
+                "availability": "unavailable",
+                "access": "application",
+                "url": "https://example.test/blocked",
+                "evidence": "[据文档]",
+            },
+        ]
+        status = source_event_status_table(
+            [event],
+            truth,
+            catalog,
+            collected_source_ids=["FOUND"],
+            absent_status={
+                "BLOCKED": {
+                    "status": "source_unavailable_access_barrier",
+                    "reason": "application required",
+                    "searched_for_event": False,
+                }
+            },
+        )
+        self.assertEqual(len(status), 2)
+        self.assertEqual(status.loc[status.source_id.eq("FOUND"), "record_count"].item(), 1)
+        self.assertEqual(
+            status.loc[status.source_id.eq("BLOCKED"), "status"].item(),
+            "source_unavailable_access_barrier",
+        )
+
+    def test_error_correlation_bootstrap_uses_storm_blocks(self) -> None:
+        rows = pd.DataFrame(
+            {
+                "SID": [f"S{index}" for index in range(6)],
+                "A_error_ms": [1, 2, 4, 7, 11, 16],
+                "B_error_ms": [2, 4, 8, 14, 22, 32],
+            }
+        )
+        result = bootstrap_error_correlations(
+            rows,
+            ("A", "B"),
+            replicates=100,
+            seed=31,
+        )
+        self.assertEqual(len(result), 4)
+        pair = result.loc[
+            result["agency_i"].eq("A") & result["agency_j"].eq("B")
+        ].iloc[0]
+        self.assertAlmostEqual(pair["correlation"], 1.0)
+        self.assertEqual(pair["cluster_unit"], "SID")
+        self.assertGreater(pair["valid_bootstrap_replicates"], 90)
 
 
 class StatisticalTests(unittest.TestCase):

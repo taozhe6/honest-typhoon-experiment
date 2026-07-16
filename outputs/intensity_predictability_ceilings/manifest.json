@@ -1,14 +1,14 @@
 {
-  "analysis_code_git_commit": "2349b0f9532a238debc23f93a053c53fd6797c4d",
-  "generated_at_utc": "2026-07-15T14:11:07.034067+00:00",
+  "analysis_code_git_commit": "9e1ca181c9f3232bc3ea865deb5247a079e1e6d8",
+  "generated_at_utc": "2026-07-16T09:37:03.223105+00:00",
   "outputs": {
     "synthesis.json": {
-      "bytes": 7682,
-      "sha256": "7b27fbcf57a24e4e4c06f233921c5607c7e4d7a8d483a35ecd8083aba9fd7846"
+      "bytes": 17258,
+      "sha256": "9c2f3829c7707737bc076c5dde8e1ea2a940964c50e1eb953654baa9028196ac"
     },
     "three_ceilings.png": {
-      "bytes": 145700,
-      "sha256": "ed3d8a06a76ca78c8c53edf31e68bd335f2aab9f995f8aa463b85d35674b83fc"
+      "bytes": 146027,
+      "sha256": "3dca55f6872e363c31c444fa988b346b8a76cc88e95b65472dde78d227e640e3"
     }
   }
 }

@@ -78,7 +78,21 @@ class OutputAuditTests(unittest.TestCase):
         branch = OUTPUTS / "b_branch"
         required = (
             ROOT / "report_b_branch.md",
+            ROOT / "landfall_truth_report.md",
             branch / "independent_truth_error_table.csv",
+            branch / "independent_truth_error_rows.csv",
+            branch / "independent_truth_error_correlation.csv",
+            branch / "independent_truth_error_correlation_intervals.csv",
+            branch / "landfall_truth.csv",
+            branch / "landfall_truth_exclusions.csv",
+            branch / "landfall_truth_event_coverage.csv",
+            branch / "landfall_truth_source_event_status.csv",
+            branch / "landfall_truth_support_evidence.csv",
+            branch / "cwa_tdb_station_crosscheck.csv",
+            branch / "cwa_tdb_eyewall_review.csv",
+            branch / "landfall_truth_coverage_summary.json",
+            branch / "landfall_truth_source_audit.json",
+            branch / "landfall_truth_manifest.json",
             branch / "source_truth_audit.json",
             branch / "landfall_cma_reference_error_table.csv",
             branch / "landfall_cma_reference_correlation_point.csv",
@@ -93,8 +107,93 @@ class OutputAuditTests(unittest.TestCase):
         branch = OUTPUTS / "b_branch"
         truth = pd.read_csv(branch / "independent_truth_error_table.csv")
         self.assertEqual(len(truth), 5)
-        self.assertTrue(truth["matched_independent_truth_events"].eq(0).all())
-        self.assertTrue(truth["mae_ms"].isna().all())
+        self.assertTrue(truth["matched_independent_truth_events"].eq(4).all())
+        self.assertTrue(truth["mae_ms"].notna().all())
+        self.assertTrue(
+            truth["status"].eq("measured_against_external_grade_a_truth").all()
+        )
+        summary = json.loads(
+            (branch / "landfall_truth_coverage_summary.json").read_text(
+                encoding="utf-8"
+            )
+        )
+        self.assertEqual(summary["frozen_events"], 108)
+        self.assertEqual(summary["grade_a_events"], 4)
+        self.assertEqual(summary["grade_a_or_b_events"], 108)
+        self.assertEqual(summary["truth_records"], 16289)
+        self.assertEqual(summary["grade_a_records"], 4)
+        self.assertEqual(summary["grade_b_records"], 16285)
+        self.assertEqual(summary["cwa_tdb_support_events"], 11)
+        self.assertEqual(summary["cwa_tdb_station_crosscheck_rows"], 4086)
+        observations = pd.read_csv(branch / "landfall_truth.csv")
+        self.assertEqual(len(observations), summary["truth_records"])
+        self.assertEqual(observations["grade"].value_counts().to_dict(), {"B": 16285, "A": 4})
+        scoreable = observations["scoreable"].astype(str).str.lower()
+        self.assertTrue(
+            scoreable.loc[observations["grade"].eq("A")].eq("true").all()
+        )
+        self.assertTrue(
+            scoreable.loc[observations["grade"].eq("B")].eq("false").all()
+        )
+        self.assertTrue(observations["raw_sha256"].str.fullmatch(r"[0-9a-f]{64}").all())
+        source_status = pd.read_csv(branch / "landfall_truth_source_event_status.csv")
+        self.assertEqual(len(source_status), 108 * 13)
+        self.assertFalse(source_status[["SID", "source_id"]].duplicated().any())
+        self.assertTrue(source_status.groupby("source_id")["SID"].nunique().eq(108).all())
+        coverage = pd.read_csv(branch / "landfall_truth_event_coverage.csv")
+        self.assertEqual(len(coverage), 108)
+        self.assertTrue(coverage["grade_a_or_b_event"].all())
+        self.assertEqual(int(coverage["grade_a_event"].sum()), 4)
+        self.assertEqual(
+            set(coverage.loc[coverage.landfall_country_name.eq("Taiwan"), "landfall_country_code"]),
+            {"TWN"},
+        )
+        support = pd.read_csv(branch / "landfall_truth_support_evidence.csv")
+        self.assertEqual(len(support), 88)
+        self.assertEqual(
+            support.loc[support.evidence_type.eq("warning_registry_match"), "SID"].nunique(),
+            11,
+        )
+        self.assertEqual(
+            support.loc[support["product"].eq("Radar"), "SID"].nunique(),
+            11,
+        )
+        self.assertEqual(
+            support.loc[
+                support.evidence_type.eq("official_station_peak_radar_pair"), "SID"
+            ].nunique(),
+            11,
+        )
+        crosscheck = pd.read_csv(branch / "cwa_tdb_station_crosscheck.csv")
+        self.assertEqual(len(crosscheck), 4086)
+        self.assertEqual(crosscheck["SID"].nunique(), 11)
+        self.assertTrue(
+            crosscheck.loc[crosscheck.measure_type.eq("CWA"), "averaging_window_minutes"]
+            .eq(10.0)
+            .all()
+        )
+        self.assertTrue(
+            crosscheck.loc[
+                crosscheck.measure_type.eq("AUTOPRECP_WIND"),
+                "averaging_window_minutes",
+            ].isna().all()
+        )
+        review = pd.read_csv(branch / "cwa_tdb_eyewall_review.csv")
+        self.assertEqual(len(review), 11)
+        self.assertEqual(int(review["final_grade"].eq("A").sum()), 4)
+        self.assertTrue(review.loc[review.final_grade.eq("A"), "scoreable"].all())
+        correlation = pd.read_csv(
+            branch / "independent_truth_error_correlation_intervals.csv"
+        )
+        self.assertEqual(len(correlation), 25)
+        self.assertTrue(correlation["matched_grade_a_events"].eq(4).all())
+        self.assertTrue(correlation["cluster_unit"].eq("SID").all())
+        self.assertTrue(
+            correlation.loc[
+                correlation.agency_i.ne(correlation.agency_j),
+                "valid_bootstrap_replicates",
+            ].gt(0).all()
+        )
         source = json.loads((branch / "source_truth_audit.json").read_text(encoding="utf-8"))
         self.assertEqual(source["cma_2015_2024_owd_present_rows"], 0)
         self.assertGreater(source["content_candidate_file_count"], 0)

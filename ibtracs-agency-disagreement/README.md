@@ -16,6 +16,8 @@ URLs, hashes, sizes, versions, and remote headers recorded in `outputs/provenanc
 python3 -m venv .venv
 .venv/bin/pip install -r requirements.txt
 PYTHONPATH=src .venv/bin/python scripts/run_analysis.py --bootstrap-replicates 2000
+PYTHONPATH=src .venv/bin/python scripts/run_landfall_truth.py --bootstrap-replicates 2000 --check
+PYTHONPATH=src .venv/bin/python scripts/run_landfall_truth.py --offline --bootstrap-replicates 2000 --check
 PYTHONPATH=src .venv/bin/python scripts/run_b_branch.py --bootstrap-replicates 2000
 PYTHONPATH=src .venv/bin/python -m unittest discover -s tests -v
 ```
@@ -23,9 +25,14 @@ PYTHONPATH=src .venv/bin/python -m unittest discover -s tests -v
 The human-readable result is `report.md`. Machine-readable matrices, sensitivity analyses,
 landfall audit, analysis rows, and the required plot are under `outputs/`.
 
-Branch B's independent-truth audit, reusable wind-pressure diagnostic, storm-grouped
-cross-validation, and CMA-reference proxy are documented in `report_b_branch.md`; its
-machine-readable outputs are under `outputs/b_branch/`.
+Branch B's external station-observation audit is documented in `landfall_truth_report.md`.
+The reusable wind-pressure diagnostic, storm-grouped cross-validation, external grade-A
+score gate, and CMA-reference proxy are integrated in `report_b_branch.md`; machine-readable
+outputs are under `outputs/b_branch/`. The CWA support package includes the 11-case radar
+review table, 4,086-row station cross-check, event-product evidence table, A-grade score table,
+and SID-block-bootstrap error-correlation intervals. The first landfall-truth run downloads
+about 4 GB of ignored raw station archives; the second command proves reconstruction from that
+cache.
 
 The cross-project interpretation of truth coverage, agency redundancy, and structural
 parameter sensitivity is published in

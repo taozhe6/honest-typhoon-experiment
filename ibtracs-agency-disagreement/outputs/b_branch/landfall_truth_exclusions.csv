@@ -1,0 +1,8 @@
+source_id,item_type,case_sid,source_url,reason,evidence_label
+IBTRACS_AGENCY_ANALYSIS,best-track or agency Vmax,,https://www.ncei.noaa.gov/products/international-best-track-archive,Agency analysis is the estimate being evaluated and is not independent truth,[据文档]
+CMA_LANDFALL_BULLETIN,analyzed center maximum wind at landfall,,https://www.cma.gov.cn/2011xwzx/zdbk/jdbktp/202307/t20230728_5678350.html,Landfall Vmax is an agency analysis; separately quoted station gusts use a different observation operator,[验证过]
+CMA_RADAR_DERIVED,radar-derived surface/multisource wind field,,https://k.data.cma.cn/mekb/?dataCode=J.0019.0010.S001&r=data%2Fdetail,Derived or inverted wind field lacks a raw surface-wind observation chain,[据文档]
+CWA_TYPHOON_DB_ANALYSIS,CWA best-track intensity and typhoon analysis,,https://rdc28.cwa.gov.tw/TDB/public/,Agency analysis is not an independent measurement,[据文档]
+HKO_BEST_TRACK,HKO post-analysis maximum sustained wind,,https://data.gov.hk/en-data/dataset/hk-hko-rss-tropical-cyclone-best-track-data,Post-analysis wind is an agency estimate,[据文档]
+JMA_BEST_TRACK,JMA best-track intensity,,https://www.jma.go.jp/jma/jma-eng/jma-center/rsmc-hp-pub-eg/besttrack.html,Best-track intensity is an agency estimate,[据文档]
+PUBLIC_RADAR_RADIAL_VELOCITY,single-beam radial velocity,,https://www.cma.gov.cn/2011xwzx/zdbk/jdbktp/202307/t20230728_5678350.html,Radial velocity aloft is not a 10-m sustained surface wind and cannot be directly scored against Vmax,[验证过]

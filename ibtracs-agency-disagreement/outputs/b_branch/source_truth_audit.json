@@ -1,6 +1,6 @@
 {
   "source_url": "https://www.ncei.noaa.gov/data/international-best-track-archive-for-climate-stewardship-ibtracs/v04r01/input/final/ibtracs_v04r01_input-bt_c20260706.tar.gz",
-  "path": "/private/tmp/ibtracs_v04r01_input-bt_c20260706.tar.gz",
+  "path": "/Users/taozhe/Documents/New project/typhoon/ibtracs-agency-disagreement/data/raw/ibtracs_v04r01_input-bt_c20260706.tar.gz",
   "bytes": 61363391,
   "sha256": "b20a2cce2bf526fc64ae04e0f7a0df1e2ecf2473c32a70076a737e59b60e36eb",
   "archive_file_count": 14358,

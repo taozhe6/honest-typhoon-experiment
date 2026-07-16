@@ -22,6 +22,16 @@ SOURCES = {
     / "outputs"
     / "b_branch"
     / "independent_truth_error_table.csv",
+    "independent_truth_summary": ROOT
+    / "ibtracs-agency-disagreement"
+    / "outputs"
+    / "b_branch"
+    / "landfall_truth_coverage_summary.json",
+    "independent_truth_correlation_intervals": ROOT
+    / "ibtracs-agency-disagreement"
+    / "outputs"
+    / "b_branch"
+    / "independent_truth_error_correlation_intervals.csv",
     "pairwise_s088": ROOT
     / "ibtracs-agency-disagreement"
     / "outputs"
@@ -100,22 +110,73 @@ def pairwise_range(path: Path) -> dict[str, Any]:
     }
 
 
-def truth_coverage(path: Path) -> dict[str, Any]:
+def truth_coverage(
+    path: Path,
+    summary_path: Path,
+    correlation_path: Path,
+) -> dict[str, Any]:
     with path.open(newline="", encoding="utf-8") as handle:
         rows = list(csv.DictReader(handle))
+    with correlation_path.open(newline="", encoding="utf-8") as handle:
+        correlation_rows = list(csv.DictReader(handle))
     event_counts = {int(row["landfall_events"]) for row in rows}
     matched_counts = {
         int(row["matched_independent_truth_events"]) for row in rows
     }
     if len(rows) != 5 or len(event_counts) != 1 or len(matched_counts) != 1:
         raise RuntimeError("independent-truth table has inconsistent agency coverage")
-    return {
+    summary = load_json(summary_path)
+    result = {
         "agency_count": len(rows),
         "landfall_events": event_counts.pop(),
         "matched_independent_truth_events": matched_counts.pop(),
+        "grade_a_events": int(summary["grade_a_events"]),
+        "grade_a_or_b_events": int(summary["grade_a_or_b_events"]),
+        "truth_records": int(summary["truth_records"]),
+        "grade_a_scoring_status": summary["grade_a_scoring_status"],
         "agencies": [row["agency"] for row in rows],
         "status_by_agency": {row["agency"]: row["status"] for row in rows},
+        "score_by_agency": {
+            row["agency"]: {
+                key: float(row[key])
+                for key in (
+                    "bias_ms",
+                    "bias_95ci_low",
+                    "bias_95ci_high",
+                    "mae_ms",
+                    "mae_95ci_low",
+                    "mae_95ci_high",
+                    "rmse_ms",
+                    "rmse_95ci_low",
+                    "rmse_95ci_high",
+                )
+            }
+            for row in rows
+            if row["status"] == "measured_against_external_grade_a_truth"
+        },
+        "error_correlation_intervals": [
+            {
+                "agency_i": row["agency_i"],
+                "agency_j": row["agency_j"],
+                "correlation": float(row["correlation"]),
+                "correlation_95ci": [
+                    float(row["correlation_95ci_low"]),
+                    float(row["correlation_95ci_high"]),
+                ],
+                "valid_bootstrap_replicates": int(
+                    row["valid_bootstrap_replicates"]
+                ),
+            }
+            for row in correlation_rows
+        ],
     }
+    if result["landfall_events"] != int(summary["frozen_events"]):
+        raise RuntimeError("truth score table and coverage summary use different event universes")
+    if result["matched_independent_truth_events"] != result["grade_a_events"]:
+        raise RuntimeError("truth score table and grade-A coverage disagree")
+    if len(result["error_correlation_intervals"]) != 25:
+        raise RuntimeError("truth error-correlation output must contain 25 cells")
+    return result
 
 
 def fixed_regime_sensitivity(global_result: dict[str, Any]) -> dict[str, Any]:
@@ -163,17 +224,40 @@ def extract_evidence() -> dict[str, Any]:
     theta = load_json(SOURCES["theta_propagation"])
     observation_wp = observation["subsets"]["jtwc_wp_only"]
     path_v3_primary = path_v3["primary"]
+    truth = truth_coverage(
+        SOURCES["independent_truth"],
+        SOURCES["independent_truth_summary"],
+        SOURCES["independent_truth_correlation_intervals"],
+    )
+    score_outputs = [
+        "agency landfall bias against independent truth",
+        "agency landfall MAE against independent truth",
+        "agency landfall RMSE against independent truth",
+        "correlation of agency errors against independent truth",
+    ]
+    truth["identifiable_outputs"] = (
+        score_outputs
+        if truth["grade_a_events"] >= 3
+        else score_outputs[:3]
+        if truth["grade_a_events"] > 0
+        else []
+    )
+    truth["unidentifiable_outputs"] = (
+        score_outputs
+        if truth["grade_a_events"] == 0
+        else score_outputs[3:]
+        if truth["grade_a_events"] < 3
+        else []
+    )
+    truth["scope_limit"] = (
+        "scores and error correlations describe the grade-A subset only; "
+        "four Taiwan cases do not identify long-run agency skill or population error correlation"
+    )
+    truth["population_unidentifiable_outputs"] = score_outputs
     return {
         "truth_ceiling": {
             "evidence_label": "MEASURED",
-            **truth_coverage(SOURCES["independent_truth"]),
-            "identifiable_outputs": [],
-            "unidentifiable_outputs": [
-                "agency landfall bias against independent truth",
-                "agency landfall MAE against independent truth",
-                "agency landfall RMSE against independent truth",
-                "correlation of agency errors against independent truth",
-            ],
+            **truth,
         },
         "redundancy_ceiling": {
             "agency_pairwise_disagreement": {
@@ -264,8 +348,18 @@ def validate_evidence(evidence: dict[str, Any]) -> None:
     truth = evidence["truth_ceiling"]
     if truth["landfall_events"] != 108:
         raise RuntimeError("expected 108 complete-five landfall events")
-    if truth["matched_independent_truth_events"] != 0:
-        raise RuntimeError("independent truth coverage changed; re-audit conclusions")
+    if not 0 <= truth["grade_a_events"] <= truth["grade_a_or_b_events"] <= 108:
+        raise RuntimeError("external truth coverage violates A subset A+B subset frozen events")
+    if truth["grade_a_events"] == 0 and any(
+        value != "unidentifiable_zero_grade_a_coverage"
+        for value in truth["status_by_agency"].values()
+    ):
+        raise RuntimeError("zero grade-A coverage must keep agency scores unidentifiable")
+    if truth["grade_a_events"] > 0 and any(
+        value != "measured_against_external_grade_a_truth"
+        for value in truth["status_by_agency"].values()
+    ):
+        raise RuntimeError("positive grade-A coverage must publish measured subset scores")
 
     redundancy = evidence["redundancy_ceiling"]
     if redundancy["five_agency_intensity_neff"]["status"] != "unidentifiable":
@@ -334,8 +428,15 @@ def build_figure(evidence: dict[str, Any], path: Path) -> None:
         color="#e7e9ec",
         edgecolor="#616b75",
     )
+    axes[0].barh(
+        [0],
+        [truth["grade_a_or_b_events"]],
+        height=0.28,
+        color="#5d8f9c",
+        edgecolor="none",
+    )
     axes[0].scatter(
-        [truth["matched_independent_truth_events"]],
+        [truth["grade_a_events"]],
         [0],
         color="#b23a48",
         s=75,
@@ -344,7 +445,10 @@ def build_figure(evidence: dict[str, Any], path: Path) -> None:
     axes[0].text(
         truth["landfall_events"] / 2,
         0,
-        "Independent truth coverage: 0 / 108 landfalls",
+        (
+            f"Grade A scoreable: {truth['grade_a_events']} / {truth['landfall_events']}   |   "
+            f"Grade A+B measured: {truth['grade_a_or_b_events']} / {truth['landfall_events']}"
+        ),
         ha="center",
         va="center",
         fontsize=11,

@@ -1,5 +1,5 @@
 {
-  "analysis_code_git_commit": "2349b0f9532a238debc23f93a053c53fd6797c4d",
+  "analysis_code_git_commit": "9e1ca181c9f3232bc3ea865deb5247a079e1e6d8",
   "ceiling_semantics": "evidence bottlenecks, not theorem-level upper bounds on atmospheric predictability",
   "evidence": {
     "redundancy_ceiling": {
@@ -125,26 +125,346 @@
         "KMA"
       ],
       "agency_count": 5,
+      "error_correlation_intervals": [
+        {
+          "agency_i": "JTWC",
+          "agency_j": "JTWC",
+          "correlation": 1.0,
+          "correlation_95ci": [
+            0.9999999999999999,
+            1.0
+          ],
+          "valid_bootstrap_replicates": 1964
+        },
+        {
+          "agency_i": "JTWC",
+          "agency_j": "JMA",
+          "correlation": -0.24643262338704508,
+          "correlation_95ci": [
+            -1.0,
+            1.0
+          ],
+          "valid_bootstrap_replicates": 1964
+        },
+        {
+          "agency_i": "JTWC",
+          "agency_j": "CMA",
+          "correlation": 0.9003535735106868,
+          "correlation_95ci": [
+            -1.0,
+            1.0
+          ],
+          "valid_bootstrap_replicates": 1964
+        },
+        {
+          "agency_i": "JTWC",
+          "agency_j": "HKO",
+          "correlation": 0.9955067197979462,
+          "correlation_95ci": [
+            0.6572036448159909,
+            1.0
+          ],
+          "valid_bootstrap_replicates": 1964
+        },
+        {
+          "agency_i": "JTWC",
+          "agency_j": "KMA",
+          "correlation": 0.8171926674095923,
+          "correlation_95ci": [
+            -0.9999999999999999,
+            1.0
+          ],
+          "valid_bootstrap_replicates": 1964
+        },
+        {
+          "agency_i": "JMA",
+          "agency_j": "JTWC",
+          "correlation": -0.24643262338704508,
+          "correlation_95ci": [
+            -1.0,
+            1.0
+          ],
+          "valid_bootstrap_replicates": 1964
+        },
+        {
+          "agency_i": "JMA",
+          "agency_j": "JMA",
+          "correlation": 1.0,
+          "correlation_95ci": [
+            0.9999999999999998,
+            1.0
+          ],
+          "valid_bootstrap_replicates": 1964
+        },
+        {
+          "agency_i": "JMA",
+          "agency_j": "CMA",
+          "correlation": 0.051466894212819005,
+          "correlation_95ci": [
+            -1.0,
+            1.0
+          ],
+          "valid_bootstrap_replicates": 1964
+        },
+        {
+          "agency_i": "JMA",
+          "agency_j": "HKO",
+          "correlation": -0.22077363325465105,
+          "correlation_95ci": [
+            -1.0,
+            1.0
+          ],
+          "valid_bootstrap_replicates": 1964
+        },
+        {
+          "agency_i": "JMA",
+          "agency_j": "KMA",
+          "correlation": -0.44636531365934173,
+          "correlation_95ci": [
+            -1.0,
+            1.0
+          ],
+          "valid_bootstrap_replicates": 1964
+        },
+        {
+          "agency_i": "CMA",
+          "agency_j": "JTWC",
+          "correlation": 0.9003535735106868,
+          "correlation_95ci": [
+            -1.0,
+            1.0
+          ],
+          "valid_bootstrap_replicates": 1964
+        },
+        {
+          "agency_i": "CMA",
+          "agency_j": "JMA",
+          "correlation": 0.051466894212819005,
+          "correlation_95ci": [
+            -1.0,
+            1.0
+          ],
+          "valid_bootstrap_replicates": 1964
+        },
+        {
+          "agency_i": "CMA",
+          "agency_j": "CMA",
+          "correlation": 1.0,
+          "correlation_95ci": [
+            0.9999999999999998,
+            1.0
+          ],
+          "valid_bootstrap_replicates": 1964
+        },
+        {
+          "agency_i": "CMA",
+          "agency_j": "HKO",
+          "correlation": 0.8732176480587533,
+          "correlation_95ci": [
+            -1.0,
+            1.0
+          ],
+          "valid_bootstrap_replicates": 1964
+        },
+        {
+          "agency_i": "CMA",
+          "agency_j": "KMA",
+          "correlation": 0.8361179526594846,
+          "correlation_95ci": [
+            -1.0,
+            1.0
+          ],
+          "valid_bootstrap_replicates": 1964
+        },
+        {
+          "agency_i": "HKO",
+          "agency_j": "JTWC",
+          "correlation": 0.9955067197979462,
+          "correlation_95ci": [
+            0.6572036448159909,
+            1.0
+          ],
+          "valid_bootstrap_replicates": 1964
+        },
+        {
+          "agency_i": "HKO",
+          "agency_j": "JMA",
+          "correlation": -0.22077363325465105,
+          "correlation_95ci": [
+            -1.0,
+            1.0
+          ],
+          "valid_bootstrap_replicates": 1964
+        },
+        {
+          "agency_i": "HKO",
+          "agency_j": "CMA",
+          "correlation": 0.8732176480587533,
+          "correlation_95ci": [
+            -1.0,
+            1.0
+          ],
+          "valid_bootstrap_replicates": 1964
+        },
+        {
+          "agency_i": "HKO",
+          "agency_j": "HKO",
+          "correlation": 1.0,
+          "correlation_95ci": [
+            0.9999999999999998,
+            1.0
+          ],
+          "valid_bootstrap_replicates": 1964
+        },
+        {
+          "agency_i": "HKO",
+          "agency_j": "KMA",
+          "correlation": 0.7598573779431737,
+          "correlation_95ci": [
+            -1.0,
+            1.0
+          ],
+          "valid_bootstrap_replicates": 1964
+        },
+        {
+          "agency_i": "KMA",
+          "agency_j": "JTWC",
+          "correlation": 0.8171926674095922,
+          "correlation_95ci": [
+            -0.9999999999999999,
+            1.0
+          ],
+          "valid_bootstrap_replicates": 1964
+        },
+        {
+          "agency_i": "KMA",
+          "agency_j": "JMA",
+          "correlation": -0.44636531365934173,
+          "correlation_95ci": [
+            -1.0,
+            1.0
+          ],
+          "valid_bootstrap_replicates": 1964
+        },
+        {
+          "agency_i": "KMA",
+          "agency_j": "CMA",
+          "correlation": 0.8361179526594846,
+          "correlation_95ci": [
+            -1.0,
+            1.0
+          ],
+          "valid_bootstrap_replicates": 1964
+        },
+        {
+          "agency_i": "KMA",
+          "agency_j": "HKO",
+          "correlation": 0.7598573779431735,
+          "correlation_95ci": [
+            -1.0,
+            1.0
+          ],
+          "valid_bootstrap_replicates": 1964
+        },
+        {
+          "agency_i": "KMA",
+          "agency_j": "KMA",
+          "correlation": 1.0,
+          "correlation_95ci": [
+            0.9999999999999998,
+            1.0
+          ],
+          "valid_bootstrap_replicates": 1964
+        }
+      ],
       "evidence_label": "MEASURED",
-      "identifiable_outputs": [],
-      "landfall_events": 108,
-      "matched_independent_truth_events": 0,
-      "status_by_agency": {
-        "CMA": "unidentifiable_zero_independent_truth_coverage",
-        "HKO": "unidentifiable_zero_independent_truth_coverage",
-        "JMA": "unidentifiable_zero_independent_truth_coverage",
-        "JTWC": "unidentifiable_zero_independent_truth_coverage",
-        "KMA": "unidentifiable_zero_independent_truth_coverage"
-      },
-      "unidentifiable_outputs": [
+      "grade_a_events": 4,
+      "grade_a_or_b_events": 108,
+      "grade_a_scoring_status": "measured",
+      "identifiable_outputs": [
         "agency landfall bias against independent truth",
         "agency landfall MAE against independent truth",
         "agency landfall RMSE against independent truth",
         "correlation of agency errors against independent truth"
-      ]
+      ],
+      "landfall_events": 108,
+      "matched_independent_truth_events": 4,
+      "population_unidentifiable_outputs": [
+        "agency landfall bias against independent truth",
+        "agency landfall MAE against independent truth",
+        "agency landfall RMSE against independent truth",
+        "correlation of agency errors against independent truth"
+      ],
+      "scope_limit": "scores and error correlations describe the grade-A subset only; four Taiwan cases do not identify long-run agency skill or population error correlation",
+      "score_by_agency": {
+        "CMA": {
+          "bias_95ci_high": 13.90553627881625,
+          "bias_95ci_low": 3.1743032078335585,
+          "bias_ms": 7.909972821967069,
+          "mae_95ci_high": 13.90553627881625,
+          "mae_95ci_low": 3.1743032078335585,
+          "mae_ms": 7.909972821967069,
+          "rmse_95ci_high": 14.553704921501309,
+          "rmse_95ci_low": 3.813110356742409,
+          "rmse_ms": 9.49749768447478
+        },
+        "HKO": {
+          "bias_95ci_high": 17.59539112739681,
+          "bias_95ci_low": 9.283853465982526,
+          "bias_ms": 12.413288120576553,
+          "mae_95ci_high": 17.59539112739681,
+          "mae_95ci_low": 9.283853465982526,
+          "mae_ms": 12.413288120576553,
+          "rmse_95ci_high": 18.20030418304493,
+          "rmse_95ci_low": 9.287266737329675,
+          "rmse_ms": 13.234238100108316
+        },
+        "JMA": {
+          "bias_95ci_high": 9.52336742713996,
+          "bias_95ci_low": 3.6748517723670595,
+          "bias_ms": 6.045996669503073,
+          "mae_95ci_high": 9.52336742713996,
+          "mae_95ci_low": 3.6748517723670595,
+          "mae_ms": 6.045996669503073,
+          "rmse_95ci_high": 10.094284523584665,
+          "rmse_95ci_low": 3.675218970792719,
+          "rmse_ms": 6.840594499170431
+        },
+        "JTWC": {
+          "bias_95ci_high": 18.507278731066428,
+          "bias_95ci_low": 9.094331784328759,
+          "bias_ms": 12.637248444366488,
+          "mae_95ci_high": 18.507278731066428,
+          "mae_95ci_low": 9.094331784328759,
+          "mae_ms": 12.637248444366488,
+          "rmse_95ci_high": 19.113118170537934,
+          "rmse_95ci_low": 9.11828400341726,
+          "rmse_ms": 13.598467912321219
+        },
+        "KMA": {
+          "bias_95ci_high": 9.939617038953841,
+          "bias_95ci_low": 2.682231175241151,
+          "bias_ms": 6.310924107097496,
+          "mae_95ci_high": 9.939617038953841,
+          "mae_95ci_low": 2.682231175241151,
+          "mae_ms": 6.310924107097496,
+          "rmse_95ci_high": 10.050793315282355,
+          "rmse_95ci_low": 2.6998771077415524,
+          "rmse_ms": 7.358932757656892
+        }
+      },
+      "status_by_agency": {
+        "CMA": "measured_against_external_grade_a_truth",
+        "HKO": "measured_against_external_grade_a_truth",
+        "JMA": "measured_against_external_grade_a_truth",
+        "JTWC": "measured_against_external_grade_a_truth",
+        "KMA": "measured_against_external_grade_a_truth"
+      },
+      "truth_records": 16289,
+      "unidentifiable_outputs": []
     }
   },
-  "generated_at_utc": "2026-07-15T14:11:07.034067+00:00",
+  "generated_at_utc": "2026-07-16T09:37:03.223105+00:00",
   "qualification": "cross-project-evidence-synthesis; unvalidated for forecasting",
   "report_id": "western-north-pacific-intensity-predictability-ceilings-v1",
   "sources": {
@@ -159,9 +479,19 @@
       "sha256": "e63555f08d0d01d755a5d394eaf1ae15d566f76a500d44502b31cf14ca1a9308"
     },
     "independent_truth": {
-      "bytes": 496,
+      "bytes": 1753,
       "path": "ibtracs-agency-disagreement/outputs/b_branch/independent_truth_error_table.csv",
-      "sha256": "f3ca7c774c7b223bbadee26e3a30434d9b91853388c1fe10fdbbb03357016094"
+      "sha256": "15fd4899b8a73fd2711ffff9a20960a9f49597f044c8c543feabfe33aef774a5"
+    },
+    "independent_truth_correlation_intervals": {
+      "bytes": 1546,
+      "path": "ibtracs-agency-disagreement/outputs/b_branch/independent_truth_error_correlation_intervals.csv",
+      "sha256": "2522e123139106c334360e47255d8b0f4a5c1aa101b1447178b144db1639f7b7"
+    },
+    "independent_truth_summary": {
+      "bytes": 6484,
+      "path": "ibtracs-agency-disagreement/outputs/b_branch/landfall_truth_coverage_summary.json",
+      "sha256": "a86b4f376c5291b1c440bb6da2f1cbd6e733bd980787d818c0ef8cc31e9f8929"
     },
     "observation_dimension": {
       "bytes": 8627,
